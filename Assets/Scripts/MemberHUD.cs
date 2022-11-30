@@ -17,6 +17,7 @@ public class MemberHUD : MonoBehaviour
     public Text traitPrice;
     public Color Colours = new Color(1f, 1f, 1f, 1f);
     public float performance;
+    public bool selected;
 
     public void SetHUD(Member member)
     {
@@ -36,5 +37,18 @@ public class MemberHUD : MonoBehaviour
     {
         performance = float.Parse(s);
     }
+
+    void Update()
+    {
+        if (selected)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
+
 
 }

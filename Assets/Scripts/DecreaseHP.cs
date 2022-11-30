@@ -11,7 +11,6 @@ public class DecreaseHP : MonoBehaviour
     public void ReadStringInput(string s)
     {
         inputValue = float.Parse(s);
-        enemyHP.value -= (inputValue/3000);
-        Debug.Log("El valor es" + inputValue);
+        enemyHP.value -= inputValue;
     }
 }

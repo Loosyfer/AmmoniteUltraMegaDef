@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
 
     [SerializeField] private Canvas canvas;
@@ -12,12 +12,11 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private MovingObject mO;
+    public Camera camera;
     private bool pointerDown;
     private bool rayCastNull;
     private bool objectDragged;
     public GameObjectHolder script;
-
-    public Camera camera;
 
     private void Awake()
     {
@@ -38,7 +37,6 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
-
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -58,17 +56,10 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        RaycastHit hit = isPointerOverModule();
+        RaycastHit hit = isPointerOverMember();
         if (!rayCastNull)
         {
-            if (hit.collider.gameObject.tag == "Member")
-            {
-                GetComponent<Image>().raycastTarget = false;
-            }
-            else
-            {
-                pointerDown = true;
-            }
+            pointerDown = true;
         }
         mO = canvas.GetComponent<MovingObject>();
         mO.movingOn = true;
@@ -77,9 +68,12 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     void Update()
     {
-
+        Debug.Log("PointerDown is " + pointerDown);
+        Debug.Log("rayCastNull is " + rayCastNull);
+        Debug.Log("objectDragged is " + objectDragged);
         if (Input.GetMouseButtonUp(0) && pointerDown && !rayCastNull && !objectDragged)
         {
+            Debug.Log("AQUIIIIIIIIIIIIIIIIII");
             EventSystem.current.SetSelectedGameObject(gameObject);
             if (script.activeModuleorMember != null && script.activeModuleorMember.tag == "Module")
                 script.activeModuleorMember.GetComponent<ModuleHUD>().selected = false;
@@ -88,13 +82,13 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
             script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
             pointerDown = false;
             rayCastNull = true;
-            script.activeModuleorMember.GetComponent<ModuleHUD>().selected = true;
+            script.activeModuleorMember.GetComponent<MemberHUD>().selected = true;
             mO = canvas.GetComponent<MovingObject>();
             mO.movingOn = false;
         }
     }
 
-    private RaycastHit isPointerOverModule()
+    private RaycastHit isPointerOverMember()
     {
         var ray = camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -110,4 +104,5 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         yield return new WaitForSeconds(0.1f);
         objectDragged = false;
     }
+
 }

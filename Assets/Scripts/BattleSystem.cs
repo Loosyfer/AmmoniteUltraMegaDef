@@ -111,111 +111,123 @@ public class BattleSystem : MonoBehaviour
 
             //InputFunction();
 
-            if (script.inputGiven == true && EventSystem.current.currentSelectedGameObject.name == "SpeModuleGenerator" && script.inputvalue != null)
+            if (EventSystem.current.currentSelectedGameObject != null)
             {
-                GameObject canvas = GameObject.Find("/Malla");
-                int k = Random.Range(0, 11);
-                script.inputGiven = false;
-                int index = int.Parse(script.inputvalue);
-                GameObject go = Instantiate(moduleGenPrefab, new Vector3(236, 650, -1), Quaternion.identity) as GameObject;
-                go.transform.parent = canvas.transform;
-                ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
-                modules.Add(go);
-                Yrt.nameText.text = modulesInfo.names[index];
-                Yrt.detailsText.text = modulesInfo.moduleDetails[index];
-                Yrt.type = modulesInfo.moduleType[index];
-                Yrt.req = modulesInfo.req[k];
-                Yrt.sliderLength = modulesInfo.cooldown[index];
-                if (Yrt.sliderLength == 0)
+                if (script.inputGiven == true && EventSystem.current.currentSelectedGameObject.name == "SpeModuleGenerator" && script.inputvalue != null)
                 {
-                    Destroy(go.transform.GetChild(1).gameObject);
-                    Destroy(go.transform.GetChild(0).gameObject);
-                    Destroy(go.transform.GetChild(6).gameObject);
-                }
-                Image imagen = go.GetComponent<Image>();
-                if (Yrt.type == (ModuleType)0) imagen.color = new Color(0, 1f, 0, 1);
-                if (Yrt.type == (ModuleType)1) imagen.color = new Color(1, 0, 0, 1);
-                if (Yrt.type == (ModuleType)2) imagen.color = new Color(0, 0.6f, 0.839f, 1);
-                if (Yrt.type == (ModuleType)4) imagen.color = new Color(1, 0.92f, 0.016f, 1);
-                if (Yrt.type == (ModuleType)5) imagen.color = new Color(1, 0.93f, 0, 1);
-            }
-
-            if (script.inputGiven == true && EventSystem.current.currentSelectedGameObject.name == "MemberGenerator" && script.inputvalue != null)
-            {
-                GameObject canvas = GameObject.Find("/Malla");
-                int l = Random.Range(0, 5);
-                script.inputGiven = false;
-                int i = int.Parse(script.inputvalue);
-                int index1 = (int) Mathf.Floor(i/1000);
-                    int index2 = (int) (i - index1*1000);
-                Debug.Log(index1 + index2);
-                GameObject go = Instantiate(memberGenPrefab, new Vector3(336, 650, -1), Quaternion.identity) as GameObject;
-                go.transform.parent = canvas.transform;
-                MemberHUD Yrt = go.GetComponent<MemberHUD>();
-                members.Add(go);
-                Yrt.nameText.text = membersInfo.names[l];
-                Yrt.profDetailsText.text = membersInfo.profDescription[index1];
-                Yrt.traitDetailsText.text = membersInfo.tDescription[index2];
-                Debug.Log(membersInfo.tDescription[index2]);
-                Yrt.trait.text = membersInfo.traitList[index2];
-                Yrt.profession = (ProfessionType)index1;
-                Yrt.profPrice.text = membersInfo.profPrice[index1].ToString();
-                Yrt.traitPrice.text = membersInfo.traitPrice[index2].ToString();
-                Yrt.totalPrice.text = (membersInfo.profPrice[index1] + membersInfo.traitPrice[index2]).ToString();
-            }
-
-                if (script.inputGiven == true && EventSystem.current.currentSelectedGameObject.name == "ModuleGenerator" && script.inputvalue != null)
-            {
-                script.inputGiven = false;
-                int cyclelenght = int.Parse(script.inputvalue);
-                GameObject canvas = GameObject.Find("/Malla");
-                for (int i = 0; i < cyclelenght; i++)
-                {
-                    int j = Random.Range(0, 149);
+                    GameObject canvas = GameObject.Find("/Malla");
                     int k = Random.Range(0, 11);
-                    GameObject go = Instantiate(moduleGenPrefab, new Vector3(236 + i * 250, 850, -1), Quaternion.identity) as GameObject;
+                    script.inputGiven = false;
+                    int index = int.Parse(script.inputvalue);
+                    GameObject go = Instantiate(moduleGenPrefab, new Vector3(236, 650, -1), Quaternion.identity) as GameObject;
                     go.transform.parent = canvas.transform;
-                    tryArray[i] = go;
-                    ModuleHUD Yrt = tryArray[i].GetComponent<ModuleHUD>();
+                    ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
                     modules.Add(go);
-                    Yrt.nameText.text = modulesInfo.names[j];
-                    Yrt.detailsText.text = modulesInfo.moduleDetails[j];
-                    Yrt.type = modulesInfo.moduleType[j];
+                    Yrt.nameText.text = modulesInfo.names[index];
+                    Yrt.detailsText.text = modulesInfo.moduleDetails[index];
+                    Yrt.type = modulesInfo.moduleType[index];
                     Yrt.req = modulesInfo.req[k];
-                    Yrt.sliderLength = modulesInfo.cooldown[j];
+                    Yrt.sliderLength = modulesInfo.cooldown[index];
                     if (Yrt.sliderLength == 0)
                     {
                         Destroy(go.transform.GetChild(1).gameObject);
-                        Destroy(go.transform.GetChild(0).gameObject);
-                        Destroy(go.transform.GetChild(6).gameObject);
                     }
-                    Image imagen = tryArray[i].GetComponent<Image>();
-                    if (Yrt.type == (ModuleType)0) imagen.color = new Color(0, 1f, 0, 1);
-                    if (Yrt.type == (ModuleType)1) imagen.color = new Color(1, 0, 0, 1);
-                    if (Yrt.type == (ModuleType)2) imagen.color = new Color(0, 0.6f, 0.839f, 1);
-                    if (Yrt.type == (ModuleType)4) imagen.color = new Color(1, 0.92f, 0.016f, 1);
-                    if (Yrt.type == (ModuleType)5) imagen.color = new Color(1, 0.93f, 0, 1);
+                    else
+                    {
+                        go.transform.GetChild(1).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+                        go.transform.GetChild(1).GetComponent<Slider>().value = Yrt.sliderLength;
+                    }
+                    Image imagen = go.GetComponent<Image>();
+                    if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.3686275f, 0.627451f, 0.4745098f, 1);
+                    if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.8431373f, 0.4705882f, 0.4117647f, 1);
+                    if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.4666667f, 0.6705883f, 0.7882353f, 1);
+                    if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.945098f, 0.8f, 0.5294118f, 1);
+                    if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843137f, 1, 0.2196078f, 1);
                 }
 
-                for (int i = 0; i < cyclelenght; i++)
+
+                if (script.inputGiven == true && EventSystem.current.currentSelectedGameObject.name == "MemberGenerator" && script.inputvalue != null)
                 {
-                    int j = Random.Range(0, 182);
+                    GameObject canvas = GameObject.Find("/Malla");
                     int l = Random.Range(0, 5);
-                    int k = Random.Range(0, 12);
-                    GameObject go = Instantiate(memberGenPrefab, new Vector3(236 + i * 250, 950, -1), Quaternion.identity) as GameObject;
+                    script.inputGiven = false;
+                    int i = int.Parse(script.inputvalue);
+                    int index1 = (int)Mathf.Floor(i / 1000);
+                    int index2 = (int)(i - index1 * 1000);
+                    Debug.Log(index1 + index2);
+                    GameObject go = Instantiate(memberGenPrefab, new Vector3(336, 650, -1), Quaternion.identity) as GameObject;
                     go.transform.parent = canvas.transform;
-                    tryArrayy[i] = go;
+                    MemberHUD Yrt = go.GetComponent<MemberHUD>();
                     members.Add(go);
-                    MemberHUD Yrt = tryArrayy[i].GetComponent<MemberHUD>();
                     Yrt.nameText.text = membersInfo.names[l];
-                    Yrt.profDetailsText.text = membersInfo.profDescription[k];
-                    Yrt.traitDetailsText.text = membersInfo.tDescription[0];
-                    Yrt.trait.text = membersInfo.traitList[j];
-                    Yrt.profession = (ProfessionType)k;
-                    Yrt.profPrice.text = membersInfo.profPrice[k].ToString();
-                    Yrt.traitPrice.text = membersInfo.traitPrice[j].ToString();
-                    Yrt.totalPrice.text = (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
-                    Image imagen = tryArrayy[i].GetComponent<Image>();
+                    Yrt.profDetailsText.text = membersInfo.profDescription[index1];
+                    Yrt.traitDetailsText.text = membersInfo.tDescription[index2];
+                    Debug.Log(membersInfo.tDescription[index2]);
+                    Yrt.trait.text = membersInfo.traitList[index2];
+                    Yrt.profession = (ProfessionType)index1;
+                    Yrt.profPrice.text = membersInfo.profPrice[index1].ToString();
+                    Yrt.traitPrice.text = membersInfo.traitPrice[index2].ToString();
+                    Yrt.totalPrice.text = (membersInfo.profPrice[index1] + membersInfo.traitPrice[index2]).ToString();
+                    Yrt.performance = 50;
+                }
+
+                if (script.inputGiven == true && EventSystem.current.currentSelectedGameObject.name == "ModuleGenerator" && script.inputvalue != null)
+                {
+                    script.inputGiven = false;
+                    int cyclelenght = int.Parse(script.inputvalue);
+                    GameObject canvas = GameObject.Find("/Malla");
+                    for (int i = 0; i < cyclelenght; i++)
+                    {
+                        int j = Random.Range(0, 149);
+                        int k = Random.Range(0, 11);
+                        GameObject go = Instantiate(moduleGenPrefab, new Vector3(236 + i * 250, 850, -1), Quaternion.identity) as GameObject;
+                        go.transform.parent = canvas.transform;
+                        tryArray[i] = go;
+                        ModuleHUD Yrt = tryArray[i].GetComponent<ModuleHUD>();
+                        modules.Add(go);
+                        Yrt.nameText.text = modulesInfo.names[j];
+                        Yrt.detailsText.text = modulesInfo.moduleDetails[j];
+                        Yrt.type = modulesInfo.moduleType[j];
+                        Yrt.req = modulesInfo.req[k];
+                        Yrt.sliderLength = modulesInfo.cooldown[j];
+                        if (Yrt.sliderLength == 0)
+                        {
+                            Destroy(go.transform.GetChild(1).gameObject);
+                        }
+                        else
+                        {
+                            go.transform.GetChild(1).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+                            go.transform.GetChild(1).GetComponent<Slider>().value = Yrt.sliderLength;
+                        }
+                        Image imagen = tryArray[i].GetComponent<Image>();
+                        if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.3686275f, 0.627451f, 0.4745098f, 1);
+                        if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.8431373f, 0.4705882f, 0.4117647f, 1);
+                        if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.4666667f, 0.6705883f, 0.7882353f, 1);
+                        if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.945098f, 0.8f, 0.5294118f, 1);
+                        if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843137f, 1, 0.2196078f, 1);
+                    }
+
+                    for (int i = 0; i < cyclelenght; i++)
+                    {
+                        int j = Random.Range(0, 182);
+                        int l = Random.Range(0, 5);
+                        int k = Random.Range(0, 12);
+                        GameObject go = Instantiate(memberGenPrefab, new Vector3(236 + i * 250, 950, -1), Quaternion.identity) as GameObject;
+                        go.transform.parent = canvas.transform;
+                        tryArrayy[i] = go;
+                        members.Add(go);
+                        MemberHUD Yrt = tryArrayy[i].GetComponent<MemberHUD>();
+                        Yrt.nameText.text = membersInfo.names[l];
+                        Yrt.profDetailsText.text = membersInfo.profDescription[k];
+                        Yrt.traitDetailsText.text = membersInfo.tDescription[0];
+                        Yrt.trait.text = membersInfo.traitList[j];
+                        Yrt.profession = (ProfessionType)k;
+                        Yrt.profPrice.text = membersInfo.profPrice[k].ToString();
+                        Yrt.traitPrice.text = membersInfo.traitPrice[j].ToString();
+                        Yrt.totalPrice.text = (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
+                        Yrt.performance = 50;
+                        Image imagen = tryArrayy[i].GetComponent<Image>();
+                    }
                 }
             }
 
@@ -299,13 +311,14 @@ public class BattleSystem : MonoBehaviour
             if (length == 0 || !active) { }
             else
             {
-                float f = (float)1 / length;
+                
                 float operation;
-                module.transform.GetChild(1).gameObject.GetComponent<Slider>().value -= f;
+                module.transform.GetChild(1).gameObject.GetComponent<Slider>().value -= 1;
                 module.gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                if (module.transform.GetChild(1).gameObject.GetComponent<Slider>().value - f < 0.0001f)
+                if (module.transform.GetChild(1).gameObject.GetComponent<Slider>().value < 0.0001f)
                 {
-                    module.transform.GetChild(1).gameObject.GetComponent<Slider>().value = 1;
+
+                    module.transform.GetChild(1).gameObject.GetComponent<Slider>().value = module.transform.GetChild(1).gameObject.GetComponent<Slider>().maxValue;
                     module.gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
                 }
             }

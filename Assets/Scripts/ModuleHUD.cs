@@ -15,6 +15,7 @@ public class ModuleHUD : MonoBehaviour
     public Slider slider;
     public int sliderLength;
     public bool cooldownActive = false;
+    public bool selected;
 
     public void SetHUD(Module module)
     {
@@ -22,6 +23,18 @@ public class ModuleHUD : MonoBehaviour
         detailsText.text = module.details;
         type = module.type;
         req = module.req;
+    }
+
+    void Update()
+    {
+        if (selected)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
 }
