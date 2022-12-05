@@ -117,7 +117,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(620 + (i * 140), 300 + (79 * j), -1), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(720 + (i * 140), 350 + (79 * j), -1), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotFolder.transform;
                 string name = "";
                 name = name + j;
@@ -213,7 +213,7 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("Your number was too high");
             return;
         }
-        GameObject go = Instantiate(moduleGenPrefab, new Vector3(236, 650, -1), Quaternion.identity) as GameObject;
+        GameObject go = Instantiate(moduleGenPrefab, new Vector3(908, 960, -1), Quaternion.identity) as GameObject;
         go.transform.parent = canvas.transform;
         ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
         modules.Add(go);
@@ -244,11 +244,11 @@ public class BattleSystem : MonoBehaviour
             go.transform.GetChild(6).GetComponent<Slider>().value = Yrt.sliderLength;
         }
         Image imagen = go.transform.GetComponent<Image>();
-        if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.3686275f, 0.627451f, 0.4745098f, 1);
-        if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.8431373f, 0.4705882f, 0.4117647f, 1);
-        if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.4666667f, 0.6705883f, 0.7882353f, 1);
-        if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.945098f, 0.8f, 0.5294118f, 1);
-        if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843137f, 1, 0.2196078f, 1);
+        if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+        if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+        if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+        if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.82f, 0.82f, 0.82f, 1);
+        if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
     }
 
     public void GenerateMembers(string s)
@@ -263,7 +263,7 @@ public class BattleSystem : MonoBehaviour
         int index1 = (int)Mathf.Floor(i / 1000);
         int index2 = (int)(i - index1 * 1000);
         Debug.Log(index1 + index2);
-        GameObject go = Instantiate(memberGenPrefab, new Vector3(336, 650, -1), Quaternion.identity) as GameObject;
+        GameObject go = Instantiate(memberGenPrefab, new Vector3(908, 1025, -1), Quaternion.identity) as GameObject;
         go.transform.parent = canvas.transform;
         MemberHUD Yrt = go.GetComponent<MemberHUD>();
         members.Add(go);
@@ -297,7 +297,7 @@ public class BattleSystem : MonoBehaviour
         {
             int j = Random.Range(0, 149);
             int k = Random.Range(0, 11);
-            GameObject go = Instantiate(moduleGenPrefab, new Vector3(236 + i * 250, 850, -1), Quaternion.identity) as GameObject;
+            GameObject go = Instantiate(moduleGenPrefab, new Vector3(288 + i * 155, 960, -1), Quaternion.identity) as GameObject;
             go.transform.parent = canvas.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
             modules.Add(go);
@@ -328,11 +328,11 @@ public class BattleSystem : MonoBehaviour
                 go.transform.GetChild(4).GetComponent<Slider>().value = Yrt.sliderLength;
             }
             Image imagen = go.transform.GetComponent<Image>();
-            if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.3686275f, 0.627451f, 0.4745098f, 1);
-            if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.8431373f, 0.4705882f, 0.4117647f, 1);
-            if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.4666667f, 0.6705883f, 0.7882353f, 1);
-            if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.945098f, 0.8f, 0.5294118f, 1);
-            if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843137f, 1, 0.2196078f, 1);
+            if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+            if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+            if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+            if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.82f, 0.82f, 0.82f, 1);
+            if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
         }
 
         for (int i = 0; i < cyclelength; i++)
@@ -340,7 +340,7 @@ public class BattleSystem : MonoBehaviour
             int j = Random.Range(0, 182);
             int l = Random.Range(0, 5);
             int k = Random.Range(0, 12);
-            GameObject go = Instantiate(memberGenPrefab, new Vector3(236 + i * 250, 950, -1), Quaternion.identity) as GameObject;
+            GameObject go = Instantiate(memberGenPrefab, new Vector3(288 + i * 155, 1025, -1), Quaternion.identity) as GameObject;
             go.transform.parent = canvas.transform;
             members.Add(go);
             MemberHUD Yrt = go.GetComponent<MemberHUD>();
@@ -371,7 +371,7 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("Your number was too high");
             return;
         }
-        GameObject go = Instantiate(megaGenPrefab, new Vector3(136, 650, -1), Quaternion.identity) as GameObject;
+        GameObject go = Instantiate(megaGenPrefab, new Vector3(768, 958, -1), Quaternion.identity) as GameObject;
         go.transform.parent = canvas.transform;
         MegaHUD ob = go.GetComponent<MegaHUD>();
         megas.Add(go);

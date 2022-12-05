@@ -20,7 +20,7 @@ public class HeartButton : MonoBehaviour
         image = this.GetComponent<Image>();
         if (active)
         {
-            image.color = new Color32(219, 57, 57, 255);
+            image.color = new Color32(2, 57, 57, 200);
             active = false;
         }
         else
