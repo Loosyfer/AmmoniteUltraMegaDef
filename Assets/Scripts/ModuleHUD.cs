@@ -10,7 +10,7 @@ public class ModuleHUD : MonoBehaviour
     public Text nameText;
     public Text detailsText;
     public ModuleType type;
-    public ModuleRequirements req;
+    public Text req;
     public Color Colours = new Color(1f, 1f, 1f, 1f);
     public Slider slider;
     public int sliderLength;
@@ -22,7 +22,7 @@ public class ModuleHUD : MonoBehaviour
         nameText.text = module.unitName;
         detailsText.text = module.details;
         type = module.type;
-        req = module.req;
+        req.text = module.req;
     }
 
     void Update()

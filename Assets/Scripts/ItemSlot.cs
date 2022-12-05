@@ -11,8 +11,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     private void Awake()
     {
-        GameObject cameraObject = GameObject.Find("/Main Camera");
-        camera = cameraObject.GetComponent<Camera>();
+        camera = Camera.main;
     }
 
     public void OnDrop(PointerEventData eventData)

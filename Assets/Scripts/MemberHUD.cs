@@ -33,20 +33,18 @@ public class MemberHUD : MonoBehaviour
 
     }
 
-    public void ReadStringInput(string s)
-    {
-        performance = float.Parse(s);
-    }
-
     void Update()
     {
         if (selected)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            this.transform.GetChild(4).gameObject.SetActive(true);
+            this.transform.GetChild(4).position = new Vector3(1700, 750, -2);
         }
         else
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            this.transform.GetChild(4).gameObject.SetActive(false);
         }
     }
 

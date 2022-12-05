@@ -13,5 +13,6 @@ public class Module : MonoBehaviour
 
     public string details;
 
-    public ModuleRequirements req;
+    public string req;
+
 }

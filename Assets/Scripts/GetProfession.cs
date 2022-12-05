@@ -14,5 +14,14 @@ public class GetProfession : MonoBehaviour
         myText = GetComponent<Text>();
         apoyo = transform.parent.GetComponent<MemberHUD>();
         myText.text = apoyo.profession.ToString();
+        Debug.Log(apoyo.profession.ToString());
+    }
+
+    public void UpdateProf()
+    {
+        myText = GetComponent<Text>();
+        apoyo = transform.parent.GetComponent<MemberHUD>();
+        myText.text = apoyo.profession.ToString();
+        Debug.Log(apoyo.profession.ToString());
     }
 }

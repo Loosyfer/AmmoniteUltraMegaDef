@@ -11,11 +11,12 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    private MovingObject mO;
     private bool pointerDown;
     private bool rayCastNull;
     private bool objectDragged;
     public GameObjectHolder script;
+    public GameObject malla;
+    private Vector3 mousePositionOffset;
 
     public Camera camera;
 
@@ -26,11 +27,10 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         rayCastNull = true;
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        GameObject canvasObject = GameObject.Find("/Malla");
-        canvas = canvasObject.GetComponent<Canvas>();
-        GameObject cameraObject = GameObject.Find("/Main Camera");
-        camera = cameraObject.GetComponent<Camera>();
-        script = GameObject.Find("/Malla/ButtonPanel").GetComponent<GameObjectHolder>();
+        malla = GameObject.Find("/Malla");
+        canvas = malla.GetComponent<Canvas>();
+        camera = Camera.main;
+        script = malla.transform.GetChild(17).GetComponent<GameObjectHolder>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -43,16 +43,16 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        rectTransform.position = GetMouseWorldPosition() + mousePositionOffset;
+        
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-        mO = canvas.GetComponent<MovingObject>();
-        mO.movingOn = false;
-        GetComponent<Image>().raycastTarget = true;
+        //GetComponent<Image>().raycastTarget = true;
+        camera.GetComponent<CameraZoomController>().movingOn = false;
         StartCoroutine(WaitAfterClickUp());
     }
 
@@ -63,15 +63,15 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         {
             if (hit.collider.gameObject.tag == "Member")
             {
-                GetComponent<Image>().raycastTarget = false;
+                //GetComponent<Image>().raycastTarget = false;
             }
             else
             {
                 pointerDown = true;
             }
         }
-        mO = canvas.GetComponent<MovingObject>();
-        mO.movingOn = true;
+        camera.GetComponent<CameraZoomController>().movingOn = true;
+        mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
 
     }
 
@@ -81,17 +81,22 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         if (Input.GetMouseButtonUp(0) && pointerDown && !rayCastNull && !objectDragged)
         {
             EventSystem.current.SetSelectedGameObject(gameObject);
-            if (script.activeModuleorMember != null && script.activeModuleorMember.tag == "Module")
-                script.activeModuleorMember.GetComponent<ModuleHUD>().selected = false;
-            if (script.activeModuleorMember != null && script.activeModuleorMember.tag == "Member")
-                script.activeModuleorMember.GetComponent<MemberHUD>().selected = false;
+            if (script.activeModuleorMember != null)
+            {
+                if (script.activeModuleorMember.tag == "Module")
+                    script.activeModuleorMember.GetComponent<ModuleHUD>().selected = false;
+                if (script.activeModuleorMember.tag == "Member")
+                    script.activeModuleorMember.GetComponent<MemberHUD>().selected = false;
+                if (script.activeModuleorMember.tag == "Mega")
+                    script.activeModuleorMember.GetComponent<MegaHUD>().selected = false;
+            }
             script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
             pointerDown = false;
             rayCastNull = true;
             script.activeModuleorMember.GetComponent<ModuleHUD>().selected = true;
-            mO = canvas.GetComponent<MovingObject>();
-            mO.movingOn = false;
+            camera.GetComponent<CameraZoomController>().movingOn = false;
         }
+            
     }
 
     private RaycastHit isPointerOverModule()
@@ -109,5 +114,10 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     {
         yield return new WaitForSeconds(0.1f);
         objectDragged = false;
+    }
+
+    private Vector3 GetMouseWorldPosition()
+    {
+        return camera.ScreenToWorldPoint(Input.mousePosition);
     }
 }

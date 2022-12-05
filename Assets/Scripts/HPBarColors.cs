@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HPBarColors : MonoBehaviour
 {
 
-    public Image imagen;
+    public SpriteRenderer imagen;
     public int swapColours = 1;
 
     public void ChangeColour()

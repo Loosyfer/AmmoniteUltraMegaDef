@@ -7,12 +7,12 @@ public class GetReq : MonoBehaviour
 {
 
     public Text myText;
-    public ModuleHUD apoyo;
+    public MegaHUD apoyo;
 
     void Start()
     {
         myText = GetComponent<Text>();
-        apoyo = transform.parent.parent.GetComponent<ModuleHUD>();
-        myText.text = apoyo.req.ToString();
+        apoyo = transform.parent.parent.GetComponent<MegaHUD>();
+        myText.text = apoyo.req.text;
     }
 }

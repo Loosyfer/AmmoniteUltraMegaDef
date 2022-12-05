@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 06cf5b9657764cc4a961b7b086e12479
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 3261
+        width: 694
+        height: 766
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fe1352ee3e8524ebd871dca2515261
+      internalID: -807728438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_1
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 3253
+        width: 716
+        height: 782
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d0656b877a83b44ba0bcaf63ffd77c
+      internalID: -1013381365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_2
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 3442
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459422f8fbb669c4fa63aec4e79deebd
+      internalID: -956439762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_3
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 3253
+        width: 706
+        height: 784
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39a153934ca2844b80c5697c99bfa44
+      internalID: 1204794868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_4
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 3233
+        width: 694
+        height: 820
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5f765ae4c66a34099ccbf0ece6af3b
+      internalID: 1792695998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_5
+      rect:
+        serializedVersion: 2
+        x: 3261
+        y: 3227
+        width: 714
+        height: 795
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48639aeb2e5a6c43b41b0f4711f6c03
+      internalID: 486178540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_6
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 2743
+        width: 1397
+        height: 444
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304d01d366e597c4ebd62f49d821a637
+      internalID: 1983503962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_7
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 2733
+        width: 1378
+        height: 462
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfaf04114ecd90645860f6ea6e68c67d
+      internalID: 441304074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_8
+      rect:
+        serializedVersion: 2
+        x: 3261
+        y: 2286
+        width: 692
+        height: 790
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf60a9324447864796d734006262c6f
+      internalID: 1010810292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_9
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2277
+        width: 1380
+        height: 392
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b12b461fa4f4d4bab72236734aea00
+      internalID: 868145577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_10
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 2257
+        width: 1390
+        height: 412
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f5c0653a441114a86ce8d05525ff76
+      internalID: 333886533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_11
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 2282
+        width: 58
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f766904861613f4f8da4d1062c6c3d2
+      internalID: 1911060064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_12
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1759
+        width: 1412
+        height: 444
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7decee96a818c48be2ccd146651c5e
+      internalID: -507186893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_13
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1759
+        width: 1396
+        height: 410
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee36d31276687f4a9150e5859a2b1c2
+      internalID: -1889633743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_14
+      rect:
+        serializedVersion: 2
+        x: 3205
+        y: 1227
+        width: 748
+        height: 942
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa227539b3ca454fbe91744f36756ff
+      internalID: 1396855654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_15
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 658
+        width: 876
+        height: 950
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfc1ab02af66a3458b4d02ec7c2b434
+      internalID: -346330846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_16
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 1100
+        width: 1556
+        height: 570
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ee3288226dc3e4684e90faee58c5f6
+      internalID: -284886241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_17
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 15
+        width: 1024
+        height: 1102
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cd0a38f33dd3840a9a759ce0fe96be
+      internalID: -1144942882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mega-Modules Unity (50%size)_7: 441304074
+      Mega-Modules Unity (50%size)_17: -1144942882
+      Mega-Modules Unity (50%size)_11: 1911060064
+      Mega-Modules Unity (50%size)_15: -346330846
+      Mega-Modules Unity (50%size)_9: 868145577
+      Mega-Modules Unity (50%size)_5: 486178540
+      Mega-Modules Unity (50%size)_10: 333886533
+      Mega-Modules Unity (50%size)_4: 1792695998
+      Mega-Modules Unity (50%size)_2: -956439762
+      Mega-Modules Unity (50%size)_16: -284886241
+      Mega-Modules Unity (50%size)_1: -1013381365
+      Mega-Modules Unity (50%size)_6: 1983503962
+      Mega-Modules Unity (50%size)_0: -807728438
+      Mega-Modules Unity (50%size)_13: -1889633743
+      Mega-Modules Unity (50%size)_8: 1010810292
+      Mega-Modules Unity (50%size)_12: -507186893
+      Mega-Modules Unity (50%size)_3: 1204794868
+      Mega-Modules Unity (50%size)_14: 1396855654
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

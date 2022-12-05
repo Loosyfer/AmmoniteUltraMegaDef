@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3828040757851088751}
   - component: {fileID: 3015353641997168482}
   - component: {fileID: 8884957687145678516}
+  - component: {fileID: 7918071207911089540}
   m_Layer: 5
   m_Name: 'ModuleSlot '
   m_TagString: ModuleSlot
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5372549}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 14.69, y: 28.8, z: 14.52, w: 29.4}
   m_Maskable: 1
@@ -90,3 +91,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
+--- !u!114 &7918071207911089540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7582567910336861899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4185a4d4f5b805544b14fd50b15e3164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0

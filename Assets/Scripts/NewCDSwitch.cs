@@ -34,24 +34,18 @@ public class NewCDSwitch : MonoBehaviour
         if (transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember != null && transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Module")
         {
             module = transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<ModuleHUD>();
-            if (transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember == null)
+            
+            if (module.sliderLength > 0)
             {
-                image.color = new Color(1, 1, 1, 1);
+                if (module.cooldownActive == false)
+                    image.color = new Color(1, 0, 0, 1);
+                else
+                    image.color = new Color(0, 1, 0, 1);
             }
-            else
-            {
-                if (module.sliderLength > 0)
-                {
-                    if (module.cooldownActive == false)
-                        image.color = new Color(1, 0, 0, 1);
-                    else
-                        image.color = new Color(0, 1, 0, 1);
-                }
                 else
                     image.color = new Color(1, 1, 1, 1);
-            }
         }
-        if (transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember == null)
+        if (transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember == null || transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
             image.color = new Color(1, 1, 1, 1);
     }
 }

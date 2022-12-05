@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class HoverOver : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler
 {
@@ -9,6 +10,7 @@ public class HoverOver : MonoBehaviour , IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         HoverPanel.SetActive(true);
     }
 

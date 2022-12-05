@@ -10,7 +10,7 @@ public class CameraZoomController : MonoBehaviour
     [SerializeField] private float zoomfactor = 100f;
     [SerializeField] private float zoomLerpSpeed = 100;
     private Vector3 dragOrigin;
-    private bool movingOn;
+    public bool movingOn;
     private MovingObject mO;
     private Canvas canvas;
     public Vector2 minPosition;
@@ -28,7 +28,7 @@ public class CameraZoomController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("MovingOn es " + movingOn);
         PanCamera();
         float ScrollData;
         ScrollData = Input.GetAxis("Mouse ScrollWheel");
@@ -40,11 +40,6 @@ public class CameraZoomController : MonoBehaviour
 
     private void PanCamera()
     {
-
-        GameObject canvasObject = GameObject.Find("/Malla");
-        canvas = canvasObject.GetComponent<Canvas>();
-        mO = canvas.GetComponent<MovingObject>();
-        movingOn = mO.movingOn;
         if (movingOn == false)
         {
             if (Input.GetMouseButtonDown(1))
