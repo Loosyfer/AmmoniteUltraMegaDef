@@ -117,7 +117,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(460 + (i * 167.8f), 260 + (94.7f * j), -1), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(620 + (i * 140), 300 + (79 * j), -1), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotFolder.transform;
                 string name = "";
                 name = name + j;
@@ -243,7 +243,7 @@ public class BattleSystem : MonoBehaviour
             go.transform.GetChild(6).GetComponent<Slider>().maxValue = Yrt.sliderLength;
             go.transform.GetChild(6).GetComponent<Slider>().value = Yrt.sliderLength;
         }
-        SpriteRenderer imagen = go.transform.GetChild(5).GetComponent<SpriteRenderer>();
+        Image imagen = go.transform.GetComponent<Image>();
         if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.3686275f, 0.627451f, 0.4745098f, 1);
         if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.8431373f, 0.4705882f, 0.4117647f, 1);
         if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.4666667f, 0.6705883f, 0.7882353f, 1);
@@ -320,14 +320,14 @@ public class BattleSystem : MonoBehaviour
             Yrt.sliderLength = modInfo.cooldown[j];
             if (Yrt.sliderLength == 0)
             {
-                Destroy(go.transform.GetChild(6).gameObject);
+                Destroy(go.transform.GetChild(4).gameObject);
             }
             else
             {
-                go.transform.GetChild(6).GetComponent<Slider>().maxValue = Yrt.sliderLength;
-                go.transform.GetChild(6).GetComponent<Slider>().value = Yrt.sliderLength;
+                go.transform.GetChild(4).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+                go.transform.GetChild(4).GetComponent<Slider>().value = Yrt.sliderLength;
             }
-            SpriteRenderer imagen = go.transform.GetChild(5).GetComponent<SpriteRenderer>();
+            Image imagen = go.transform.GetComponent<Image>();
             if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.3686275f, 0.627451f, 0.4745098f, 1);
             if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.8431373f, 0.4705882f, 0.4117647f, 1);
             if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.4666667f, 0.6705883f, 0.7882353f, 1);
@@ -390,12 +390,12 @@ public class BattleSystem : MonoBehaviour
         ob.sliderLength = megaInfo.cooldown[index];
         if (ob.sliderLength == 0)
         {
-            Destroy(go.transform.GetChild(0).gameObject);
+            Destroy(go.transform.GetChild(4).gameObject);
         }
         else
         {
-            go.transform.GetChild(0).GetComponent<Slider>().maxValue = ob.sliderLength;
-            go.transform.GetChild(0).GetComponent<Slider>().value = ob.sliderLength;
+            go.transform.GetChild(4).GetComponent<Slider>().maxValue = ob.sliderLength;
+            go.transform.GetChild(4).GetComponent<Slider>().value = ob.sliderLength;
         }
         SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();
         imagen.sprite = megaInfo.sprites[index];

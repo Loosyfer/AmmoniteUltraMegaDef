@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class HoverOver : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler
+public class HoverOver : MonoBehaviour //, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject HoverPanel;
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void Enter()
     {
         Debug.Log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         HoverPanel.SetActive(true);
     }
 
-    public void OnPointerExit(PointerEventData evenData)
+    public void Exit()
     {
         HoverPanel.SetActive(false);
     }
