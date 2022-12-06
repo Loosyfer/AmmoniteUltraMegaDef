@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ProfessionType { ARCHITECT, PSYCHOLOGIST, BIOLOGIST, DEVELOPER, ENGINEER, CADET, DOCTOR, RECRUITER, BUSINESSMAN, SCIENTIST, EXPLORER, GENERALOFFICER };
+public enum ProfessionType { Architect, Psychologist, Biologist, Developer, Engineer, Cadet, Doctor, Recruiter, Businessman, Scientist, Explorer, GeneralOficcer };
 
 public class Member : MonoBehaviour
 {

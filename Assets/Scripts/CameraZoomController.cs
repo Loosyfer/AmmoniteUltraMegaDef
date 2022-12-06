@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraZoomController : MonoBehaviour
 {
 
     private Camera cam;
     private float targetZoom;
-    [SerializeField] private float zoomfactor = 100f;
+    [SerializeField] private float zoomfactor = 200f;
     [SerializeField] private float zoomLerpSpeed = 100;
     private Vector3 dragOrigin;
     public bool movingOn;
@@ -16,6 +17,7 @@ public class CameraZoomController : MonoBehaviour
     public Vector2 minPosition;
     public Vector2 maxPosition;
     public GameObject malla;
+    private int zoomLevel;
 
 
     // Start is called before the first frame update
@@ -23,19 +25,13 @@ public class CameraZoomController : MonoBehaviour
     {
         cam = Camera.main;
         targetZoom = cam.orthographicSize;
+        zoomLevel = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("MovingOn es " + movingOn);
         PanCamera();
-        float ScrollData;
-        ScrollData = Input.GetAxis("Mouse ScrollWheel");
-
-        targetZoom -= ScrollData * zoomfactor;
-        //targetZoom = Mathf.Clamp()
-        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomLerpSpeed);
     }
 
     private void PanCamera()
@@ -54,6 +50,34 @@ public class CameraZoomController : MonoBehaviour
                 cam.transform.position += difference;
 
             }
+        }
+
+    }
+
+    public void SetCameraZoom()
+    {
+
+        float ScrollData;
+        ScrollData = Input.GetAxis("Mouse ScrollWheel");
+
+        if (ScrollData > 0 && zoomLevel < 3)
+            zoomLevel++;
+        if (ScrollData < 0 && zoomLevel > 1)
+            zoomLevel--;
+
+        Debug.Log("Zoom level is " + zoomLevel);
+
+        switch (zoomLevel)
+        {
+            case 1:
+                cam.orthographicSize = 528.3f;
+                break;
+            case 2:
+                cam.orthographicSize = 276f;
+                break;
+            case 3:
+                cam.orthographicSize = 126f;
+                break;
         }
 
     }

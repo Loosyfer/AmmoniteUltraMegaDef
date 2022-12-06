@@ -428,8 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da27ef66cb8ef548b130836bed1ce39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 0}
-  slider: {fileID: 0}
+  imagen: {fileID: 2320792744294825546}
+  swapColours: 1
 --- !u!114 &4522121522290469228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,7 +837,6 @@ GameObject:
   - component: {fileID: 685843594920946759}
   - component: {fileID: 6407723210201642051}
   - component: {fileID: 8514926322427008640}
-  - component: {fileID: 6531416776569901029}
   m_Layer: 5
   m_Name: MemberGen
   m_TagString: Member
@@ -977,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -2025167672, guid: f59512e4c2a39114489ef17911d06145, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -987,27 +986,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!223 &6531416776569901029
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2276106604882465598}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &2283596015565550228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1095,7 @@ GameObject:
   - component: {fileID: 7174131885758645727}
   - component: {fileID: 3314824118473433355}
   - component: {fileID: 317834982730925434}
-  - component: {fileID: 1125208936827884933}
+  - component: {fileID: 7539006514798535874}
   m_Layer: 5
   m_Name: TotalPrice
   m_TagString: Untagged
@@ -1187,7 +1165,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 200
---- !u!223 &1125208936827884933
+--- !u!223 &7539006514798535874
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2219,8 +2197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da27ef66cb8ef548b130836bed1ce39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 0}
-  slider: {fileID: 0}
+  imagen: {fileID: 210471034742399393}
+  swapColours: 1
 --- !u!114 &3323329164481262415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2604,9 +2582,9 @@ GameObject:
   - component: {fileID: 5707133622389489332}
   - component: {fileID: 4767538272351511747}
   - component: {fileID: 6120325423777440733}
-  - component: {fileID: 5696909931213086751}
   - component: {fileID: 5437274705522839640}
   - component: {fileID: 7534354499507661820}
+  - component: {fileID: 5145495325224139268}
   m_Layer: 5
   m_Name: HealthPoint
   m_TagString: Untagged
@@ -2694,20 +2672,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5696909931213086751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435803403886738160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da27ef66cb8ef548b130836bed1ce39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script: {fileID: 0}
-  slider: {fileID: 0}
 --- !u!114 &5437274705522839640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2752,7 +2716,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5696909931213086751}
+      - m_Target: {fileID: 5145495325224139268}
         m_TargetAssemblyTypeName: HPBarColors, Assembly-CSharp
         m_MethodName: ChangeColour
         m_Mode: 1
@@ -2794,6 +2758,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5145495325224139268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435803403886738160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da27ef66cb8ef548b130836bed1ce39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagen: {fileID: 0}
+  swapColours: 1
 --- !u!1 &8812076601875016163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3005,8 +2983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da27ef66cb8ef548b130836bed1ce39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 0}
-  slider: {fileID: 0}
+  imagen: {fileID: 9052074068971190615}
+  swapColours: 1
 --- !u!114 &594553634940633343
 MonoBehaviour:
   m_ObjectHideFlags: 0

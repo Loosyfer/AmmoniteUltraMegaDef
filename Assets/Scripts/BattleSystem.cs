@@ -173,13 +173,13 @@ public class BattleSystem : MonoBehaviour
             {
                 
                 float operation;
-                module.transform.GetChild(1).gameObject.GetComponent<Slider>().value -= 1;
-                module.gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                if (module.transform.GetChild(1).gameObject.GetComponent<Slider>().value < 0.0001f)
+                module.transform.GetChild(4).gameObject.GetComponent<Slider>().value -= 1;
+                module.gameObject.transform.GetChild(4).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                if (module.transform.GetChild(4).gameObject.GetComponent<Slider>().value < 0.0001f)
                 {
 
-                    module.transform.GetChild(1).gameObject.GetComponent<Slider>().value = module.transform.GetChild(1).gameObject.GetComponent<Slider>().maxValue;
-                    module.gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
+                    module.transform.GetChild(4).gameObject.GetComponent<Slider>().value = module.transform.GetChild(4).gameObject.GetComponent<Slider>().maxValue;
+                    module.gameObject.transform.GetChild(4).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
                 }
             }
 
@@ -220,7 +220,6 @@ public class BattleSystem : MonoBehaviour
         Yrt.nameText.text = modInfo.names[index];
         Yrt.detailsText.text = modInfo.moduleDetails[index];
         Yrt.type = modInfo.moduleType[index];
-        Debug.Log(modInfo.req[index]);
         switch (modInfo.req[index])
         {
             case "0":
@@ -236,19 +235,19 @@ public class BattleSystem : MonoBehaviour
         Yrt.sliderLength = modInfo.cooldown[index];
         if (Yrt.sliderLength == 0)
         {
-            Destroy(go.transform.GetChild(6).gameObject);
+            Destroy(go.transform.GetChild(4).gameObject);
         }
         else
         {
-            go.transform.GetChild(6).GetComponent<Slider>().maxValue = Yrt.sliderLength;
-            go.transform.GetChild(6).GetComponent<Slider>().value = Yrt.sliderLength;
+            go.transform.GetChild(4).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+            go.transform.GetChild(4).GetComponent<Slider>().value = Yrt.sliderLength;
         }
         Image imagen = go.transform.GetComponent<Image>();
         if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
         if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
         if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
-        if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.82f, 0.82f, 0.82f, 1);
-        if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+        if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+        if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
     }
 
     public void GenerateMembers(string s)
@@ -270,7 +269,6 @@ public class BattleSystem : MonoBehaviour
         Yrt.nameText.text = membersInfo.names[l];
         Yrt.profDetailsText.text = membersInfo.profDescription[index1];
         Yrt.traitDetailsText.text = membersInfo.tDescription[index2];
-        Debug.Log(membersInfo.tDescription[index2]);
         Yrt.trait.text = membersInfo.traitList[index2];
         Yrt.profession = (ProfessionType)index1;
         Yrt.profPrice.text = membersInfo.profPrice[index1].ToString();
@@ -287,7 +285,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (cyclelength > 6)
+        if (cyclelength > 5)
         {
             Debug.Log("Your number was too high");
             return;
@@ -331,8 +329,8 @@ public class BattleSystem : MonoBehaviour
             if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
             if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
             if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
-            if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.82f, 0.82f, 0.82f, 1);
-            if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+            if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+            if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
         }
 
         for (int i = 0; i < cyclelength; i++)
@@ -390,12 +388,12 @@ public class BattleSystem : MonoBehaviour
         ob.sliderLength = megaInfo.cooldown[index];
         if (ob.sliderLength == 0)
         {
-            Destroy(go.transform.GetChild(4).gameObject);
+            Destroy(go.transform.GetChild(0).gameObject);
         }
         else
         {
-            go.transform.GetChild(4).GetComponent<Slider>().maxValue = ob.sliderLength;
-            go.transform.GetChild(4).GetComponent<Slider>().value = ob.sliderLength;
+            go.transform.GetChild(0).GetComponent<Slider>().maxValue = ob.sliderLength;
+            go.transform.GetChild(0).GetComponent<Slider>().value = ob.sliderLength;
         }
         SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();
         imagen.sprite = megaInfo.sprites[index];

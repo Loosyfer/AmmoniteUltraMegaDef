@@ -29,7 +29,7 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         malla = GameObject.Find("/Malla");
         canvas = malla.GetComponent<Canvas>();
         camera = Camera.main;
-        script = malla.transform.GetChild(17).GetComponent<GameObjectHolder>();
+        script = malla.transform.GetChild(15).GetComponent<GameObjectHolder>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)

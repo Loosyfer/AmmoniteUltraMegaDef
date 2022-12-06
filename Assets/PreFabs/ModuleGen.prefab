@@ -54,7 +54,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5517068731674356912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -73,8 +73,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 7.28}
-  m_SizeDelta: {x: 109.1, y: 48.3}
+  m_AnchoredPosition: {x: 0, y: -6.62}
+  m_SizeDelta: {x: 128.6, y: 34.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1742298136167474303
 CanvasRenderer:
@@ -245,8 +245,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.07184, y: 2.8}
-  m_SizeDelta: {x: 39.90687, y: 11.235}
+  m_AnchoredPosition: {x: 2.25, y: 4}
+  m_SizeDelta: {x: 35.58, y: 4.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &327974138170647216
 MonoBehaviour:
@@ -293,9 +293,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 30
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 30
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 3.2, y: 6.4, z: 3.28, w: 6.25}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -690,8 +690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0.000061035156}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: -0.6899991, y: 0.000061035156}
+  m_SizeDelta: {x: 2.3400002, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1495999230903978604
 CanvasRenderer:
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 5
 --- !u!1 &5736516257191564504
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,8 +887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.29, y: 2.3}
-  m_SizeDelta: {x: 155.06, y: 11.4}
+  m_AnchoredPosition: {x: 1.74, y: 2.47}
+  m_SizeDelta: {x: 60, y: 11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4309174163148163314
 CanvasRenderer:
@@ -931,7 +931,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Esto Es una prueba
+  m_Text: asdfasdfas dfasdfasdfasdfasdfasdfasdf
 --- !u!114 &1583961658469117353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1011,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2883834042122814804}
+          m_TargetAssemblyTypeName: HoverOverExtend, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -1029,6 +1041,18 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2094858209216933451}
           m_TargetAssemblyTypeName: HoverOver, Assembly-CSharp
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2883834042122814804}
+          m_TargetAssemblyTypeName: HoverOverExtend, Assembly-CSharp
           m_MethodName: Exit
           m_Mode: 1
           m_Arguments:
