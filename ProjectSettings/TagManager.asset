@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Member
   - Module
+  - ModuleSlot
+  - Mega
   layers:
   - Default
   - TransparentFX

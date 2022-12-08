@@ -38,7 +38,7 @@ public class ClickMega : MonoBehaviour
     {
         GameObject target = null;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray.origin, ray.direction * 10, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
             if (!isPointerOverUIObject())
             {

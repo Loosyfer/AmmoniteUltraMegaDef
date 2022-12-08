@@ -27,14 +27,14 @@ public class MegaHUD : MonoBehaviour
 
     void Update()
     {
-        /*if (selected)
+        if (selected)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        }*/
+        }
     }
 
 }

@@ -529,7 +529,9 @@ GameObject:
   - component: {fileID: 80194500}
   - component: {fileID: 80194499}
   - component: {fileID: 80194503}
-  - component: {fileID: 80194504}
+  - component: {fileID: 80194505}
+  - component: {fileID: 80194506}
+  - component: {fileID: 80194507}
   m_Layer: 5
   m_Name: Malla
   m_TagString: Untagged
@@ -653,7 +655,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingOn: 0
---- !u!114 &80194504
+--- !u!60 &80194505
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80194498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -997.1442, y: 137.83228}
+      - {x: -997.6867, y: -548.681}
+      - {x: 912.21844, y: -547.6232}
+      - {x: 917.2346, y: 529.28656}
+      - {x: -996.09106, y: 527.74335}
+--- !u!114 &80194506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -682,6 +714,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &80194507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80194498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534fdb96c216ada469103394b09414fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &106817490 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 171825948961776049, guid: f6b10fa77fcb3674ea9ce032309f2271, type: 3}
@@ -1877,9 +1921,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 11.421186
   orthographic: 1
-  orthographic size: 528.3
+  orthographic size: 540
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -1902,8 +1946,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282680102}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 904.3, y: 528.6, z: -46.7}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 918.4, y: 529.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1925,9 +1969,8 @@ MonoBehaviour:
   zoomfactor: 100
   zoomLerpSpeed: 100
   movingOn: 0
-  minPosition: {x: 396, y: 272}
-  maxPosition: {x: 0, y: 0}
   malla: {fileID: 80194498}
+  map: {fileID: 1044336504}
 --- !u!1 &284734412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,7 +2887,8 @@ MonoBehaviour:
   memberGenPrefab: {fileID: 2276106604882465598, guid: b17789f6222097a47abf0ae6f3e5b2f8, type: 3}
   moduleSlotPrefab: {fileID: 7582567910336861899, guid: f5f118e30b152794d953615dc6edaf2e, type: 3}
   slotButtonPrefab: {fileID: 2193749514060378138, guid: 0df0f85bc186ef348a53e633e9a97928, type: 3}
-  megaGenPrefab: {fileID: 6895991420207441083, guid: e610265138033d0418d4709f92e5ecbf, type: 3}
+  megaGenHorPrefab: {fileID: 6895991420207441083, guid: e610265138033d0418d4709f92e5ecbf, type: 3}
+  megaGenVerPrefab: {fileID: 5793563803536828983, guid: fce8a272675978f44897992e2d81bdae, type: 3}
   modInfo: {fileID: 11400000, guid: 8851d5a100d27ec4f94fb952f0f4833c, type: 2}
   membersInfo: {fileID: 11400000, guid: 1de7570251df35847b027f405e81b956, type: 2}
   megaInfo: {fileID: 11400000, guid: 740121e2e76297e49962dd878c0d570c, type: 2}
@@ -8644,7 +8688,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044336501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15292,7 +15336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2055, y: -10}
+  m_AnchoredPosition: {x: 2118.07, y: 11}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962665423

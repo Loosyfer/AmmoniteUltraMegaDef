@@ -17,7 +17,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject memberGenPrefab;
     public GameObject moduleSlotPrefab;
     public GameObject slotButtonPrefab;
-    public GameObject megaGenPrefab;
+    public GameObject megaGenHorPrefab;
+    public GameObject megaGenVerPrefab;
     public ModInfo modInfo;
     public MemInfo membersInfo;
     public MegamodulesInfo megaInfo;
@@ -105,8 +106,8 @@ public class BattleSystem : MonoBehaviour
 
         GameObject canvas = GameObject.Find("/Malla");
 
-        GameObject slotFolder = canvas.transform.GetChild(20).gameObject;
-        GameObject slotButtonsFolder = canvas.transform.GetChild(21).gameObject;
+        GameObject slotFolder = canvas.transform.GetChild(18).gameObject;
+        GameObject slotButtonsFolder = canvas.transform.GetChild(19).gameObject;
 
         slots = new GameObject[42];
         buttons = new GameObject[42];
@@ -369,7 +370,11 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("Your number was too high");
             return;
         }
-        GameObject go = Instantiate(megaGenPrefab, new Vector3(768, 958, -1), Quaternion.identity) as GameObject;
+        GameObject go = new GameObject();
+        if (index <= 5)
+            go = Instantiate(megaGenHorPrefab, new Vector3(768, 958, -1), Quaternion.identity) as GameObject;
+        else
+            go = Instantiate(megaGenVerPrefab, new Vector3(768, 958, -1), Quaternion.identity) as GameObject;
         go.transform.parent = canvas.transform;
         MegaHUD ob = go.GetComponent<MegaHUD>();
         megas.Add(go);
@@ -388,12 +393,12 @@ public class BattleSystem : MonoBehaviour
         ob.sliderLength = megaInfo.cooldown[index];
         if (ob.sliderLength == 0)
         {
-            Destroy(go.transform.GetChild(0).gameObject);
+            Destroy(go.transform.GetChild(1).gameObject);
         }
         else
         {
-            go.transform.GetChild(0).GetComponent<Slider>().maxValue = ob.sliderLength;
-            go.transform.GetChild(0).GetComponent<Slider>().value = ob.sliderLength;
+            go.transform.GetChild(1).GetComponent<Slider>().maxValue = ob.sliderLength;
+            go.transform.GetChild(1).GetComponent<Slider>().value = ob.sliderLength;
         }
         SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();
         imagen.sprite = megaInfo.sprites[index];

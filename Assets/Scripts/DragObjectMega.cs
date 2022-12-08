@@ -57,8 +57,6 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown Working");
-
         RaycastHit hit = isPointerOverModule();
         if (!rayCastNull)
         {
@@ -78,7 +76,6 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     void Update()
     {
-
         if (Input.GetMouseButtonUp(0) && pointerDown && !rayCastNull && !objectDragged)
         {
             EventSystem.current.SetSelectedGameObject(gameObject);
@@ -91,6 +88,7 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                 if (script.activeModuleorMember.tag == "Mega")
                     script.activeModuleorMember.GetComponent<MegaHUD>().selected = false;
             }
+            
             script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
             pointerDown = false;
             rayCastNull = true;
