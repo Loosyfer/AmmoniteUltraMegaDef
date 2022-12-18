@@ -8,6 +8,9 @@ TagManager:
   - Module
   - ModuleSlot
   - Mega
+  - Mega2
+  - Icon
+  - Node
   layers:
   - Default
   - TransparentFX

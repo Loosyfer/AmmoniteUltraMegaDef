@@ -70,7 +70,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Sensitivity: 0
-    - _Smooth: 0.46
+    - _Smooth: 0.213
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

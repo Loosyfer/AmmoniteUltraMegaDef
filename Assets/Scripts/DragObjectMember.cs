@@ -55,11 +55,7 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        RaycastHit hit = isPointerOverMember();
-        if (!rayCastNull)
-        {
-            pointerDown = true;
-        }
+        pointerDown = true;
         camera.GetComponent<CameraZoomController>().movingOn = true;
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
 
@@ -67,7 +63,8 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && pointerDown && !rayCastNull && !objectDragged)
+        Debug.Log("pointerDown es " + pointerDown + " rayCastNull es " + rayCastNull + " objectDragged es " + objectDragged);
+        if (Input.GetMouseButtonUp(0) && pointerDown && !objectDragged)
         {
             EventSystem.current.SetSelectedGameObject(gameObject);
             if (script.activeModuleorMember != null)
@@ -85,17 +82,24 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
             script.activeModuleorMember.GetComponent<MemberHUD>().selected = true;
             camera.GetComponent<CameraZoomController>().movingOn = false;
         }
+        if (Input.GetMouseButtonUp(0))
+            pointerDown = false;
     }
 
-    private RaycastHit isPointerOverMember()
+    private bool GetRayCast()
     {
-        var ray = camera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
-            rayCastNull = false;
-        else
-            rayCastNull = true;
-        return hit;
+        RaycastHit2D[] hits;
+        hits = Physics2D.RaycastAll(Input.mousePosition, Vector2.zero);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.tag == "Member")
+            {
+                rayCastNull = false;
+                return true;
+            }
+        }
+        rayCastNull = true;
+        return false;
     }
 
     IEnumerator WaitAfterClickUp()

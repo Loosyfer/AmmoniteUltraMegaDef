@@ -8,14 +8,8 @@ public class CameraZoomController : MonoBehaviour
 {
 
     private Camera cam;
-    private float targetZoom;
-    [SerializeField] private float zoomfactor = 200f;
-    [SerializeField] private float zoomLerpSpeed = 100;
     private Vector3 dragOrigin;
     public bool movingOn;
-    private MovingObject mO;
-    private Canvas canvas;
-    public GameObject malla;
     private int zoomLevel;
     [SerializeField]
     private RawImage map;
@@ -26,7 +20,6 @@ public class CameraZoomController : MonoBehaviour
     void Awake()
     {
         cam = Camera.main;
-        targetZoom = cam.orthographicSize;
         zoomLevel = 1;
         mapMinX = map.transform.position.x - map.GetComponent<RectTransform>().sizeDelta.x / 2f;
         mapMaxX = map.transform.position.x + map.GetComponent<RectTransform>().sizeDelta.x / 2f;
@@ -38,6 +31,7 @@ public class CameraZoomController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (cam.gameObject.activeSelf)
         PanCamera();
     }
 
@@ -62,6 +56,8 @@ public class CameraZoomController : MonoBehaviour
 
     public void SetCameraZoom()
     {
+        if (!cam.gameObject.activeSelf)
+            return;
         int previousZoomLevel;
         previousZoomLevel = zoomLevel;
         float ScrollData;
@@ -79,7 +75,7 @@ public class CameraZoomController : MonoBehaviour
                     StartCoroutine(ScalingZoom(540, ScrollData));
                 break;
             case 2:
-                
+
                 if (zoomLevel != previousZoomLevel)
                     StartCoroutine(ScalingZoom(276, ScrollData));
                 break;

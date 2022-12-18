@@ -23,4 +23,8 @@ public class Member : MonoBehaviour
     public int traitPrice;
 
     public int performance;
+
+    public string secTrait;
+
+    public string secTraitDescription;
 }

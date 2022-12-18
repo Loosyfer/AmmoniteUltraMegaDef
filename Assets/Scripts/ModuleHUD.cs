@@ -11,11 +11,15 @@ public class ModuleHUD : MonoBehaviour
     public Text detailsText;
     public ModuleType type;
     public Text req;
+    public int price;
     public Color Colours = new Color(1f, 1f, 1f, 1f);
     public Slider slider;
     public int sliderLength;
     public bool cooldownActive = false;
     public bool selected;
+    public bool WFlooded;
+    public bool SFlooded;
+    public bool Freezed;
 
     public void SetHUD(Module module)
     {
@@ -23,6 +27,10 @@ public class ModuleHUD : MonoBehaviour
         detailsText.text = module.details;
         type = module.type;
         req.text = module.req;
+        price = module.price;
+        WFlooded = false;
+        SFlooded = false;
+        Freezed = false;
     }
 
     void Update()
@@ -30,11 +38,21 @@ public class ModuleHUD : MonoBehaviour
         if (selected)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            this.transform.GetChild(2).gameObject.SetActive(true);
         }
         else
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            this.transform.GetChild(2).gameObject.SetActive(false);
         }
+        if (WFlooded)
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+        else
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        if (SFlooded)
+            gameObject.transform.GetChild(5).gameObject.SetActive(true);
+        else
+            gameObject.transform.GetChild(5).gameObject.SetActive(false);
     }
 
 }

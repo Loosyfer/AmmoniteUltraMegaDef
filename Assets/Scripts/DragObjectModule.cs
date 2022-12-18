@@ -58,18 +58,13 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        RaycastHit hit = isPointerOverModule();
-        if (!rayCastNull)
+        if (GetRaycast())
         {
-            if (hit.collider.gameObject.tag == "Member")
-            {
-                //GetComponent<Image>().raycastTarget = false;
-            }
-            else
-            {
-                pointerDown = true;
-            }
+            Debug.Log("Todo funciona a pedir de Milhouse");
+            GetComponent<Image>().raycastTarget = false;
         }
+        else
+            pointerDown = true;
         camera.GetComponent<CameraZoomController>().movingOn = true;
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
 
@@ -78,7 +73,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     void Update()
     {
 
-        if (Input.GetMouseButtonUp(0) && pointerDown && !rayCastNull && !objectDragged)
+        if (Input.GetMouseButtonUp(0) && pointerDown && !objectDragged)
         {
             EventSystem.current.SetSelectedGameObject(gameObject);
             if (script.activeModuleorMember != null)
@@ -99,15 +94,16 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
             
     }
 
-    private RaycastHit isPointerOverModule()
+    private bool GetRaycast()
     {
-        var ray = camera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
-            rayCastNull = false;
-        else
-            rayCastNull = true;
-        return hit;
+        RaycastHit2D[] hits;
+        hits = Physics2D.RaycastAll(Input.mousePosition, Vector2.zero);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.tag == "Member")
+                return true;
+        }
+        return false;
     }
 
     IEnumerator WaitAfterClickUp()

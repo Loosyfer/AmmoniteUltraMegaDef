@@ -10,7 +10,6 @@ public class HoverOver : MonoBehaviour //, IPointerEnterHandler, IPointerExitHan
 
     public void Enter()
     {
-        Debug.Log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         HoverPanel.SetActive(true);
     }
 

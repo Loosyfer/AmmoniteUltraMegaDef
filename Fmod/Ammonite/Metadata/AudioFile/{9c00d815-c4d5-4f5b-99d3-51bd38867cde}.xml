@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9c00d815-c4d5-4f5b-99d3-51bd38867cde}">
+		<property name="assetPath">
+			<value>3 layer Calm.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>142.17393749999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{adbdb7e0-3ff1-4eec-9713-4efffaf20917}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -15,4 +15,6 @@ public class Module : MonoBehaviour
 
     public string req;
 
+    public int price;
+
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -15,12 +17,14 @@ public class BattleSystem : MonoBehaviour
     public GameObject[] modulearray;
     public bool activeSelf = true;
     public GameObject memberGenPrefab;
+    public GameObject memberBioPrefab;
     public GameObject moduleSlotPrefab;
     public GameObject slotButtonPrefab;
-    public GameObject megaGenHorPrefab;
-    public GameObject megaGenVerPrefab;
+    public GameObject megaHorPrefab;
+    public GameObject megaVerPrefab;
     public ModInfo modInfo;
     public MemInfo membersInfo;
+    public BioInfo bioInfo;
     public MegamodulesInfo megaInfo;
     private int loopNumber = 0;
     public List<GameObject> modules = new List<GameObject>();
@@ -30,6 +34,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject[] slots;
     private GameObject[] buttons;
     private bool destroyedSlots;
+    public int[] stackeos = new int[5];
+    public int[] mStackeos = new int[12];
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -118,7 +124,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(720 + (i * 140), 350 + (79 * j), -1), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(720 + (i * 140), 350 + (79 * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotFolder.transform;
                 string name = "";
                 name = name + j;
@@ -138,7 +144,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(760 + (i * 21), 50 + (17 * j), -1), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(760 + (i * 21), 50 + (17 * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotButtonsFolder.transform;
                 string name = "";
                 name = name + j;
@@ -174,16 +180,49 @@ public class BattleSystem : MonoBehaviour
             {
                 
                 float operation;
-                module.transform.GetChild(4).gameObject.GetComponent<Slider>().value -= 1;
-                module.gameObject.transform.GetChild(4).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                if (module.transform.GetChild(4).gameObject.GetComponent<Slider>().value < 0.0001f)
+                module.transform.GetChild(8).gameObject.GetComponent<Slider>().value -= 1;
+                module.gameObject.transform.GetChild(8).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                if (module.transform.GetChild(8).gameObject.GetComponent<Slider>().value < 0.0001f)
                 {
 
-                    module.transform.GetChild(4).gameObject.GetComponent<Slider>().value = module.transform.GetChild(4).gameObject.GetComponent<Slider>().maxValue;
-                    module.gameObject.transform.GetChild(4).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
+                    module.transform.GetChild(8).gameObject.GetComponent<Slider>().value = module.transform.GetChild(8).gameObject.GetComponent<Slider>().maxValue;
+                    module.gameObject.transform.GetChild(8).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
                 }
             }
 
+        }
+        foreach (GameObject mega in megas)
+        {
+            int length = mega.GetComponent<MegaHUD>().sliderLength;
+            bool active = mega.GetComponent<MegaHUD>().cooldownActive;
+            if (length == 0 || !active) { }
+            else
+            {
+
+                float operation;
+                if (mega.tag == "Mega")
+                {
+                    mega.transform.GetChild(12).gameObject.GetComponent<Slider>().value -= 1;
+                    mega.gameObject.transform.GetChild(12).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                    if (mega.transform.GetChild(12).gameObject.GetComponent<Slider>().value < 0.0001f)
+                    {
+
+                        mega.transform.GetChild(12).gameObject.GetComponent<Slider>().value = mega.transform.GetChild(12).gameObject.GetComponent<Slider>().maxValue;
+                        mega.gameObject.transform.GetChild(12).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
+                    }
+                }
+                else
+                {
+                    mega.transform.GetChild(10).gameObject.GetComponent<Slider>().value -= 1;
+                    mega.gameObject.transform.GetChild(10).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                    if (mega.transform.GetChild(10).gameObject.GetComponent<Slider>().value < 0.0001f)
+                    {
+
+                        mega.transform.GetChild(10).gameObject.GetComponent<Slider>().value = mega.transform.GetChild(10).gameObject.GetComponent<Slider>().maxValue;
+                        mega.gameObject.transform.GetChild(10).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
+                    }
+                }
+            }
         }
     }
 
@@ -202,6 +241,7 @@ public class BattleSystem : MonoBehaviour
     public void GenerateModules(string s)
     {
         GameObject canvas = GameObject.Find("/Malla");
+        GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
         int k = Random.Range(0, 11);
         if (!int.TryParse(s, out int index))
         {
@@ -209,17 +249,18 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (index > 160)
+        if (index > 164)
         {
             Debug.Log("Your number was too high");
             return;
         }
-        GameObject go = Instantiate(moduleGenPrefab, new Vector3(908, 960, -1), Quaternion.identity) as GameObject;
-        go.transform.parent = canvas.transform;
+        GameObject go = Instantiate(moduleGenPrefab, new Vector3(908, 960, 0), Quaternion.identity) as GameObject;
+        go.transform.parent = modulesFolder.transform;
         ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
         modules.Add(go);
         Yrt.nameText.text = modInfo.names[index];
-        Yrt.detailsText.text = modInfo.moduleDetails[index];
+        Yrt.detailsText.text = modInfo.names[index] + " = " + modInfo.moduleDetails[index];
+        Yrt.price = modInfo.modulePrice[index];
         Yrt.type = modInfo.moduleType[index];
         switch (modInfo.req[index])
         {
@@ -236,25 +277,56 @@ public class BattleSystem : MonoBehaviour
         Yrt.sliderLength = modInfo.cooldown[index];
         if (Yrt.sliderLength == 0)
         {
-            Destroy(go.transform.GetChild(4).gameObject);
+            Destroy(go.transform.GetChild(8).gameObject);
         }
         else
         {
-            go.transform.GetChild(4).GetComponent<Slider>().maxValue = Yrt.sliderLength;
-            go.transform.GetChild(4).GetComponent<Slider>().value = Yrt.sliderLength;
+            go.transform.GetChild(8).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+            go.transform.GetChild(8).GetComponent<Slider>().value = Yrt.sliderLength;
         }
         Image imagen = go.transform.GetComponent<Image>();
-        if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
-        if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
-        if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
-        if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
-        if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
+        if (Yrt.type == (ModuleType)0)
+        {
+            imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+            stackeos[0]++;
+            canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[0];
+        }
+        if (Yrt.type == (ModuleType)1)
+        { 
+            imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+            stackeos[1]++;
+            canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[1];
+        }
+        if (Yrt.type == (ModuleType)2)
+        {
+            imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+            stackeos[2]++;
+            canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[2];
+        }
+        if (Yrt.type == (ModuleType)3)
+        {
+            stackeos[3]++;
+            canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[3];
+        }
+        if (Yrt.type == (ModuleType)4)
+        {
+            imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+            stackeos[4]++;
+            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+        }
+        if (Yrt.type == (ModuleType)5)
+        {
+            imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
+            stackeos[4]++;
+            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+        }
     }
 
     public void GenerateMembers(string s)
     {
         GameObject canvas = GameObject.Find("/Malla");
-        int l = Random.Range(0, 5);
+        GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
+        int l = Random.Range(0, membersInfo.names.Length);
         if (!int.TryParse(s, out int i))
         {
             Debug.Log("Try inputting a valid integer");
@@ -263,19 +335,22 @@ public class BattleSystem : MonoBehaviour
         int index1 = (int)Mathf.Floor(i / 1000);
         int index2 = (int)(i - index1 * 1000);
         Debug.Log(index1 + index2);
-        GameObject go = Instantiate(memberGenPrefab, new Vector3(908, 1025, -1), Quaternion.identity) as GameObject;
-        go.transform.parent = canvas.transform;
+        GameObject go = Instantiate(memberGenPrefab, new Vector3(908, 1025, 0), Quaternion.identity) as GameObject;
+        go.transform.parent = membersFolder.transform;
         MemberHUD Yrt = go.GetComponent<MemberHUD>();
         members.Add(go);
         Yrt.nameText.text = membersInfo.names[l];
-        Yrt.profDetailsText.text = membersInfo.profDescription[index1];
-        Yrt.traitDetailsText.text = membersInfo.tDescription[index2];
+        Yrt.profDetailsText.text = (ProfessionType)index1 + " = " + membersInfo.profDescription[index1];
+        Yrt.traitDetailsText.text = membersInfo.traitList[index2] + " = " + membersInfo.tDescription[index2];
         Yrt.trait.text = membersInfo.traitList[index2];
         Yrt.profession = (ProfessionType)index1;
         Yrt.profPrice.text = membersInfo.profPrice[index1].ToString();
         Yrt.traitPrice.text = membersInfo.traitPrice[index2].ToString();
         Yrt.totalPrice.text = (membersInfo.profPrice[index1] + membersInfo.traitPrice[index2]).ToString();
         Yrt.performance = 50;
+        mStackeos[index1]++;
+        canvas.transform.GetChild(30).GetChild(index1 + 5).GetChild(0).GetComponent<TMP_Text>().text = "x" + mStackeos[index1];  
+
     }
 
     public void Generate(string s)
@@ -292,17 +367,20 @@ public class BattleSystem : MonoBehaviour
             return;
         }
         GameObject canvas = GameObject.Find("/Malla");
+        GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
+        GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = Random.Range(0, 149);
+            int j = Random.Range(0, 165);
             int k = Random.Range(0, 11);
-            GameObject go = Instantiate(moduleGenPrefab, new Vector3(288 + i * 155, 960, -1), Quaternion.identity) as GameObject;
-            go.transform.parent = canvas.transform;
+            GameObject go = Instantiate(moduleGenPrefab, new Vector3(288 + i * 155, 960, 0), Quaternion.identity) as GameObject;
+            go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
             modules.Add(go);
             Debug.Log(modInfo.names[j]);
             Yrt.nameText.text = modInfo.names[j];
-            Yrt.detailsText.text = modInfo.moduleDetails[j];
+            Yrt.detailsText.text = modInfo.names[j] + " = " + modInfo.moduleDetails[j];
+            Yrt.price = modInfo.modulePrice[j];
             Yrt.type = modInfo.moduleType[j];
             switch (modInfo.req[j])
             {
@@ -319,33 +397,63 @@ public class BattleSystem : MonoBehaviour
             Yrt.sliderLength = modInfo.cooldown[j];
             if (Yrt.sliderLength == 0)
             {
-                Destroy(go.transform.GetChild(4).gameObject);
+                Destroy(go.transform.GetChild(8).gameObject);
             }
             else
             {
-                go.transform.GetChild(4).GetComponent<Slider>().maxValue = Yrt.sliderLength;
-                go.transform.GetChild(4).GetComponent<Slider>().value = Yrt.sliderLength;
+                go.transform.GetChild(8).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+                go.transform.GetChild(8).GetComponent<Slider>().value = Yrt.sliderLength;
             }
             Image imagen = go.transform.GetComponent<Image>();
-            if (Yrt.type == (ModuleType)0) imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
-            if (Yrt.type == (ModuleType)1) imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
-            if (Yrt.type == (ModuleType)2) imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
-            if (Yrt.type == (ModuleType)4) imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
-            if (Yrt.type == (ModuleType)5) imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
+            if (Yrt.type == (ModuleType)0)
+            {
+                imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+                stackeos[0]++;
+                canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[0];
+            }
+            if (Yrt.type == (ModuleType)1)
+            {
+                imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+                stackeos[1]++;
+                canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[1];
+            }
+            if (Yrt.type == (ModuleType)2)
+            {
+                imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+                stackeos[2]++;
+                canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[2];
+            }
+            if (Yrt.type == (ModuleType)3)
+            {
+                stackeos[3]++;
+                canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[3];
+            }
+            if (Yrt.type == (ModuleType)4)
+            {
+                imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+                stackeos[4]++;
+                canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+            }
+            if (Yrt.type == (ModuleType)5)
+            {
+                imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
+                stackeos[4]++;
+                canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+            }
         }
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = Random.Range(0, 182);
-            int l = Random.Range(0, 5);
+            int j = Random.Range(0, 187);
+            int l = Random.Range(0, membersInfo.names.Length);
             int k = Random.Range(0, 12);
-            GameObject go = Instantiate(memberGenPrefab, new Vector3(288 + i * 155, 1025, -1), Quaternion.identity) as GameObject;
-            go.transform.parent = canvas.transform;
+            GameObject go = Instantiate(memberGenPrefab, new Vector3(288 + i * 155, 1025, 0), Quaternion.identity) as GameObject;
+            go.transform.parent = membersFolder.transform;
             members.Add(go);
             MemberHUD Yrt = go.GetComponent<MemberHUD>();
             Yrt.nameText.text = membersInfo.names[l];
-            Yrt.profDetailsText.text = membersInfo.profDescription[k];
-            Yrt.traitDetailsText.text = membersInfo.tDescription[j];
+            Yrt.profDetailsText.text = (ProfessionType)k + " = " + membersInfo.profDescription[k];
+            Yrt.traitDetailsText.text = membersInfo.traitList[j] + " = " + membersInfo.tDescription[j];
             Yrt.trait.text = membersInfo.traitList[j];
             Yrt.profession = (ProfessionType)k;
             Yrt.profPrice.text = membersInfo.profPrice[k].ToString();
@@ -353,55 +461,131 @@ public class BattleSystem : MonoBehaviour
             Yrt.totalPrice.text = (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
             Yrt.performance = 50;
             SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();
+            mStackeos[k]++;
+            canvas.transform.GetChild(30).GetChild(k + 5).GetChild(0).GetComponent<TMP_Text>().text = "x" + mStackeos[k];
+
         }
     }
 
     public void GenerateMegas(string s)
     {
         GameObject canvas = GameObject.Find("/Malla");
-        int k = Random.Range(0, 11);
+        GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
         if (!int.TryParse(s, out int index))
         {
             Debug.Log("Try inputting a valid integer");
             return;
         }
-        if (index > 12)
+        if (index > 13)
         {
             Debug.Log("Your number was too high");
             return;
         }
         GameObject go = new GameObject();
         if (index <= 5)
-            go = Instantiate(megaGenHorPrefab, new Vector3(768, 958, -1), Quaternion.identity) as GameObject;
+            go = Instantiate(megaHorPrefab, new Vector3(768, 958, 0), Quaternion.identity) as GameObject;
         else
-            go = Instantiate(megaGenVerPrefab, new Vector3(768, 958, -1), Quaternion.identity) as GameObject;
-        go.transform.parent = canvas.transform;
-        MegaHUD ob = go.GetComponent<MegaHUD>();
+            go = Instantiate(megaVerPrefab, new Vector3(768, 958, 0), Quaternion.identity) as GameObject;
+        go.transform.parent = modulesFolder.transform;
+        if (index <= 5)
+        {
+            MegaHUD ob = go.GetComponent<MegaHUD>();
+            ob.detailsText.text = megaInfo.moduleDetails[index];
+            ob.type = megaInfo.moduleType[index];
+            ob.nameText.text = megaInfo.names[index];
+            switch (megaInfo.req[index])
+            {
+                case "0":
+                    ob.req.text = "No Requirement";
+                    break;
+                default:
+                    ob.req.text = megaInfo.req[index];
+                    break;
+            }
+            ob.sliderLength = megaInfo.cooldown[index];
+            SpriteRenderer imagen;
+            if (ob.sliderLength == 0)
+            {
+                imagen = go.transform.GetChild(13).GetComponent<SpriteRenderer>();
+                Destroy(go.transform.GetChild(12).gameObject);
+                
+            }
+            else
+            {
+                go.transform.GetChild(12).GetComponent<Slider>().maxValue = ob.sliderLength;
+                go.transform.GetChild(12).GetComponent<Slider>().value = ob.sliderLength;
+                imagen = go.transform.GetChild(13).GetComponent<SpriteRenderer>();
+            }
+            imagen.sprite = megaInfo.sprites[index];
+        }
+        else
+        {
+            MegaVerHUD ob = go.GetComponent<MegaVerHUD>();
+            ob.detailsText.text = megaInfo.moduleDetails[index];
+            ob.type = megaInfo.moduleType[index];
+            ob.nameText.text = megaInfo.names[index];
+            switch (megaInfo.req[index])
+            {
+                case "0":
+                    ob.req.text = "No Requirement";
+                    break;
+                default:
+                    ob.req.text = megaInfo.req[index];
+                    break;
+            }
+            ob.sliderLength = megaInfo.cooldown[index];
+            SpriteRenderer imagen;
+            if (ob.sliderLength == 0)
+            {
+                imagen = go.transform.GetChild(11).GetComponent<SpriteRenderer>();
+                Destroy(go.transform.GetChild(10).gameObject);
+            }
+            else
+            {
+                go.transform.GetChild(10).GetComponent<Slider>().maxValue = ob.sliderLength;
+                go.transform.GetChild(10).GetComponent<Slider>().value = ob.sliderLength;
+                imagen = go.transform.GetChild(11).GetComponent<SpriteRenderer>();
+            }
+            imagen.sprite = megaInfo.sprites[index];
+        }
         megas.Add(go);
         //ob.nameText.text = megaInfo.names[index];
-        ob.detailsText.text = megaInfo.moduleDetails[index];
-        ob.type = megaInfo.moduleType[index];
-        switch (megaInfo.req[index])
+    }
+
+    public void GenerateBiologicModules(string s)
+    {
+        GameObject canvas = GameObject.Find("/Malla");
+        GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
+        if (!int.TryParse(s, out int index))
         {
-            case "0":
-                ob.req.text = "No Requirement";
-                break;
-            default:
-                ob.req.text = megaInfo.req[index];
-                break;
+            Debug.Log("Try inputting a valid integer");
+            return;
         }
-        ob.sliderLength = megaInfo.cooldown[index];
-        if (ob.sliderLength == 0)
+
+        if (index > 160)
         {
-            Destroy(go.transform.GetChild(1).gameObject);
+            Debug.Log("Your number was too high");
+            return;
+        }
+        GameObject go = Instantiate(moduleGenPrefab, new Vector3(908, 960, -1), Quaternion.identity) as GameObject;
+        go.transform.parent = modulesFolder.transform;
+        ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
+        modules.Add(go);
+        Yrt.nameText.text = bioInfo.names[index];
+        Yrt.detailsText.text = bioInfo.moduleDetails[index];
+        Yrt.type = (ModuleType)0;
+        Yrt.req.text = "No Requirement";
+        Yrt.sliderLength = bioInfo.cooldown[index];
+        if (Yrt.sliderLength == 0)
+        {
+            Destroy(go.transform.GetChild(8).gameObject);
         }
         else
         {
-            go.transform.GetChild(1).GetComponent<Slider>().maxValue = ob.sliderLength;
-            go.transform.GetChild(1).GetComponent<Slider>().value = ob.sliderLength;
+            go.transform.GetChild(8).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+            go.transform.GetChild(8).GetComponent<Slider>().value = Yrt.sliderLength;
         }
-        SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();
-        imagen.sprite = megaInfo.sprites[index];
-
+        Image imagen = go.transform.GetComponent<Image>();
+        imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
     }
 }

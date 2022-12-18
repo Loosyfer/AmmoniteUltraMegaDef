@@ -87,12 +87,17 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                     script.activeModuleorMember.GetComponent<MemberHUD>().selected = false;
                 if (script.activeModuleorMember.tag == "Mega")
                     script.activeModuleorMember.GetComponent<MegaHUD>().selected = false;
+                if (script.activeModuleorMember.tag == "Mega2")
+                    script.activeModuleorMember.GetComponent<MegaVerHUD>().selected = false;
             }
             
             script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
             pointerDown = false;
             rayCastNull = true;
-            script.activeModuleorMember.GetComponent<MegaHUD>().selected = true;
+            if (script.activeModuleorMember.tag == "Mega")
+                script.activeModuleorMember.GetComponent<MegaHUD>().selected = true;
+            if (script.activeModuleorMember.tag == "Mega2")
+                script.activeModuleorMember.GetComponent<MegaVerHUD>().selected = true;
             camera.GetComponent<CameraZoomController>().movingOn = false;
         }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ModInfo", menuName = "My Game/Mod Info")]
 public class ModInfo : ScriptableObject
 {
-    public string[] names = new string[161] { "Torpedo Launcher", "Exhausting Super-Cockpit", "Excrelaser", "Whale Corpse Explosion", "Blood Beam", "Seaweed Barrier", "Corpse-Utilising Module", "Cult Headquarters", "Portable Nursing Home", "Performance Extractor",
+    public string[] names = new string[165] { "Torpedo Launcher", "Exhausting Super-Cockpit", "Excrelaser", "Whale Corpse Explosion", "Blood Beam", "Seaweed Barrier", "Corpse-Utilising Module", "Cult Headquarters", "Portable Nursing Home", "Performance Extractor",
         "Improperly Installed Mega-Rocket", "Ammonite Capsule", "Age-reversing Treatment", "Dream Extractor", "Triumphant Regenerator", "Jelly Flexi-Membrane", "General Officer AI", "Adjacent Automatisation", "Mind Control Unit", "Motherly Jellycarer",
         "Impact Redirector", "Chamber of Sacrifice", "Mimic", "Excretor", "Golem", "Videogame Weapon Materialiser", "Mini-Hospital", "Passive Regenerator", "Shock gun", "Robot Factory", "Hacking Peripheral", "Harpoon Dispenser", "Doping Clinic",
         "Anglerfish Glare", "Commander's Cockpit", "Stingray Fin", "Urchin Megacarapace", "Laser Beam", "Magicoral", "Quantum Predictor", "Waste Extractor", "Electroconvulsive Capsule", "Recycling Unit",
@@ -19,9 +19,9 @@ public class ModInfo : ScriptableObject
         "Sticky node", "Tentacollector", "Chef Academy", "Explosive Charger", "Pain Transformer", "Cotagion Beam", "Water-Based Doping Module", "Arctic Hull", "Chamber of Infinite Wisdom", "Resourceful Blocker", "Systemic Freezer",
         "Gambletron 3000", "Frozen Node", "Seafood Absorber", "Recrutibot 3000", "Item Transformer", "Steamthrower", "Marine Hostage", "Co-pilot's Cockpit", "General Quarters", "Autopilot Navigator", "Kidnaptron 3000", "Professional Union",
         "Corruption Node", "Grand Professional Abduction", "Desperate Disintegrator", "Greed Pact", "Mirror Room", "Ineptitude Distiller", "Gleaming Ruby", "Sanatorium of Chaos", "Campus of Chaos", "Alien Takeover",
-        "Gates of the Chosen One", "Portable Wormhole", "Gleaming Sapphier", "Teleportation Laboratory", "Purge House"};
+        "Gates of the Chosen One", "Portable Wormhole", "Gleaming Sapphier", "Teleportation Laboratory", "Purge House", "Fart Bubble", "Tobacco Bubble", "Frozen Coffin", "Eye of the Calamity"};
 
-    public string[] moduleDetails = new string[161] {"+20 attack. Has a 50% chance of dealing damage to 2 enemies at once.",
+    public string[] moduleDetails = new string[165] {"+20 attack. Has a 50% chance of dealing damage to 2 enemies at once.",
         "+40 attack for as long as the crew member in it has 4 or more HP.",
         "Extracts any Excrement from this/adjacent modules and turns it into extra +50 dmg that has a slight chance of inflicting Poison status.However, if this module gets hit, it will explode and throw Excrement into all adjacent modules.",
 "Explosion that does 500 dmg to all enemies. Built from the item Bulging Whale Corpse.",
@@ -181,10 +181,14 @@ public class ModInfo : ScriptableObject
 "At the start of every Build Phase, all of your Modules and Crew Members change to completely random ones, but if you achieve 50% or more Ship Performance, it automatically increases another 25%.",
 "At the start of every battle, all of the Modules in the ship will become the same Module as one of the Modules adjacent to Mirroring Diamond. All of your Modules are immune to Flooding.",
 "Every 2 turns, all Crew Members will teleport to other Modules randomly. Every time a different Crew Member teleports into this Module, deal 100 damage to the enemy (resets every battle).",
-"All Crew Members will attack each other, dealing 1 Health damage every 2 turns. Every time a Crew Member loses Health, this Module deals 100 damage to the enemy, and if a Crew Member dies, deals 300 damage instead."
+"All Crew Members will attack each other, dealing 1 Health damage every 2 turns. Every time a Crew Member loses Health, this Module deals 100 damage to the enemy, and if a Crew Member dies, deals 300 damage instead.",
+"Bubbles that may form automatically adjacent to crew members that fart. Explodes after being hit, and a Crew Member in it will become Sick. If hit by an enemy, they will be inflicted Poisoned status.",
+"Bubbles that may form automatically adjacent to crew members that are heavy smokers. Explodes after being hit, and a Crew Member in it will become Sick. If hit by an enemy, they will be inflicted Poisoned status.",
+"If there was a crew member in a module when a Frozen Coffin is formed, the crew member is immune to damage but Frozen. If an enemy hits a Frozen coffin, there’s a 50% chance to inflict Frozen status.",
+"This module can’t be bought or crafted. It is only born by leaving an available space surrounded by 4 organic modules, after which it cannot be separated from its 4 adjacent modules. Every battle, Eye of the Calamity uses one offensive or defensive abyssal creature effect (those present in Organic Mega-Modules)."
 };
 
-    public int[] cooldown = new int[161] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    public int[] cooldown = new int[165] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                                             0, 0, 30, 0, 0, 0, 0, 0, 0, 0,
                                             0, 0, 0, 0, 0, 0, 0, 10, 0, 0,
                                             0, 0, 2, 0, 0, 0, 0, 4, 0, 0,
@@ -201,9 +205,9 @@ public class ModInfo : ScriptableObject
                                             0, 0, 0, 0, 0, 0, 0, 20, 0, 0,
                                             0, 0, 0, 0, 0, 0, 0, 0, 0, 100,
                                             20, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                                            0};
+                                            0, 0, 0, 0, 0};
 
-    public ModuleType[] moduleType = new ModuleType[161] { (ModuleType)1, (ModuleType)1, (ModuleType)1, (ModuleType)0, (ModuleType)1, (ModuleType)2, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)3,
+    public ModuleType[] moduleType = new ModuleType[165] { (ModuleType)1, (ModuleType)1, (ModuleType)1, (ModuleType)0, (ModuleType)1, (ModuleType)2, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)3,
     (ModuleType)1, (ModuleType)0, (ModuleType)3, (ModuleType)2, (ModuleType)0, (ModuleType)0, (ModuleType)3, (ModuleType)3, (ModuleType)3, (ModuleType)0, (ModuleType)2, (ModuleType)2, (ModuleType)3, (ModuleType)0, (ModuleType)2,
     (ModuleType)3, (ModuleType)0, (ModuleType)0, (ModuleType)0, (ModuleType)3, (ModuleType)3, (ModuleType)1, (ModuleType)3, (ModuleType)0, (ModuleType)1, (ModuleType)0, (ModuleType)0, (ModuleType)1, (ModuleType)0, (ModuleType)3,
     (ModuleType)3, (ModuleType)3, (ModuleType)3, (ModuleType)0, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)2,
@@ -213,9 +217,10 @@ public class ModInfo : ScriptableObject
     (ModuleType)1, (ModuleType)0, (ModuleType)1, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)3, (ModuleType)2, (ModuleType)1, (ModuleType)0, (ModuleType)2, (ModuleType)2,
     (ModuleType)1, (ModuleType)1, (ModuleType)3, (ModuleType)1, (ModuleType)4, (ModuleType)0, (ModuleType)4, (ModuleType)2, (ModuleType)2, (ModuleType)0, (ModuleType)4, (ModuleType)3, (ModuleType)1, (ModuleType)1, (ModuleType)3,
     (ModuleType)2, (ModuleType)4, (ModuleType)2, (ModuleType)2, (ModuleType)4, (ModuleType)2, (ModuleType)2, (ModuleType)3, (ModuleType)3, (ModuleType)1, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4,
-    (ModuleType)4, (ModuleType)0, (ModuleType)4, (ModuleType)1, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4};
+    (ModuleType)4, (ModuleType)0, (ModuleType)4, (ModuleType)1, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)3, 
+    (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)2, (ModuleType)0};
 
-    public string[] req = new string[161] { "1", "1", "0", "Needs to be placed in the first column of your Layout.", "1", "1", "0", "0", "0", "1", "1", "1", "0", "1", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1",
+    public string[] req = new string[165] { "1", "1", "0", "Needs to be placed in the first column of your Layout.", "1", "1", "0", "0", "0", "1", "1", "1", "0", "1", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1",
      "Only works if adjacent to a Defensive module.", "0", "1", "1",
      "1", "1", "1", "1", "1", "1", "Only works if adjacent to another attack module.", "Can only be placed in the very last column of the Layout.",
      "0", "1", "1", "0", "0", "0", "0", "1", "0", "0", "1", "0", "1", "0", "0", "0", "1", "0", "1", "0", "1", "0", "0", "0", "1", "0", "1", "0", "1", "0", "0", "0", "1", "1", "1", "0", "0", "0", "1", "0", "1", "0", "1", "1",
@@ -223,12 +228,12 @@ public class ModInfo : ScriptableObject
      "1", "1", "1", "0", "1", "0", "1", "0", "1", "1", "0", "1", "0", "0", "1", "0", "1", "0", "0", "0", "0", "1", "1", "1", "1", "1", "1", "Must be adjacent to all other 4 modules types.", "0", "1", "0", "0", "1", "1",
      "0", "1", "1", "0", "One must be placed in the highest row of the Layout, and the other in the lowest row.", "0", "1", "0",
      "0", "0", "1", "0", "1", "0", "1", "Must be adjacent to the Captain", "Must be adjacent to the Captain.", "Must be adjacent to the Captain.", "0", "Only works when adjacent to 4 crew members of the same profession.",
-     "0", "0", "0", "1", "1", "0", "Only works when adjacent to 4 crew Members.", "0", "0", "0", "0", "0", "1", "0", "0"};
+     "0", "0", "0", "1", "1", "0", "Only works when adjacent to 4 crew Members.", "0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "0", "0"};
 
     public ModuleRequirements[] randomReq = new ModuleRequirements[11] { (ModuleRequirements)0, (ModuleRequirements)1, (ModuleRequirements)2, (ModuleRequirements)3, (ModuleRequirements)4, (ModuleRequirements)5,
     (ModuleRequirements)6, (ModuleRequirements)7, (ModuleRequirements)8, (ModuleRequirements)9, (ModuleRequirements)10};
 
-    public int[] modulePrice = new int[161] {200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+    public int[] modulePrice = new int[165] {200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
                                             200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
                                             200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
                                             200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
@@ -245,6 +250,6 @@ public class ModInfo : ScriptableObject
                                             300, 200, 200, 200, 200, 200, 200, 200, 200, 200,
                                             200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
                                             200, 500, 500, 500, 500, 500, 500, 500, 500, 500,
-                                            500 };
+                                            500, 0, 0, 0, 0 };
 
 }
