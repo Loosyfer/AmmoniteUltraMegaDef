@@ -124,7 +124,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(720 + (i * 140), 350 + (79 * j), 0), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(760 + (i * 140), 343 + (79 * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotFolder.transform;
                 string name = "";
                 name = name + j;
@@ -144,7 +144,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(760 + (i * 21), 50 + (17 * j), 0), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(730 + (i * 27.77f), 16.8f + (22.17f * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotButtonsFolder.transform;
                 string name = "";
                 name = name + j;

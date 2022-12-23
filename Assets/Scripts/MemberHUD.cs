@@ -43,11 +43,11 @@ public class MemberHUD : MonoBehaviour
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             this.transform.GetChild(4).gameObject.SetActive(true);
-            this.transform.GetChild(4).position = new Vector3(1726, 830, -2);
+            //this.transform.GetChild(4).position = new Vector3(17, 17, -2);
             this.transform.GetChild(20).gameObject.SetActive(true);
-            this.transform.GetChild(20).position = new Vector3(1748, 700, -2);
+            //this.transform.GetChild(20).position = new Vector3(17, 5, -2);
             this.transform.GetChild(5).gameObject.SetActive(true);
-            this.transform.GetChild(5).position = new Vector3(1748, 340, -2);
+           //this.transform.GetChild(5).position = new Vector3(335, 0, -2);
         }
         else
         {
