@@ -163,16 +163,16 @@ RectTransform:
   m_GameObject: {fileID: 1307074198777429400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34, y: 0.33633095, z: 0.33633095}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.3437, y: 0.3437, z: 0.3437}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3385528482753254648}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.7729, y: 25.944}
-  m_SizeDelta: {x: 200.6319, y: 30.15}
+  m_AnchoredPosition: {x: -30.7929, y: 26.7}
+  m_SizeDelta: {x: 203.2342, y: 30.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7976977405712335580
 CanvasRenderer:
@@ -215,7 +215,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: fdfasdfasdfasdfasdf !"
+  m_Text: Anastasia
 --- !u!223 &2343401693636863332
 Canvas:
   m_ObjectHideFlags: 0
@@ -652,8 +652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.477589, y: 8.447288}
-  m_SizeDelta: {x: 159, y: 45.133}
+  m_AnchoredPosition: {x: -23.98418, y: 7.4985}
+  m_SizeDelta: {x: 157.2741, y: 50.6536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8170566678214117061
 CanvasRenderer:
@@ -695,8 +695,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Some Trait
+    m_LineSpacing: 0.65
+  m_Text: Some Trait blablabloblo
 --- !u!114 &7868038701298675278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,7 +1621,7 @@ RectTransform:
   m_GameObject: {fileID: 5782285231045620857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalScale: {x: 0.3437, y: 0.3437, z: 0.3437}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3385528482753254648}
@@ -1629,7 +1629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32.5, y: -3.49}
+  m_AnchoredPosition: {x: -33.70996, y: -3.49}
   m_SizeDelta: {x: 213.97, y: 28.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1064088501097746055
@@ -2049,7 +2049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.477774, y: 16.080107}
+  m_AnchoredPosition: {x: -24.409962, y: 16.080107}
   m_SizeDelta: {x: 159, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2635551832640945188
