@@ -7,7 +7,7 @@ public class MapSwitcher : MonoBehaviour
 {
 
     public NodesMapVariables mapas;
-    private int index = 0;
+    public int index = 0;
 
     public void Switch()
     {
