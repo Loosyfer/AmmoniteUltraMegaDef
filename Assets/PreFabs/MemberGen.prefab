@@ -1164,7 +1164,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!1 &3325134863751655540
 GameObject:
@@ -2628,7 +2628,6 @@ GameObject:
   - component: {fileID: 8979190275087027987}
   - component: {fileID: 2410489212204111174}
   - component: {fileID: 2082026671346904281}
-  - component: {fileID: 1940360765766483863}
   m_Layer: 5
   m_Name: TotalPriceDetails
   m_TagString: Untagged
@@ -2698,18 +2697,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!114 &1940360765766483863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8411893747301527180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2abc2a8009c316c429c55dde2f788447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8435803403886738160
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,4 +17,6 @@ public class Module : MonoBehaviour
 
     public int price;
 
+    public string typeDetails;
+
 }

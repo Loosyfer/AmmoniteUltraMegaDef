@@ -16,7 +16,13 @@ public class GetProfDesc : MonoBehaviour
             if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
                 text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().profDetailsText.text;
             if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Module")
-                text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<ModuleHUD>().detailsText.text;
+                text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<ModuleHUD>().typeDetails.text;
+            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Mega")
+                text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MegaHUD>().typeDetails.text;
+            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Mega2")
+                text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MegaVerHUD>().typeDetails.text;
+            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Monster")
+                text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MonsterHUD>().flavour;
         }
     }
 }

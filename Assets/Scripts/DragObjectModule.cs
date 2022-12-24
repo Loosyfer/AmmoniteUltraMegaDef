@@ -84,6 +84,11 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
                     script.activeModuleorMember.GetComponent<MemberHUD>().selected = false;
                 if (script.activeModuleorMember.tag == "Mega")
                     script.activeModuleorMember.GetComponent<MegaHUD>().selected = false;
+                if (script.activeModuleorMember.tag == "Monster")
+                {
+                    script.activeModuleorMember.GetComponent<MonsterHUD>().selected = false;
+                    script.activeModuleorMember.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+                }
             }
             script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
             pointerDown = false;

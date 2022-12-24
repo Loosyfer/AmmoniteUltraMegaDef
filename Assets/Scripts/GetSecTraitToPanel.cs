@@ -16,7 +16,11 @@ public class GetSecTraitToPanel : MonoBehaviour
             if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
                 text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().secTraitDescription.text;
             if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Module")
-                text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<ModuleHUD>().detailsText.text;
+                text.text = "";
+            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Mega")
+                text.text = "";
+            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Mega2")
+                text.text = "";
         }
     }
 }

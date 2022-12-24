@@ -1311,50 +1311,52 @@ MonoBehaviour:
     a rate of -1% per turn.
   - They will have 10 Health and 100% Performance, but if they die you lose the Dive.
   profDescription:
-  - Once per Architect, can change the requirements of one module to another random
-    requirement. 4x = Opportunity to change your layout to architect-exclusive layouts.
-    8x = if the layout is full, it becomes a megastructure that prevents enemy flooding/destruction
-    of modules and has a 20% chance of deflecting a hit.
-  - After being adjacent to a crew member during a battle, you can reroll their trait.
-    20T CD. 3x = When you reroll someone's trait, choose one from a random selection
-    of 3. 6x = Can add a random Erudite Trait as secondary traits to crew members
-  - Once per Biologist, after participating in a victorious monster battle, can build
-    a Basic Fishcapsule. 4x = once per biologist, can build an exclusive organic
-    module depending on the defeated sea creature. 8x = Can build organic mega-modules
-    from abysmal bosses shown in the Logbook.
-  - Once per Developer, after being in a module during a battle, can automatise that
-    module. 3x = Increase module recharge speeds by 25%. 6x = Increase module recharge
-    speeds by 40%, and if a crew member dies, they will be replaced by a copy of
-    them with the Robot trait.
-  - Once per Engineer, after being in a module during a battle, can rebuild it into
-    another random module. 3x When rebuilding a module choose 1 of a random selection
-    of 3. 6x = can fuse two modules to get a random mega-module of the same type
-    as the fused modules.
-  - No special effects, but cheap. 4x + GO = Cadets will count as GO for moudle requirements.
-    8x + GO = If the GO dies, upgrade one Cadet to be the new GO.
-  - 'Once per battle, can heal an adjacent crew member by 1HP. 3x = Will also cure
-    the ailment of an adjacent crew member once per battle. 6x = Each Doctor can
-    attempt to reanimate a crew member that''s died, with a: 20% chance +Doomed,
-    60% chance +Reanimated, 20% chance of returning in a perfect state.'
-  - Once per Recruiter, they can be paid 150 currency to recruit one random crew
-    member guaranteed to be of a profession you already have. 2x = Once per Shop,
-    you can reroll the shop by paying 200 currency. 4x = You can fire crew members
-    and get some money back.
-  - Increases the chance of a module or applicant having a whopping discount. The
-    more businessmen, the higher the chance and maximum size of discount. 3x = During
-    Shop, you can invest a minimum of 500 currency and get it back with +20% interest
-    during the next Shop phase. 6x = You can enter debt to buy in Shop,m in exchange
-    of interest.
-  - 'Each scientist, when adjacent to a Scientific module with a crew member, can
+  - "Once per Architect, can change the requirements of one module to another random
+    requirement. \n 4x = Opportunity to change your layout to architect-exclusive
+    layouts. \n 8x = if the layout is full, it becomes a megastructure that prevents
+    enemy flooding/destruction of modules and has a 20% chance of deflecting a hit."
+  - "After being adjacent to a crew member during a battle, you can reroll their
+    trait. 20T CD. \n 3x = When you reroll someone's trait, choose one from a random
+    selection of 3. \n 6x = Can add a random Erudite Trait as secondary traits to
+    crew members"
+  - "Once per Biologist, after participating in a victorious monster battle, can
+    build a Basic Fishcapsule. \n 4x = once per biologist, can build an exclusive
+    organic module depending on the defeated sea creature. \n 8x = Can build organic
+    mega-modules from abysmal bosses shown in the Logbook."
+  - "Once per Developer, after being in a module during a battle, can automatise
+    that module. \n 3x = Increase module recharge speeds by 25%. \n 6x = Increase
+    module recharge speeds by 40%, and if a crew member dies, they will be replaced
+    by a copy of them with the Robot trait."
+  - "Once per Engineer, after being in a module during a battle, can rebuild it into
+    another random module. \n 3x When rebuilding a module choose 1 of a random selection
+    of 3. \n 6x = can fuse two modules to get a random mega-module of the same type
+    as the fused modules."
+  - "No special effects, but cheap. \n 4x + GO = Cadets will count as GO for module
+    requirements. \n 8x + GO = If the GO dies, upgrade one Cadet to be the new GO."
+  - "Once per battle, can heal an adjacent crew member by 1HP. \n 3x = Will also
+    cure the ailment of an adjacent crew member once per battle. \n 6x = Each Doctor
+    can attempt to reanimate a crew member that's died, with a: 20% chance +Doomed,
+    60% chance +Reanimated, 20% chance of returning in a perfect state."
+  - "Once per Recruiter, they can be paid 150 currency to recruit one random crew
+    member guaranteed to be of a profession you already have. \n 2x = Once per Shop,
+    you can reroll the shop by paying 200 currency. \n 4x = You can fire crew members
+    and get some money back."
+  - "Increases the chance of a module or applicant having a whopping discount. The
+    more businessmen, the higher the chance and maximum size of discount. \n 3x =
+    During Shop, you can invest a minimum of 500 currency and get it back with +20%
+    interest during the next Shop phase. \n 6x = You can enter debt to buy in Shop,m
+    in exchange of interest."
+  - "Each scientist, when adjacent to a Scientific module with a crew member, can
     subject them to Radical Testing. After 10 turns: 10% chance +Lunatic, 40% chance
-    +Doomed, 50%chance he becomes Augmented, fully healing and gaining +1 max HP.
-    3x = Enhance the body (+1 max HP) or the mind (+25% performance cap) of an Augmented
-    crew member. 6x = Grant an Augmented crew member a random Super Trait.'
-  - Can foresee the type of content of nearby nodes. 4x = Unlock new routes and nodes
-    that you previously couldn't see, which may include exclusive events with unique
-    rewards, such as exclusive modules, crew members and objects like fossil.
-  - Unlocks extra power in certain modules. 4 Cadets + GO = Cadets will count as
-    GO for moudle requirements. 8 Cadets + GO = If the GO dies, upgrade one Cadet
-    to be the new GO.
+    +Doomed, 50% chance he becomes Augmented, fully healing and gaining +1 max HP.
+    \n 3x = Enhance the body (+1 max HP) or the mind (+25% performance cap) of an
+    Augmented crew member. \n 6x = Grant an Augmented crew member a random Super
+    Trait."
+  - "Can foresee the type of content of nearby nodes. \n 4x = Unlock new routes and
+    nodes that you previously couldn't see, which may include exclusive events with
+    unique rewards, such as exclusive modules, crew members and objects like fossil."
+  - "Unlocks extra power in certain modules. \n 4 Cadets + GO = Cadets will count
+    as GO for moudle requirements. \n 8 Cadets + GO = If the GO dies, upgrade one
+    Cadet to be the new GO."
   traitPrice: 6400000000000000320000000000000032000000320000003200000032000000320000006400000032000000000000000000000000000000640000003200000000000000640000003200000000000000000000000000000032000000000000000000000032000000000000003200000000000000320000000000000064000000640000000000000000000000000000006400000000000000000000006400000032000000000000003200000000000000320000000000000000000000320000003200000032000000000000003200000032000000000000000000000032000000640000003200000000000000000000003200000032000000320000003200000000000000000000003200000000000000000000003200000000000000320000003200000064000000000000006400000064000000320000006400000032000000320000003200000000000000320000006400000032000000f40100000000000000000000640000003200000000000000f4010000f4010000000000003200000064000000640000003200000032000000320000003200000032000000f401000032000000320000003200000032000000320000003200000000000000640000006400000000000000000000003200000032000000320000003200000032000000320000000000000000000000320000000000000032000000000000003200000032000000320000003200000064000000320000003200000032000000320000000000000032000000320000003200000064000000640000006400000032000000000000003200000032000000000000003200000032000000320000003200000032000000640000003200000064000000320000003200000032000000640000000000000000000000640000000000000032000000320000003200000032000000320000000000000032000000320000006400000064000000320000003200000032000000640000006400000064000000000000000000000032000000640000006400000032000000640000000000000000000000000000000000000000000000
   profPrice: c8000000c8000000c8000000c8000000c800000064000000c8000000c8000000c8000000c8000000c80000002c010000

@@ -217,7 +217,7 @@ public class ModInfo : ScriptableObject
     (ModuleType)1, (ModuleType)0, (ModuleType)1, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)3, (ModuleType)2, (ModuleType)1, (ModuleType)0, (ModuleType)2, (ModuleType)2,
     (ModuleType)1, (ModuleType)1, (ModuleType)3, (ModuleType)1, (ModuleType)4, (ModuleType)0, (ModuleType)4, (ModuleType)2, (ModuleType)2, (ModuleType)0, (ModuleType)4, (ModuleType)3, (ModuleType)1, (ModuleType)1, (ModuleType)3,
     (ModuleType)2, (ModuleType)4, (ModuleType)2, (ModuleType)2, (ModuleType)4, (ModuleType)2, (ModuleType)2, (ModuleType)3, (ModuleType)3, (ModuleType)1, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4,
-    (ModuleType)4, (ModuleType)0, (ModuleType)4, (ModuleType)1, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)3, 
+    (ModuleType)4, (ModuleType)0, (ModuleType)4, (ModuleType)1, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)3,
     (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)2, (ModuleType)0};
 
     public string[] req = new string[165] { "1", "1", "0", "Needs to be placed in the first column of your Layout.", "1", "1", "0", "0", "0", "1", "1", "1", "0", "1", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1",
@@ -251,5 +251,13 @@ public class ModInfo : ScriptableObject
                                             200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
                                             200, 500, 500, 500, 500, 500, 500, 500, 500, 500,
                                             500, 0, 0, 0, 0 };
+
+    public string[] typeStacking = new string[6] { "Effects based on creatures, sometimes not hollow and therefore autonomous. There can only be 1 of each type of Organic Module in the ship. \n Organic A modules are available in commerce. \n Organic B modules are exclusive to 4x Biologist stacking bonus. \n Organic M modules are Mega-Modules and exclusive to 8x Biologist. \n 4x = random crew members will soon turn into marine abominations (Monstrous trait). The more organic modules, the more transformations.",
+        "Cause & encourage low ship HP, often interact with GO and Cadets. \n 2x = 10% chance your basic attack becomes a shell-destroying nuke. \n 4x = 20 % chance your basic attack becomes a shell-destroying nuke. 6x = 30 % chance your basic attack becomes a shell-destroying nuke.",
+        "Cause & encourage high ship HP, stalling (combo with charge bars), and having a fat ship with lots of modules. \n 2x = +10 ship HP for every module in your ship. \n 4x = +20 ship HP for every module in your ship. \n 6x = +30 ship HP for every module in your ship.",
+        "Technological effects, item-transformed effects. \n 4x = after a battle, you can transform 1 basic item. \n 8x = after a battle, you can transform 1 rare item.",
+        "Niche and unique effects that can fit into any ship. \n 6x = each battle, 1 random module with a random crew member in it are called for assistance and appear in a random available Layout Slot, and they will last until end of combat. \n 10x = each battle, 2 random module with a random crew member in it are called for assistance and appear in a random available Layout Slot, and they will last until end of combat.",
+        "Special type of module. There's only a few of these, and their functionality varies. Doesn't have a stacking bonus."
+        };
 
 }

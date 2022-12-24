@@ -11,6 +11,7 @@ TagManager:
   - Mega2
   - Icon
   - Node
+  - Monster
   layers:
   - Default
   - TransparentFX

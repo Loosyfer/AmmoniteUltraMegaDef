@@ -262,6 +262,27 @@ public class BattleSystem : MonoBehaviour
         Yrt.detailsText.text = modInfo.names[index] + " = " + modInfo.moduleDetails[index];
         Yrt.price = modInfo.modulePrice[index];
         Yrt.type = modInfo.moduleType[index];
+        switch (Yrt.type)
+        {
+            case (ModuleType)0:
+                Yrt.typeDetails.text = modInfo.typeStacking[0];
+                break;
+            case (ModuleType)1:
+                Yrt.typeDetails.text = modInfo.typeStacking[1];
+                break;
+            case (ModuleType)2:
+                Yrt.typeDetails.text = modInfo.typeStacking[2];
+                break;
+            case (ModuleType)3:
+                Yrt.typeDetails.text = modInfo.typeStacking[3];
+                break;
+            case (ModuleType)4:
+                Yrt.typeDetails.text = modInfo.typeStacking[4];
+                break;
+            case (ModuleType)5:
+                Yrt.typeDetails.text = modInfo.typeStacking[5];
+                break;
+        }
         switch (modInfo.req[index])
         {
             case "0":
@@ -382,6 +403,27 @@ public class BattleSystem : MonoBehaviour
             Yrt.detailsText.text = modInfo.names[j] + " = " + modInfo.moduleDetails[j];
             Yrt.price = modInfo.modulePrice[j];
             Yrt.type = modInfo.moduleType[j];
+            switch (Yrt.type)
+            {
+                case (ModuleType)0:
+                    Yrt.typeDetails.text = modInfo.typeStacking[0];
+                    break;
+                case (ModuleType)1:
+                    Yrt.typeDetails.text = modInfo.typeStacking[1];
+                    break;
+                case (ModuleType)2:
+                    Yrt.typeDetails.text = modInfo.typeStacking[2];
+                    break;
+                case (ModuleType)3:
+                    Yrt.typeDetails.text = modInfo.typeStacking[3];
+                    break;
+                case (ModuleType)4:
+                    Yrt.typeDetails.text = modInfo.typeStacking[4];
+                    break;
+                case (ModuleType)5:
+                    Yrt.typeDetails.text = modInfo.typeStacking[5];
+                    break;
+            }
             switch (modInfo.req[j])
             {
                 case "0":
@@ -493,6 +535,27 @@ public class BattleSystem : MonoBehaviour
             ob.detailsText.text = megaInfo.moduleDetails[index];
             ob.type = megaInfo.moduleType[index];
             ob.nameText.text = megaInfo.names[index];
+            switch (ob.type)
+            {
+                case (ModuleType)0:
+                    ob.typeDetails.text = modInfo.typeStacking[0];
+                    break;
+                case (ModuleType)1:
+                    ob.typeDetails.text = modInfo.typeStacking[1];
+                    break;
+                case (ModuleType)2:
+                    ob.typeDetails.text = modInfo.typeStacking[2];
+                    break;
+                case (ModuleType)3:
+                    ob.typeDetails.text = modInfo.typeStacking[3];
+                    break;
+                case (ModuleType)4:
+                    ob.typeDetails.text = modInfo.typeStacking[4];
+                    break;
+                case (ModuleType)5:
+                    ob.typeDetails.text = modInfo.typeStacking[5];
+                    break;
+            }
             switch (megaInfo.req[index])
             {
                 case "0":
@@ -524,6 +587,27 @@ public class BattleSystem : MonoBehaviour
             ob.detailsText.text = megaInfo.moduleDetails[index];
             ob.type = megaInfo.moduleType[index];
             ob.nameText.text = megaInfo.names[index];
+            switch (ob.type)
+            {
+                case (ModuleType)0:
+                    ob.typeDetails.text = modInfo.typeStacking[0];
+                    break;
+                case (ModuleType)1:
+                    ob.typeDetails.text = modInfo.typeStacking[1];
+                    break;
+                case (ModuleType)2:
+                    ob.typeDetails.text = modInfo.typeStacking[2];
+                    break;
+                case (ModuleType)3:
+                    ob.typeDetails.text = modInfo.typeStacking[3];
+                    break;
+                case (ModuleType)4:
+                    ob.typeDetails.text = modInfo.typeStacking[4];
+                    break;
+                case (ModuleType)5:
+                    ob.typeDetails.text = modInfo.typeStacking[5];
+                    break;
+            }
             switch (megaInfo.req[index])
             {
                 case "0":
@@ -585,6 +669,9 @@ public class BattleSystem : MonoBehaviour
             go.transform.GetChild(8).GetComponent<Slider>().maxValue = Yrt.sliderLength;
             go.transform.GetChild(8).GetComponent<Slider>().value = Yrt.sliderLength;
         }
+        Yrt.typeDetails.text = modInfo.typeStacking[0];
+        stackeos[0]++;
+        canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[0];
         Image imagen = go.transform.GetComponent<Image>();
         imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
     }

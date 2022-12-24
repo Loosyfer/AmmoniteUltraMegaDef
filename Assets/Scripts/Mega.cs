@@ -11,4 +11,6 @@ public class Mega : MonoBehaviour
     public string details;
 
     public string req;
+
+    public string typeDetails;
 }

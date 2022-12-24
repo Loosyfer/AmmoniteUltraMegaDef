@@ -11,6 +11,7 @@ public class MegaVerHUD : MonoBehaviour
     public Text detailsText;
     public ModuleType type;
     public Text req;
+    public Text typeDetails;
     public Slider slider;
     public int sliderLength;
     public Color Colours = new Color(1f, 1f, 1f, 1f);
@@ -26,6 +27,7 @@ public class MegaVerHUD : MonoBehaviour
         detailsText.text = mega.details;
         type = mega.type;
         req.text = mega.req;
+        typeDetails.text = mega.typeDetails;
         WFlooded = false;
         SFlooded = false;
         Freezed = false;

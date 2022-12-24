@@ -89,6 +89,11 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                     script.activeModuleorMember.GetComponent<MegaHUD>().selected = false;
                 if (script.activeModuleorMember.tag == "Mega2")
                     script.activeModuleorMember.GetComponent<MegaVerHUD>().selected = false;
+                if (script.activeModuleorMember.tag == "Monster")
+                {
+                    script.activeModuleorMember.GetComponent<MonsterHUD>().selected = false;
+                    script.activeModuleorMember.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+                }
             }
             
             script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;

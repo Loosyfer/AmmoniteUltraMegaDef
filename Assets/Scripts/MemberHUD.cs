@@ -42,19 +42,19 @@ public class MemberHUD : MonoBehaviour
         if (selected)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            this.transform.GetChild(4).gameObject.SetActive(true);
+            //this.transform.GetChild(4).gameObject.SetActive(true);
             //this.transform.GetChild(4).position = new Vector3(17, 17, -2);
-            this.transform.GetChild(20).gameObject.SetActive(true);
+            //this.transform.GetChild(20).gameObject.SetActive(true);
             //this.transform.GetChild(20).position = new Vector3(17, 5, -2);
-            this.transform.GetChild(5).gameObject.SetActive(true);
+            //this.transform.GetChild(5).gameObject.SetActive(true);
            //this.transform.GetChild(5).position = new Vector3(335, 0, -2);
         }
         else
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            this.transform.GetChild(4).gameObject.SetActive(false);
-            this.transform.GetChild(21).gameObject.SetActive(false);
-            this.transform.GetChild(5).gameObject.SetActive(false);
+            //this.transform.GetChild(4).gameObject.SetActive(false);
+            //this.transform.GetChild(21).gameObject.SetActive(false);
+            //this.transform.GetChild(5).gameObject.SetActive(false);
         }
     }
 
