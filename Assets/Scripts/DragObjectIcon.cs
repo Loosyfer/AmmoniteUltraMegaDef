@@ -38,6 +38,7 @@ public class DragObjectIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         if (!firstDragged)
         {
             CreateNewIcon(this.GetComponent<Image>().sprite, this.rectTransform.position, canvas, camera, iconPrefab);
+            this.transform.parent.GetComponent<IconsFolder>().icons.Add(this.gameObject);
             firstDragged = true;
         }
     }

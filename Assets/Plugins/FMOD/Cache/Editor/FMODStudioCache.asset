@@ -1,6 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6042119043190576101
+--- !u!114 &-7739309998612832040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Ammonite/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638068055844503347
+  FileSizes:
+  - Name: 
+    Value: 864
+  Exists: 1
+--- !u!114 &-3963913332902846271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,16 +39,34 @@ MonoBehaviour:
     Data3: -382846049
     Data4: -2051980202
   Banks:
-  - {fileID: 6312201036056218006}
+  - {fileID: -3708867045443387618}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1168740435075013460}
+  - {fileID: -1475213665126609009}
   MinDistance: 1
   MaxDistance: 20
   Length: 343107
---- !u!114 &-1168740435075013460
+--- !u!114 &-3708867045443387618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Ammonite/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638068055844493344
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1475213665126609009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,39 +103,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1459456528749658977}
-  - {fileID: 6312201036056218006}
+  - {fileID: -7739309998612832040}
+  - {fileID: -3708867045443387618}
   EditorEvents:
-  - {fileID: -6042119043190576101}
-  - {fileID: 2015682009537023289}
+  - {fileID: -3963913332902846271}
+  - {fileID: 1764428182256140012}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6312201036056218006}
+  - {fileID: -3708867045443387618}
   StringsBanks:
-  - {fileID: 1459456528749658977}
-  cacheTime: 638073038528164704
-  cacheVersion: 131593
---- !u!114 &1459456528749658977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Fmod/Ammonite/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638073038528164704
-  FileSizes:
-  - Name: 
-    Value: 864
-  Exists: 1
---- !u!114 &2015682009537023289
+  - {fileID: -7739309998612832040}
+  cacheTime: 638068055844503347
+  cacheVersion: 131601
+--- !u!114 &1764428182256140012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +134,7 @@ MonoBehaviour:
     Data3: -1701916280
     Data4: 1469803425
   Banks:
-  - {fileID: 6312201036056218006}
+  - {fileID: -3708867045443387618}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -124,21 +142,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 128709
---- !u!114 &6312201036056218006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Fmod/Ammonite/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638073038528096416
-  FileSizes: []
-  Exists: 1

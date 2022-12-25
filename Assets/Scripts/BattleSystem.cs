@@ -36,6 +36,8 @@ public class BattleSystem : MonoBehaviour
     private bool destroyedSlots;
     public int[] stackeos = new int[5];
     public int[] mStackeos = new int[12];
+    public GameObject stackingFolder;
+    public StackingIcons stackingIcons;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -310,36 +312,57 @@ public class BattleSystem : MonoBehaviour
         {
             imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
             stackeos[0]++;
-            canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[0];
+            canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = stackeos[0].ToString();
+            if (stackeos[0] < 4)
+                stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[49];
+            else
+                stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];
         }
         if (Yrt.type == (ModuleType)1)
         { 
             imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
             stackeos[1]++;
-            canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[1];
+            canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = stackeos[1].ToString();
+            if (stackeos[1] == 1)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[54];
+            if (stackeos[1] == 2 || stackeos[1] == 3)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[55];
+            if (stackeos[1] == 4 || stackeos[1] == 5)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[56];
+            if (stackeos[1] > 5)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[57];
         }
         if (Yrt.type == (ModuleType)2)
         {
             imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
             stackeos[2]++;
-            canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[2];
+            canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = stackeos[2].ToString();
+            if (stackeos[2] == 1)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[59];
+            if (stackeos[2] == 2 || stackeos[1] == 3)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[60];
+            if (stackeos[2] == 4 || stackeos[1] == 5)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[61];
+            if (stackeos[2] > 5)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[62];
         }
         if (Yrt.type == (ModuleType)3)
         {
             stackeos[3]++;
-            canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[3];
+            canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
+
         }
         if (Yrt.type == (ModuleType)4)
         {
             imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
             stackeos[4]++;
-            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
         }
         if (Yrt.type == (ModuleType)5)
         {
             imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
             stackeos[4]++;
-            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
         }
     }
 

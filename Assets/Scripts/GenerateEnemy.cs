@@ -21,30 +21,35 @@ public class GenerateEnemy : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 break;
             case 1:
                 random = Random.Range(10, 19);
                 malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 break;
             case 2:
                 random = Random.Range(22, 32);
                 malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 break;
             case 3:
                 random = Random.Range(34, 44);
                 malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 break;
             case 4:
                 random = Random.Range(46, 53);
                 malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 break;
         }
         
