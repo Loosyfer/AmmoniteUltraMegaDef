@@ -350,6 +350,12 @@ public class BattleSystem : MonoBehaviour
         {
             stackeos[3]++;
             canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
+            if (stackeos[3] < 4)
+                stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[69];
+            if (stackeos[3] > 3 && stackeos[3] < 8)
+                stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[71];
+            if (stackeos[3] > 7)
+                stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[72];
 
         }
         if (Yrt.type == (ModuleType)4)
@@ -357,12 +363,24 @@ public class BattleSystem : MonoBehaviour
             imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
             stackeos[4]++;
             canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
+            if (stackeos[4] < 6)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
+            if (stackeos[4] > 5 && stackeos[4] < 10)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
+            if (stackeos[4] > 9)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];
         }
         if (Yrt.type == (ModuleType)5)
         {
             imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
             stackeos[4]++;
             canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
+            if (stackeos[4] < 6)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
+            if (stackeos[4] > 5 && stackeos[4] < 10)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
+            if (stackeos[4] > 9)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];
         }
     }
 
@@ -474,36 +492,75 @@ public class BattleSystem : MonoBehaviour
             {
                 imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
                 stackeos[0]++;
-                canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[0];
+                canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = stackeos[0].ToString();
+                if (stackeos[0] < 4)
+                    stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[49];
+                else
+                    stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];
             }
             if (Yrt.type == (ModuleType)1)
             {
                 imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
                 stackeos[1]++;
-                canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[1];
+                canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = stackeos[1].ToString();
+                if (stackeos[1] == 1)
+                    stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[54];
+                if (stackeos[1] == 2 || stackeos[1] == 3)
+                    stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[55];
+                if (stackeos[1] == 4 || stackeos[1] == 5)
+                    stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[56];
+                if (stackeos[1] > 5)
+                    stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[57];
             }
             if (Yrt.type == (ModuleType)2)
             {
                 imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
                 stackeos[2]++;
-                canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[2];
+                canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = stackeos[2].ToString();
+                if (stackeos[2] == 1)
+                    stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[59];
+                if (stackeos[2] == 2 || stackeos[1] == 3)
+                    stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[60];
+                if (stackeos[2] == 4 || stackeos[1] == 5)
+                    stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[61];
+                if (stackeos[2] > 5)
+                    stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[62];
             }
             if (Yrt.type == (ModuleType)3)
             {
                 stackeos[3]++;
-                canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[3];
+                canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
+                if (stackeos[3] < 4)
+                    stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[69];
+                if (stackeos[3] > 3 && stackeos[3] < 8)
+                    stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[71];
+                if (stackeos[3] > 7)
+                    stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[72];
+
             }
             if (Yrt.type == (ModuleType)4)
             {
                 imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
                 stackeos[4]++;
-                canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+                canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
+                if (stackeos[4] < 6)
+                    stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
+                if (stackeos[4] > 5 && stackeos[4] < 10)
+                    stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
+                if (stackeos[4] > 9)
+                    stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];
             }
             if (Yrt.type == (ModuleType)5)
             {
                 imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
                 stackeos[4]++;
-                canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[4];
+                canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
+                if (stackeos[4] < 6)
+                    stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
+                if (stackeos[4] > 5 && stackeos[4] < 10)
+                    stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
+                if (stackeos[4] > 9)
+                    stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];
             }
         }
 
@@ -527,7 +584,74 @@ public class BattleSystem : MonoBehaviour
             Yrt.performance = 50;
             SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();
             mStackeos[k]++;
-            canvas.transform.GetChild(30).GetChild(k + 5).GetChild(0).GetComponent<TMP_Text>().text = "x" + mStackeos[k];
+            canvas.transform.GetChild(30).GetChild(k + 5).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[k].ToString();
+            switch (k)
+            {
+                case 0:
+                    if (mStackeos[0] > 0 && mStackeos[0] < 3)
+                        stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[1];
+                    if (mStackeos[0] > 2 && mStackeos[0] < 6)
+                        stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[2];
+                    if (mStackeos[0] > 5)
+                        stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[3];
+                    break;
+                case 1:
+                    if (mStackeos[1] > 0 && mStackeos[1] < 3)
+                        stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[5];
+                    if (mStackeos[1] > 2 && mStackeos[1] < 6)
+                        stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[6];
+                    if (mStackeos[1] > 5)
+                        stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[7];
+                    break;
+                case 2:
+                    if (mStackeos[2] > 0 && mStackeos[2] < 4)
+                        stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[9];
+                    if (mStackeos[2] > 3 && mStackeos[2] < 8)
+                        stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[10];
+                    if (mStackeos[2] > 7)
+                        stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[11];
+                    break;
+                case 3:
+                    if (mStackeos[3] > 0 && mStackeos[3] < 3)
+                        stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[13];
+                    if (mStackeos[3] > 2 && mStackeos[3] < 6)
+                        stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[14];
+                    if (mStackeos[3] > 5)
+                        stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[15];
+                    break;
+                case 4:
+                    if (mStackeos[4] > 0 && mStackeos[4] < 3)
+                        stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[17];
+                    if (mStackeos[4] > 2 && mStackeos[4] < 6)
+                        stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[18];
+                    if (mStackeos[4] > 5)
+                        stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[19];
+                    break;
+                case 5:
+                    if (mStackeos[5] > 0 && mStackeos[5] < 4)
+                        stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[21];
+                    if (mStackeos[5] > 3 && mStackeos[5] < 6)
+                        stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[22];
+                    if (mStackeos[5] > 5)
+                        stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[23];
+                    break;
+                case 6:
+                    if (mStackeos[6] > 0 && mStackeos[6] < 3)
+                        stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[25];
+                    if (mStackeos[6] > 2 && mStackeos[6] < 6)
+                        stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[26];
+                    if (mStackeos[6] > 5)
+                        stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[27];
+                    break;
+                case 7:
+                    if (mStackeos[7] > 0 && mStackeos[6] < 2)
+                        stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[25];
+                    if (mStackeos[7] > 1 && mStackeos[6] < 4)
+                        stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[26];
+                    if (mStackeos[7] > 3)
+                        stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[27];
+                    break;
+            }
 
         }
     }
@@ -694,8 +818,12 @@ public class BattleSystem : MonoBehaviour
         }
         Yrt.typeDetails.text = modInfo.typeStacking[0];
         stackeos[0]++;
-        canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "x" + stackeos[0];
+        canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = stackeos[0].ToString();
         Image imagen = go.transform.GetComponent<Image>();
         imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+        if (stackeos[0] < 4)
+            stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[49];
+        else
+            stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];
     }
 }
