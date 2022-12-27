@@ -44,5 +44,6 @@ public class UpdateTP : MonoBehaviour
             background.color = new Color(1, 1, 0, 1);
             fill.color = new Color(1, 0.9333333f, 0.3372549f, 1);
         }
+        this.transform.GetChild(6).GetComponent<Text>().text = slider.value + " %";
     }
 }
