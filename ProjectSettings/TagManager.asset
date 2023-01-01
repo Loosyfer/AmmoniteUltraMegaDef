@@ -12,6 +12,9 @@ TagManager:
   - Icon
   - Node
   - Monster
+  - ShipHP
+  - EnemyHP
+  - Slider
   layers:
   - Default
   - TransparentFX

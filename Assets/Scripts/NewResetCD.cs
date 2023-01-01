@@ -12,8 +12,12 @@ public class NewResetCD : MonoBehaviour
         if (transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember != null && transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Module")
         {
             module = transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<ModuleHUD>();
-            module.transform.GetChild(1).gameObject.GetComponent<Slider>().value = module.transform.GetChild(1).gameObject.GetComponent<Slider>().maxValue;
-            module.gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
+            if (module.transform.GetChild(8).transform.tag == "Slider")
+            {
+                module.transform.GetChild(8).gameObject.GetComponent<Slider>().value = module.transform.GetChild(8).gameObject.GetComponent<Slider>().maxValue;
+                module.gameObject.transform.GetChild(8).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 0.8031063f, 0.3066038f, 1);
+            }
+            
         }
 
     }

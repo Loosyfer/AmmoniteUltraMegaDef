@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GetMonsterName : MonoBehaviour
 {
 
-    public GameObject holder;
+    public GameObject monster;
     public Text text;
 
     void Start()
@@ -18,19 +18,7 @@ public class GetMonsterName : MonoBehaviour
     void Update()
     {
 
-        if (holder.GetComponent<GameObjectHolder>().activeModuleorMember != null)
-        {
-            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
-                text.text = "";
-            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Module")
-                text.text = "";
-            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Mega")
-                text.text = "";
-            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Mega2")
-                text.text = "";
-            if (holder.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Monster")
-                text.text = holder.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MonsterHUD>().name;
-        }
+                text.text = monster.GetComponent<MonsterHUD>().name;
 
     }
 }

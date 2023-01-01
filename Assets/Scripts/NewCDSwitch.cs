@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NewCDSwitch : MonoBehaviour
 {
@@ -23,12 +24,14 @@ public class NewCDSwitch : MonoBehaviour
                 if (module.cooldownActive == true)
                 {
                     module.cooldownActive = false;
-                    image.color = new Color(1, 0, 0, 1);
+                    image.color = new Color(0.9f, 0.1f, 0.1f, 0.5f);
+                    this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Locked";
                 }
                 else
                 {
                     module.cooldownActive = true;
-                    image.color = new Color(0, 1, 0, 1);
+                    image.color = new Color(0.1f, 0.9f, 0.1f, 1);
+                    this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Unlocked";
                 }
             }
             if (tag == "Mega")
@@ -37,12 +40,14 @@ public class NewCDSwitch : MonoBehaviour
                 if (mega.cooldownActive == true)
                 {
                     mega.cooldownActive = false;
-                    image.color = new Color(1, 0, 0, 1);
+                    image.color = new Color(0.9f, 0.1f, 0.1f, 0.5f);
+                    this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Locked";
                 }
                 else
                 {
                     mega.cooldownActive = true;
-                    image.color = new Color(0, 1, 0, 1);
+                    image.color = new Color(0.1f, 0.9f, 0.1f, 1);
+                    this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Unlocked";
                 }
             }
         }
@@ -65,10 +70,16 @@ public class NewCDSwitch : MonoBehaviour
                 if (module.sliderLength > 0)
                 {
                     if (module.cooldownActive == false)
-                        image.color = new Color(1, 0, 0, 1);
+                    {
+                        image.color = new Color(0.9f, 0.1f, 0.1f, 0.5f);
+                        this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Locked";
+                    }
                     else
-                        image.color = new Color(0, 1, 0, 1);
-                }
+                    {
+                        image.color = new Color(0.1f, 0.9f, 0.1f, 1);
+                        this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Unlocked";
+                    }
+                    }
                 else
                     image.color = new Color(1, 1, 1, 1);
             }
@@ -78,9 +89,15 @@ public class NewCDSwitch : MonoBehaviour
                 if (mega.sliderLength > 0)
                 {
                     if (mega.cooldownActive == false)
-                        image.color = new Color(1, 0, 0, 1);
+                    {
+                        image.color = new Color(0.9f, 0.1f, 0.1f, 0.5f);
+                        this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Locked";
+                    }
                     else
-                        image.color = new Color(0, 1, 0, 1);
+                    {
+                        image.color = new Color(0.1f, 0.9f, 0.1f, 1);
+                        this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "CD Unlocked";
+                    }
                 }
                 else
                     image.color = new Color(1, 1, 1, 1);

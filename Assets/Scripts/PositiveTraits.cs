@@ -12,7 +12,7 @@ public class PositiveTraits : ScriptableObject
         "Genius", "CopyCat", "Competitive", "War Fanatic", "Pacifist", "Has an Imaginary Friend", "Lucky", "Sadistic", "Mr. Moneybags", "Selfless", "Hero Mindset", "Best Buddies", "Spiritual Meditator",
         "Necromancy Enthusiast", "Has Gross Eating Habits", "Puppeteering Enthusiast", "Snitch", "Massage Expert", "Escape Artist", "Speaks Fish Language", "Heavy Snoring", "Sushi Chef", "Bone Architect",
         "Corpse Looter", "Unleashed Power", "Sushi Lover", "Home Chef", "Also a Lawyer", "Frankestein Fan", "A Karen", "Loves Rainbows", "Professor", "Loves Fireworks", "Posh Millionaire", 
-        "Gifted", "Recycling Fanatic", "Hypothermic"
+        "Gifted", "Recycling Fanatic", "Hypothermic", "Big Daddy"
     };
 
     public string[] description = new string[]
@@ -53,7 +53,8 @@ public class PositiveTraits : ScriptableObject
         "Can’t be placed in any Module that doesn’t cost at least 300 coins, but if their Module was undisturbed, they will pay a rent of 50 coins after every battle.",
         "Only applies to men. If a woman is in the Ship, no matter how far, she will gain the Pregnant Trait after 15 turns.",
         "Each Shop event, you can sell back 1 Module in your bench for half its original coin value.",
-        "Operates and performs normally even if their Module is Frozen."
+        "Operates and performs normally even if their Module is Frozen.",
+        "If an adjacent crew member is damaged by an enemy, they deal 50 damage to that enemy."
     };
 
 

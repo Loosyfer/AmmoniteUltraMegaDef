@@ -39,6 +39,6 @@ public class MonsterHUD : MonoBehaviour
         }
         script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
         selected = true;
-        this.transform.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 115);
+        this.transform.GetComponent<SpriteRenderer>().color = new Color32(120, 120, 120, 255);
     }
 }

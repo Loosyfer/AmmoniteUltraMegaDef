@@ -73,6 +73,18 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     void Update()
     {
 
+        if (GetRaycast())
+            GetComponent<Image>().raycastTarget = false;
+        else
+            GetComponent<Image>().raycastTarget = true;
+
+        Debug.Log("GetRayCast es " + GetRaycast());
+
+        if (Input.GetMouseButtonDown(0) && GetRaycast())
+        {
+            GetComponent<Image>().raycastTarget = false;
+        }
+
         if (Input.GetMouseButtonUp(0) && pointerDown && !objectDragged)
         {
             EventSystem.current.SetSelectedGameObject(gameObject);
@@ -96,17 +108,23 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
             script.activeModuleorMember.GetComponent<ModuleHUD>().selected = true;
             camera.GetComponent<CameraZoomController>().movingOn = false;
         }
+
+        if (Input.GetMouseButtonUp(0))
+            GetComponent<Image>().raycastTarget = true;
             
     }
 
     private bool GetRaycast()
     {
         RaycastHit2D[] hits;
-        hits = Physics2D.RaycastAll(Input.mousePosition, Vector2.zero);
+        hits = Physics2D.RaycastAll(camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         for (int i = 0; i < hits.Length; i++)
         {
             if (hits[i].transform.tag == "Member")
+            {
+                EventSystem.current.SetSelectedGameObject(hits[i].transform.gameObject);
                 return true;
+            }
         }
         return false;
     }

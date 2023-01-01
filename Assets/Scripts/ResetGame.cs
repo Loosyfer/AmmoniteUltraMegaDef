@@ -5,20 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class ResetGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject surePanel;
+    public FMOD.Studio.EventInstance instance;
+    public GameObject stopMusic;
+
+    public void DisplaySurePanel()
     {
-        
+        surePanel.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HideSurePanel()
     {
-        
+        surePanel.SetActive(false);
     }
+
 
     public void ResetTheGame()
     {
+        instance = stopMusic.transform.GetChild(0).GetComponent<PlaySong1>().instance;
+        if (IsPlaying(instance))
+            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        instance.release();
+        surePanel.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    bool IsPlaying(FMOD.Studio.EventInstance instance)
+    {
+        FMOD.Studio.PLAYBACK_STATE state;
+        instance.getPlaybackState(out state);
+        return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
     }
 }

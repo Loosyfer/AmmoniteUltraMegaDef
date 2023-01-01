@@ -50,6 +50,7 @@ MonoBehaviour:
   - Gifted
   - Recycling Fanatic
   - Hypothermic
+  - Big Daddy
   description:
   - +30% Performance, but always comes paired with Moody, Psychopath, Fussy, Geek
     or Vain.
@@ -117,3 +118,5 @@ MonoBehaviour:
   - Each Shop event, you can sell back 1 Module in your bench for half its original
     coin value.
   - Operates and performs normally even if their Module is Frozen.
+  - If an adjacent crew member is damaged by an enemy, they deal 50 damage to that
+    enemy.

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ae3392a58a9c34589032dd8194b753, type: 3}
+  m_Name: StrangeEvents
+  m_EditorClassIdentifier: 
+  strangeEvents:
+  - Enemy Ship(Neutral)
+  - Enemy Ship(Hostile)
+  - Eerie Cave
+  - Marine graveyard
+  - Rescue mission
+  - Dangerous request
+  - Guarded Treasure
+  - Underwater Colony
+  - Submarine Wreck
+  - Antique Shop
+  - Training Academy
+  - Hospital
+  - Repair Facility
+  - Cemetery
+  - Mystical temple gate
+  - Mystery portal
+  - Trinket merchant
+  - Interdimensional wormhole
+  - Boxing ring
+  - Collector of idiots
+  - Oceanic trespasser
+  - Dangerous cave
+  - Underwater Tavern
+  - Oceanic gambler
+  - Nuclear waste dump
+  - Rapture city
+  - Forgotten submarine
+  - Turtle cave
+  - Pirate shipwreck

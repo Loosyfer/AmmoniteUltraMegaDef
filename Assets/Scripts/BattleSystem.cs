@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using TMPro;
+using BayatGames.SaveGameFree;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -58,6 +59,11 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
     {
+        /*BattleSystem data = new BattleSystem();
+        data = SaveGame.Load<BattleSystem>("allData");
+        modules = data.modules;
+        members = data.members;
+        megas = data.megas;*/
         state = BattleState.START;
         StartCoroutine(SetupBattle());
     }
@@ -66,7 +72,6 @@ public class BattleSystem : MonoBehaviour
     {
         while (activeSelf)
         {
-
 
             if (loopNumber == 0)
             {
@@ -126,7 +131,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(760 + (i * 140), 343 + (79 * j), 0), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(760 + (i * 140), 390 + (79 * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotFolder.transform;
                 string name = "";
                 name = name + j;
@@ -146,7 +151,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 7; i++)
             {
-                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(730 + (i * 27.77f), 16.8f + (22.17f * j), 0), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(64 + (i * 27.77f), 20.2f + (22.17f * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotButtonsFolder.transform;
                 string name = "";
                 name = name + j;
@@ -242,6 +247,8 @@ public class BattleSystem : MonoBehaviour
 
     public void GenerateModules(string s)
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
         int k = Random.Range(0, 11);
@@ -386,6 +393,8 @@ public class BattleSystem : MonoBehaviour
 
     public void GenerateMembers(string s)
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         int l = Random.Range(0, membersInfo.names.Length);
@@ -509,6 +518,8 @@ public class BattleSystem : MonoBehaviour
 
     public void Generate(string s)
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            return;
         if (!int.TryParse(s, out int cyclelength))
         {
             Debug.Log("Try inputting a valid integer");
@@ -658,9 +669,34 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = Random.Range(0, 187);
+            int j = Random.Range(0, 190);
             int l = Random.Range(0, membersInfo.names.Length);
-            int k = Random.Range(0, 12);
+            int k = 0;
+            float random = Random.Range(0f, 100f);
+            if (random < 9f)
+                k = 0;
+            if (random >= 9f && random < 18f)
+                k = 1;
+            if (random >= 18f && random < 27f)
+                k = 2;
+            if (random >= 27f && random < 36f)
+                k = 3;
+            if (random >= 36f && random < 45f)
+                k = 4;
+            if (random >= 45f && random < 54f)
+                k = 5;
+            if (random >= 54f && random < 63f)
+                k = 6;
+            if (random >= 63f && random < 72f)
+                k = 7;
+            if (random >= 72f && random < 81f)
+                k = 8;
+            if (random >= 81f && random < 90f)
+                k = 9;
+            if (random >= 90f && random < 97f)
+                k = 10;
+            if (random >= 97f && random < 100f)
+                k = 11;
             GameObject go = Instantiate(memberGenPrefab, new Vector3(288 + i * 155, 1025, 0), Quaternion.identity) as GameObject;
             go.transform.parent = membersFolder.transform;
             members.Add(go);
@@ -775,6 +811,8 @@ public class BattleSystem : MonoBehaviour
 
     public void GenerateMegas(string s)
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
         if (!int.TryParse(s, out int index))
@@ -902,6 +940,8 @@ public class BattleSystem : MonoBehaviour
 
     public void GenerateBiologicModules(string s)
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
         if (!int.TryParse(s, out int index))
@@ -942,5 +982,16 @@ public class BattleSystem : MonoBehaviour
             stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[49];
         else
             stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];
+    }
+
+    void Save()
+    {
+
+        BattleSystem data = new BattleSystem();
+        data.modules = modules;
+        data.members = members;
+        data.megas = megas;
+        SaveGame.Save<BattleSystem>("allData", data);
+
     }
 }
