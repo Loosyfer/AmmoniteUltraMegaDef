@@ -129,9 +129,9 @@ public class BattleSystem : MonoBehaviour
         for (int j = 0; j < 6; j++)
         {
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
-                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(760 + (i * 140), 390 + (79 * j), 0), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(745 + (i * 171), 300 + (102* j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotFolder.transform;
                 string name = "";
                 name = name + j;
@@ -149,9 +149,9 @@ public class BattleSystem : MonoBehaviour
         for (int j = 0; j < 6; j++)
         {
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
-                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(64 + (i * 27.77f), 20.2f + (22.17f * j), 0), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(slotButtonPrefab, new Vector3(723 + (i * 27.77f), 18.1f + (22.17f * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotButtonsFolder.transform;
                 string name = "";
                 name = name + j;
@@ -406,7 +406,7 @@ public class BattleSystem : MonoBehaviour
         int index1 = (int)Mathf.Floor(i / 1000);
         int index2 = (int)(i - index1 * 1000);
         Debug.Log(index1 + index2);
-        GameObject go = Instantiate(memberGenPrefab, new Vector3(908, 1025, 0), Quaternion.identity) as GameObject;
+        GameObject go = Instantiate(memberGenPrefab, new Vector3(820, 1025, 0), Quaternion.identity) as GameObject;
         go.transform.parent = membersFolder.transform;
         MemberHUD Yrt = go.GetComponent<MemberHUD>();
         members.Add(go);
@@ -538,7 +538,7 @@ public class BattleSystem : MonoBehaviour
         {
             int j = Random.Range(0, 165);
             int k = Random.Range(0, 11);
-            GameObject go = Instantiate(moduleGenPrefab, new Vector3(288 + i * 155, 960, 0), Quaternion.identity) as GameObject;
+            GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
             modules.Add(go);
@@ -697,7 +697,7 @@ public class BattleSystem : MonoBehaviour
                 k = 10;
             if (random >= 97f && random < 100f)
                 k = 11;
-            GameObject go = Instantiate(memberGenPrefab, new Vector3(288 + i * 155, 1025, 0), Quaternion.identity) as GameObject;
+            GameObject go = Instantiate(memberGenPrefab, new Vector3(272 + i * 163, 934, 0), Quaternion.identity) as GameObject;
             go.transform.parent = membersFolder.transform;
             members.Add(go);
             MemberHUD Yrt = go.GetComponent<MemberHUD>();
