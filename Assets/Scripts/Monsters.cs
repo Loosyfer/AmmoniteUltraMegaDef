@@ -23,7 +23,7 @@ public class Monsters : ScriptableObject
 "Tapeworms",
 "Shell-less Turtle",
 "Manfish",
-"Ophtalmonster",
+"Ophthalmonster",
 "Puffers",
 "Psychic Starfish",
 "Sunfish",
