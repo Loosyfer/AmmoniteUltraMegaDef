@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -41496,6 +41496,7 @@ GameObject:
   - component: {fileID: 1720324050}
   - component: {fileID: 1720324051}
   - component: {fileID: 1720324052}
+  - component: {fileID: 1720324053}
   m_Layer: 5
   m_Name: Monster
   m_TagString: Monster
@@ -41520,7 +41521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -684, y: 33.66}
+  m_AnchoredPosition: {x: -740, y: 0.000026703}
   m_SizeDelta: {x: 354.2895, y: 354.2895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1720324050
@@ -41618,6 +41619,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6768785, y: 3.6763783}
   m_EdgeRadius: 0
+--- !u!95 &1720324053
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720324048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b17b3ffaff9176439c72e62ab496b71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1720542971
 GameObject:
   m_ObjectHideFlags: 0
