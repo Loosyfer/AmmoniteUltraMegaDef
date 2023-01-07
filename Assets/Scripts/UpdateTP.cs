@@ -16,7 +16,7 @@ public class UpdateTP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value = (script.totalPerformance);
+        /*slider.value = (script.totalPerformance);
         Image background = slider.transform.GetChild(0).GetComponent<Image>();
         Image fill = slider.transform.GetChild(1).GetChild(0).GetComponent<Image>();
         if (slider.value < 25)
@@ -44,6 +44,6 @@ public class UpdateTP : MonoBehaviour
             background.color = new Color(1, 1, 0, 1);
             fill.color = new Color(1, 0.9333333f, 0.3372549f, 1);
         }
-        this.transform.GetChild(6).GetComponent<Text>().text = slider.value + " %";
+        this.transform.GetChild(6).GetComponent<Text>().text = slider.value + " %";*/
     }
 }

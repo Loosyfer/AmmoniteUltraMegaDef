@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEditor;
+using UnityEngine.EventSystems;
 
 
 public class SceneSwitcher : MonoBehaviour
@@ -14,6 +15,8 @@ public class SceneSwitcher : MonoBehaviour
     public Camera camera3;
     public GameObject malla;
     public GameObject canvas2;
+    public GameObject healthChanger;
+    public GameObject performanceChanger;
     WaitForEndOfFrame frameEnd = new WaitForEndOfFrame();
     private bool mapOn = false;
 
@@ -27,7 +30,7 @@ public class SceneSwitcher : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Tab))
         { 
             if (mapOn)
                 MainGame();
@@ -37,6 +40,21 @@ public class SceneSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             this.transform.GetComponent<BattleSystem>().TurnButtonClick();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            this.transform.GetComponent<BattleSystem>().ResetTurns();
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            EventSystem.current.SetSelectedGameObject(healthChanger);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            EventSystem.current.SetSelectedGameObject(performanceChanger);
         }
     }
 

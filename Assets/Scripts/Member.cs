@@ -27,4 +27,6 @@ public class Member : MonoBehaviour
     public string secTrait;
 
     public string secTraitDescription;
+
+    public int health;
 }

@@ -39,6 +39,8 @@ public class BattleSystem : MonoBehaviour
     public int[] mStackeos = new int[12];
     public GameObject stackingFolder;
     public StackingIcons stackingIcons;
+    public GameObject turnCounter;
+    private int turn;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -75,7 +77,7 @@ public class BattleSystem : MonoBehaviour
 
             if (loopNumber == 0)
             {
-                
+                turn = 0;
                 StartGame();
 
             }
@@ -231,6 +233,9 @@ public class BattleSystem : MonoBehaviour
                 }
             }
         }
+
+        turn++;
+        turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
     }
 
     public void CalculatePerformance()
@@ -993,5 +998,12 @@ public class BattleSystem : MonoBehaviour
         data.megas = megas;
         SaveGame.Save<BattleSystem>("allData", data);
 
+    }
+
+    public void ResetTurns()
+    {
+
+        turn = 0;
+        turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
     }
 }

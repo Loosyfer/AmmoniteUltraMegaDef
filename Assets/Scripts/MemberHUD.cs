@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class MemberHUD : MonoBehaviour
@@ -20,6 +21,7 @@ public class MemberHUD : MonoBehaviour
     public Color Colours = new Color(1f, 1f, 1f, 1f);
     public float performance;
     public bool selected;
+    public int health;
 
     public void SetHUD(Member member)
     {
@@ -34,11 +36,19 @@ public class MemberHUD : MonoBehaviour
         profPrice.text = member.profPrice.ToString();
         traitPrice.text = member.traitPrice.ToString();
         performance = member.performance;
+        health = member.health;
 
+    }
+
+    private void Awake()
+    {
+        health = 4;
     }
 
     void Update()
     {
+        this.transform.GetChild(23).GetComponent<TextMeshProUGUI>().text = health.ToString();
+
         if (selected)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);

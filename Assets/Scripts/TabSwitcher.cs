@@ -12,7 +12,7 @@ public class TabSwitcher : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        /*if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (EventSystem.current.currentSelectedGameObject == null)
                 EventSystem.current.SetSelectedGameObject(ShipHP);
@@ -23,6 +23,6 @@ public class TabSwitcher : MonoBehaviour
                 else
                     EventSystem.current.SetSelectedGameObject(ShipHP);
             }
-        }
+        }*/
     }
 }
