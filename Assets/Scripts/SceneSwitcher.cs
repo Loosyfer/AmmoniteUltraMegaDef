@@ -17,6 +17,7 @@ public class SceneSwitcher : MonoBehaviour
     public GameObject canvas2;
     public GameObject healthChanger;
     public GameObject performanceChanger;
+    public GameObject rngObject;
     WaitForEndOfFrame frameEnd = new WaitForEndOfFrame();
     private bool mapOn = false;
 
@@ -55,6 +56,10 @@ public class SceneSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             EventSystem.current.SetSelectedGameObject(performanceChanger);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            rngObject.GetComponent<RNGenerator>().GenerateNumber();
         }
     }
 

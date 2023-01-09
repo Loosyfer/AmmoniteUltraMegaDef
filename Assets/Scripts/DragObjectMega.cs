@@ -35,7 +35,6 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
 
@@ -48,7 +47,6 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         //GetComponent<SpriteRenderer>().raycastTarget = true;
         camera.GetComponent<CameraZoomController>().movingOn = false;

@@ -7,7 +7,17 @@ public class TotalDamage : MonoBehaviour
 {
 
     public GameObject battleSystem;
-    public GameObject displayer;
+    public GameObject displayer1;
+    public GameObject displayer2;
+    public GameObject displayer3;
+    public int extraDmg;
+    public int sum;
+
+    void Awake()
+    {
+        extraDmg = 0;
+        sum = 0;
+    }
 
     void Update()
     {
@@ -29,6 +39,14 @@ public class TotalDamage : MonoBehaviour
             if (performance == 100)
                 crewPerformance += 40;
         }
-        displayer.GetComponent<TextMeshProUGUI>().text = crewPerformance.ToString();
+        displayer1.GetComponent<TextMeshProUGUI>().text = crewPerformance.ToString();
+        displayer2.GetComponent<TextMeshProUGUI>().text = extraDmg.ToString();
+        sum = crewPerformance + extraDmg;
+        displayer3.GetComponent<TextMeshProUGUI>().text = sum.ToString();
+    }
+
+    public void updateExtraDmg(string s)
+    {
+        extraDmg = int.Parse(s);
     }
 }

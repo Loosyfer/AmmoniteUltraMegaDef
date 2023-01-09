@@ -905,6 +905,7 @@ MonoBehaviour:
   Colours: {r: 1, g: 1, b: 1, a: 1}
   performance: 0
   selected: 0
+  health: 0
 --- !u!114 &8514926322427008640
 MonoBehaviour:
   m_ObjectHideFlags: 0

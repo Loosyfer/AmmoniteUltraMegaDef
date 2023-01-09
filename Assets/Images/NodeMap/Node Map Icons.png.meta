@@ -120,8 +120,8 @@ TextureImporter:
       name: Node Map Icons_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 439
+        x: 30
+        y: 452
         width: 30
         height: 30
       alignment: 0
@@ -141,8 +141,8 @@ TextureImporter:
       name: Node Map Icons_1
       rect:
         serializedVersion: 2
-        x: 98
-        y: 439
+        x: 90
+        y: 452
         width: 30
         height: 30
       alignment: 0
@@ -162,8 +162,8 @@ TextureImporter:
       name: Node Map Icons_2
       rect:
         serializedVersion: 2
-        x: 139
-        y: 439
+        x: 30
+        y: 392
         width: 30
         height: 30
       alignment: 0
@@ -183,8 +183,8 @@ TextureImporter:
       name: Node Map Icons_3
       rect:
         serializedVersion: 2
-        x: 180
-        y: 439
+        x: 90
+        y: 392
         width: 30
         height: 30
       alignment: 0
@@ -204,8 +204,8 @@ TextureImporter:
       name: Node Map Icons_4
       rect:
         serializedVersion: 2
-        x: 221
-        y: 439
+        x: 30
+        y: 332
         width: 30
         height: 30
       alignment: 0
@@ -225,8 +225,8 @@ TextureImporter:
       name: Node Map Icons_5
       rect:
         serializedVersion: 2
-        x: 262
-        y: 439
+        x: 90
+        y: 332
         width: 30
         height: 30
       alignment: 0
@@ -246,8 +246,8 @@ TextureImporter:
       name: Node Map Icons_6
       rect:
         serializedVersion: 2
-        x: 303
-        y: 439
+        x: 30
+        y: 272
         width: 30
         height: 30
       alignment: 0
@@ -267,8 +267,8 @@ TextureImporter:
       name: Node Map Icons_7
       rect:
         serializedVersion: 2
-        x: 344
-        y: 439
+        x: 30
+        y: 212
         width: 30
         height: 30
       alignment: 0
@@ -288,8 +288,8 @@ TextureImporter:
       name: Node Map Icons_8
       rect:
         serializedVersion: 2
-        x: 385
-        y: 439
+        x: 30
+        y: 152
         width: 30
         height: 30
       alignment: 0
@@ -309,8 +309,8 @@ TextureImporter:
       name: Node Map Icons_9
       rect:
         serializedVersion: 2
-        x: 426
-        y: 439
+        x: 30
+        y: 92
         width: 30
         height: 30
       alignment: 0
@@ -330,8 +330,8 @@ TextureImporter:
       name: Node Map Icons_10
       rect:
         serializedVersion: 2
-        x: 57
-        y: 399
+        x: 30
+        y: 32
         width: 30
         height: 30
       alignment: 0
@@ -347,195 +347,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_11
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d4df7ce4c1b8c041bac709063f38fb9
-      internalID: 1027277080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_12
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 333df2ed6a6f3464f8dcaf1de3d6cefe
-      internalID: 609343348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_13
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f90e6135c68c58547a82ad3c2e8a6c22
-      internalID: 1618052390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_14
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e06ca7419e785240b176573ad2bc116
-      internalID: 2002034697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_15
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8f97ca83f8b0114083978bbce992bc3
-      internalID: -997394256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_16
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a25a1308b233e744a4109d45c1e23e2
-      internalID: 1542418345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_17
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27690273cef4b3c40880d4ce0bd9f9b1
-      internalID: -581947354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_18
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2622ba61ecee9741871a47bc66177cd
-      internalID: -1492522814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Node Map Icons_19
-      rect:
-        serializedVersion: 2
-        x: 426
-        y: 399
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fc2c3a239edfb8448dfa3d1bbc6e9f2
-      internalID: 1548443275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -547,25 +358,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Node Map Icons_19: 1548443275
-      Node Map Icons_14: 2002034697
       Node Map Icons_2: 777307998
       Node Map Icons_1: -1106812096
-      Node Map Icons_12: 609343348
       Node Map Icons_5: -457921210
-      Node Map Icons_17: -581947354
       Node Map Icons_4: -94564233
       Node Map Icons_7: 1432487319
-      Node Map Icons_16: 1542418345
-      Node Map Icons_15: -997394256
       Node Map Icons_3: 636755655
       Node Map Icons_9: -1141050781
       Node Map Icons_6: 817927849
-      Node Map Icons_13: 1618052390
-      Node Map Icons_18: -1492522814
       Node Map Icons_10: 477754015
       Node Map Icons_8: 1530872448
-      Node Map Icons_11: 1027277080
       Node Map Icons_0: 1125123634
   spritePackingTag: 
   pSDRemoveMatte: 0

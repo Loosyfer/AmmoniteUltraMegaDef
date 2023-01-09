@@ -34,7 +34,6 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
     }
@@ -46,7 +45,6 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         GetComponent<Image>().raycastTarget = true;
         camera.GetComponent<CameraZoomController>().movingOn = false;
