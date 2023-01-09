@@ -421,7 +421,7 @@ public class BattleSystem : MonoBehaviour
         Yrt.trait.text = membersInfo.traitList[index2];
         Yrt.profession = (ProfessionType)index1;
         Yrt.profPrice.text = membersInfo.profPrice[index1].ToString();
-        Yrt.traitPrice.text = membersInfo.traitPrice[index2].ToString();
+        Yrt.traitPrice.text = Yrt.trait.text + "(" + membersInfo.traitPrice[index2].ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[index1] + membersInfo.traitPrice[index2]).ToString();
         Yrt.totalPrice.text = (membersInfo.profPrice[index1] + membersInfo.traitPrice[index2]).ToString();
         Yrt.performance = 50;
         mStackeos[index1]++;
@@ -712,7 +712,7 @@ public class BattleSystem : MonoBehaviour
             Yrt.trait.text = membersInfo.traitList[j];
             Yrt.profession = (ProfessionType)k;
             Yrt.profPrice.text = membersInfo.profPrice[k].ToString();
-            Yrt.traitPrice.text = membersInfo.traitPrice[j].ToString();
+            Yrt.traitPrice.text = Yrt.trait.text + "(" + membersInfo.traitPrice[j].ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
             Yrt.totalPrice.text = (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
             Yrt.performance = 50;
             SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();

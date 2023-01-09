@@ -47,7 +47,8 @@ public class MemberHUD : MonoBehaviour
 
     void Update()
     {
-        this.transform.GetChild(23).GetComponent<TextMeshProUGUI>().text = health.ToString();
+
+        this.transform.GetChild(22).GetComponent<TextMeshProUGUI>().text = health.ToString();
 
         if (selected)
         {
