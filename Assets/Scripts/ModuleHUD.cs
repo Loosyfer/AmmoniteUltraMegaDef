@@ -21,6 +21,7 @@ public class ModuleHUD : MonoBehaviour
     public bool WFlooded;
     public bool SFlooded;
     public bool Freezed;
+    public bool insideField;
 
     public void SetHUD(Module module)
     {
@@ -33,6 +34,7 @@ public class ModuleHUD : MonoBehaviour
         WFlooded = false;
         SFlooded = false;
         Freezed = false;
+        insideField = false;
     }
 
     void Update()

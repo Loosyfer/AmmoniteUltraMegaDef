@@ -11,6 +11,7 @@ public class MonsterHUD : MonoBehaviour
     public string instructions;
     public string name;
     public string flavour;
+    public int dPT;
 
     void Start()
     {

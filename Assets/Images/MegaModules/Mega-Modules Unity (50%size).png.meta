@@ -159,27 +159,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mega-Modules Unity (50%size)_2
-      rect:
-        serializedVersion: 2
-        x: 1551
-        y: 3442
-        width: 7
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 459422f8fbb669c4fa63aec4e79deebd
-      internalID: -956439762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mega-Modules Unity (50%size)_3
       rect:
         serializedVersion: 2
@@ -343,27 +322,6 @@ TextureImporter:
       bones: []
       spriteID: 52f5c0653a441114a86ce8d05525ff76
       internalID: 333886533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mega-Modules Unity (50%size)_11
-      rect:
-        serializedVersion: 2
-        x: 3630
-        y: 2282
-        width: 58
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f766904861613f4f8da4d1062c6c3d2
-      internalID: 1911060064
       vertices: []
       indices: 
       edges: []

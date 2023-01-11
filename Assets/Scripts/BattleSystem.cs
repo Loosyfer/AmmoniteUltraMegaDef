@@ -41,6 +41,11 @@ public class BattleSystem : MonoBehaviour
     public StackingIcons stackingIcons;
     public GameObject turnCounter;
     private int turn;
+    public GameObject playerHPBar;
+    public GameObject enemyHPBar;
+    public GameObject monster;
+    public GameObject playerBattleHUD;
+    public GameObject rockets;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -236,6 +241,18 @@ public class BattleSystem : MonoBehaviour
 
         turn++;
         turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
+        if ((turn % 2) == 1)
+        {
+            playerHPBar.GetComponent<DecreaseHP>().ReadStringInput(((monster.GetComponent<MonsterHUD>().dPT) * -1).ToString());
+            monster.GetComponent<Animator>().Play("Monster_Attack");
+        }
+        if ((turn % 2) == 0)
+        {
+            enemyHPBar.GetComponent<DecreaseHP>().ReadStringInput(((playerBattleHUD.GetComponent<TotalDamage>().sum) * -1).ToString());
+            monster.GetComponent<Animator>().Play("Monster_Flinch");
+            rockets.transform.GetChild(0).GetComponent<Animator>().Play("AA_0");
+        }
+
     }
 
     public void CalculatePerformance()
@@ -360,6 +377,7 @@ public class BattleSystem : MonoBehaviour
         }
         if (Yrt.type == (ModuleType)3)
         {
+            imagen.color = new Color(0.7f, 0.7f, 0.7f, 1);
             stackeos[3]++;
             canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
             if (stackeos[3] < 4)
@@ -636,6 +654,7 @@ public class BattleSystem : MonoBehaviour
             }
             if (Yrt.type == (ModuleType)3)
             {
+                imagen.color = new Color(0.7f, 0.7f, 0.7f, 1);
                 stackeos[3]++;
                 canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
                 if (stackeos[3] < 4)

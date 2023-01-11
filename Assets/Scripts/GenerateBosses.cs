@@ -22,6 +22,7 @@ public class GenerateBosses : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
                 break;
             case 1:
                 random = Random.Range(19, 21);
@@ -29,6 +30,7 @@ public class GenerateBosses : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
                 break;
             case 2:
                 random = Random.Range(32, 34);
@@ -36,6 +38,7 @@ public class GenerateBosses : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
                 break;
             case 3:
                 random = Random.Range(44, 46);
@@ -43,6 +46,7 @@ public class GenerateBosses : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
                 break;
             case 4:
                 random = Random.Range(53, 56);
@@ -50,6 +54,7 @@ public class GenerateBosses : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
                 break;
         }
     }

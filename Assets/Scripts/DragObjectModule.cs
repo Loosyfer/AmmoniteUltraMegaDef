@@ -17,6 +17,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObjectHolder script;
     public GameObject malla;
     private Vector3 mousePositionOffset;
+    public GameObject shipField;
 
     public Camera camera;
 
@@ -137,4 +138,5 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     {
         return camera.ScreenToWorldPoint(Input.mousePosition);
     }
+
 }

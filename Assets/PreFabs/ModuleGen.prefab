@@ -708,6 +708,7 @@ MonoBehaviour:
   WFlooded: 0
   SFlooded: 0
   Freezed: 0
+  insideField: 0
 --- !u!225 &5252401854985802036
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -735,6 +736,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   script: {fileID: 0}
   malla: {fileID: 0}
+  shipField: {fileID: 0}
   camera: {fileID: 0}
 --- !u!114 &4971035606155351638
 MonoBehaviour:

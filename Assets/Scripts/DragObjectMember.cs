@@ -119,10 +119,13 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     private void OnMouseOver()
     {
         this.transform.GetChild(4).gameObject.SetActive(true);
+        if (this.transform.GetComponent<MemberHUD>().secTrait.text != "")
+            this.transform.GetChild(23).gameObject.SetActive(true);
     }
 
     private void OnMouseExit()
     {
         this.transform.GetChild(4).gameObject.SetActive(false);
+        this.transform.GetChild(23).gameObject.SetActive(false);
     }
 }
