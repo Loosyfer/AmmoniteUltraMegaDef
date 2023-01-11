@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1102 &-6811048380013823555
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Monster_Scope
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 11096c7324b37ef41a597eacc6911611, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-5763751095376095583
 AnimatorState:
   serializedVersion: 6
@@ -157,16 +183,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6491819740633980482}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 420, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2384205198449138434}
-    m_Position: {x: 410, y: 0, z: 0}
+    m_Position: {x: 680, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 383384446629271601}
-    m_Position: {x: 450, y: 160, z: 0}
+    m_Position: {x: 680, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5763751095376095583}
-    m_Position: {x: 230, y: 160, z: 0}
+    m_Position: {x: 680, y: 90, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -6811048380013823555}
+    m_Position: {x: 330, y: 70, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -174,7 +203,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ExitPosition: {x: 840, y: 350, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 6491819740633980482}
 --- !u!1102 &6491819740633980482
