@@ -22,6 +22,8 @@ public class ModuleHUD : MonoBehaviour
     public bool SFlooded;
     public bool Freezed;
     public bool insideField;
+    public bool onFire;
+    public GameObject fireMotion;
 
     public void SetHUD(Module module)
     {
@@ -35,6 +37,7 @@ public class ModuleHUD : MonoBehaviour
         SFlooded = false;
         Freezed = false;
         insideField = false;
+        onFire = false;
     }
 
     void Update()
@@ -57,6 +60,10 @@ public class ModuleHUD : MonoBehaviour
             gameObject.transform.GetChild(5).gameObject.SetActive(true);
         else
             gameObject.transform.GetChild(5).gameObject.SetActive(false);
+        if (onFire)
+            fireMotion.SetActive(true);
+        else
+            fireMotion.SetActive(false);
     }
 
 }

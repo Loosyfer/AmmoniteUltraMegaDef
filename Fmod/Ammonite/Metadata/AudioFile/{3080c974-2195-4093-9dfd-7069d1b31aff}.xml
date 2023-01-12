@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3080c974-2195-4093-9dfd-7069d1b31aff}">
+		<property name="assetPath">
+			<value>Trumpet.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.0640000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{adbdb7e0-3ff1-4eec-9713-4efffaf20917}</destination>
+		</relationship>
+	</object>
+</objects>

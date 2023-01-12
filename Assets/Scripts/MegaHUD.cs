@@ -20,6 +20,9 @@ public class MegaHUD : MonoBehaviour
     public bool WFlooded;
     public bool SFlooded;
     public bool Freezed;
+    public bool onFire;
+    public GameObject fireMotion1;
+    public GameObject fireMotion2;
 
     public void SetHUD(Mega mega)
     {
@@ -31,6 +34,7 @@ public class MegaHUD : MonoBehaviour
         WFlooded = false;
         SFlooded = false;
         Freezed = false;
+        onFire = false;
     }
 
     void Update()
@@ -59,6 +63,16 @@ public class MegaHUD : MonoBehaviour
         {
             gameObject.transform.GetChild(6).gameObject.SetActive(false);
             gameObject.transform.GetChild(7).gameObject.SetActive(false);
+        }
+        if (onFire)
+        {
+            fireMotion1.SetActive(true);
+            fireMotion2.SetActive(true);
+        }
+        else
+        {
+            fireMotion1.SetActive(false);
+            fireMotion2.SetActive(false);
         }
     }
 

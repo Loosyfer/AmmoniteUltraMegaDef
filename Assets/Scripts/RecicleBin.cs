@@ -30,7 +30,7 @@ public class RecicleBin : MonoBehaviour, IDropHandler
             if (eventData.pointerDrag.tag == "Module")
             {
                 script.modules.Remove(eventData.pointerDrag);
-                if (eventData.pointerDrag.GetComponent<ModuleHUD>().type == (ModuleType)0)
+                /*if (eventData.pointerDrag.GetComponent<ModuleHUD>().type == (ModuleType)0)
                 {
                     script.stackeos[0]--;
                     canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = script.stackeos[0].ToString();
@@ -96,11 +96,11 @@ public class RecicleBin : MonoBehaviour, IDropHandler
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
                     if (script.stackeos[4] > 9)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];
-                }
+                }*/
             }
             if (eventData.pointerDrag.tag == "Member")
             {
-                switch (eventData.pointerDrag.GetComponent<MemberHUD>().profession)
+                /*switch (eventData.pointerDrag.GetComponent<MemberHUD>().profession)
                 {
                     case (ProfessionType)0:
                         script.mStackeos[0]--;
@@ -240,7 +240,7 @@ public class RecicleBin : MonoBehaviour, IDropHandler
                         if (script.mStackeos[11] > 0)
                             stackingFolder.transform.GetChild(16).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[47];
                         break;
-                }
+                }*/
                 script.members.Remove(eventData.pointerDrag);
             }
             Destroy(eventData.pointerDrag);

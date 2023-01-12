@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{27da64af-a6bf-418f-bcb1-24e3c5615d48}">
+		<property name="assetPath">
+			<value>Geodude.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.2</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{adbdb7e0-3ff1-4eec-9713-4efffaf20917}</destination>
+		</relationship>
+	</object>
+</objects>
