@@ -22,7 +22,7 @@ public class ItemSpawner : MonoBehaviour
     public void SpawnObject()
     {
         int i = Random.Range(0, 165);
-        GameObject objeto = Instantiate(objectPrefab, new Vector3(745 , 300 , 0), Quaternion.identity) as GameObject;
+        GameObject objeto = Instantiate(objectPrefab, new Vector3(618 , 197 , 0), Quaternion.identity) as GameObject;
         objeto.GetComponent<ObjectHUD>().name = objects.names[i];
         objeto.GetComponent<ObjectHUD>().description = objects.description[i];
         objeto.GetComponent<Image>().sprite = objects.sprites[i];
