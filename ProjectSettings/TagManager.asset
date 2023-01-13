@@ -15,6 +15,7 @@ TagManager:
   - ShipHP
   - EnemyHP
   - Slider
+  - Item
   layers:
   - Default
   - TransparentFX

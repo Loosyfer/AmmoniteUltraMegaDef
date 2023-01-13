@@ -273,7 +273,7 @@ public class BattleSystem : MonoBehaviour
             return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
-        int k = Random.Range(0, 11);
+        int k = Random.Range(0, 13);
         if (!int.TryParse(s, out int index))
         {
             Debug.Log("Try inputting a valid integer");
@@ -321,6 +321,48 @@ public class BattleSystem : MonoBehaviour
                 break;
             case "1":
                 Yrt.req.text = modInfo.randomReq[k].ToString();
+                switch (k)
+                {
+                    case 0:
+                        go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                        break;
+                    case 1:
+                        go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                        break;
+                    case 2:
+                        go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                        break;
+                    case 3:
+                        go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                        break;
+                    case 4:
+                        go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                        break;
+                    case 5:
+                        go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                        break;
+                    case 6:
+                        go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                        break;
+                    case 7:
+                        go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                        break;
+                    case 8:
+                        go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                        break;
+                    case 9:
+                        go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                        break;
+                    case 10:
+                        go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                        break;
+                    case 11:
+                        go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                        break;
+                    case 12:
+                        go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                        break;
+                }
                 break;
             default:
                 Yrt.req.text = modInfo.req[index];
@@ -560,7 +602,7 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < cyclelength; i++)
         {
             int j = Random.Range(0, 165);
-            int k = Random.Range(0, 11);
+            int k = Random.Range(0, 13);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
@@ -598,6 +640,48 @@ public class BattleSystem : MonoBehaviour
                     break;
                 case "1":
                     Yrt.req.text = modInfo.randomReq[k].ToString();
+                    switch (k)
+                    {
+                        case 0:
+                            go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                            break;
+                        case 1:
+                            go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                            break;
+                        case 2:
+                            go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                            break;
+                        case 3:
+                            go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                            break;
+                        case 4:
+                            go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                            break;
+                        case 5:
+                            go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                            break;
+                        case 6:
+                            go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                            break;
+                        case 7:
+                            go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                            break;
+                        case 8:
+                            go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                            break;
+                        case 9:
+                            go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                            break;
+                        case 10:
+                            go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                            break;
+                        case 11:
+                            go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                            break;
+                        case 12:
+                            go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                            break;
+                    }
                     break;
                 default:
                     Yrt.req.text = modInfo.req[j];

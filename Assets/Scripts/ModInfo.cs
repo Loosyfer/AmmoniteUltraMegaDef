@@ -230,8 +230,8 @@ public class ModInfo : ScriptableObject
      "0", "0", "1", "0", "1", "0", "1", "Must be adjacent to the Captain", "Must be adjacent to the Captain.", "Must be adjacent to the Captain.", "0", "Only works when adjacent to 4 crew members of the same profession.",
      "0", "0", "0", "1", "1", "0", "Only works when adjacent to 4 crew Members.", "0", "0", "0", "0", "0", "1", "0", "0", "0", "0", "0", "0"};
 
-    public ModuleRequirements[] randomReq = new ModuleRequirements[11] { (ModuleRequirements)0, (ModuleRequirements)1, (ModuleRequirements)2, (ModuleRequirements)3, (ModuleRequirements)4, (ModuleRequirements)5,
-    (ModuleRequirements)6, (ModuleRequirements)7, (ModuleRequirements)8, (ModuleRequirements)9, (ModuleRequirements)10};
+    public ModuleRequirements[] randomReq = new ModuleRequirements[13] { (ModuleRequirements)0, (ModuleRequirements)1, (ModuleRequirements)2, (ModuleRequirements)3, (ModuleRequirements)4, (ModuleRequirements)5,
+    (ModuleRequirements)6, (ModuleRequirements)7, (ModuleRequirements)8, (ModuleRequirements)9, (ModuleRequirements)10, (ModuleRequirements)11, (ModuleRequirements)12};
 
     public int[] modulePrice = new int[165] {200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
                                             200, 200, 200, 200, 200, 200, 200, 200, 200, 200,

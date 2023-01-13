@@ -17,6 +17,7 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObjectHolder script;
     public GameObject malla;
     private Vector3 mousePositionOffset;
+    public GameObject member;
 
     public Camera camera;
 
@@ -38,7 +39,10 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
-
+        if (member != null)
+        {
+            member.transform.GetComponent<DragObjectMember>().item = null;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -56,7 +60,6 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("MILHOUSEEEEEEEEEEEEEEEEEE");
         camera.GetComponent<CameraZoomController>().movingOn = true;
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
     }
@@ -70,4 +73,5 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     {
         return camera.ScreenToWorldPoint(Input.mousePosition);
     }
+
 }

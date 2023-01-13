@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
 
     [SerializeField] private Canvas canvas;
@@ -18,6 +18,7 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObjectHolder script;
     public GameObject malla;
     private Vector3 mousePositionOffset;
+    public GameObject item;
 
     private void Awake()
     {
@@ -41,6 +42,8 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.position = GetMouseWorldPosition() + mousePositionOffset;
+        if (item != null)
+            item.transform.position = GetMouseWorldPosition() + mousePositionOffset + new Vector3(23, 15, 0);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -128,4 +131,21 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         this.transform.GetChild(4).gameObject.SetActive(false);
         this.transform.GetChild(23).gameObject.SetActive(false);
     }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        Debug.Log("Checkpoint1");
+        if (eventData.pointerDrag != null)
+        {
+            Debug.Log("Checkpoint2");
+            if (eventData.pointerDrag.transform.tag == "Item")
+            {
+                eventData.pointerDrag.transform.position = transform.position + new Vector3(23, 15, 0);
+                item = eventData.pointerDrag.gameObject;
+                eventData.pointerDrag.transform.GetComponent<DragObjectObject>().member = this.gameObject;
+            }
+        }
+    }
+
+
 }
