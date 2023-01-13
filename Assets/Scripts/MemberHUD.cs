@@ -10,7 +10,7 @@ public class MemberHUD : MonoBehaviour
 
     public Text nameText;
     public Text profDetailsText;
-    public Text traitDetailsText;
+    public TMP_Text traitDetailsText;
     public ProfessionType profession;
     public Text trait;
     public Text secTrait;

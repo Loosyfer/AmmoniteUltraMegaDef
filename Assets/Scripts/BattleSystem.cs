@@ -243,7 +243,7 @@ public class BattleSystem : MonoBehaviour
         turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
         if ((turn % 2) == 1)
         {
-            playerHPBar.GetComponent<DecreaseHP>().ReadStringInput(((monster.GetComponent<MonsterHUD>().dPT) * -1).ToString());
+            playerHPBar.GetComponent<DecreaseHPShip>().ReadStringInput(((monster.GetComponent<MonsterHUD>().dPT) * -1).ToString());
             monster.GetComponent<Animator>().Play("Monster_Attack");
         }
         if ((turn % 2) == 0)
@@ -366,8 +366,75 @@ public class BattleSystem : MonoBehaviour
                 break;
             default:
                 Yrt.req.text = modInfo.req[index];
+                go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                 break;
         }
+        int m = Random.Range(0, 2);
+        if (m == 0)
+        {
+            float l = Random.Range(0f, 100f);
+            if (l <= 3.25f)
+                go.transform.GetChild(12).GetChild(0).gameObject.SetActive(true);
+            if (l <= 6.5f && l > 3.25f)
+                go.transform.GetChild(12).GetChild(1).gameObject.SetActive(true);
+            if (l <= 9.75f && l > 6.5f)
+                go.transform.GetChild(12).GetChild(2).gameObject.SetActive(true);
+            if (l <= 13f && l > 9.75f)
+                go.transform.GetChild(12).GetChild(3).gameObject.SetActive(true);
+            if (l <= 16.25f && l > 13f)
+                go.transform.GetChild(12).GetChild(4).gameObject.SetActive(true);
+            if (l <= 19.5f && l > 16.25f)
+                go.transform.GetChild(12).GetChild(5).gameObject.SetActive(true);
+            if (l <= 22.75f && l > 19.5f)
+                go.transform.GetChild(12).GetChild(6).gameObject.SetActive(true);
+            if (l <= 26f && l > 22.75f)
+                go.transform.GetChild(12).GetChild(7).gameObject.SetActive(true);
+            if (l <= 29.25f && l > 26f)
+                go.transform.GetChild(12).GetChild(8).gameObject.SetActive(true);
+            if (l <= 32.5f && l > 29.25f)
+                go.transform.GetChild(12).GetChild(9).gameObject.SetActive(true);
+            if (l <= 35.75f && l > 32.5f)
+                go.transform.GetChild(12).GetChild(10).gameObject.SetActive(true);
+            if (l <= 39 && l > 35.75f)
+                go.transform.GetChild(12).GetChild(11).gameObject.SetActive(true);
+            if (l <= 42 && l > 39f)
+                go.transform.GetChild(12).GetChild(12).gameObject.SetActive(true);
+            if (l <= 45 && l > 42f)
+                go.transform.GetChild(12).GetChild(13).gameObject.SetActive(true);
+            if (l <= 48 && l > 45f)
+                go.transform.GetChild(12).GetChild(14).gameObject.SetActive(true);
+            if (l <= 51 && l > 48f)
+                go.transform.GetChild(12).GetChild(15).gameObject.SetActive(true);
+            if (l <= 54 && l > 51f)
+                go.transform.GetChild(12).GetChild(16).gameObject.SetActive(true);
+            if (l <= 57 && l > 54f)
+                go.transform.GetChild(12).GetChild(17).gameObject.SetActive(true);
+            if (l <= 60.25f && l > 57f)
+                go.transform.GetChild(12).GetChild(18).gameObject.SetActive(true);
+            if (l <= 63.5f && l > 60.25f)
+                go.transform.GetChild(12).GetChild(19).gameObject.SetActive(true);
+            if (l <= 66.5 && l > 63.5f)
+                go.transform.GetChild(12).GetChild(20).gameObject.SetActive(true);
+            if (l <= 69.5f && l > 66.5f)
+                go.transform.GetChild(12).GetChild(21).gameObject.SetActive(true);
+            if (l <= 75.5 && l > 69.5f)
+                go.transform.GetChild(12).GetChild(22).gameObject.SetActive(true);
+            if (l <= 81.5f && l > 75.5f)
+                go.transform.GetChild(12).GetChild(23).gameObject.SetActive(true);
+            if (l <= 84.5 && l > 81.5f)
+                go.transform.GetChild(12).GetChild(24).gameObject.SetActive(true);
+            if (l <= 87.5f && l > 84.5f)
+                go.transform.GetChild(12).GetChild(25).gameObject.SetActive(true);
+            if (l <= 90.5 && l > 87.5)
+                go.transform.GetChild(12).GetChild(26).gameObject.SetActive(true);
+            if (l <= 93.5 && l > 90.5f)
+                go.transform.GetChild(12).GetChild(27).gameObject.SetActive(true);
+            if (l <= 96.75 && l > 93.5f)
+                go.transform.GetChild(12).GetChild(28).gameObject.SetActive(true);
+            if (l > 96.75f)
+                go.transform.GetChild(12).GetChild(29).gameObject.SetActive(true);
+        }
+
         Yrt.sliderLength = modInfo.cooldown[index];
         if (Yrt.sliderLength == 0)
         {
@@ -685,8 +752,75 @@ public class BattleSystem : MonoBehaviour
                     break;
                 default:
                     Yrt.req.text = modInfo.req[j];
+                    go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                     break;
             }
+            int m = Random.Range(0, 2);
+            if (m == 0)
+            {
+                float l = Random.Range(0f, 100f);
+                if (l <= 3.25f)
+                    go.transform.GetChild(12).GetChild(0).gameObject.SetActive(true);
+                if (l <= 6.5f && l > 3.25f)
+                    go.transform.GetChild(12).GetChild(1).gameObject.SetActive(true);
+                if (l <= 9.75f && l > 6.5f)
+                    go.transform.GetChild(12).GetChild(2).gameObject.SetActive(true);
+                if (l <= 13f && l > 9.75f)
+                    go.transform.GetChild(12).GetChild(3).gameObject.SetActive(true);
+                if (l <= 16.25f && l > 13f)
+                    go.transform.GetChild(12).GetChild(4).gameObject.SetActive(true);
+                if (l <= 19.5f && l > 16.25f)
+                    go.transform.GetChild(12).GetChild(5).gameObject.SetActive(true);
+                if (l <= 22.75f && l > 19.5f)
+                    go.transform.GetChild(12).GetChild(6).gameObject.SetActive(true);
+                if (l <= 26f && l > 22.75f)
+                    go.transform.GetChild(12).GetChild(7).gameObject.SetActive(true);
+                if (l <= 29.25f && l > 26f)
+                    go.transform.GetChild(12).GetChild(8).gameObject.SetActive(true);
+                if (l <= 32.5f && l > 29.25f)
+                    go.transform.GetChild(12).GetChild(9).gameObject.SetActive(true);
+                if (l <= 35.75f && l > 32.5f)
+                    go.transform.GetChild(12).GetChild(10).gameObject.SetActive(true);
+                if (l <= 39 && l > 35.75f)
+                    go.transform.GetChild(12).GetChild(11).gameObject.SetActive(true);
+                if (l <= 42 && l > 39f)
+                    go.transform.GetChild(12).GetChild(12).gameObject.SetActive(true);
+                if (l <= 45 && l > 42f)
+                    go.transform.GetChild(12).GetChild(13).gameObject.SetActive(true);
+                if (l <= 48 && l > 45f)
+                    go.transform.GetChild(12).GetChild(14).gameObject.SetActive(true);
+                if (l <= 51 && l > 48f)
+                    go.transform.GetChild(12).GetChild(15).gameObject.SetActive(true);
+                if (l <= 54 && l > 51f)
+                    go.transform.GetChild(12).GetChild(16).gameObject.SetActive(true);
+                if (l <= 57 && l > 54f)
+                    go.transform.GetChild(12).GetChild(17).gameObject.SetActive(true);
+                if (l <= 60.25f && l > 57f)
+                    go.transform.GetChild(12).GetChild(18).gameObject.SetActive(true);
+                if (l <= 63.5f && l > 60.25f)
+                    go.transform.GetChild(12).GetChild(19).gameObject.SetActive(true);
+                if (l <= 66.5 && l > 63.5f)
+                    go.transform.GetChild(12).GetChild(20).gameObject.SetActive(true);
+                if (l <= 69.5f && l > 66.5f)
+                    go.transform.GetChild(12).GetChild(21).gameObject.SetActive(true);
+                if (l <= 75.5 && l > 69.5f)
+                    go.transform.GetChild(12).GetChild(22).gameObject.SetActive(true);
+                if (l <= 81.5f && l > 75.5f)
+                    go.transform.GetChild(12).GetChild(23).gameObject.SetActive(true);
+                if (l <= 84.5 && l > 81.5f)
+                    go.transform.GetChild(12).GetChild(24).gameObject.SetActive(true);
+                if (l <= 87.5f && l > 84.5f)
+                    go.transform.GetChild(12).GetChild(25).gameObject.SetActive(true);
+                if (l <= 90.5 && l > 87.5)
+                    go.transform.GetChild(12).GetChild(26).gameObject.SetActive(true);
+                if (l <= 93.5 && l > 90.5f)
+                    go.transform.GetChild(12).GetChild(27).gameObject.SetActive(true);
+                if (l <= 96.75 && l > 93.5f)
+                    go.transform.GetChild(12).GetChild(28).gameObject.SetActive(true);
+                if (l > 96.75f)
+                    go.transform.GetChild(12).GetChild(29).gameObject.SetActive(true);
+            }
+
             Yrt.sliderLength = modInfo.cooldown[j];
             if (Yrt.sliderLength == 0)
             {

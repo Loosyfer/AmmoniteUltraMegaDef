@@ -3903,6 +3903,7 @@ MonoBehaviour:
   malla: {fileID: 80194498}
   malla2: {fileID: 723143974}
   monsters: {fileID: 11400000, guid: d2183fb2cc749e64c8c9e44eee22065c, type: 2}
+  enemyHB: {fileID: 284734412}
 --- !u!1 &141570808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8439,6 +8440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHP: {fileID: 284734414}
   inputValue: 0
+  monster: {fileID: 1720324048}
 --- !u!224 &294470702 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 171825948961776049, guid: f6b10fa77fcb3674ea9ce032309f2271, type: 3}
@@ -18685,7 +18687,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1912621764}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DecreaseHP, Assembly-CSharp
         m_MethodName: ReadStringInput
         m_Mode: 0
@@ -41192,6 +41194,7 @@ MonoBehaviour:
   malla: {fileID: 80194498}
   malla2: {fileID: 723143974}
   monsters: {fileID: 11400000, guid: d2183fb2cc749e64c8c9e44eee22065c, type: 2}
+  enemyHB: {fileID: 284734412}
 --- !u!1 &1429621362
 GameObject:
   m_ObjectHideFlags: 0
@@ -49991,6 +49994,7 @@ MonoBehaviour:
   name: 
   flavour: 
   dPT: 0
+  health: 0
 --- !u!61 &1720324052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55431,7 +55435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1912621766}
   - component: {fileID: 1912621765}
-  - component: {fileID: 1912621764}
+  - component: {fileID: 1912621767}
   m_Layer: 5
   m_Name: PlayerHBar
   m_TagString: Untagged
@@ -55439,20 +55443,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1912621764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912621763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ded4acf976b634c86acbf496f1bc11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHP: {fileID: 1912621765}
-  inputValue: 0
 --- !u!114 &1912621765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55528,6 +55518,20 @@ RectTransform:
   m_AnchoredPosition: {x: -149.94969, y: 563.1525}
   m_SizeDelta: {x: 825.8882, y: 111.8837}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1912621767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912621763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1152fbdb307e5b34fa6d7bae3d157b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: {fileID: 1912621765}
+  inputValue: 0
 --- !u!1 &1912921133
 GameObject:
   m_ObjectHideFlags: 0

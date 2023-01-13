@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GenerateEnemy : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GenerateEnemy : MonoBehaviour
     public GameObject malla2;
     public Monsters monsters;
     private int index;
+    public GameObject enemyHB;
 
     public void Generate()
     {
@@ -23,6 +25,10 @@ public class GenerateEnemy : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
+                enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
                 break;
             case 1:
                 random = Random.Range(10, 19);
@@ -31,6 +37,10 @@ public class GenerateEnemy : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
+                enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
                 break;
             case 2:
                 random = Random.Range(22, 32);
@@ -39,6 +49,10 @@ public class GenerateEnemy : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
+                enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
                 break;
             case 3:
                 random = Random.Range(34, 44);
@@ -47,6 +61,10 @@ public class GenerateEnemy : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
+                enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
                 break;
             case 4:
                 random = Random.Range(46, 53);
@@ -55,6 +73,10 @@ public class GenerateEnemy : MonoBehaviour
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
                 malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
+                malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
+                enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
+                enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
                 break;
         }
         
