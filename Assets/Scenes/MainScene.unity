@@ -1327,7 +1327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: 77.099945}
+  m_AnchoredPosition: {x: 28.3, y: 77.099945}
   m_SizeDelta: {x: 4.96, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &42965311
@@ -2431,8 +2431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 18.7}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: -0.2991, y: -0.0009558201}
+  m_SizeDelta: {x: 302.9438, y: 193.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84102739
 MonoBehaviour:
@@ -2454,19 +2454,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unlocks extra power in certain modules. \n 4 Cadets + GO = Cadets will
-    count as GO for moudle requirements. \n 8 Cadets + GO = If the GO dies, upgrade
-    one Cadet to be the new GO.
+  m_text: "Unlocks extra power in certain modules. \n\n4 Cadets + GO = Cadets will
+    count as GO for moudle requirements.\n\n8 Cadets + GO = If the GO dies, upgrade
+    one Cadet to be the new GO."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2483,8 +2483,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2495,7 +2495,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3099,8 +3099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.090088, y: -0.27}
-  m_SizeDelta: {x: 190.48657, y: 118.39243}
+  m_AnchoredPosition: {x: -18.765285, y: 2.92248}
+  m_SizeDelta: {x: 309.67682, y: 216.55505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &107713110
 Canvas:
@@ -3121,7 +3121,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &107713111
 MonoBehaviour:
@@ -3136,7 +3136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3602,8 +3602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 56.6}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: -0.123, y: -0.0011454}
+  m_SizeDelta: {x: 304.8488, y: 379.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136870790
 MonoBehaviour:
@@ -3628,19 +3628,25 @@ MonoBehaviour:
   m_text: 'Each scientist, when adjacent to a Scientific module with a crew member,
     can subject them to Radical Testing. After 10 turns: 10% chance +Lunatic, 40%
     chance +Doomed, 50% chance he becomes Augmented, fully healing and gaining +1
-    max HP. \n 3x = Enhance the body (+1 max HP) or the mind (+25% performance cap)
-    of an Augmented crew member. \n 6x = Grant an Augmented crew member a random
-    Super Trait.'
+    max HP.
+
+
+    3x = Enhance the body (+1 max HP) or the mind (+25% performance
+    cap) of an Augmented crew member.
+
+
+    6x = Grant an Augmented crew member a
+    random Super Trait.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3657,8 +3663,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3669,7 +3675,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -4345,8 +4351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000056386, y: -0.0709}
-  m_SizeDelta: {x: 298.0979, y: 135.1493}
+  m_AnchoredPosition: {x: -0.311, y: -0.0709}
+  m_SizeDelta: {x: 298.72, y: 135.1493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147294335
 MonoBehaviour:
@@ -4408,7 +4414,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -8529,7 +8535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: 24.899948}
+  m_AnchoredPosition: {x: 28.3, y: 24.899948}
   m_SizeDelta: {x: 4.96, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &300036507
@@ -8740,8 +8746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 9.18}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.2426, y: 1.8988}
+  m_SizeDelta: {x: 303.2255, y: 241.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301089877
 MonoBehaviour:
@@ -8765,21 +8771,23 @@ MonoBehaviour:
       m_Calls: []
   m_text: '2x = 30% chance your basic attack becomes a +50 dmg rocket.
 
+
     4x =
     30% chance your basic attack becomes a +100 dmg rocket.
+
 
     6x = 30% chance
     your basic attack becomes a +150 dmg shell-destroying rocket.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8796,8 +8804,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8808,7 +8816,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -9103,8 +9111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 37.3}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.2579, y: -0.00011635}
+  m_SizeDelta: {x: 304.087, y: 302.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302335672
 MonoBehaviour:
@@ -9127,21 +9135,27 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Once per Developer, after being in a module during a battle, can automatise
-    that module. \n 3x = Increase module recharge speeds by 25%. \n 6x = Increase
+    that module.
+
+
+    3x = Increase module recharge speeds by 25%.
+
+
+    6x = Increase
     module recharge speeds by 40%, and if a crew member dies, they will be replaced
     by a copy of them with the Robot trait.
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9158,8 +9172,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9170,7 +9184,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -9480,8 +9494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -5.750002}
-  m_SizeDelta: {x: 190.44656, y: 159.1}
+  m_AnchoredPosition: {x: -18.790333, y: 0.15951943}
+  m_SizeDelta: {x: 309.62756, y: 297.0809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &332319249
 Canvas:
@@ -9502,7 +9516,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &332319250
 MonoBehaviour:
@@ -9517,7 +9531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9577,8 +9591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 28.9}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: -0.1841, y: -0.00093555}
+  m_SizeDelta: {x: 304.8487, y: 270.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334423968
 MonoBehaviour:
@@ -9601,21 +9615,27 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Once per Engineer, after being in a module during a battle, can rebuild
-    it into another random module. \n 3x When rebuilding a module choose 1 of a random
-    selection of 3. \n 6x = can fuse two modules to get a random mega-module of the
-    same type as the fused modules.
+    it into another random module.
+
+
+    3x When rebuilding a module choose 1 of
+    a random selection of 3.
+
+
+    6x = can fuse two modules to get a random mega-module
+    of the same type as the fused modules.
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9632,8 +9652,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9644,7 +9664,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -10233,7 +10253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.70005, y: -449.1}
+  m_AnchoredPosition: {x: 28.3, y: -451.1}
   m_SizeDelta: {x: 4.92, y: 2.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &353410688
@@ -11496,8 +11516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119873, y: -1.75}
-  m_SizeDelta: {x: 190.48659, y: 123.9}
+  m_AnchoredPosition: {x: -18.780579, y: -0.17581844}
+  m_SizeDelta: {x: 309.64783, y: 229.37166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &390516477
 Canvas:
@@ -11518,7 +11538,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &390516478
 MonoBehaviour:
@@ -11533,7 +11553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11984,7 +12004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.7, y: -543.5}
+  m_AnchoredPosition: {x: 28.3, y: -545.5}
   m_SizeDelta: {x: 4.92, y: 2.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &404488358
@@ -12048,8 +12068,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 9.18}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.0248, y: 1.313}
+  m_SizeDelta: {x: 304.3662, y: 216.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405414403
 MonoBehaviour:
@@ -12074,6 +12094,7 @@ MonoBehaviour:
   m_text: '4x = after a battle, 50% chance of creating 1 item. // 2 temporary items
     at the start of battle
 
+
     8x = after a battle, 50% chance of creating 1 item,
     30% chance of creating 2 items. // 4 temporary items at the start of battle
 
@@ -12081,15 +12102,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12106,8 +12127,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12118,7 +12139,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -13985,8 +14006,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -5.763792}
-  m_SizeDelta: {x: 190.44658, y: 156.32758}
+  m_AnchoredPosition: {x: -18.790333, y: 0.1373291}
+  m_SizeDelta: {x: 309.62756, y: 268.0653}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &451983930
 Canvas:
@@ -14007,7 +14028,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &451983931
 MonoBehaviour:
@@ -14022,7 +14043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14795,7 +14816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.000046, y: -235.90005}
+  m_AnchoredPosition: {x: 28.3, y: -235.90005}
   m_SizeDelta: {x: 4.92, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &475195330
@@ -14871,8 +14892,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 9.18}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.025, y: -0.0011613}
+  m_SizeDelta: {x: 304.3661, y: 220.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475787719
 MonoBehaviour:
@@ -14894,18 +14915,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2x = +10 ship HP for every module in your ship.\r\n4x = +20 ship HP for
-    every module in your ship.\r\n6x = +30 ship HP for every module in your ship.\r"
+  m_text: "2x = +10 ship HP for every module in your ship.\r\n\n4x = +20 ship HP
+    for every module in your ship.\r\n\n6x = +30 ship HP for every module in your
+    ship.\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14922,8 +14944,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14934,7 +14956,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -15346,8 +15368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 36.8}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: -0.1841, y: 0.000069857}
+  m_SizeDelta: {x: 304.8487, y: 327.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494891982
 MonoBehaviour:
@@ -15369,21 +15391,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increases the chance of a module or applicant having a whopping discount.
-    The more businessmen, the higher the chance and maximum size of discount. \n
-    3x = During Shop, you can invest a minimum of 500 currency and get it back with
-    +20% interest during the next Shop phase. \n 6x = You can enter debt to buy in
-    Shop,m in exchange of interest.
+  m_text: 'Increases the chance of a module or applicant having a whopping discount.
+    The more businessmen, the higher the chance and maximum size of discount.
+
+
+    3x
+    = During Shop, you can invest a minimum of 500 currency and get it back with
+    +20% interest during the next Shop phase.
+
+
+    6x = You can enter debt to buy
+    in Shop in exchange of interest.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15400,8 +15428,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15412,7 +15440,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -18120,8 +18148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -2.803565}
-  m_SizeDelta: {x: 190.4866, y: 199.40714}
+  m_AnchoredPosition: {x: -18.7805, y: -1.0429039}
+  m_SizeDelta: {x: 309.648, y: 380.2858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &595187338
 Canvas:
@@ -18142,7 +18170,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &595187339
 MonoBehaviour:
@@ -18157,7 +18185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20571,8 +20599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 43.14}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.3358, y: 2.1236}
+  m_SizeDelta: {x: 303.7441, y: 297.4524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698769815
 MonoBehaviour:
@@ -20598,8 +20626,9 @@ MonoBehaviour:
     called for assistance and appear in a random available Layout Slot, and they
     will last until end of combat.
 
-    10x = each battle, 2 random module with a
-    random crew member in it are called for assistance and appear in a random available
+
+    10x = each battle, 2 random module with
+    a random crew member in it are called for assistance and appear in a random available
     Layout Slot, and they will last until end of combat.
 
 
@@ -20607,15 +20636,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20632,8 +20661,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20644,7 +20673,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -21998,8 +22027,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 23.8}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.1968, y: -0.0012118}
+  m_SizeDelta: {x: 304.0871, y: 274.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &734404152
 MonoBehaviour:
@@ -22022,21 +22051,27 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'After being adjacent to a crew member during a battle, you can reroll
-    their trait. 20T CD. \n 3x = When you reroll someone''s trait, choose one from
-    a random selection of 3. \n 6x = Can add a random Erudite Trait as secondary
+    their trait. 20T CD.
+
+
+    3x = When you reroll someone''s trait, choose one
+    from a random selection of 3.
+
+
+    6x = Can add a random Erudite Trait as secondary
     traits to crew members
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -22053,8 +22088,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -22065,7 +22100,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -24301,8 +24336,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 37.3}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.1966, y: 1.8319}
+  m_SizeDelta: {x: 304.0871, y: 297.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827772341
 MonoBehaviour:
@@ -24325,21 +24360,27 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Once per Biologist, after participating in a victorious monster battle,
-    can build a Basic Fishcapsule. \n 4x = once per biologist, can build an exclusive
-    organic module depending on the defeated sea creature. \n 8x = Can build organic
+    can build a Basic Fishcapsule.
+
+
+    4x = once per biologist, can build an exclusive
+    organic module depending on the defeated sea creature.
+
+
+    8x = Can build organic
     mega-modules from abysmal bosses shown in the Logbook.
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -24356,8 +24397,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24368,7 +24409,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -25509,8 +25550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 18.7}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.2574, y: 0.8}
+  m_SizeDelta: {x: 304.0871, y: 217.8547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854690100
 MonoBehaviour:
@@ -25532,20 +25573,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Can foresee the type of content of nearby nodes. \n 4x = Unlock new routes
-    and nodes that you previously couldn't see, which may include exclusive events
-    with unique rewards, such as exclusive modules, crew members and objects like
-    fossil.
+  m_text: 'Can foresee the type of content of nearby nodes.
+
+
+    4x = Unlock new
+    routes and nodes that you previously couldn''t see, which may include exclusive
+    events with unique rewards, such as exclusive modules, crew members and objects
+    like fossil.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -25562,8 +25606,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25574,7 +25618,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -27214,7 +27258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: 182.79996}
+  m_AnchoredPosition: {x: 28.3, y: 182.79996}
   m_SizeDelta: {x: 4.96, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &907479306
@@ -27346,7 +27390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: -183.60007}
+  m_AnchoredPosition: {x: 28.3, y: -183.60007}
   m_SizeDelta: {x: 4.92, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &913080247
@@ -28432,8 +28476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -4.664995}
-  m_SizeDelta: {x: 190.44656, y: 140.13}
+  m_AnchoredPosition: {x: -18.790333, y: 0.034083366}
+  m_SizeDelta: {x: 309.62766, y: 267.1318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &950223679
 Canvas:
@@ -28454,7 +28498,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &950223680
 MonoBehaviour:
@@ -28469,7 +28513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -29899,8 +29943,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -6.2477307}
-  m_SizeDelta: {x: 190.48659, y: 165.82951}
+  m_AnchoredPosition: {x: -18.7805, y: -0.0012254715}
+  m_SizeDelta: {x: 309.64804, y: 296.20242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &987898000
 Canvas:
@@ -29921,7 +29965,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &987898001
 MonoBehaviour:
@@ -29936,7 +29980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -30550,8 +30594,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -5.1712856}
-  m_SizeDelta: {x: 190.44658, y: 147.14258}
+  m_AnchoredPosition: {x: -18.790333, y: -0.86079454}
+  m_SizeDelta: {x: 309.62756, y: 315.42163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1013925776
 Canvas:
@@ -30572,7 +30616,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1013925777
 MonoBehaviour:
@@ -30587,7 +30631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -32714,7 +32758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: 235.99994}
+  m_AnchoredPosition: {x: 28.3, y: 235.99994}
   m_SizeDelta: {x: 4.96, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1101861749
@@ -33539,7 +33583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: -288.10007}
+  m_AnchoredPosition: {x: 28.3, y: -288.10007}
   m_SizeDelta: {x: 4.92, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1140081543
@@ -35904,8 +35948,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119873, y: 3.4700012}
-  m_SizeDelta: {x: 190.48659, y: 123.899994}
+  m_AnchoredPosition: {x: -18.78935, y: 0.25031996}
+  m_SizeDelta: {x: 309.55704, y: 188.29361}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1242312417
 Canvas:
@@ -35926,7 +35970,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1242312418
 MonoBehaviour:
@@ -35941,7 +35985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -36232,8 +36276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: -1}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: 0.1966, y: 0.23014}
+  m_SizeDelta: {x: 304.0871, y: 190.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253836307
 MonoBehaviour:
@@ -36255,19 +36299,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No special effects, but cheap. \n 4x + GO = Cadets will count as GO for
-    module requirements. \n 8x + GO = If the GO dies, upgrade one Cadet to be the
-    new GO.
+  m_text: 'No special effects, but cheap.
+
+
+    4x + GO = Cadets will count as GO
+    for module requirements.
+
+
+    8x + GO = If the GO dies, upgrade one Cadet to
+    be the new GO.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -36284,8 +36334,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -36296,7 +36346,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -36576,8 +36626,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.089996, y: -1.76962}
-  m_SizeDelta: {x: 190.48657, y: 118.39243}
+  m_AnchoredPosition: {x: -18.763027, y: 0.81903327}
+  m_SizeDelta: {x: 309.609, y: 242.56195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1263635725
 Canvas:
@@ -36598,7 +36648,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1263635726
 MonoBehaviour:
@@ -36613,7 +36663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -37999,7 +38049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: -79.30005}
+  m_AnchoredPosition: {x: 28.3, y: -79.30005}
   m_SizeDelta: {x: 4.96, y: 4.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1327068882
@@ -38866,8 +38916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.090088, y: 4.87}
-  m_SizeDelta: {x: 190.48657, y: 173.84122}
+  m_AnchoredPosition: {x: -18.765285, y: 11.577503}
+  m_SizeDelta: {x: 309.6769, y: 294.685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1346538375
 Canvas:
@@ -38888,7 +38938,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1346538376
 MonoBehaviour:
@@ -38903,7 +38953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -40890,8 +40940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -1.73465}
-  m_SizeDelta: {x: 190.44658, y: 74.60292}
+  m_AnchoredPosition: {x: -18.790333, y: 0.0906868}
+  m_SizeDelta: {x: 309.62756, y: 183.61864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1426211846
 Canvas:
@@ -40912,7 +40962,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1426211847
 MonoBehaviour:
@@ -40927,7 +40977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -41232,8 +41282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -5.444992}
-  m_SizeDelta: {x: 190.48657, y: 149.09}
+  m_AnchoredPosition: {x: -18.7805, y: -0.18628025}
+  m_SizeDelta: {x: 309.64804, y: 299.57254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1432355480
 Canvas:
@@ -41254,7 +41304,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1432355481
 MonoBehaviour:
@@ -41269,7 +41319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -42639,7 +42689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.699997, y: -496.19998}
+  m_AnchoredPosition: {x: 28.3, y: -498.2}
   m_SizeDelta: {x: 4.92, y: 2.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1464931992
@@ -43568,8 +43618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.090088, y: -0.18}
-  m_SizeDelta: {x: 190.48657, y: 118.39243}
+  m_AnchoredPosition: {x: -18.765285, y: 0.46044183}
+  m_SizeDelta: {x: 309.67682, y: 216.8791}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1484873578
 Canvas:
@@ -43590,7 +43640,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1484873579
 MonoBehaviour:
@@ -43605,7 +43655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -44292,8 +44342,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.684082, y: 3.84819}
-  m_SizeDelta: {x: 308.63184, y: 144.47144}
+  m_AnchoredPosition: {x: -18.751793, y: 0.15623832}
+  m_SizeDelta: {x: 309.98602, y: 137.08752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1525672980
 Canvas:
@@ -44314,7 +44364,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &1525672981
 MonoBehaviour:
@@ -44736,8 +44786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 42.4}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: -0.0628, y: -0.00035369}
+  m_SizeDelta: {x: 304.8487, y: 301.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539292976
 MonoBehaviour:
@@ -44760,23 +44810,29 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Once per Architect, can change the requirements of one module to another
-    random requirement. \n 3x = Opportunity to change your layout to architect-exclusive
-    layouts. \n 6x = if the layout is full, it becomes a megastructure that prevents
+    random requirement.
+
+
+    3x = Opportunity to change your layout to architect-exclusive
+    layouts.
+
+
+    6x = if the layout is full, it becomes a megastructure that prevents
     enemy flooding/destruction of modules and has a 20% chance of deflecting a hit.
 
 
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -44793,8 +44849,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -44805,7 +44861,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -45069,7 +45125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: 129.69995}
+  m_AnchoredPosition: {x: 28.3, y: 129.69995}
   m_SizeDelta: {x: 4.92, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1541849480
@@ -45298,7 +45354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.700073, y: -402.1}
+  m_AnchoredPosition: {x: 28.3, y: -404.1}
   m_SizeDelta: {x: 4.92, y: 2.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1550147055
@@ -48105,7 +48161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: -131.30005}
+  m_AnchoredPosition: {x: 28.3, y: -131.30005}
   m_SizeDelta: {x: 4.96, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1664458761
@@ -49643,7 +49699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.700073, y: -355.40002}
+  m_AnchoredPosition: {x: 28.3, y: -357.4}
   m_SizeDelta: {x: 4.92, y: 2.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1709706124
@@ -50518,7 +50574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.999924, y: -27.100052}
+  m_AnchoredPosition: {x: 28.3, y: -27.100052}
   m_SizeDelta: {x: 4.92, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1740131992
@@ -57418,8 +57474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 41.12}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: -0.1841, y: -0.9739502}
+  m_SizeDelta: {x: 304.8487, y: 275.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010185694
 MonoBehaviour:
@@ -57441,20 +57497,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Once per Recruiter, they can be paid 150 currency to recruit one random
-    crew member guaranteed to be of a profession you already have. \n 2x = Once per
-    Shop, you can reroll the shop by paying 200 currency. \n 4x = You can fire crew
-    members and get some money back.
+  m_text: 'Once per Recruiter, they can be paid 150 currency to recruit one random
+    crew member guaranteed to be of a profession you already have.
+
+
+    2x = Once
+    per Shop, you can reroll the shop by paying 200 currency.
+
+
+    4x = You can
+    fire crew members and get some money back.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -57471,8 +57533,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -57483,7 +57545,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -59119,8 +59181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3221, y: 41.12}
-  m_SizeDelta: {x: 187.84, y: 77.656}
+  m_AnchoredPosition: {x: -0.123, y: -0.68973}
+  m_SizeDelta: {x: 304.8487, y: 303.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088192955
 MonoBehaviour:
@@ -59142,20 +59204,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Once per battle, can heal an adjacent crew member by 1HP. \n 3x = Will
-    also cure the ailment of an adjacent crew member once per battle. \n 6x = Each
-    Doctor can attempt to reanimate a crew member that''s died, with a: 20% chance
-    +Doomed, 60% chance +Reanimated, 20% chance of returning in a perfect state.'
+  m_text: 'Once per battle, can heal an adjacent crew member by 1HP.
+
+
+    3x = Will
+    also cure the ailment of an adjacent crew member once per battle.
+
+
+    6x =
+    Each Doctor can attempt to reanimate a crew member that''s died, with a: 20%
+    chance +Doomed, 60% chance +Reanimated, 20% chance of returning in a perfect
+    state.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
+  m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -59172,8 +59241,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -59184,7 +59253,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -59583,8 +59652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.159912, y: -5.549999}
-  m_SizeDelta: {x: 190.44656, y: 166.7}
+  m_AnchoredPosition: {x: -18.811132, y: -0.30632997}
+  m_SizeDelta: {x: 309.58807, y: 295.69672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2111798568
 Canvas:
@@ -59605,7 +59674,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &2111798569
 MonoBehaviour:
@@ -59620,7 +59689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -60020,8 +60089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.119751, y: -3.5499992}
-  m_SizeDelta: {x: 190.44656, y: 125.1}
+  m_AnchoredPosition: {x: -18.790333, y: 0.023590088}
+  m_SizeDelta: {x: 309.62756, y: 269.4369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2129120620
 Canvas:
@@ -60042,7 +60111,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!114 &2129120621
 MonoBehaviour:
@@ -60057,7 +60126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -60226,7 +60295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.4, y: 289.59995}
+  m_AnchoredPosition: {x: 28.3, y: 289.59995}
   m_SizeDelta: {x: 4.96, y: 4.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &2140678193
