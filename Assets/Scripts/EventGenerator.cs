@@ -8,11 +8,17 @@ public class EventGenerator : MonoBehaviour
     public void GenerateEvent()
     {
         float number = Random.Range(0f, 100f);
-        if (number < 40f)
-            this.transform.GetChild(1).GetComponent<Text>().text = "Monster";
-        if (number > 40f && number < 65f)
-            this.transform.GetChild(1).GetComponent<Text>().text = "Shop";
-        if (number > 65f)
-            this.transform.GetChild(1).GetComponent<Text>().text = "Strange Event";
+        if (number < 25f)
+            this.transform.GetChild(2).GetComponent<Text>().text = "Normal Enemy";
+        if (number > 25f && number < 35f)
+            this.transform.GetChild(2).GetComponent<Text>().text = "Strong Enemy";
+        if (number > 35f && number < 52f)
+            this.transform.GetChild(2).GetComponent<Text>().text = "Recruitment Center";
+        if (number > 52f && number < 69f)
+            this.transform.GetChild(2).GetComponent<Text>().text = "Submarine Factory";
+        if (number > 69f && number < 92f)
+            this.transform.GetChild(2).GetComponent<Text>().text = "Rare Event";
+        if (number > 92f)
+            this.transform.GetChild(2).GetComponent<Text>().text = "Ultra Rare Event";
     }
 }

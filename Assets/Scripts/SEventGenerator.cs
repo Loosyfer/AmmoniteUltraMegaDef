@@ -11,6 +11,6 @@ public class SEventGenerator : MonoBehaviour
     public void GenerateStrangeEvent()
     {
         int number = Random.Range(0, strangeEvents.strangeEvents.Length);
-            this.transform.GetChild(1).GetComponent<Text>().text = strangeEvents.strangeEvents[number];
+            this.transform.GetChild(2).GetComponent<Text>().text = strangeEvents.strangeEvents[number];
     }
 }

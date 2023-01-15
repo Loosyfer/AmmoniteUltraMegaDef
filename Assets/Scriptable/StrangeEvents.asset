@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: StrangeEvents
   m_EditorClassIdentifier: 
   strangeEvents:
-  - Enemy Ship(Neutral)
-  - Enemy Ship(Hostile)
+  - Enemy Ship (Neutral)
+  - Enemy Ship (Hostile)
   - Eerie Cave
-  - Marine graveyard
-  - Rescue mission
-  - Dangerous request
+  - Marine Graveyard
+  - Rescue Mission
+  - Dangerous Request
   - Guarded Treasure
   - Underwater Colony
   - Submarine Wreck
@@ -27,18 +27,24 @@ MonoBehaviour:
   - Hospital
   - Repair Facility
   - Cemetery
-  - Mystical temple gate
-  - Mystery portal
-  - Trinket merchant
-  - Interdimensional wormhole
-  - Boxing ring
-  - Collector of idiots
-  - Oceanic trespasser
-  - Dangerous cave
+  - Boxing Ring
+  - Collector of Idiots
+  - Dangerous Cave
   - Underwater Tavern
-  - Oceanic gambler
-  - Nuclear waste dump
-  - Rapture city
-  - Forgotten submarine
-  - Turtle cave
-  - Pirate shipwreck
+  - Oceanic Gambler
+  - Nuclear Waste Dump
+  - Rapture City
+  - Forgotten Submarine
+  - Turtle Cave
+  - Pirate Shipwreck
+  - Violent Vortex
+  - Underwater Volcano
+  - Futuristic Colony
+  - Secret Tunnel
+  - 'Lost Islander Request  '
+  - Crustacean Colony
+  - Lost Seaman
+  - Zoo
+  - Artic Rift
+  - Lava Tunnel
+  - Oceanic Jungle
