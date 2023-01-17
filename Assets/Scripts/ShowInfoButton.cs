@@ -17,9 +17,9 @@ public class ShowInfoButton : MonoBehaviour
     {
         showInfo = !showInfo;
         if (showInfo)
-            this.GetComponent<Image>().color = new Color32(13, 255, 0, 255);
+            this.GetComponent<Image>().color = new Color32(156, 247, 255, 255);
         else
-            this.GetComponent<Image>().color = new Color32(255, 0, 0, 255);
+            this.GetComponent<Image>().color = new Color32(224, 136, 153, 255);
     }
 
 }

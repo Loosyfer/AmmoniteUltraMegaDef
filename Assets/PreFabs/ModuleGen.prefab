@@ -598,7 +598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.1, y: -1.30264}
+  m_AnchoredPosition: {x: 24.29, y: -3.23}
   m_SizeDelta: {x: 29.2, y: 32.60529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &674955256818873391
@@ -1462,8 +1462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -0.6}
-  m_SizeDelta: {x: 257.75635, y: 372.38617}
+  m_AnchoredPosition: {x: 0.39964, y: 7.7262673}
+  m_SizeDelta: {x: 321.67258, y: 184.08493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6806642923327228836
 CanvasRenderer:
@@ -1494,11 +1494,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 23
-    m_FontStyle: 2
+    m_Font: {fileID: 12800000, guid: f357c8d78bff88548b86b2eb3198427e, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1506,7 +1506,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Does a ton of damage
+  m_Text: After placing a crew member in it, closes its doors and transports the
+    crew member into another dimension for 3 battles, during which it cannot be used.
+    Then, they return transformed into an improved being with two positive traits,
+    8 max HP and 100% performance. There is a 25% chance the crew member returns
+    as a monstrous abomination that shits himself.
 --- !u!223 &6317589518512021836
 Canvas:
   m_ObjectHideFlags: 0
@@ -1786,7 +1790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1480945264796616352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1804,8 +1808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -20.1}
-  m_SizeDelta: {x: 257.75635, y: 372.38617}
+  m_AnchoredPosition: {x: 0.74609, y: -6.7}
+  m_SizeDelta: {x: 328.98, y: 117.82388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1984511030393320944
 CanvasRenderer:
@@ -1836,11 +1840,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 23
-    m_FontStyle: 2
+    m_Font: {fileID: 12800000, guid: f357c8d78bff88548b86b2eb3198427e, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1848,7 +1852,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Does a ton of damage
+  m_Text: One must be placed in the highest row of the Layout, and the other in the
+    lowest row.
 --- !u!223 &8398680739811131254
 Canvas:
   m_ObjectHideFlags: 0
@@ -5732,7 +5737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3119023061824537635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5750,8 +5755,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -8.898062}
-  m_SizeDelta: {x: 0, y: -20.68387}
+  m_AnchoredPosition: {x: 0.4750204, y: -3.615594}
+  m_SizeDelta: {x: 0.95005, y: -27.35941}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3466919470814730018
 CanvasRenderer:
@@ -5774,7 +5779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5790,7 +5795,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3
+  m_PixelsPerUnitMultiplier: 7
 --- !u!223 &4259583997030064213
 Canvas:
   m_ObjectHideFlags: 0
@@ -5848,8 +5853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 6.9140835}
-  m_SizeDelta: {x: 0, y: -13.82816}
+  m_AnchoredPosition: {x: 0.4750204, y: 7.7154617}
+  m_SizeDelta: {x: 0.95004, y: -15.43052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &942940654911077329
 CanvasRenderer:
@@ -5872,7 +5877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5888,7 +5893,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3
+  m_PixelsPerUnitMultiplier: 7
 --- !u!223 &7003723219229360135
 Canvas:
   m_ObjectHideFlags: 0

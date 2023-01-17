@@ -9,7 +9,7 @@ public class HoverOverStacks : MonoBehaviour
     private void OnMouseOver()
     {
         this.transform.GetChild(2).gameObject.SetActive(true);
-        this.transform.GetChild(1).GetComponent<TextMeshProUGUI>().color = new Color32(255, 214, 0, 255);
+        this.transform.GetChild(1).GetComponent<TextMeshProUGUI>().color = new Color32(99, 230, 241, 255);
     }
 
     private void OnMouseExit()
