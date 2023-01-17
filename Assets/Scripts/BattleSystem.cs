@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using TMPro;
 using BayatGames.SaveGameFree;
+using UnityEngine.Video;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -46,6 +47,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject monster;
     public GameObject playerBattleHUD;
     public GameObject rockets;
+    public GameObject spark;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -245,6 +247,17 @@ public class BattleSystem : MonoBehaviour
         {
             playerHPBar.GetComponent<DecreaseHPShip>().ReadStringInput(((monster.GetComponent<MonsterHUD>().dPT) * -1).ToString());
             monster.GetComponent<Animator>().Play("Monster_Attack");
+            List<GameObject> activatedModules = new List<GameObject>();
+            for (int j = 0; j < 36; j++)
+            {
+                if (slots[j].GetComponent<ActivateSlot>().activated && slots[j].GetComponent<ItemSlot>().module != null)
+                    activatedModules.Add(slots[j]);
+            }
+            int i = Random.Range(0, activatedModules.Count);
+            Vector3 pos = activatedModules[i].transform.position;
+            spark.transform.position = pos;
+            spark.GetComponent<VideoPlayer>().Play();
+            attackModule(activatedModules[i]);
         }
         if ((turn % 2) == 0)
         {
@@ -318,9 +331,11 @@ public class BattleSystem : MonoBehaviour
         {
             case "0":
                 Yrt.req.text = "No Requirement";
+                Yrt.reqType = 0;
                 break;
             case "1":
                 Yrt.req.text = modInfo.randomReq[k].ToString();
+                Yrt.reqType = 1;
                 switch (k)
                 {
                     case 0:
@@ -366,6 +381,7 @@ public class BattleSystem : MonoBehaviour
                 break;
             default:
                 Yrt.req.text = modInfo.req[index];
+                Yrt.reqType = 2;
                 go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                 break;
         }
@@ -704,9 +720,11 @@ public class BattleSystem : MonoBehaviour
             {
                 case "0":
                     Yrt.req.text = "No Requirement";
+                    Yrt.reqType = 0;
                     break;
                 case "1":
                     Yrt.req.text = modInfo.randomReq[k].ToString();
+                    Yrt.reqType = 1;
                     switch (k)
                     {
                         case 0:
@@ -752,6 +770,7 @@ public class BattleSystem : MonoBehaviour
                     break;
                 default:
                     Yrt.req.text = modInfo.req[j];
+                    Yrt.reqType = 2;
                     go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                     break;
             }
@@ -1242,5 +1261,14 @@ public class BattleSystem : MonoBehaviour
 
         turn = 0;
         turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
+    }
+
+    private void attackModule(GameObject slot)
+    {
+        if (slot.GetComponent<ItemSlot>().member != null)
+        {
+            if (slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health != 0)
+                slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health--;
+        }
     }
 }

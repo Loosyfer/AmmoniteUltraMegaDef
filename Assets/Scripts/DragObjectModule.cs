@@ -18,6 +18,8 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObject malla;
     private Vector3 mousePositionOffset;
     public GameObject shipField;
+    public GameObject infoPanels;
+    public GameObject showInfoButton;
 
     public Camera camera;
 
@@ -32,6 +34,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         canvas = malla.GetComponent<Canvas>();
         camera = Camera.main;
         script = malla.transform.GetChild(15).GetComponent<GameObjectHolder>();
+        showInfoButton = malla.transform.GetChild(15).GetChild(26).gameObject;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -137,6 +140,25 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     private Vector3 GetMouseWorldPosition()
     {
         return camera.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    private void OnMouseOver()
+    {
+        if (showInfoButton.transform.GetComponent<ShowInfoButton>().showInfo)
+        {
+            infoPanels.gameObject.SetActive(true);
+            if (this.transform.GetComponent<ModuleHUD>().reqType == 2)
+            {
+                infoPanels.transform.GetChild(2).gameObject.SetActive(true);
+                infoPanels.transform.GetChild(3).gameObject.SetActive(true);
+            }
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        infoPanels.gameObject.SetActive(false);
+
     }
 
 }

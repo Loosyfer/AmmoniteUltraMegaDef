@@ -19,6 +19,7 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObject malla;
     private Vector3 mousePositionOffset;
     public GameObject item;
+    public GameObject showInfoButton;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         canvas = malla.GetComponent<Canvas>();
         camera = Camera.main;
         script = malla.transform.GetChild(15).GetComponent<GameObjectHolder>();
+        showInfoButton = malla.transform.GetChild(15).GetChild(26).gameObject;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -121,9 +123,12 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     private void OnMouseOver()
     {
-        this.transform.GetChild(4).gameObject.SetActive(true);
-        if (this.transform.GetComponent<MemberHUD>().secTrait.text != "")
-            this.transform.GetChild(23).gameObject.SetActive(true);
+        if (showInfoButton.transform.GetComponent<ShowInfoButton>().showInfo)
+        {
+            this.transform.GetChild(4).gameObject.SetActive(true);
+            if (this.transform.GetComponent<MemberHUD>().secTrait.text != "")
+                this.transform.GetChild(23).gameObject.SetActive(true);
+        }
     }
 
     private void OnMouseExit()

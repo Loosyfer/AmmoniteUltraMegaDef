@@ -8,6 +8,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 {
 
     public Camera camera;
+    public GameObject module;
+    public GameObject member;
 
     private void Awake()
     {
@@ -24,9 +26,13 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.transform.position = transform.position - new Vector3(0, 18.4f, 0);
                 if (eventData.pointerDrag.transform.GetComponent<DragObjectMember>().item != null)
                     eventData.pointerDrag.transform.GetComponent<DragObjectMember>().item.transform.position = transform.position - new Vector3(0, 18.4f, 0) + new Vector3(23, 15, 0);
+                member = eventData.pointerDrag.gameObject;
             }
             if (eventData.pointerDrag.transform.tag == "Module")
+            {
                 eventData.pointerDrag.transform.position = transform.position;
+                module = eventData.pointerDrag.gameObject;
+            }
             //GetComponent<RectTransform>().anchoredPosition
         }
     }

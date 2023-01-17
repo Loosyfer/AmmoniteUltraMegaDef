@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class MonsterHUD : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class MonsterHUD : MonoBehaviour
     public string flavour;
     public int dPT;
     public int health;
+    public TMP_Text instructionsPanel;
 
     void Start()
     {
@@ -22,7 +24,7 @@ public class MonsterHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnMouseDown()

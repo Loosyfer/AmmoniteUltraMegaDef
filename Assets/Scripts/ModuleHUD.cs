@@ -24,6 +24,7 @@ public class ModuleHUD : MonoBehaviour
     public bool insideField;
     public bool onFire;
     public GameObject fireMotion;
+    public int reqType;
 
     public void SetHUD(Module module)
     {

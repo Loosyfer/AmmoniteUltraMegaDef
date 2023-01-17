@@ -20,6 +20,7 @@ public class SceneSwitcher : MonoBehaviour
     public GameObject rngObject;
     WaitForEndOfFrame frameEnd = new WaitForEndOfFrame();
     private bool mapOn = false;
+    public GameObject showInfoButton;
 
     public void NodeMap()
     {
@@ -60,6 +61,10 @@ public class SceneSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             rngObject.GetComponent<RNGenerator>().GenerateNumber();
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            showInfoButton.GetComponent<ShowInfoButton>().switchShowInfo();
         }
     }
 
