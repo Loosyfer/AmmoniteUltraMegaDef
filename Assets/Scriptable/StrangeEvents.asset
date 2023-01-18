@@ -22,8 +22,8 @@ MonoBehaviour:
   - Guarded Treasure
   - Underwater Colony
   - Submarine Wreck
-  - Antique Shop
-  - Training Academy
+  - Mysterious Abduction
+  - Scrap Thieves
   - Hospital
   - Repair Facility
   - Cemetery
@@ -45,6 +45,7 @@ MonoBehaviour:
   - Crustacean Colony
   - Lost Seaman
   - Zoo
-  - Artic Rift
+  - Arctic Rift
   - Lava Tunnel
   - Oceanic Jungle
+  - Loan from Friendly Ship

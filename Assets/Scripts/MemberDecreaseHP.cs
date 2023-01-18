@@ -34,7 +34,7 @@ public class MemberDecreaseHP : MonoBehaviour
                 member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(254, 69, 7, 255);
                 return;
             case 0:
-                member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(131, 34, 1, 255);
+                member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(0, 0, 0, 255);
                 return;
             default:
                 member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(17, 205, 238, 255);

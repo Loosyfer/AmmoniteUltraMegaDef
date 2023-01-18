@@ -148,7 +148,7 @@ MonoBehaviour:
     and dies, and then it splashes everyone in the Ship with diarrhoea, causing 50%
     of Modules to be Excrement-flooded for the next battle."
   - 600HP. 50dpt. 3 Crew Members will have another random trait for the rest of this
-    battle.
+    battle. Only targets crewed and automatised modules.
   - 800HP. 50dpt. Every 8 turns, blinding attack that stuns the 4 closest crew members,
     and each module hit has a 50% chance of being set on fire.
   - 800HP. 50dpt. Every 8 turns, blinding attack that stuns the 4 closest crew members,
@@ -158,7 +158,8 @@ MonoBehaviour:
     to the hit module Sick.
   - 1000HP. 50dpt. Every attack from your ship has a 25% chance of getting blocked
     by his shield, and a 25% chance of being deflected and parried back onto your
-    ship. It will hit the highest-performing crew members.
+    ship. It will hit the highest-performing crew members. Only targets crewed and
+    automatised modules.
   - 1000HP. 70dpt. Water-flooded modules instantly turn into Excrement-flooded. Any
     module hit has a 50% chance of becoming Excrement-flooded.
   - "200. 70dpt. 500HP shell. At the start of combat, it kidnaps a random crew member
@@ -167,7 +168,8 @@ MonoBehaviour:
   - 800HP. 80dpt. Every time it hits a module, 30% chance it becomes damaged and
     30% chance it becomes detached.
   - 1000HP. 50dpt. Odd number attacks poison the target, while even number attacks
-    hit 2 modules and each of them have a 50% chance of becoming damaged.
+    hit 2 modules and each of them have a 50% chance of becoming damaged. Only targets
+    crewed and automatised modules.
   - 300HP. 70dpt. 500HP shell. Immune to attacks from from 30% or less performance
     members. When you kill it, the creepy pearl with an eye in its interior is released
     and shot into a random module that explodes with a vengeance.
@@ -175,10 +177,12 @@ MonoBehaviour:
     Explosive Diarrhoea for the rest of the battle, and a 40% chance of becoming
     sick.
   - "500HP. 50dpt. 400HP shell. Every time he\u2019s attacked with shell, there\u2019s
-    a 40% chance he hides inside his shell and completely blocks the attack."
+    a 40% chance he hides inside his shell and completely blocks the attack. Only
+    targets crewed and automatised modules."
   - 900HP. 70dpt. When below 500HP, goes berserk, breaking out of its cage, and throwing
     the metal bars at the ship, causing each module hit to become water-flooded,
-    and dealing double damage to crew members.
+    and dealing double damage to crew members. Only targets crewed and automatised
+    modules.
   - 800HP. 100dpt. Every attack has a 20% chance of missing and losing 50HP instead.
     Every module hit will have a 70% chance of becoming damaged.
   - 800HP. 50dpt.The nearest crew member to this monster has a 50% chance of becoming
@@ -187,7 +191,8 @@ MonoBehaviour:
     its net and taken by Netfish. You get the item back if you defeat Netifsh.
   - 1400HP. 70dpt. Every 6 turns, starting 1, grabs a random item from your ship
     and throws it away into the ocean and it's lost forever. Every 6 turns starting
-    4, attacks with the anchor causing the targeted module to become damaged.
+    4, attacks with the anchor causing the targeted module to become damaged. Only
+    targets crewed and automatised modules.
   - 2500HP. 40dpt. Only attacks the closest 6 modules and hits two modules at a time.
     Every attack causes an earthquake inside the ship that causes some crew members
     to swap places.
@@ -196,7 +201,8 @@ MonoBehaviour:
     it attacks and transverses the whole ship, and every Crew Member has a 25% chance
     of becoming Lunatic.
   - 1400HP. 40dpt. Every hit has a 50% chance of causing the module to become unstable.
-  - 2000HP. 30dpt. Every hit has a 70% chance of turning the module wild.
+  - 2000HP. 30dpt. Every hit has a 70% chance of turning the module wild. Only targets
+    crewed and automatised modules.
   - 800HP. 150dpt. Every one of its attacks has a 50% chance of missing, but if it
     lands, 30% chance of damaged and 30% chance of unstable.
   - 800HP. 80dpt. Will prioritise the highest performing crew members.
@@ -211,11 +217,13 @@ MonoBehaviour:
     module that\u2019s hit or adjacent to a hit becomes frozen."
   - "2000HP. 100dpt. Every 4 turns, throws an electric beam that stuns 50% of crew
     members, while the other 50% have their trait randomly changed for this battle.
-    If he\u2019s regular attacks hits an item, he keeps it until he\u2019s defeated."
+    If he\u2019s regular attacks hits an item, he keeps it until he\u2019s defeated.
+    Only targets crewed and automatised modules."
   - '2000HP. 80dpt. At turn 1, it exhales an arctic breath that freezes a whole area
     of your ship: 40% of your modules on one side of the Ship become frozen.'
   - 1500HP. 100dpt. Every 6 turns, one random Crew Member close to Mystic Squid becomes
-    a Centenarian forever. Every 6 turns starting 3, it swaps around 2 modules.
+    a Centenarian forever. Every 6 turns starting 3, it swaps around 2 modules. Only
+    targets crewed and automatised modules.
   - 2000HP. 70dpt. Every 4 turns, a 0% Performance crew member with the Monstrous
     trait will invade your ship.
   - 2000HP. 0dpt. At the start of battle, it sends baby parasites into a random external
@@ -223,7 +231,8 @@ MonoBehaviour:
     crew members Cannibal until the battle ends.
   - 1200HP. 60dpt. After dying, it revives with full health and 120dpt, and throws
     the head at your ship, exploding the module hit and inflicting Sick to adjacent
-    crew members. Heals 50HP for every crew member that dies.
+    crew members. Heals 50HP for every crew member that dies. Only targets crewed
+    and automatised modules.
   - 2000HP. 120dpt. Targets the lowest 5 modules of your ship.
   - 2400HP. 100dpt. Targets the highest 5 modules of your ship.
   - "3000HP. 80dpt. Every time it attacks, there\u2019s a 50% chance the module is
@@ -232,7 +241,7 @@ MonoBehaviour:
     you a victory."
   - 2000HP. 100dpt. Every crew member hit will forget their profession for the rest
     of the fight. Every 6 turns, throws a spell that causes 4 modules to be set on
-    fire, frozen of become wild.
+    fire, frozen of become wild. Only targets crewed and automatised modules.
   - '3000HP. 100dpt. Every 4 turns, a cannonball is fired and hits a random module,
     Water-floods it and the Crew Member in it becomes Sick. Once its Health gets
     below 1000HP, it becomes berserk: its dpt increases to 150, cannonballs now fire

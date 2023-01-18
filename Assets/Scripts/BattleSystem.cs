@@ -272,7 +272,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayExplosion(Vector3 pos)
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.1f);
         spark.transform.position = pos;
         spark.GetComponent<VideoPlayer>().Play();
     }
@@ -1275,7 +1275,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator AttackModule(GameObject slot)
     {
 
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.23f);
 
         if (slot.GetComponent<ItemSlot>().member != null)
         {
@@ -1296,7 +1296,7 @@ public class BattleSystem : MonoBehaviour
                     slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(254, 69, 7, 255);
                     yield break;
                 case 0:
-                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(131, 34, 1, 255);
+                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(0, 0, 0, 255);
                     yield break;
                 default:
                     slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(17, 205, 238, 255);
