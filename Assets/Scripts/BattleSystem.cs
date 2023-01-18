@@ -243,7 +243,7 @@ public class BattleSystem : MonoBehaviour
 
         turn++;
         turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
-        if ((turn % 2) == 1)
+        if ((turn % 2) == 1 && enemyHPBar.GetComponent<Slider>().value != 0)
         {
             playerHPBar.GetComponent<DecreaseHPShip>().ReadStringInput(((monster.GetComponent<MonsterHUD>().dPT) * -1).ToString());
             monster.GetComponent<Animator>().Play("Monster_Attack");
@@ -255,17 +255,26 @@ public class BattleSystem : MonoBehaviour
             }
             int i = Random.Range(0, activatedModules.Count);
             Vector3 pos = activatedModules[i].transform.position;
-            spark.transform.position = pos;
-            spark.GetComponent<VideoPlayer>().Play();
-            attackModule(activatedModules[i]);
+            StartCoroutine(PlayExplosion(pos + new Vector3(-25, 0, 0)));
+            StartCoroutine(AttackModule(activatedModules[i]));
         }
         if ((turn % 2) == 0)
         {
             enemyHPBar.GetComponent<DecreaseHP>().ReadStringInput(((playerBattleHUD.GetComponent<TotalDamage>().sum) * -1).ToString());
-            monster.GetComponent<Animator>().Play("Monster_Flinch");
+            if (enemyHPBar.GetComponent<Slider>().value == 0)
+                monster.GetComponent<Animator>().Play("Monster_Die");
+            else
+                monster.GetComponent<Animator>().Play("Monster_Flinch");
             rockets.transform.GetChild(0).GetComponent<Animator>().Play("AA_0x3");
         }
 
+    }
+
+    IEnumerator PlayExplosion(Vector3 pos)
+    {
+        yield return new WaitForSeconds(0.15f);
+        spark.transform.position = pos;
+        spark.GetComponent<VideoPlayer>().Play();
     }
 
     public void CalculatePerformance()
@@ -1263,12 +1272,36 @@ public class BattleSystem : MonoBehaviour
         turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
     }
 
-    private void attackModule(GameObject slot)
+    IEnumerator AttackModule(GameObject slot)
     {
+
+        yield return new WaitForSeconds(0.15f);
+
         if (slot.GetComponent<ItemSlot>().member != null)
         {
             if (slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health != 0)
                 slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health--;
+            switch (slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health)
+            {
+                case 4:
+                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(0, 241, 81, 255);
+                    yield break;
+                case 3:
+                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(226, 238, 11, 255);
+                    yield break;
+                case 2:
+                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(244, 168, 26, 255);
+                    yield break;
+                case 1:
+                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(254, 69, 7, 255);
+                    yield break;
+                case 0:
+                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(131, 34, 1, 255);
+                    yield break;
+                default:
+                    slot.GetComponent<ItemSlot>().member.transform.GetChild(22).GetComponent<TextMeshProUGUI>().color = new Color32(17, 205, 238, 255);
+                    yield break;
+            }
         }
     }
 }
