@@ -25,6 +25,7 @@ public class ModuleHUD : MonoBehaviour
     public bool onFire;
     public bool Damaged;
     public bool inactive;
+    public bool unstable;
     public GameObject fireMotion;
     public int reqType;
     public bool automatised;
@@ -46,6 +47,7 @@ public class ModuleHUD : MonoBehaviour
         onFire = false;
         automatised = false;
         Damaged = false;
+        unstable = false;
     }
 
     void Update()

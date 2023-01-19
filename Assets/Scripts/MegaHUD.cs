@@ -23,6 +23,7 @@ public class MegaHUD : MonoBehaviour
     public bool onFire;
     public bool Damaged;
     public bool inactive;
+    public bool unstable;
     public GameObject fireMotion1;
     public GameObject fireMotion2;
     public GameObject damagedSprite1;
@@ -41,6 +42,7 @@ public class MegaHUD : MonoBehaviour
         Freezed = false;
         onFire = false;
         inactive = false;
+        unstable = false;
     }
 
     void Update()

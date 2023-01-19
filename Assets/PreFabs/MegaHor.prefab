@@ -565,6 +565,7 @@ MonoBehaviour:
   onFire: 0
   Damaged: 0
   inactive: 0
+  unstable: 0
   fireMotion1: {fileID: 5432846781943549420}
   fireMotion2: {fileID: 6413181460359692575}
   damagedSprite1: {fileID: 7562358372839443389}
@@ -1318,6 +1319,7 @@ GameObject:
   - component: {fileID: 6938626767339640537}
   - component: {fileID: 5213324702007652695}
   - component: {fileID: 1490099410522584372}
+  - component: {fileID: 147960256622162213}
   m_Layer: 0
   m_Name: Module
   m_TagString: Untagged
@@ -1400,6 +1402,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &147960256622162213
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248638329788254418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb7e20fb71197c942a23334f533d2548, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5400020961750769602
 GameObject:
   m_ObjectHideFlags: 0
