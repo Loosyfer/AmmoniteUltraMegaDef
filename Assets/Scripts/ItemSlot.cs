@@ -33,6 +33,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.transform.position = transform.position;
                 module = eventData.pointerDrag.gameObject;
             }
+            if (eventData.pointerDrag.transform.tag == "Mega" || eventData.pointerDrag.transform.tag == "Mega2")
+                eventData.pointerDrag.transform.position = transform.position;
             //GetComponent<RectTransform>().anchoredPosition
         }
     }

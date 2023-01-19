@@ -21,7 +21,12 @@ public class MegaVerHUD : MonoBehaviour
     public bool SFlooded;
     public bool Freezed;
     public bool onFire;
+    public bool Damaged;
+    public bool inactive;
     public GameObject fireMotion;
+    public GameObject damagedSprite1;
+    public GameObject damagedSprite2;
+    public GameObject module;
 
     public void SetHUD(Mega mega)
     {
@@ -34,6 +39,8 @@ public class MegaVerHUD : MonoBehaviour
         SFlooded = false;
         Freezed = false;
         onFire = false;
+        Damaged = false;
+        inactive = false;
     }
 
     void Update()
@@ -65,6 +72,20 @@ public class MegaVerHUD : MonoBehaviour
         }
         else
             fireMotion.SetActive(false);
+        if (Damaged)
+        {
+            damagedSprite1.SetActive(true);
+            damagedSprite2.SetActive(true);
+        }
+        else
+        {
+            damagedSprite1.SetActive(false);
+            damagedSprite2.SetActive(false);
+        }
+        if (inactive)
+            module.GetComponent<SpriteRenderer>().color = new Color32(92, 92, 92, 255);
+        else
+            module.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
     }
 
 }

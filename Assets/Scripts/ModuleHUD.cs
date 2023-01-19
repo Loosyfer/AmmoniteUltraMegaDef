@@ -23,8 +23,13 @@ public class ModuleHUD : MonoBehaviour
     public bool Freezed;
     public bool insideField;
     public bool onFire;
+    public bool Damaged;
+    public bool inactive;
     public GameObject fireMotion;
     public int reqType;
+    public bool automatised;
+    public GameObject automatisedSprite;
+    public GameObject damagedSprite;
 
     public void SetHUD(Module module)
     {
@@ -39,6 +44,8 @@ public class ModuleHUD : MonoBehaviour
         Freezed = false;
         insideField = false;
         onFire = false;
+        automatised = false;
+        Damaged = false;
     }
 
     void Update()
@@ -65,6 +72,41 @@ public class ModuleHUD : MonoBehaviour
             fireMotion.SetActive(true);
         else
             fireMotion.SetActive(false);
+
+        if (automatised)
+            automatisedSprite.gameObject.SetActive(true);
+        else
+            automatisedSprite.gameObject.SetActive(false);
+        if (Damaged)
+            damagedSprite.gameObject.SetActive(true);
+        else
+            damagedSprite.gameObject.SetActive(false);
+        if (type == (ModuleType)0)
+        {
+            this.GetComponent<Image>().color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+        }
+        if (type == (ModuleType)1)
+        {
+            this.GetComponent<Image>().color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+        }
+        if (type == (ModuleType)2)
+        {
+            this.GetComponent<Image>().color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+        }
+        if (type == (ModuleType)3)
+        {
+            this.GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f, 1);
+        }
+        if (type == (ModuleType)4)
+        {
+            this.GetComponent<Image>().color = new Color(0.99f, 0.84f, 0.4f, 1);
+        }
+        if (type == (ModuleType)5)
+        {
+            this.GetComponent<Image>().color = new Color(0.9843f, 1, 0.2196f, 1);
+        }
+        if (inactive)
+            this.GetComponent<Image>().color = new Color32(92, 92, 92, 255);
     }
 
 }
