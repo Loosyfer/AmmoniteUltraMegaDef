@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 3698191461580386124}
   - component: {fileID: 7699730911568748020}
   - component: {fileID: 4413296702668369619}
+  - component: {fileID: 392601188580460050}
   m_Layer: 5
   m_Name: ReqBG
   m_TagString: Untagged
@@ -166,8 +167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.499999}
-  m_SizeDelta: {x: 0, y: -24.800001}
+  m_AnchoredPosition: {x: 0.58068, y: -4.30931}
+  m_SizeDelta: {x: 1.1614, y: -41.1814}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7699730911568748020
 CanvasRenderer:
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -206,7 +207,28 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 5
+  m_PixelsPerUnitMultiplier: 7
+--- !u!223 &392601188580460050
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267515265954079851}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 11
+  m_TargetDisplay: 0
 --- !u!1 &1475968022128912831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1047,7 @@ GameObject:
   - component: {fileID: 7301331490423007869}
   - component: {fileID: 3412746365437917745}
   - component: {fileID: 2131993763167700549}
+  - component: {fileID: 8134860125264920758}
   m_Layer: 5
   m_Name: Requirements
   m_TagString: Untagged
@@ -1041,7 +1064,7 @@ RectTransform:
   m_GameObject: {fileID: 2701912311368041522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
+  m_LocalScale: {x: 0.09000001, y: 0.09000001, z: 0.09000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1080095124667094621}
@@ -1049,8 +1072,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.02105, y: -12.33304}
-  m_SizeDelta: {x: 190.31146, y: 143.4283}
+  m_AnchoredPosition: {x: 0.57334, y: -4.54409}
+  m_SizeDelta: {x: 303.05237, y: 51.74138}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3412746365437917745
 CanvasRenderer:
@@ -1081,11 +1104,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: f357c8d78bff88548b86b2eb3198427e, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1093,7 +1116,28 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Only works when manned and adjacent to another 6 crew members. '
+--- !u!223 &8134860125264920758
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701912311368041522}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 12
+  m_TargetDisplay: 0
 --- !u!1 &2783200099685707300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1525,7 @@ GameObject:
   - component: {fileID: 926923522443280651}
   - component: {fileID: 1344112838936621586}
   - component: {fileID: 730351258818336015}
+  - component: {fileID: 2847327723876147037}
   m_Layer: 5
   m_Name: DescriptionBG
   m_TagString: Untagged
@@ -1505,8 +1550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 10.865803}
-  m_SizeDelta: {x: 0, y: -21.7316}
+  m_AnchoredPosition: {x: 0.5806799, y: 6.0078964}
+  m_SizeDelta: {x: 1.16136, y: -31.08367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1344112838936621586
 CanvasRenderer:
@@ -1529,7 +1574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6117647, g: 0.96862745, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1545,7 +1590,28 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 5
+  m_PixelsPerUnitMultiplier: 7
+--- !u!223 &2847327723876147037
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4805690829764861848}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 11
+  m_TargetDisplay: 0
 --- !u!1 &4813208332975887187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +1623,7 @@ GameObject:
   - component: {fileID: 9078014367956342764}
   - component: {fileID: 9125252480738118788}
   - component: {fileID: 4166073940886880140}
+  - component: {fileID: 6191902974040640421}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -1573,7 +1640,7 @@ RectTransform:
   m_GameObject: {fileID: 4813208332975887187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
+  m_LocalScale: {x: 0.09000001, y: 0.09000001, z: 0.09000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1080095124667094621}
@@ -1581,8 +1648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.02105, y: 10.89968}
-  m_SizeDelta: {x: 190.31146, y: 167.5277}
+  m_AnchoredPosition: {x: 0.88009, y: 5.98}
+  m_SizeDelta: {x: 311.2023, y: 162.77357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9125252480738118788
 CanvasRenderer:
@@ -1613,11 +1680,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: f357c8d78bff88548b86b2eb3198427e, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1625,7 +1692,32 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "Cannot place a crew member in it. At the beginning of the fight, the portal
+    will open, to reveal the otherworldly return of the first Crew Member that ever
+    died this Dive, exactly as you remembered him, except that he will have an HP
+    bar of 12 Points, and will always take aggro from the monster for as long as
+    he\u2019s alive."
+--- !u!223 &6191902974040640421
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4813208332975887187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 12
+  m_TargetDisplay: 0
 --- !u!1 &5407203620283913131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,7 +2054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.618795, y: 2.8001623}
+  m_AnchoredPosition: {x: 22.82, y: -2.46}
   m_SizeDelta: {x: 27.43919, y: 46.18813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7138542603692223309
