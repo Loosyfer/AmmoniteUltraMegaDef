@@ -2262,6 +2262,7 @@ MonoBehaviour:
   onFire: 0
   Damaged: 0
   inactive: 0
+  unstable: 0
   fireMotion: {fileID: 6017205825751616911}
   reqType: 0
   automatised: 0
