@@ -12,7 +12,8 @@ public class PositiveTraits : ScriptableObject
         "Genius", "CopyCat", "Competitive", "War Fanatic", "Pacifist", "Has an Imaginary Friend", "Lucky", "Sadistic", "Mr. Moneybags", "Selfless", "Hero Mindset", "Best Buddies", "Spiritual Meditator",
         "Necromancy Enthusiast", "Has Gross Eating Habits", "Puppeteering Enthusiast", "Snitch", "Massage Expert", "Escape Artist", "Speaks Fish Language", "Heavy Snoring", "Sushi Chef", "Bone Architect",
         "Corpse Looter", "Unleashed Power", "Sushi Lover", "Home Chef", "Also a Lawyer", "Frankestein Fan", "A Karen", "Loves Rainbows", "Professor", "Loves Fireworks", "Posh Millionaire", 
-        "Gifted", "Recycling Fanatic", "Hypothermic", "Big Daddy"
+        "Gifted", "Recycling Fanatic", "Hypothermic", "Big Daddy", "Learns From Mistakes", "Has Sweet Dreams", "Does the Opposite", "Expert Gardener", "Vegetarian", "Loves Ruins", "Baker", "Orchestra Conductor",
+        "Woodsculptor", "Fire Fighter", "High Body Temperature", "Loves Popsicles", "Jungle Rescuer" 
     };
 
     public string[] description = new string[]
@@ -54,7 +55,21 @@ public class PositiveTraits : ScriptableObject
         "Only applies to men. If a woman is in the Ship, no matter how far, she will gain the Pregnant Trait after 15 turns.",
         "Each Shop event, you can sell back 1 Module in your bench for half its original coin value.",
         "Operates and performs normally even if their Module is Frozen.",
-        "If an adjacent crew member is damaged by an enemy, they deal 50 damage to that enemy."
+        "If an adjacent crew member is damaged by an enemy, they deal 50 damage to that enemy.",
+        "Won’t suffer damage from an enemy attack more than once per battle.",
+        "If Asleep, +1 HP every 4 turns.",
+        "Their performance gains and losses are reversed.",
+        "+20% performance in a Wild module, and can be moved in and out of it.",
+        "+1 HP per 4 turns if in a Wild module.",
+        "+40% performance in a Damaged module.",
+        "If their module is set on fire, produce 1 Tasty Pizza.",
+        "If they and 4 adjacent crew members all have the same performance, +20% performance to everyone.",
+        "If in or adjacent to a Wild module, produce 1 Wooden Puppet at the end of battle",
+        "If an adjacent module is set on fire, they will put out the fire after 2 turns, and there’s a 10% chance they die in the process.",
+        "Their module thaws from frozen after 2 turns.",
+        "If their module is frozen, they are immune to it and +20% performance.",
+        "At the end of battle, will send any adjacent crew members in wild modules to the bench."
+
     };
 
 

@@ -14,7 +14,7 @@ public class EruditeTrait : MonoBehaviour
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
             {
-                int random = Random.Range(0, 10);
+                int random = Random.Range(0, 15);
                 memberorModule = this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.secTrait.text = specialTraits.names[random];

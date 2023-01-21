@@ -18807,7 +18807,7 @@ GameObject:
   - component: {fileID: 532036413}
   - component: {fileID: 532036412}
   - component: {fileID: 532036411}
-  - component: {fileID: 532036410}
+  - component: {fileID: 532036414}
   m_Layer: 5
   m_Name: Wild
   m_TagString: Untagged
@@ -18837,18 +18837,6 @@ RectTransform:
   m_AnchoredPosition: {x: 8.4005, y: 46.404}
   m_SizeDelta: {x: 50.3, y: 40.2}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &532036410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532036408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e699a7448719b94ea5efaa597ad5a88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &532036411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18893,9 +18881,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 532036410}
-        m_TargetAssemblyTypeName: WaterFlooded, Assembly-CSharp
-        m_MethodName: WFlooded
+      - m_Target: {fileID: 532036414}
+        m_TargetAssemblyTypeName: WildButton, Assembly-CSharp
+        m_MethodName: Wild
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18943,6 +18931,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532036408}
   m_CullTransparentMesh: 1
+--- !u!114 &532036414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532036408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ec785352456ad46aa0a7db6a9f88f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532719477
 GameObject:
   m_ObjectHideFlags: 0
@@ -21433,19 +21433,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636639793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1582956684}
   - {fileID: 1612468106}
-  m_Father: {fileID: 723143978}
-  m_RootOrder: 19
+  m_Father: {fileID: 1420614935}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194.29, y: 391.80002}
+  m_AnchoredPosition: {x: 376.4301, y: -0.000030517578}
   m_SizeDelta: {x: 175.7, y: 40.2043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636639795
@@ -21507,7 +21507,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 636639795}
         m_TargetAssemblyTypeName: SEventGenerator, Assembly-CSharp
-        m_MethodName: GenerateStrangeEvent
+        m_MethodName: GenerateExplorerEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24266,9 +24266,6 @@ RectTransform:
   - {fileID: 1420614935}
   - {fileID: 1296978949}
   - {fileID: 171512296}
-  - {fileID: 1894863627}
-  - {fileID: 636639794}
-  - {fileID: 840530914}
   - {fileID: 1714235267}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -28436,13 +28433,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 723143978}
-  m_RootOrder: 20
+  m_Father: {fileID: 1420614935}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194.29004, y: 391.80005}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 189.88, y: -205.97}
+  m_SizeDelta: {x: 548.55, y: 225.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840530915
 MonoBehaviour:
@@ -28464,14 +28461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This fellow explorer has eyes on a nearby treasure, however, it is guarded
-    by a powerful Alpha enemy and he\u2019s not brave enough for the task, so he
-    asks if you can fetch it for him and you can both share the loot. \u201CDangerous
-    request: enemy\u201D will appear nearby in the node map, and if you successfully
-    win you\u2019ll collect \u201CRequested treasures\u201D. You can choose to keep
-    them to yourself, or go back to the fellow explorer using O2 to share them as
-    promised. If you do the latter, you\u2019ll only get 1 Treasure instead of 2
-    but the explorer and his module will join your crew."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28534,7 +28524,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -350.9773, y: 124.44653, z: 23.288818, w: -287.02338}
+  m_margin: {x: 0.71533203, y: -1.2276611, z: -0.33813477, w: 0.6320801}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -46400,6 +46390,9 @@ RectTransform:
   - {fileID: 754501374}
   - {fileID: 1715457070}
   - {fileID: 795418102}
+  - {fileID: 1894863627}
+  - {fileID: 636639794}
+  - {fileID: 840530914}
   m_Father: {fileID: 723143978}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46467,7 +46460,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1420614936}
         m_TargetAssemblyTypeName: SEventGenerator, Assembly-CSharp
-        m_MethodName: GenerateStrangeEvent
+        m_MethodName: GenerateRareEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -56313,7 +56306,7 @@ Transform:
   - {fileID: 961202711}
   - {fileID: 1274892584}
   m_Father: {fileID: 723143978}
-  m_RootOrder: 21
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1715457069
 GameObject:
@@ -57464,7 +57457,7 @@ GameObject:
   - component: {fileID: 1746462100}
   - component: {fileID: 1746462099}
   - component: {fileID: 1746462098}
-  - component: {fileID: 1746462097}
+  - component: {fileID: 1746462101}
   m_Layer: 5
   m_Name: Detached
   m_TagString: Untagged
@@ -57494,18 +57487,6 @@ RectTransform:
   m_AnchoredPosition: {x: -43.6, y: -47.648994}
   m_SizeDelta: {x: 50.3, y: 40.2}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1746462097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746462095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e699a7448719b94ea5efaa597ad5a88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1746462098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57550,9 +57531,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1746462097}
-        m_TargetAssemblyTypeName: WaterFlooded, Assembly-CSharp
-        m_MethodName: WFlooded
+      - m_Target: {fileID: 1746462101}
+        m_TargetAssemblyTypeName: DetachedButton, Assembly-CSharp
+        m_MethodName: Detached
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -57600,6 +57581,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746462095}
   m_CullTransparentMesh: 1
+--- !u!114 &1746462101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746462095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2776c9587ac9ddb49a7d54a8ebba4b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749206798
 GameObject:
   m_ObjectHideFlags: 0
@@ -61866,19 +61859,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894863626}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2124499470}
   - {fileID: 2084774412}
-  m_Father: {fileID: 723143978}
-  m_RootOrder: 18
+  m_Father: {fileID: 1420614935}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.8, y: 391.80002}
+  m_AnchoredPosition: {x: 186.94014, y: -0.000030517578}
   m_SizeDelta: {x: 175.7, y: 40.2043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894863628
@@ -61940,23 +61933,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1894863628}
         m_TargetAssemblyTypeName: SEventGenerator, Assembly-CSharp
-        m_MethodName: GenerateStrangeEvent
+        m_MethodName: GenerateUltraRareEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SEventGenerator, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

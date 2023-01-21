@@ -23,9 +23,14 @@ public class MegaVerHUD : MonoBehaviour
     public bool onFire;
     public bool Damaged;
     public bool inactive;
+    public bool unstable;
+    public bool detached;
+    public bool wild;
     public GameObject fireMotion;
     public GameObject damagedSprite1;
     public GameObject damagedSprite2;
+    public GameObject wildMotion1;
+    public GameObject wildMotion2;
     public GameObject module;
 
     public void SetHUD(Mega mega)
@@ -41,6 +46,9 @@ public class MegaVerHUD : MonoBehaviour
         onFire = false;
         Damaged = false;
         inactive = false;
+        unstable = false;
+        detached = false;
+        wild = false;
     }
 
     void Update()
@@ -86,6 +94,17 @@ public class MegaVerHUD : MonoBehaviour
             module.GetComponent<SpriteRenderer>().color = new Color32(92, 92, 92, 255);
         else
             module.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+        if (wild)
+        {
+            wildMotion1.SetActive(true);
+            wildMotion2.SetActive(true);
+        }
+        else
+        {
+            wildMotion1.SetActive(false);
+            wildMotion2.SetActive(false);
+        }
+
     }
 
 }

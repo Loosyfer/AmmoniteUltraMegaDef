@@ -933,7 +933,7 @@ MonoBehaviour:
   - Hired Assassin
   - Scared of Heights
   - Alien-looking
-  - Ugly like a Caveman
+  - Caveman
   - Has had Plastic Surgery
   - All-nighter Metalhead
   - Sushi Lover
@@ -973,11 +973,52 @@ MonoBehaviour:
   - Radioactive
   - Big Daddy
   - Missing an arm and a leg
+  - Amateur Surgeon
+  - Learns From Mistakes
+  - Clumsy
+  - Uni-tasker
+  - Hoarder
+  - Generous
+  - Jealous
+  - Thinks This is All a Dream
+  - Emotionally Attached
+  - Sleepwalker
+  - Has Sweet Dreams
+  - Has Nightmares
+  - Does the Opposite
+  - Gambling Addict
+  - 'Expert Gardener '
+  - Forgetful
+  - Vegetarian
+  - Spits Fire
+  - Careless
+  - Babysitter
+  - Loves Ruins
+  - Repairman Wannabe
+  - Hates Society
+  - Isolationist
+  - Baker
+  - Orchestra Conductor
+  - Wimp
+  - Danger Addict
+  - "No Driver\u2019s Licence"
+  - Environmentalist
+  - Allergic to Pollen
+  - Wood Sculptor
+  - Fire Fighter
+  - Coastguard
+  - High Body Temperature
+  - Loves Popsicles
+  - Hyperactive
+  - Deep Thinker
+  - Jungle Rescuer
+  - Marathon Runner
   - Monstrous
   - Parrot
   - Doomed
   - Reanimated
   - The Chosen One
+  - Blastman
   tDescription:
   - +30% Performance, but always comes paired with Moody, Psychopath, Fussy, Geek
     or Vain.
@@ -1060,7 +1101,7 @@ MonoBehaviour:
   - -20% Performance versus small enemies, +20% Performance versus big enemies.
   - 20% chance of dropping dead after each battle.
   - At the start of battle, there's a 50% chance they swap around 2 Modules.
-  - 30% Performance, but +20% Performance every time their Module is attacked.
+  - -20% Performance, but +20% Performance every time they lose HP
   - Every time a Crew Member loses Health, they gain +10% Performance.
   - 50% chance that after being recruited they divide into two Crew Members of Cadet
     Profession and 30% Performance.
@@ -1137,8 +1178,9 @@ MonoBehaviour:
     clean it up, and gain 1 Health.
   - Will create a 30% Performance clone of himself without a Trait in an adjacent
     Module, but if this Module becomes Flooded the clone will die.
-  - 70% Performance, but if its Module becomes Flooded it will short-circuit and
-    die. Cannot be healed.
+  - 60% base performance. +20% performance in automatised/unmanned modules. +30%
+    performance cap. If its Module becomes Flooded it will short-circuit and die.
+    Cannot be healed.
   - If placed adjacent to the Captain, they will reveal who is a Serial Killer or
     Undercover Competitor, as well as who is a Liar, Traitor or Cheeky Undergrad
     in the Shop.
@@ -1234,7 +1276,7 @@ MonoBehaviour:
   - -20% Performance in Scientific Modules, +10% Performance in Organic and Normal
     Modules.
   - After every battle, there's an increase in 20% chance that their trait changes
-    to Ugly Like a Caveman, starting from 0% after the first battle.
+    to Caveman, starting from 0% after the first battle.
   - The crew members that were adjacent to them in the previous battle, will become
     Sleepy at the beginning of the next battle.
   - If they're attacked by a Monstrous crew member, he will eat them. They will also
@@ -1310,13 +1352,68 @@ MonoBehaviour:
     enemy.
   - "Only has 2 base HP, however if attacked, there\u2019s a 33% chance the enemy
     misses."
+  - If an adjacent crew member has 2 or less HP, 50% chance they fully heal, and
+    50% chance they lose 1 HP and become Sick.
+  - "Won\u2019t suffer damage from an enemy attack more than once per battle."
+  - If they hold an item, 33% chance that it breaks after a battle.
+  - -20% Performance if they hold an item.
+  - Once they receive an item, it cannot be swapped by any means.
+  - At the start of battle, they will gift their item to a random adjacent crew member.
+  - "If adjacent to a crew member with an item, every turn there\u2019s a 5% chance
+    this trait actives, with a 50% chance that item is destroyed, and a 50% chance
+    it\u2019s stolen."
+  - If they wake up from being Asleep, they will disappear.
+  - If an adjacent crew member dies, -10% performance permanently.
+  - If Asleep, every 2 turns moves to an adjacent module.
+  - If Asleep, +1 HP every 4 turns.
+  - If Asleep, -1 HP every 4 turns.
+  - Their performance gains and losses are reversed.
+  - At the end of battle, 50% chance you lose 100 coins and 50% chance you gain 100
+    coins. At the end of combat they will gamble with your money.
+  - +20% performance in a Wild module, and can be moved in and out of it.
+  - 50% chance at the start of battle that they leave their item behind on the bench.
+  - +1 HP per 4 turns if in a Wild module.
+  - 25% chance for each adjacent module to be set on fire at the start of each battle.
+  - "Every 10 turns, there\u2019s a 10% chance their module becomes Damaged."
+  - Always comes with the item Lucky Baby equipped. If they lose hold of this item,
+    they become Lunatic.
+  - +40% performance in a Damaged module.
+  - After 6 turns, 50% chance they repair a Damaged module, and 50% chance they turn
+    it into an Unstable module.
+  - "Every 4 turns, there\u2019s a 20% chance their module becomes Detached."
+  - -10% performance, +50% performance if their module is Detached.
+  - If their module is set on fire, produce 1 Tasty Pizza.
+  - If they and 4 adjacent crew members all have the same performance, +20% performance
+    to everyone.
+  - If they or any adjacent module is hit, their module will become detached.
+  - "-10% performance, but +80% performance if they\u2019re in an unstable module."
+  - Their module will be inactive.
+  - Their module will become Wild at the end of the battle.
+  - -1HP/4turns in a Wild module.
+  - If in or adjacent to a Wild module, produce 1 Wooden Puppet at the end of battle
+  - "If an adjacent module is set on fire, they will put out the fire after 2 turns,
+    and there\u2019s a 10% chance they die in the process."
+  - If an adjacent module is water-flooded, they will rescue the crew member and
+    send them to the bench.
+  - Their module thaws from frozen after 2 turns.
+  - If their module is frozen, they are immune to it and +20% performance.
+  - "+20% performance, but every 8 turns, there\u2019s a 15% chance their module
+    becomes damaged."
+  - -10% performance, but if their module is inactive, +20% performance instead.
+  - At the end of battle, will send any adjacent crew members in wild modules to
+    the bench.
+  - "Every 4 turns, moves to an adjacent module they haven\u2019t been in this battle
+    yet."
   - "+20 Performance. Every turn, they have a 10% chance of attacking the closest
     Crew Member for 1 Health damage, unless they\u2019re also Monstrous."
   - Will copy the Profession of an adjacent Crew Member and also apply Stacking Bonus.
   - Performance is halved and will inevitably die after 15 turns.
   - Their skin will be grey and cracked. Their Performance will slowly decrease at
     a rate of -1% per turn.
-  - They will have 10 Health and 100% Performance, but if they die you lose the Dive.
+  - They will have 10 Health, 100% Performance and are immune to explosions, but
+    if they die you lose the Dive
+  - They rescue from death and send to the bench up to 4 crew members, after which
+    they quit the Dive to help in other places.
   profDescription:
   - "Once per Architect, can change the requirements of one module to another random
     requirement. \n 3x = Opportunity to change your layout to architect-exclusive
@@ -1365,5 +1462,5 @@ MonoBehaviour:
   - "Unlocks extra power in certain modules. \n 4 Cadets + GO = Cadets will count
     as GO for moudle requirements. \n 8 Cadets + GO = If the GO dies, upgrade one
     Cadet to be the new GO."
-  traitPrice: 640000000000000032000000000000003200000032000000320000003200000032000000640000003200000000000000000000000000000064000000320000000000000064000000320000000000000000000000000000003200000000000000000000003200000000000000320000000000000032000000000000006400000064000000000000000000000000000000640000000000000000000000640000003200000000000000320000000000000032000000000000000000000032000000320000003200000000000000320000003200000000000000000000003200000064000000320000000000000000000000320000003200000032000000320000000000000000000000320000000000000000000000320000000000000032000000320000006400000000000000640000006400000032000000640000003200000032000000320000000000000032000000640000003200000032000000000000000000000064000000320000000000000032000000320000000000000032000000640000006400000032000000320000003200000032000000320000003200000032000000320000003200000032000000320000003200000000000000640000006400000000000000000000003200000032000000320000003200000032000000320000000000000000000000320000000000000032000000000000003200000032000000320000003200000064000000320000003200000032000000320000000000000032000000320000003200000064000000640000006400000032000000000000003200000032000000000000003200000032000000320000003200000032000000640000003200000064000000320000003200000032000000640000000000000000000000640000000000000032000000320000003200000032000000320000000000000032000000320000006400000064000000320000003200000032000000640000006400000064000000000000000000000032000000640000006400000032000000640000000000000064000000320000000000000000000000000000000000000000000000
+  traitPrice: 6400000000000000320000000000000032000000320000003200000032000000320000006400000032000000000000000000000000000000640000003200000000000000640000003200000000000000000000000000000032000000000000000000000032000000000000003200000000000000320000000000000064000000640000000000000000000000000000006400000000000000000000006400000032000000000000003200000000000000320000000000000000000000320000003200000032000000000000003200000032000000000000000000000032000000640000003200000000000000000000003200000032000000320000003200000000000000000000003200000000000000000000003200000000000000320000003200000064000000000000006400000064000000320000006400000032000000320000003200000000000000320000006400000032000000320000000000000000000000640000003200000000000000320000003200000000000000320000006400000064000000320000003200000032000000320000003200000032000000320000003200000032000000320000003200000032000000000000006400000064000000000000000000000032000000320000003200000032000000320000003200000000000000000000003200000000000000320000000000000032000000320000003200000032000000640000003200000032000000320000003200000000000000320000003200000032000000640000006400000064000000320000000000000032000000320000000000000032000000320000003200000032000000320000006400000032000000640000003200000032000000320000006400000000000000000000006400000000000000320000003200000032000000320000003200000000000000320000003200000064000000640000003200000032000000320000006400000064000000640000000000000000000000320000006400000064000000320000006400000000000000640000003200000000000000640000000000000000000000320000003200000032000000000000003200000032000000640000003200000064000000320000006400000032000000640000000000000000000000320000006400000032000000320000000000000032000000640000000000000000000000000000003200000032000000640000006400000032000000640000006400000032000000320000006400000032000000000000000000000000000000000000000000000000000000
   profPrice: c8000000c8000000c8000000c8000000c800000064000000c8000000c8000000c8000000c8000000c80000002c010000

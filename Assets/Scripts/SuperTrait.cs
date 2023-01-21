@@ -14,7 +14,7 @@ public class SuperTrait : MonoBehaviour
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
             {
-                int random = Random.Range(10, 20);
+                int random = Random.Range(15, 33);
                 memberorModule = this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.secTrait.text = specialTraits.names[random];

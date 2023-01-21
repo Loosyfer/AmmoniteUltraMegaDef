@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnstableButton : MonoBehaviour
+public class DetachedButton : MonoBehaviour
 {
     private ModuleHUD module;
     private MegaHUD mega;
     private MegaVerHUD mega2;
     private string tag;
 
-    public void Unstable()
+    public void Detached()
     {
         if (transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember != null)
             tag = transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag;
@@ -19,48 +19,48 @@ public class UnstableButton : MonoBehaviour
             if (tag == "Module")
             {
                 module = transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<ModuleHUD>();
-                if (module.unstable == true)
+                if (module.detached == true)
                 {
-                    module.unstable = false;
+                    module.detached = false;
                     transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Nothing");
                     transform.GetChild(1).gameObject.SetActive(false);
                 }
                 else
                 {
-                    module.unstable = true;
-                    transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Module_Unstable");
+                    module.detached = true;
+                    transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Module_Detached");
                     transform.GetChild(1).gameObject.SetActive(true);
                 }
             }
             if (tag == "Mega")
             {
                 mega = transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MegaHUD>();
-                if (mega.unstable == true)
+                if (mega.detached == true)
                 {
-                    mega.unstable = false;
+                    mega.detached = false;
                     transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Nothing");
                     transform.GetChild(1).gameObject.SetActive(false);
                 }
                 else
                 {
-                    mega.unstable = true;
-                    transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Module_Unstable_Mega");
+                    mega.detached = true;
+                    transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Module_Detached_Mega");
                     transform.GetChild(1).gameObject.SetActive(true);
                 }
             }
             if (tag == "Mega2")
             {
                 mega2 = transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MegaVerHUD>();
-                if (mega2.unstable == true)
+                if (mega2.detached == true)
                 {
-                    mega2.unstable = false;
+                    mega2.detached = false;
                     transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Nothing");
                     transform.GetChild(1).gameObject.SetActive(false);
                 }
                 else
                 {
-                    mega2.unstable = true;
-                    transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Module_Unstable_Mega");
+                    mega2.detached = true;
+                    transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<Animator>().Play("Module_Detached_Mega");
                     transform.GetChild(1).gameObject.SetActive(true);
                 }
             }

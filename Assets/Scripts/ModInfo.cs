@@ -118,7 +118,7 @@ public class ModInfo : ScriptableObject
 "An excellent +50 dmg with no drawbacks. However, the toilet in it is broken, so it gets full of shit after 4 turns.If it’s hit by an enemy, shit spreads to any adjacent modules.",
 "+40 dmg.However the module vibrates while operational, which makes crew members in/adjacent to it puke",
 "If your crew has taken 6 HP damage this battle, heal +200 Ship HP",
-"Costs 5000 currency. May come more easily to players with lots of currency. Offers maximum comfort to the crew member in it, however it is extremely delicate as it is beautiful.After 30 turns without this module taking any hits, it magically transforms into any desired module in the game, including mega-modules, and will make its crew member a Posh Millionaire Businessman of 150% performance that can’t be lowered.",
+"Costs 5000 coins and comes more easily to players with lots of coins. Offers maximum comfort to the crew member in it, however it is extremely delicate as it is beautiful. If undisturbed for 30 turns, it magically transforms into any desired module in the game, and will make its crew member a Posh Millionaire Businessman of 160% performance.",
 "Attracts applicants with the Hero Mindset trait. If manned by a crew member with the Hero Mindset trait, he will have 100% performance and if attacked, will hit the enemy back for 100 dmg. Only one per Dive.",
 "If a crew member takes damage in this module, his attitude changes to Masochist.",
 "+50 attack, but has a 50% chance of damaging the ship.If operated by a General Officer, there’s a 0 chance it damages the ship.",

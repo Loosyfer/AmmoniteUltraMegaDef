@@ -26,11 +26,14 @@ public class ModuleHUD : MonoBehaviour
     public bool Damaged;
     public bool inactive;
     public bool unstable;
+    public bool detached;
+    public bool wild;
     public GameObject fireMotion;
+    public GameObject damagedSprite;
     public int reqType;
     public bool automatised;
     public GameObject automatisedSprite;
-    public GameObject damagedSprite;
+    public GameObject wildMotion;
 
     public void SetHUD(Module module)
     {
@@ -48,6 +51,8 @@ public class ModuleHUD : MonoBehaviour
         automatised = false;
         Damaged = false;
         unstable = false;
+        detached = false;
+        wild = false;
     }
 
     void Update()
@@ -83,6 +88,11 @@ public class ModuleHUD : MonoBehaviour
             damagedSprite.gameObject.SetActive(true);
         else
             damagedSprite.gameObject.SetActive(false);
+        if (wild)
+            wildMotion.gameObject.SetActive(true);
+        else
+            wildMotion.gameObject.SetActive(false);
+
         if (type == (ModuleType)0)
         {
             this.GetComponent<Image>().color = new Color(0.4078f, 0.7294f, 0.5411f, 1);

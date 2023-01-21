@@ -939,7 +939,7 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = Random.Range(0, 190);
+            int j = Random.Range(0, 230);
             int l = Random.Range(0, membersInfo.names.Length);
             int k = 0;
             float random = Random.Range(0f, 100f);
@@ -967,6 +967,7 @@ public class BattleSystem : MonoBehaviour
                 k = 10;
             if (random >= 97f && random < 100f)
                 k = 11;
+
             GameObject go = Instantiate(memberGenPrefab, new Vector3(272 + i * 163, 934, 0), Quaternion.identity) as GameObject;
             go.transform.parent = membersFolder.transform;
             members.Add(go);
