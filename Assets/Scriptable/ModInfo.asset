@@ -174,10 +174,80 @@ MonoBehaviour:
   - Gleaming Sapphier
   - Teleportation Laboratory
   - Purge House
+  - Profession Replicator
+  - Eject Button Capsule
+  - Sleepy Sponge
+  - Spike Chamber
+  - Jacuzzi Module
+  - Seafood Producer
+  - Crocodile Tank
+  - Insane Augmentator
+  - Item Bombardier
+  - Item Deflector
+  - Item Recycler
+  - Bedrock disintegrator
+  - Row Channeler
+  - Unstable Channeler
+  - Electrifier
+  - Magifish Spawn
+  - Sea Urchin Spawn
+  - Uncontrolled Greenhouse
+  - Fire Station
+  - Heat Beam
+  - Volcanic Container
+  - Sushi Kitchen
+  - Brick Oven
+  - Forge
+  - Escape Pod
+  - Isolator
+  - Ephemeral Booster
+  - Satellite Bombardier
+  - Petrifying Defender
+  - Sperm Bank
+  - Mega Chimney
+  - Freezeitor 2000
+  - Missile Deflector
+  - Rooted Core
+  - Uncomfortable Cabin
+  - Unstable Gatling Gun
+  - Overheat Laser
+  - Reckless Sparker
+  - High-precision Cutter
+  - System Cooler
+  - Confinement Room
+  - Gravity Engine
+  - Anti-gravity Blaster
+  - Contained Power Beam
+  - Biomass Power Station
+  - Oil Platform
+  - Paper Factory
+  - Hunting Settlement
+  - Prehistoric Shelter
+  - Disaster Laboratory
+  - Irritable Volcano
+  - Jungle Ruins
+  - Prehistoric Portal
+  - Crummy Torpedo Launcher
+  - Crummy Deflector
+  - Abandoned Laboratory
+  - Latent Mega Iceberg
+  - Glacier Producer
+  - Sewer
+  - Atlantis Portal
+  - Human Catapult
+  - Sushi Bar
+  - Mediocre Clinic
+  - Element Changer
   - Fart Bubble
   - Tobacco Bubble
   - Frozen Coffin
   - Eye of the Calamity
+  - Pearlcore
+  - Millennial Explorer
+  - "Morgan\u2019s Submarine"
+  - Selfless Whale
+  - Nuclear Fusion Energiser
+  - Nuclear Fission Disintegrator
   moduleDetails:
   - +20 attack. Has a 50% chance of dealing damage to 2 enemies at once.
   - +40 attack for as long as the crew member in it has 4 or more HP.
@@ -264,8 +334,8 @@ MonoBehaviour:
     inside this module.
   - "Adds 20 dmg to the ship\u2019s base attack, and will convert any crew member\u2019s
     profession into Cadet if stayed inside this module for one battle"
-  - "Will repair the first adjacent module that gets destroyed, but can\u2019t help
-    any crew members that were in it.Unmanned."
+  - Once per battle, will repair the first adjacent module that becomes damaged or
+    unstable.
   - This module will act as a professional Doctor if a crew member mans it for 2
     battles in a row.
   - Will turn any attitude into Bodybuilder if a crew member mans it for 2 battles
@@ -292,7 +362,8 @@ MonoBehaviour:
   - Compresses your saved currency into hard golden bullets that deal great damage.
     For every 100 coins spent, deal 200 damage.
   - Pack your precious O2 into rockets that explode to deal 200 dmg.
-  - If used 3 times in a row against the same enemy, will inflict Burn status.
+  - If used 3 times in a row against the same enemy, will inflict Burn status. If
+    set on fire, +30 dmg.
   - Can be manned. Sticks to adjacent modules forever. Crew members inside this module
     are immune to Ailments.
   - If you activate 3 effects in or under 3 successive turns, launch a Combo Bomb
@@ -318,7 +389,7 @@ MonoBehaviour:
     with Robot Trait. You can even repurpose a module that has just been destroyed.Flooding
     will disable this module\u2019s effect."
   - Only once, you can place an item in this module, and after 20 turns, it will
-    return back as a rare item.
+    return back as a different item.
   - If a crew member spends 1 battle undisturbed in this module, they will fully
     heal at the end of the battle.
   - Devastating attack that can only be used once per battle and inflicts 300 dmg
@@ -335,9 +406,9 @@ MonoBehaviour:
     it first lands a hit onto this or any of its adjacent modules."
   - If manned by a General Officer, the enemy will receive +100 dmg unless it first
     lands a hit onto this or any of its adjacent modules.
-  - "Unmanned.Every 2 turns, a random Biologist from your crew will move 1 step closer
-    to this module until he\u2019s adjacent to it, even if it means swapping places
-    with others."
+  - "Unmanned. This module is permanently water-flooded. Every 2 turns, a random
+    Biologist from your crew will move 1 step closer to this module until he\u2019s
+    adjacent to it, even if it means swapping places with others."
   - This and adjacent modules can't explode
   - If this module gets flooded, it produces 1 O2 this battle.
   - If your Ship Health is at least 90% full, +40 dmg.
@@ -357,15 +428,14 @@ MonoBehaviour:
   - "An excellent +50 dmg with no drawbacks. However, the toilet in it is broken,
     so it gets full of shit after 4 turns.If it\u2019s hit by an enemy, shit spreads
     to any adjacent modules."
-  - +40 dmg.However the module vibrates while operational, which makes crew members
-    in/adjacent to it puke
+  - "+50 dmg. However the module vibrates while operational, which means every 4
+    turns, there\u2019s a 50% chance an adjacent module becomes damaged."
   - If your crew has taken 6 HP damage this battle, heal +200 Ship HP
-  - "Costs 5000 currency. May come more easily to players with lots of currency.
-    Offers maximum comfort to the crew member in it, however it is extremely delicate
-    as it is beautiful.After 30 turns without this module taking any hits, it magically
-    transforms into any desired module in the game, including mega-modules, and will
-    make its crew member a Posh Millionaire Businessman of 150% performance that
-    can\u2019t be lowered."
+  - Costs 5000 coins and comes more easily to players with lots of coins. Offers
+    maximum comfort to the crew member in it, however it is extremely delicate as
+    it is beautiful. If undisturbed for 30 turns, it magically transforms into any
+    desired module in the game, and will make its crew member a Posh Millionaire
+    Businessman of 160% performance.
   - Attracts applicants with the Hero Mindset trait. If manned by a crew member with
     the Hero Mindset trait, he will have 100% performance and if attacked, will hit
     the enemy back for 100 dmg. Only one per Dive.
@@ -449,8 +519,7 @@ MonoBehaviour:
   - Every time you win a battle, +10 to your ship HP, stacks up to 15 times.
   - You can insert 150 currency in it, and after 20 turns, it will produce a random
     crew member.
-  - "Can transform an item into another random item. Flooding will disable this module\u2019s
-    effect."
+  - After 30 turns with an item in it, it will produce a copy of that item.
   - When a module floods, instantly boils away the water to shoot scalding steam
     at the enemy that deals 200 dmg.Any crew member in the flooded module will take
     1 HP dmg.
@@ -505,6 +574,131 @@ MonoBehaviour:
   - All Crew Members will attack each other, dealing 1 Health damage every 2 turns.
     Every time a Crew Member loses Health, this Module deals 100 damage to the enemy,
     and if a Crew Member dies, deals 300 damage instead.
+  - "For as long as this module hasn\u2019t been disturbed in battle, gain 1 stacking
+    bonus count for the profession of the crew member inside this module."
+  - If this module is about to explode, or the crew member in it about to die, eject
+    the crew member to the bench while this module is ejected and disappears.
+  - If the enemy hits this module, inflict Asleep status. The crew member in this
+    module starts every battle Sleepy.
+  - If this module is hit, the crew member in it takes the damage twice.
+  - "If this module is Water-flooded, there\u2019s no drawbacks and +1HP/4turns."
+  - If this module was hit, produce 1 Tasty fish meal and 100 extra coins at the
+    end of the battle.
+  - Every time the module is hit, the crocodiles will bite the enemy for 100 dmg
+    but lose 1 HP out of a total of 4 HP. After reaching 0 HP it becomes a Dumpster
+    module. If a crew member is placed in this module, they will die but fully heal
+    the crocodiles.
+  - The crew member in this module will have 100% performance, however they will
+    lose 1 HP every 6 turns, and if they die, this and an adjacent module will explode
+  - If the crew member in this module holds an item, you can launch it at the enemy
+    to deal 200 dmg
+  - If the crew member in this module holds an item, you can launch it at the enemy
+    to block and attack
+  - Every time an item is consumed or destroyed, 50% chance of gaining 50 coins and
+    50% chance of receiving another random item
+  - Once per Dive, eliminate an adjacent map node, and the nodes adjacent to that
+    nodes will become direct paths
+  - For every crew member connected and in line with this module, +5 dmg.
+  - +40 dmg. If at any moment it is not adjacent to 4 crew members, this module explodes.
+  - Electrify this and all Offensive modules chain-connected to this one. 20 damage
+    every time the enemy hits an electrified Offensive module.
+  - Releases Magifish to this and any other water-flooded modules in your ship. Magifish
+    heal their crew member +1HP/4 turns.
+  - If hit, deal 100 damage to the enemy and release Sea Urchins to all adjacent
+    modules that will disappear and deal 100 damage to the enemy if also hit.
+  - +20% performance in adjacent organic modules. Adjacent modules have a 33% chance
+    of becoming Wild at the end of a battle.
+  - Prevents this and adjacent modules from being set on fire.
+  - "+10 dmg for each adjacent module that\u2019s set on fire. Every adjacent module
+    has a 25% chance of being set on fire at the start of each battle."
+  - "Unmanned. This module is always set on fire. If hit by the enemy, there\u2019s
+    a volcanic explosion that sets on fire all surrounding modules and deals 500
+    damage to the enemy."
+  - If the enemy hits this module, produce 1 Tasty Fish Meal.
+  - If set on fire, it will produce 1 Tasty Pizza at the end of the battle.
+  - If set on fire, it will produce 1 metal weapon item at the end of the battle.
+  - "Activate this module\u2019s effect for it to become Detached, after which it
+    will no longer be targeted by the enemy."
+  - Every 6 turns, each adjacent module will have a 25% chance of becoming Detached.
+  - +40% performance to the crew member in it. At turn 4, this module always becomes
+    detached.
+  - "+10 dmg. +10 extra dmg for each Detached module, even if they\u2019re in another
+    node."
+  - Adjacent modules to this one become inactive. For each adjacent module, +50 Ship
+    HP.
+  - If undisturbed and if its crew member is female, at the end of the battle they
+    will have Pregnant as their secondary trait.
+  - If set on fire, +1HP/4turns to this and adjacent crew members, and prevents freezing
+    in these modules too.
+  - Once per battle, you can freeze or defrost the adjacent module to the left.
+  - If this module receives an ally hit, instead deflect the missile to the enemy
+    dealing 200 damage.
+  - If this module is Wild, +40 HP for every Wild module.
+  - "Every 2 turns, there\u2019s a 20% chance its crew member swaps places with a
+    nearby module."
+  - +100dmg, but this module is permanently unstable.
+  - +60dmg, but it overheats and every 4 turns, a random adjacent module will be
+    set on fire (70%) or become unstable (30%).
+  - +60dmg. Unless adjacent to an ecrement-flooded or water-flooded module, it'll
+    be set on fire after 4 turns, and then become unstable in another 4 turns.
+  - +40dmg. If the crew member in it has less than 60% performance, this module becomes
+    unstable.
+  - Prevents explosions and fixes unstable in this or any adjacent module.
+  - Detaches at the start of battle, but returns to the ship at the end of the battle.
+  - "Activate to un-detach all modules. Items and crew members in this or adjacent
+    modules can\u2019t move from their place during battle."
+  - "+100dmg, but every 4 turns, there\u2019s a 50% chance an adjacent module becomes
+    detached."
+  - "Shoots a red beam that\u2019s very thin, but the more damaged the module is,
+    the more energy is released and the thicker the beam becomes. +5dmg. +50dmg if
+    this module is damaged. +100dmg if this module is unstable."
+  - "CDs regenerate 25% faster if there\u2019s a Wild module adjacent to this one."
+  - If next to a Wild module during battle, produce 1 O2 at the end of battle.
+  - "If there\u2019s an adjacent Wild module, at the end of the battle produce one
+    of the following items: Recipe Book (0-10), Book of the Dead (11-20), Ancient
+    Volume of Wisdom (21-30), Lost Page (31-40), Treasure Map (41-50), Love Letter
+    (51-60), Suspicious Magazines (61-70), Military Propaganda (71-80), Notice of
+    Termination (81-90) or University Diploma (91-100)."
+  - If this module is Wild, its crew member will throw wooden spears at the enemy,
+    +30dmg.
+  - If this module is Wild, its crew member will be protected by branches from the
+    first enemy hit each battle.
+  - This module is permanently set on fire. At the end of each battle, gain a random
+    bad quality item that will last for 1 battle.
+  - This module is permanently set on fire. Unmanned. If hit by the enemy, inflict
+    burn // deal 200 damage and each adjacent module will have a 50% chance of being
+    set on fire.
+  - 'This module is permanently wild. The crew member in it, at the end of the battle
+    and once per dive, will receive Summoning Rune, Human Skeleton or Pendant of
+    Cursed Water. '
+  - This module is permanently wild. Unmanned. At the start of each battle, Vicious
+    Dinosaur appears in this module until the end of the battle.
+  - This module is permanently damaged. If the enemy hits this or an adjacent module,
+    throw a torpedo that deals 150 damage.
+  - This module is permanently damaged. If the enemy hits this or an adjacent module,
+    deflect the attack once per battle.
+  - "This module is permanently damaged. At the end of each battle, there\u2019s
+    a 50% chance you gain a random bad quality item that will last for 1 battle."
+  - Unmanned. This module is permanently frozen. If surrounded by 4 water-flooded
+    modules, it permanently grows a massive iceberg, and if this or any adjacent
+    modules are hit by the enemy, freeze the enemy // blow a blizzard that deals
+    300 dmg.
+  - Unmanned. If an adjacent module is water-flooded, it becomes frozen after 2 turns.
+    Every time an enemy hits a frozen module connected to this one, freeze the enemy
+    // deal 300 dmg.
+  - Unmanned. This module is permanently excrement-flooded. If hit, excrement-floods
+    any adjacent module to the left and right.
+  - Unmanned. While this module is surrounded by 4 water-flooded modules, it will
+    be occupied by Atlantis Elder until the end of the battle.
+  - If this or an adjacent module is hit by the enemy, the catapult fires the crew
+    member in this module, who dies, dealing 300 dmg to the enemy.
+  - The crew member inside this module will have -40% performance as they will be
+    busy preparing sushi, but they will produce one Tasty Fish Meal every 6 turns.
+  - "When a crew member in or adjacent to this module is inflicted with an Ailment
+    that isn\u2019t Lunatic, reroll it to another Ailment except for Lunatic."
+  - When this or an adjacent module is inflicted with wild, set on fire, water-flooded,
+    excrement-flooded, frozen or detached, reroll this status to another one of these
+    statuses.
   - Bubbles that may form automatically adjacent to crew members that fart. Explodes
     after being hit, and a Crew Member in it will become Sick. If hit by an enemy,
     they will be inflicted Poisoned status.
@@ -518,8 +712,22 @@ MonoBehaviour:
     space surrounded by 4 organic modules, after which it cannot be separated from
     its 4 adjacent modules. Every battle, Eye of the Calamity uses one offensive
     or defensive abyssal creature effect (those present in Organic Mega-Modules)."
-  cooldown: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000002000000000000000000000000000000000000000400000000000000000000000000000000000000000000001e000000000000000000000000000000140000000000000002000000000000000000000014000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000300000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000c0000000f0000001e000000000000000400000000000000000000001e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000064000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  moduleType: 010000000100000001000000000000000100000002000000020000000400000004000000030000000100000000000000030000000200000000000000000000000300000003000000030000000000000002000000020000000300000000000000020000000300000000000000000000000000000003000000030000000100000003000000000000000100000000000000000000000100000000000000030000000300000003000000030000000000000002000000040000000400000004000000020000000400000004000000030000000400000004000000020000000000000002000000020000000100000002000000040000000100000001000000010000000100000000000000010000000200000003000000030000000200000003000000040000000400000002000000040000000400000003000000040000000400000001000000020000000400000000000000020000000100000004000000000000000300000000000000030000000400000003000000040000000100000001000000000000000500000004000000040000000100000000000000010000000300000004000000040000000400000004000000030000000300000002000000010000000000000002000000020000000100000001000000030000000100000004000000000000000400000002000000020000000000000004000000030000000100000001000000030000000200000004000000020000000200000004000000020000000200000003000000030000000100000002000000040000000400000004000000040000000400000000000000040000000100000004000000040000000300000004000000040000000400000004000000040000000400000004000000030000000400000004000000040000000200000000000000
+  - "This module can\u2019t be bought or crafted. It is only born by having a Pearl
+    equipped inside an Organic module, that then absorbs the item and transforms
+    into Pearlcore, which is unmanned so that holder is moved to the bench. Once
+    per battle, heal everyone 1HP and +100 Ship HP."
+  - Place next to the Captain to reveal the contents of all nodes in the current
+    level. Once placed, it cannot be moved from its slot.
+  - Old and damaged module that will suffer a random module status at the start of
+    each battle.
+  - Unmanned, indestructible,occupies 4 modules in a row and has to be placed at
+    the very bottom of the slot layout. For as long as its in this position, halve
+    O2 consumption, and increase your Ship Health by 300 HP.
+  - All modules in this row charge up 50% faster.
+  - Once per battle in turn 4, fire a nuclear blast at the enemy that deals 300 damage,
+    but it sets on fire all modules in this row.
+  cooldown: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000002000000000000000000000000000000000000000400000000000000000000000000000000000000000000001e000000000000000000000000000000140000000000000002000000000000000000000014000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000300000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000c0000000f0000001e000000000000000400000000000000000000001e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000064000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  moduleType: 01000000010000000100000000000000010000000200000002000000040000000400000003000000010000000000000003000000020000000000000000000000030000000300000003000000000000000200000002000000030000000000000002000000030000000000000000000000000000000300000003000000010000000300000000000000010000000000000000000000010000000000000003000000030000000300000003000000000000000200000004000000040000000400000002000000040000000400000003000000040000000400000002000000000000000200000002000000010000000200000004000000010000000100000001000000010000000000000001000000020000000300000003000000020000000300000004000000040000000200000004000000040000000300000004000000040000000100000002000000040000000000000002000000010000000400000000000000030000000000000003000000040000000300000004000000010000000100000000000000050000000400000004000000010000000000000001000000030000000400000004000000040000000400000003000000030000000200000001000000000000000200000002000000010000000100000003000000010000000400000000000000040000000200000002000000000000000400000003000000010000000100000003000000020000000400000002000000020000000400000002000000020000000300000003000000010000000200000004000000040000000400000004000000040000000000000004000000010000000400000004000000030000000400000004000000040000000400000004000000040000000400000003000000040000000300000003000000000000000400000002000000040000000400000003000000010000000200000003000000030000000100000001000000010000000000000000000000000000000400000001000000000000000400000004000000040000000300000003000000030000000100000002000000030000000200000003000000010000000200000004000000010000000100000001000000010000000300000004000000030000000100000001000000030000000300000003000000010000000200000003000000010000000400000004000000010000000200000003000000040000000300000004000000040000000100000004000000040000000400000004000000040000000200000000000000000000000400000000000000000000000300000003000000
   req:
   - 1
   - 1
@@ -680,6 +888,68 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  - Only works when adjacent to 4 Modules.
+  - 0
+  - 0
+  - 1
+  - 1
+  - 0
+  - 0
+  - 1
+  - 1
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 0
+  - 0
+  - 0
+  - Must be placed in the periphery of the layout.
+  - 1
+  - 1
+  - 0
+  - 1
+  - 1
+  - 1
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1
+  - 0
   - 1
   - 0
   - 0
@@ -687,8 +957,16 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1
+  - 1
   randomReq: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000
-  modulePrice: c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c80000006400000064000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c80000006400000064000000c800000064000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c80000002c010000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f401000000000000000000000000000000000000
+  modulePrice: c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c80000006400000064000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c80000006400000064000000c800000064000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c80000002c010000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c800000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   typeStacking:
   - "Effects based on creatures, sometimes not hollow and therefore autonomous. There
     can only be 1 of each type of Organic Module in the ship. \n Organic A modules

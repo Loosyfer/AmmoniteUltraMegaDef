@@ -16,39 +16,101 @@ MonoBehaviour:
   - Excreel Pump
   - Jellynfestor Babycrib
   - Infectuna Guts
-  - Intellectopus Brain
+  - Irritable Brain REMOVE?
   - Sluugi Vessel
-  - Seabear Artic Exhaler
-  - Narwhal Horncannon
+  - Arctic Exhaler
+  - Tusklauncher
   - Monstercrewed Module
   - Ophthalmonster Eye
-  - Bone Capsule
+  - Bone Capsule TYPE A?
   - Lobster Icicle Launcher
-  - Crusty Shield Weaponiser
+  - Crusty Weaponiser
   - Monstrous Accumulator
+  - Eternal Healer
+  - Modular Oyster
+  - Hurling Tentamodule
+  - Bloodsucking Node
+  - Draconic Shield
+  - Node of Spines
+  - Ammonode
+  - Puffy Spineball
+  - Psychic Chamber
+  - Gigantic Pod
+  - Corrupted Ammonode
+  - Muscle Peripheral
+  - Kamebunker
+  - Cage of Apes
+  - Net Attachment
+  - Structural Cetacea
+  - Blast Capsule
+  - Baby Turtlearth
+  - Telescopic Augmentor
+  - Angler Baiter
+  - Shelter of the Overlord
+  - Life-Absorbing Krakencore
   moduleDetails:
-  - You are the one that can excrete turds now to Poison the enemy.
+  - Excreel-shaped module with an anus end that shoots turds that Poison the enemy.
   - You are the one that sends Cannibal-inducing baby parasites now, which will make
     the enemies attack each other.
   - This module can be manned. Its crew member and any adjacent crew members will
-    have Explosive Diarrhea from turn 1.
-  - If this module gets hit by the enemy, he will suffer a great irritable explosion
+    have the Explosive Diarrhea trait at the start of battle.
+  - If this module gets hit by the enemy, it will suffer a great irritable explosion
     of 300 dmg.
-  - "Every now and then sends Sluugi that deal low damage to the enemy, but it\u2019s
-    a constant flow of +10 damage."
+  - Every now and then sends Sluugi into the enemy to die, that deal low damage to
+    the enemy; +5dpt.
   - Freeze the enemy at the start of battle, or 1-2 enemies in a multi-battle.
   - Launch Narwhal horns at the enemy that penetrate and heavily damage shells.
   - You are the one that sends little monsters that attack the enemy.
-  - Gain greater information on the types of events in nearby Nodes.
+  - Gain greater information on the types of events in nearby Nodes // Have greater
+    range of sight in Node Map
   - Crafted from many skeleton-related enemies. Protects the crew member inside from
     damage by physical hits.
-  - If this or an adjacent module gets flooded, it turns the liquid into icicles
-    and launches them into the enemy to deal +40 dmg with a chance of Freezing.
+  - If this or an adjacent module is flooded or frozen, launch icicles into the enemy
+    to deal +40 dmg with a chance of Freezing.
   - Uses the activated effect from an adjacent defensive module, and instead transforms
     that effect into an aggressive blast that deals +200 HP.
-  - Crafted from small earlygame enemies. Every time you defeat a different creature
+  - Crafted from defeating 5 different earlygame enemies, and looks like a bunch
+    of small sea creatures clumped together.Every time you defeat a different creature
     species, +5 dmg.
-  cooldown: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  - This module cannot explode, and heal its and djacent crew members +1HP/4turns.
+  - At the end of each battle, if undisturbed, has a 33% chance of producing a Pearl.
+  - Every 4 turns, grabs a random item from its interior or an adjacent module and
+    throws it at the enemy to deal 150 damage.
+  - If the enemy hits this module, once per battle deal 100 damage and heal 150 Ship
+    HP.
+  - If placed on the first column of the layout, blocks the first enemy attack onto
+    the Ship.
+  - If hit, spikes will harm the enemy for 300 dmg but all adjacent modules will
+    be water-flooded.
+  - Manned. Live ammonite that collects food and shares it with the crew member in
+    it, +1HP/4turns.
+  - If hit, spikes will Poision the enemy and excrement-flood all adjacent modules.
+  - Manned. Its crew member in this module will have a different trait every battle.
+  - Manned. Its crew member will be immune to the first 5 enemy hits, after which
+    the module will become Damaged.
+  - "Manned. Live corrupted ammonite that sucks life from its crew member, -1HP/4turns.
+    Live ammonite can\u2019t become Damaged or explode as long as it has a crew member
+    in it."
+  - Huge muscular arm that can only be placed on the periphery of the ship, and if
+    hit, punches back for 300 dmg.
+  - Protective module shielded by the two turtle shells that Kameman left behind.
+    Immune to Damaged, and the crew member inside takes half the damage.
+  - "Cage full of apes. Their performance will be completely random at the start
+    of a battle. If they\u2019re hit, they go apeshit and start flinging faeces at
+    each other; the module is excrement-flooded and -20% performance."
+  - Needs peripheral positioning. Collects little and fish and food, grating 1 (60%)
+    or 2 (40%) items that are either Tasty Fish Meal or Expired Sushi
+  - Takes up 3 slots horizontally. Increases Ship HP by 400.
+  - If this or an adjacent module is hit, it explodes and the enemy is dealt 300
+    damage. This module cannot be destroyed by explosions.
+  - This and all adjacent modules are permanently Wild. Increase Ship HP by 500.
+  - The enemy will be revealed sooner in the build phase.
+  - Each battle, a random adjacent module will get hit a lot more often.
+  - If the crew member in this module is about to die, you can sacrifice another
+    crew member instead.
+  - Must be adjacent to a scientific module. If you kill a creature, the squid capsule
+    redirects his life energy into the crew, healing by 1HP every crew member.
+  cooldown: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   req:
   - 0
   - 0
@@ -63,5 +125,27 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  randomReq: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a000000
-  modulePrice: c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c800000090010000
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  randomReq: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000
+  modulePrice: c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000900100002c0100002c0100002c0100002c0100002c0100002c010000c8000000c80000002c010000c80000002c0100002c010000c80000002c0100002c0100002c0100002c010000c8000000c80000002c010000c8000000

@@ -23,11 +23,13 @@ public class ActivateSlot : MonoBehaviour
         {
             this.transform.GetComponent<Image>().raycastTarget = false;
             this.transform.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            activated = false;
         }
         else
         {
             this.transform.GetComponent<Image>().raycastTarget = true;
             this.transform.GetComponent<Image>().color = new Color32(0, 0, 0, 90);
+            activated = true;
         }
     }
 

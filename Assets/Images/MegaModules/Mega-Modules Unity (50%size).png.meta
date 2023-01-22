@@ -120,12 +120,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 3261
-        width: 694
-        height: 766
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+        x: 53
+        y: 3253
+        width: 728
+        height: 782
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_1
       rect:
         serializedVersion: 2
-        x: 834
+        x: 842
         y: 3253
-        width: 716
+        width: 715
         height: 782
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_3
       rect:
         serializedVersion: 2
-        x: 1683
+        x: 1689
         y: 3253
-        width: 706
+        width: 708
         height: 784
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_4
       rect:
         serializedVersion: 2
-        x: 2477
+        x: 2485
         y: 3233
         width: 694
         height: 820
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_5
       rect:
         serializedVersion: 2
-        x: 3261
+        x: 3269
         y: 3227
         width: 714
         height: 795
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_6
       rect:
         serializedVersion: 2
-        x: 54
-        y: 2743
+        x: 62
+        y: 2741
         width: 1397
-        height: 444
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_7
       rect:
         serializedVersion: 2
-        x: 1557
+        x: 1565
         y: 2733
         width: 1378
-        height: 462
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_8
       rect:
         serializedVersion: 2
-        x: 3261
-        y: 2286
-        width: 692
-        height: 790
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+        x: 3267
+        y: 2291
+        width: 694
+        height: 785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,12 +288,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_9
       rect:
         serializedVersion: 2
-        x: 45
-        y: 2277
-        width: 1380
-        height: 392
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+        x: 51
+        y: 2275
+        width: 1382
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,12 +309,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_10
       rect:
         serializedVersion: 2
-        x: 1543
+        x: 1551
         y: 2257
         width: 1390
         height: 412
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,12 +330,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_12
       rect:
         serializedVersion: 2
-        x: 29
+        x: 37
         y: 1759
         width: 1412
         height: 444
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,12 +351,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_13
       rect:
         serializedVersion: 2
-        x: 1539
+        x: 1547
         y: 1759
         width: 1396
         height: 410
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,12 +372,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_14
       rect:
         serializedVersion: 2
-        x: 3205
+        x: 3213
         y: 1227
         width: 748
         height: 942
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,12 +393,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_15
       rect:
         serializedVersion: 2
-        x: 296
+        x: 304
         y: 658
         width: 876
         height: 950
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,12 +414,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_16
       rect:
         serializedVersion: 2
-        x: 1448
-        y: 1100
+        x: 1456
+        y: 1098
         width: 1556
-        height: 570
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -435,12 +435,12 @@ TextureImporter:
       name: Mega-Modules Unity (50%size)_17
       rect:
         serializedVersion: 2
-        x: 3021
+        x: 3027
         y: 15
-        width: 1024
+        width: 1026
         height: 1102
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,6 +448,27 @@ TextureImporter:
       bones: []
       spriteID: b4cd0a38f33dd3840a9a759ce0fe96be
       internalID: -1144942882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega-Modules Unity (50%size)_18
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 109
+        width: 742
+        height: 886
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b7a3a05ae916345b2ecbab7e0658d6
+      internalID: -1472910114
       vertices: []
       indices: 
       edges: []
@@ -480,6 +501,7 @@ TextureImporter:
       Mega-Modules Unity (50%size)_8: 1010810292
       Mega-Modules Unity (50%size)_12: -507186893
       Mega-Modules Unity (50%size)_3: 1204794868
+      Mega-Modules Unity (50%size)_18: -1472910114
       Mega-Modules Unity (50%size)_14: 1396855654
   spritePackingTag: 
   pSDRemoveMatte: 0

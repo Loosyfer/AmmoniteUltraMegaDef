@@ -302,7 +302,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (index > 164)
+        if (index > 234)
         {
             Debug.Log("Your number was too high");
             return;
@@ -693,7 +693,7 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = Random.Range(0, 165);
+            int j = Random.Range(0, 225);
             int k = Random.Range(0, 13);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
@@ -1091,7 +1091,7 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("Try inputting a valid integer");
             return;
         }
-        if (index > 13)
+        if (index > 14)
         {
             Debug.Log("Your number was too high");
             return;
@@ -1221,7 +1221,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (index > 160)
+        if (index > 34)
         {
             Debug.Log("Your number was too high");
             return;

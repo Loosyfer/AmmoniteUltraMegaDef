@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   names:
   - Visceral Execution
-  - Modublast Bomber
+  - Submabomber
   - Soul Crusher
   - Body Splicer
   - Cryogenic Lab
@@ -26,7 +26,8 @@ MonoBehaviour:
   - Clone Lab
   - Colossal Expansion
   - Cathedral of the Depths
-  - Life-Absorbing Krakencore
+  - Extreme Hospital
+  - Steel Sacrificer
   moduleDetails:
   - "If a creature has less than 500HP, you can execute it, but will be utterly disintegrated
     and you won\u2019t be able to harvest it for any organic effects or modules.
@@ -65,10 +66,11 @@ MonoBehaviour:
     HP will stay as a shield into future battles.
   - Summon an Abyssal Beast that will fight by your side during this battle. Takes
     4 battles to recharge.
-  - If you kill a creature, the squid capsule redirects his life energy into the
-    crew, healing by 1HP every crew member.
-  cooldown: 320000000000000000000000320000003200000000000000000000000000000000000000280000000f000000000000002800000000000000
-  moduleType: 0100000001000000010000000300000003000000040000000200000003000000040000000300000003000000020000000400000000000000
+  - If a crew member dies in or adjacent to this mega module, they return as a Zombie.
+  - If your ship is below 30% HP, a random adjacent module will be destroyed for
+    every attack over 100 HP you were about to receive.
+  cooldown: 320000000000000000000000320000003200000000000000000000000000000000000000280000000f00000000000000280000000000000000000000
+  moduleType: 010000000100000001000000030000000300000004000000020000000300000004000000030000000300000002000000040000000300000002000000
   req:
   - 0
   - 0
@@ -83,7 +85,8 @@ MonoBehaviour:
   - Adjacent to a scientist
   - 0
   - Only works when manned and adjacent to another 6 crew members
-  - Adjacent to a scientific module
+  - Requires a Doctor or Scientist in it
+  - 0
   sprites:
   - {fileID: 333886533, guid: 06cf5b9657764cc4a961b7b086e12479, type: 3}
   - {fileID: -1889633743, guid: 06cf5b9657764cc4a961b7b086e12479, type: 3}
@@ -99,3 +102,4 @@ MonoBehaviour:
   - {fileID: -1144942882, guid: 06cf5b9657764cc4a961b7b086e12479, type: 3}
   - {fileID: 1396855654, guid: 06cf5b9657764cc4a961b7b086e12479, type: 3}
   - {fileID: -807728438, guid: 06cf5b9657764cc4a961b7b086e12479, type: 3}
+  - {fileID: -1472910114, guid: 06cf5b9657764cc4a961b7b086e12479, type: 3}
