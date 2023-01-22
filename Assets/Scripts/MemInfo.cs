@@ -85,7 +85,7 @@ public class MemInfo : ScriptableObject
         "10% chance they quit the Dive after a battle.", "After each battle, there's a 10% chance that their Module explodes.", "Every time they move, there's a 50% chance they lose 1 Health.",
         "40% Performance, increased to 50% if they have a Crew Member placed adjacent to the right (behind his back).",
         "Unless their module is Flooded, they and adjacent Crew Members have a 30% chance of becoming Sick.", "Will only have 3 Health.",
-        "Starts applying 0% performance to his module, but every turn his performance increases by 2% for up to 25 turns.", "Every turn, there's a 20% chance they swap places with a random Crew Member.",
+        "0% base performance, but +10% after every successful battle up to 6 times.", "Every turn, there's a 20% chance they swap places with a random Crew Member.",
         "At the start of each battle, their Performance will become either 70% or 20%.", "They will disappear at the start of battle, and reappear after 5 turns.",
         "They have a secondary Trait that changes randomly at the start of every battle.", "After every battle, there's a 20% chance they lose their profession and Senile is replaced by another random Trait.",
         "60% Performance in Offensive Modules, and 30% Performance in Defensive Modules.", "60% Performance in Defensive Modules, and 30% Performance in Offensive Modules.",

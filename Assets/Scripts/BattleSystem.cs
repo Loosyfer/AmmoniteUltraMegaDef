@@ -1100,7 +1100,7 @@ public class BattleSystem : MonoBehaviour
         if (index <= 5)
             go = Instantiate(megaHorPrefab, new Vector3(730, 992, 0), Quaternion.identity) as GameObject;
         else
-            go = Instantiate(megaVerPrefab, new Vector3(920, 1015, 0), Quaternion.identity) as GameObject;
+            go = Instantiate(megaVerPrefab, new Vector3(920, 1016, 0), Quaternion.identity) as GameObject;
         go.transform.parent = modulesFolder.transform;
         if (index <= 5)
         {

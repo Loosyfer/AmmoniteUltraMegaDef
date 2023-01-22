@@ -608,7 +608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.29004, y: -3.2299805}
+  m_AnchoredPosition: {x: 22.37, y: -11.76}
   m_SizeDelta: {x: 29.2, y: 32.60529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &674955256818873391
@@ -795,7 +795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2147759772611510579
 Transform:
   m_ObjectHideFlags: 0
@@ -804,7 +804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753100210870519394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.53, y: 0, z: 0}
+  m_LocalPosition: {x: -0.02, y: 0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.084745765}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -853,7 +853,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c6844118d3410f948bcec37735673a71, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6862745}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1556,8 +1556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.39964, y: 7.7262673}
-  m_SizeDelta: {x: 321.67258, y: 184.08493}
+  m_AnchoredPosition: {x: 0.39964, y: 7.5691}
+  m_SizeDelta: {x: 321.67258, y: 187.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6806642923327228836
 CanvasRenderer:
@@ -1600,11 +1600,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: After placing a crew member in it, closes its doors and transports the
-    crew member into another dimension for 3 battles, during which it cannot be used.
-    Then, they return transformed into an improved being with two positive traits,
-    8 max HP and 100% performance. There is a 25% chance the crew member returns
-    as a monstrous abomination that shits himself.
+  m_Text: "If there\u2019s an adjacent Wild module, at the end of the battle produce
+    one of the following items: Recipe Book (0-10), Book of the Dead (11-20), Ancient
+    Volume of Wisdom (21-30), Lost Page (31-40), Treasure Map (41-50), Love Letter
+    (51-60), Suspicious Magazines (61-70), Military Propaganda (71-80), Notice of
+    Termination (81-90) or University Diploma (91-100)."
 --- !u!223 &6317589518512021836
 Canvas:
   m_ObjectHideFlags: 0
@@ -3618,7 +3618,7 @@ VideoPlayer:
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
-  m_PlaybackSpeed: 1
+  m_PlaybackSpeed: 1.6
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -3629,9 +3629,9 @@ VideoPlayer:
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
+  m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!223 &7979825739909649238
@@ -3749,7 +3749,7 @@ VideoPlayer:
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
-  m_PlaybackSpeed: 1
+  m_PlaybackSpeed: 1.6
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -3760,9 +3760,9 @@ VideoPlayer:
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
+  m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!223 &7278718142283809558
@@ -4554,7 +4554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3248100327507074030
 RectTransform:
   m_ObjectHideFlags: 0

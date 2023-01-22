@@ -118,7 +118,7 @@ public class ModuleHUD : MonoBehaviour
             this.GetComponent<Image>().color = new Color(0.9843f, 1, 0.2196f, 1);
         }
         if (inactive)
-            this.GetComponent<Image>().color = new Color32(92, 92, 92, 255);
+            this.GetComponent<Image>().color = new Color32(45, 45, 45, 255);
     }
 
 }

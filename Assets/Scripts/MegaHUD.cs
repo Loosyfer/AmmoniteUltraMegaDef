@@ -99,7 +99,7 @@ public class MegaHUD : MonoBehaviour
             damagedSprite2.SetActive(false);
         }
         if (inactive)
-            module.GetComponent<SpriteRenderer>().color = new Color32(92, 92, 92, 255);
+            module.GetComponent<SpriteRenderer>().color = new Color32(45, 45, 45, 255);
         else
             module.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
         if (wild)
