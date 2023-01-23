@@ -171,7 +171,7 @@ MonoBehaviour:
   - Alien Takeover
   - Gates of the Chosen One
   - Portable Wormhole
-  - Gleaming Sapphier
+  - Gleaming Sapphire
   - Teleportation Laboratory
   - Purge House
   - Profession Replicator
@@ -987,9 +987,9 @@ MonoBehaviour:
     item."
   - "Niche and unique effects that can fit into any ship. \n 6x = each battle, 1
     random module with a random crew member in it are called for assistance and appear
-    in a random available Layout Slot, and they will last until end of combat. \n
-    10x = each battle, 2 random module with a random crew member in it are called
-    for assistance and appear in a random available Layout Slot, and they will last
-    until end of combat."
+    in a random available Layout Slot, and they will last until end of combat. \n10x
+    = each battle, 2 random module with a random crew member in it are called for
+    assistance and appear in a random available Layout Slot, and they will last until
+    end of combat."
   - Special type of module. There's only a few of these, and their functionality
     varies. Doesn't have a stacking bonus.

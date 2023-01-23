@@ -19,7 +19,7 @@ public class ModInfo : ScriptableObject
         "Sticky node", "Tentacollector", "Chef Academy", "Explosive Charger", "Pain Transformer", "Cotagion Beam", "Water-Based Doping Module", "Arctic Hull", "Chamber of Infinite Wisdom", "Resourceful Blocker", "Systemic Freezer",
         "Gambletron 3000", "Frozen Node", "Seafood Absorber", "Recrutibot 3000", "Item Transformer", "Steamthrower", "Marine Hostage", "Co-pilot's Cockpit", "General Quarters", "Autopilot Navigator", "Kidnaptron 3000", "Professional Union",
         "Corruption Node", "Grand Professional Abduction", "Desperate Disintegrator", "Greed Pact", "Mirror Room", "Ineptitude Distiller", "Gleaming Ruby", "Sanatorium of Chaos", "Campus of Chaos", "Alien Takeover",
-        "Gates of the Chosen One", "Portable Wormhole", "Gleaming Sapphier", "Teleportation Laboratory", "Purge House", "Profession Replicator",
+        "Gates of the Chosen One", "Portable Wormhole", "Gleaming Sapphire", "Teleportation Laboratory", "Purge House", "Profession Replicator",
         "Eject Button Capsule",
         "Sleepy Sponge",
         "Spike Chamber",
