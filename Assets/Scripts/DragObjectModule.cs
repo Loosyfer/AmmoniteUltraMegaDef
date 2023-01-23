@@ -73,6 +73,23 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
             pointerDown = true;
         camera.GetComponent<CameraZoomController>().movingOn = true;
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
+        EventSystem.current.SetSelectedGameObject(gameObject);
+        if (script.activeModuleorMember != null)
+        {
+            if (script.activeModuleorMember.tag == "Module")
+                script.activeModuleorMember.GetComponent<ModuleHUD>().selected = false;
+            if (script.activeModuleorMember.tag == "Member")
+                script.activeModuleorMember.GetComponent<MemberHUD>().selected = false;
+            if (script.activeModuleorMember.tag == "Mega")
+                script.activeModuleorMember.GetComponent<MegaHUD>().selected = false;
+            if (script.activeModuleorMember.tag == "Monster")
+            {
+                script.activeModuleorMember.GetComponent<MonsterHUD>().selected = false;
+                script.activeModuleorMember.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            }
+        }
+        script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
+        script.activeModuleorMember.GetComponent<ModuleHUD>().selected = true;
 
     }
 
@@ -93,7 +110,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
         if (Input.GetMouseButtonUp(0) && pointerDown && !objectDragged)
         {
-            EventSystem.current.SetSelectedGameObject(gameObject);
+            /*EventSystem.current.SetSelectedGameObject(gameObject);
             if (script.activeModuleorMember != null)
             {
                 if (script.activeModuleorMember.tag == "Module")
@@ -108,10 +125,10 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
                     script.activeModuleorMember.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
                 }
             }
-            script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
+            script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;*/
             pointerDown = false;
             rayCastNull = true;
-            script.activeModuleorMember.GetComponent<ModuleHUD>().selected = true;
+            //script.activeModuleorMember.GetComponent<ModuleHUD>().selected = true;
             camera.GetComponent<CameraZoomController>().movingOn = false;
         }
 

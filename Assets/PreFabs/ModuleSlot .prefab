@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
+  module: {fileID: 0}
+  member: {fileID: 0}
 --- !u!114 &7918071207911089540
 MonoBehaviour:
   m_ObjectHideFlags: 0

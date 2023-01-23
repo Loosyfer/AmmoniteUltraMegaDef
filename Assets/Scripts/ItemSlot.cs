@@ -21,9 +21,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
         if (eventData.pointerDrag != null)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn2");
             if (eventData.pointerDrag.transform.tag == "Member")
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn2");
                 eventData.pointerDrag.gameObject.GetComponent<DragObjectMember>().slot = this.gameObject;
                 eventData.pointerDrag.transform.position = transform.position - new Vector3(0, 18.4f, 0);
                 if (eventData.pointerDrag.transform.GetComponent<DragObjectMember>().item != null)
@@ -32,12 +32,14 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             }
             if (eventData.pointerDrag.transform.tag == "Module")
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn2");
                 eventData.pointerDrag.gameObject.GetComponent<DragObjectModule>().slot = this.gameObject;
                 eventData.pointerDrag.transform.position = transform.position;
                 module = eventData.pointerDrag.gameObject;
             }
             if (eventData.pointerDrag.transform.tag == "Mega" || eventData.pointerDrag.transform.tag == "Mega2")
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn2");
                 eventData.pointerDrag.gameObject.GetComponent<DragObjectMega>().slot = this.gameObject;
                 eventData.pointerDrag.transform.position = transform.position;
                 module = eventData.pointerDrag.gameObject;

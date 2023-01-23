@@ -77,6 +77,29 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         }
         camera.GetComponent<CameraZoomController>().movingOn = true;
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
+        EventSystem.current.SetSelectedGameObject(gameObject);
+        if (script.activeModuleorMember != null)
+        {
+            if (script.activeModuleorMember.tag == "Module")
+                script.activeModuleorMember.GetComponent<ModuleHUD>().selected = false;
+            if (script.activeModuleorMember.tag == "Member")
+                script.activeModuleorMember.GetComponent<MemberHUD>().selected = false;
+            if (script.activeModuleorMember.tag == "Mega")
+                script.activeModuleorMember.GetComponent<MegaHUD>().selected = false;
+            if (script.activeModuleorMember.tag == "Mega2")
+                script.activeModuleorMember.GetComponent<MegaVerHUD>().selected = false;
+            if (script.activeModuleorMember.tag == "Monster")
+            {
+                script.activeModuleorMember.GetComponent<MonsterHUD>().selected = false;
+                script.activeModuleorMember.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            }
+        }
+
+        script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
+        if (script.activeModuleorMember.tag == "Mega")
+            script.activeModuleorMember.GetComponent<MegaHUD>().selected = true;
+        if (script.activeModuleorMember.tag == "Mega2")
+            script.activeModuleorMember.GetComponent<MegaVerHUD>().selected = true;
 
     }
 
@@ -84,7 +107,7 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     {
         if (Input.GetMouseButtonUp(0) && pointerDown && !rayCastNull && !objectDragged)
         {
-            EventSystem.current.SetSelectedGameObject(gameObject);
+            /*EventSystem.current.SetSelectedGameObject(gameObject);
             if (script.activeModuleorMember != null)
             {
                 if (script.activeModuleorMember.tag == "Module")
@@ -102,13 +125,13 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                 }
             }
             
-            script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
+            script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;*/
             pointerDown = false;
             rayCastNull = true;
-            if (script.activeModuleorMember.tag == "Mega")
+            /*if (script.activeModuleorMember.tag == "Mega")
                 script.activeModuleorMember.GetComponent<MegaHUD>().selected = true;
             if (script.activeModuleorMember.tag == "Mega2")
-                script.activeModuleorMember.GetComponent<MegaVerHUD>().selected = true;
+                script.activeModuleorMember.GetComponent<MegaVerHUD>().selected = true;*/
             camera.GetComponent<CameraZoomController>().movingOn = false;
         }
 
