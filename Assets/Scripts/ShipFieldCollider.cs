@@ -89,6 +89,7 @@ public class ShipFieldCollider : MonoBehaviour
 
         if (other.gameObject.tag == "Member")
         {
+            other.gameObject.GetComponent<MemberHUD>().insideField = true;
             switch (other.gameObject.GetComponent<MemberHUD>().profession)
             {
                 case (ProfessionType)0:
@@ -286,6 +287,7 @@ public class ShipFieldCollider : MonoBehaviour
 
         if (other.gameObject.tag == "Member")
         {
+            other.gameObject.GetComponent<MemberHUD>().insideField = false;
             switch (other.gameObject.GetComponent<MemberHUD>().profession)
             {
                 case (ProfessionType)0:

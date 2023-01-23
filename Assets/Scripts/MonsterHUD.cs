@@ -15,6 +15,7 @@ public class MonsterHUD : MonoBehaviour
     public int dPT;
     public int health;
     public TMP_Text instructionsPanel;
+    public TMP_Text flavourPanel;
 
     void Start()
     {
@@ -24,10 +25,10 @@ public class MonsterHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        flavourPanel.text = flavour;
     }
 
-    public void OnMouseDown()
+    /*public void OnMouseDown()
     {
         EventSystem.current.SetSelectedGameObject(gameObject);
         if (script.activeModuleorMember != null)
@@ -44,5 +45,5 @@ public class MonsterHUD : MonoBehaviour
         script.activeModuleorMember = EventSystem.current.currentSelectedGameObject;
         selected = true;
         this.transform.GetComponent<SpriteRenderer>().color = new Color32(120, 120, 120, 255);
-    }
+    }*/
 }

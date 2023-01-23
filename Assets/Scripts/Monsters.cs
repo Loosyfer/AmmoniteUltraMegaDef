@@ -165,7 +165,7 @@ public class Monsters : ScriptableObject
 "A rare being that appears to have a human face. However, each person sees a different face.",
 "This fish has lived trapped in a net for so long that removing it would do more harm than good.",
 "When an anchor landed on its head and nearly killed it, it adapted and took over it, now using it as a daunting weapon to dominate its environment.",
-"A whale so massive that it can’t change direction or stop moving, it just charges forward destroying or eating any obstacles in its path.",
+"A whale so massive that it can’t change direction or stop moving, it just charges forward destroying or eating any obstacles in its path. Some think that Whalenormous was even more enormous in the past, but the front of his head was cut clean in half, but what could have performed such a cut?",
 "Its rotting flesh is somehow being kept alive, and the corpse is enjoying its newfound life.",
 "This giant clam has been invaded by a ghostly spirit.",
 "Crazy monster with explosives at the end of its tail. It won’t hesitate to use its tail even at the cost of its own flesh.",

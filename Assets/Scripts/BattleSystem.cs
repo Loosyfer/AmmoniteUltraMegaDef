@@ -242,6 +242,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         turn++;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn");
         turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
         if ((turn % 2) == 1 && enemyHPBar.GetComponent<Slider>().value != 0)
         {

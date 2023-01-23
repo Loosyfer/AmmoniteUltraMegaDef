@@ -22,6 +22,7 @@ public class MemberHUD : MonoBehaviour
     public float performance;
     public bool selected;
     public int health;
+    public bool insideField = false;
 
     public void SetHUD(Member member)
     {

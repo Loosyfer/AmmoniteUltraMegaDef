@@ -19,6 +19,7 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     private Vector3 mousePositionOffset;
     public GameObject showInfoButton;
     public GameObject infoPanels;
+    public GameObject slot;
 
     public Camera camera;
 
@@ -40,7 +41,11 @@ public class DragObjectMega : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     {
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
-
+        if (slot != null)
+        {
+            slot.GetComponent<ItemSlot>().module = null;
+            slot = null;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)

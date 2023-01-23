@@ -20,7 +20,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObject shipField;
     public GameObject infoPanels;
     public GameObject showInfoButton;
-
+    public GameObject slot;
     public Camera camera;
 
     private void Awake()
@@ -41,7 +41,11 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     {
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
-
+        if (slot != null)
+        {
+            slot.GetComponent<ItemSlot>().module = null;
+            slot = null;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)

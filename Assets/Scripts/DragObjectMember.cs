@@ -20,6 +20,7 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     private Vector3 mousePositionOffset;
     public GameObject item;
     public GameObject showInfoButton;
+    public GameObject slot;
 
     private void Awake()
     {
@@ -39,6 +40,11 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     {
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
+        if (slot != null)
+        {
+            slot.GetComponent<ItemSlot>().member = null;
+            slot = null;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)

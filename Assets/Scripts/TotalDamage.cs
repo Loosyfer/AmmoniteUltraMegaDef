@@ -26,18 +26,21 @@ public class TotalDamage : MonoBehaviour
         foreach (GameObject member in members)
         {
             float performance = member.GetComponent<MemberHUD>().performance;
-            if (performance < 20)
-                crewPerformance += 3;
-            if (performance >= 20 && performance< 39)
-                crewPerformance += 6;
-            if (performance >= 40 && performance< 59)
-                crewPerformance += 10;
-            if (performance >= 60 && performance< 79)
-                crewPerformance += 20;
-            if (performance >= 80 && performance< 99)
-                crewPerformance += 30;
-            if (performance == 100)
-                crewPerformance += 40;
+            if (member.gameObject.GetComponent<MemberHUD>().insideField)
+            {
+                if (performance < 20)
+                    crewPerformance += 3;
+                if (performance >= 20 && performance < 39)
+                    crewPerformance += 6;
+                if (performance >= 40 && performance < 59)
+                    crewPerformance += 10;
+                if (performance >= 60 && performance < 79)
+                    crewPerformance += 20;
+                if (performance >= 80 && performance < 99)
+                    crewPerformance += 30;
+                if (performance == 100)
+                    crewPerformance += 40;
+            }
         }
         displayer1.GetComponent<TextMeshProUGUI>().text = crewPerformance.ToString();
         displayer2.GetComponent<TextMeshProUGUI>().text = extraDmg.ToString();

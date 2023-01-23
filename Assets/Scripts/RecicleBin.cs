@@ -243,7 +243,8 @@ public class RecicleBin : MonoBehaviour, IDropHandler
                 }*/
                 script.members.Remove(eventData.pointerDrag);
             }
-            Destroy(eventData.pointerDrag);
+            if (eventData.pointerDrag.transform.tag != "ModuleSlot")
+                Destroy(eventData.pointerDrag);
             SceneManager.GetActiveScene().GetRootGameObjects()[0].GetComponent<CameraZoomController>().movingOn = false;
         }
 
