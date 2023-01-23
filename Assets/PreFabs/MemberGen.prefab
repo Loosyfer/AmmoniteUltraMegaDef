@@ -722,8 +722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66.954285, y: 0.20007372}
-  m_SizeDelta: {x: 137.5288, y: 20.681}
+  m_AnchoredPosition: {x: -84.61424, y: 0.20007372}
+  m_SizeDelta: {x: 172.8487, y: 20.681}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8170566678214117061
 CanvasRenderer:
@@ -766,7 +766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.65
-  m_Text: Some Trait blablabloblo
+  m_Text: Could be 2 Kids in a Trenchcoat
 --- !u!114 &7868038701298675278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +1026,7 @@ MonoBehaviour:
   malla: {fileID: 0}
   item: {fileID: 0}
   showInfoButton: {fileID: 0}
+  slot: {fileID: 0}
 --- !u!114 &685843594920946759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,6 +1053,7 @@ MonoBehaviour:
   performance: 0
   selected: 0
   health: 0
+  insideField: 0
 --- !u!114 &8514926322427008640
 MonoBehaviour:
   m_ObjectHideFlags: 0
