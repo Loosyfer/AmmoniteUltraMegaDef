@@ -857,6 +857,7 @@ MonoBehaviour:
   malla: {fileID: 0}
   showInfoButton: {fileID: 0}
   infoPanels: {fileID: 8737646849692162992}
+  slot: {fileID: 0}
   camera: {fileID: 0}
 --- !u!223 &6837194355214101291
 Canvas:
@@ -1754,7 +1755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.89, y: -0.01}
+  m_AnchoredPosition: {x: -6.95, y: -0.01}
   m_SizeDelta: {x: 16.83134, y: 9.467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5752933338087685907
@@ -3001,7 +3002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7562358372839443389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.55, y: -0.06, z: 0}
+  m_LocalPosition: {x: 0.04, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3431,7 +3432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8647078648940087791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.41, y: -0.03, z: 0}
+  m_LocalPosition: {x: 13.8, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
