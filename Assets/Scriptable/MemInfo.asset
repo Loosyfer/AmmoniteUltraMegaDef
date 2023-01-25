@@ -1052,7 +1052,8 @@ MonoBehaviour:
   - "Every 2 turns, there\u2019s a 20% chance their module sets on fire and a 5%
     chance it explodes."
   - 10% chance they quit the Dive after a battle.
-  - After each battle, there's a 10% chance that their Module explodes.
+  - "Every 2 turns, there\u2019s a 20% chance their module sets on fire and a 5%
+    chance it explodes."
   - Every time they move, there's a 50% chance they lose 1 Health.
   - 40% Performance, increased to 50% if they have a Crew Member placed adjacent
     to the right (behind his back).

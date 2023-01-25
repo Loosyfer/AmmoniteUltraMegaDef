@@ -82,7 +82,7 @@ public class MemInfo : ScriptableObject
         "Copies the most common Trait of adjacent Crew Members.", "20% Performance if adjacent to a Crew Member of the opposite Gender.",
         "After 20 turns of staying in the same Module, it will change to a Dumpster Module.", "20% Performance if alone, but it will increase to match the best-performing adjacent Crew Member.",
         "Every 2 turns, there’s a 20% chance their module sets on fire and a 5% chance it explodes.",
-        "10% chance they quit the Dive after a battle.", "After each battle, there's a 10% chance that their Module explodes.", "Every time they move, there's a 50% chance they lose 1 Health.",
+        "10% chance they quit the Dive after a battle.", "Every 2 turns, there’s a 20% chance their module sets on fire and a 5% chance it explodes.", "Every time they move, there's a 50% chance they lose 1 Health.",
         "40% Performance, increased to 50% if they have a Crew Member placed adjacent to the right (behind his back).",
         "Unless their module is Flooded, they and adjacent Crew Members have a 30% chance of becoming Sick.", "Will only have 3 Health.",
         "0% base performance, but +10% after every successful battle up to 6 times.", "Every turn, there's a 20% chance they swap places with a random Crew Member.",
