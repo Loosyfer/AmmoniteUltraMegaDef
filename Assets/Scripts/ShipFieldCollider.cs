@@ -6,6 +6,8 @@ using TMPro;
 public class ShipFieldCollider : MonoBehaviour
 {
 
+    //661.5 267.1 1682.8 864.2
+
     public BattleSystem battleSystem;
     public GameObject canvas;
     public GameObject stackingFolder;

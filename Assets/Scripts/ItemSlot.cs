@@ -25,7 +25,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn2");
                 eventData.pointerDrag.gameObject.GetComponent<DragObjectMember>().slot = this.gameObject;
-                eventData.pointerDrag.transform.position = transform.position - new Vector3(0, 18.4f, 0);
+                eventData.pointerDrag.transform.position = transform.position - new Vector3(0, 10, 0);
                 if (eventData.pointerDrag.transform.GetComponent<DragObjectMember>().item != null)
                     eventData.pointerDrag.transform.GetComponent<DragObjectMember>().item.transform.position = transform.position - new Vector3(0, 18.4f, 0) + new Vector3(23, 15, 0);
                 member = eventData.pointerDrag.gameObject;
