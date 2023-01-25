@@ -173,7 +173,7 @@ public class Monsters : ScriptableObject
 "This creature might miss its chomps every now and again, but when they land they’re sure to smash its prey.",
 "Its eyes can see through the flesh of its prey, which allow it to target its inner weak spots.",
 "Formerly a magnificent huge shark, this mutilated corpse now transverses the seas full of rage, destroying everything in its path as its flesh disintegrates.",
-"This pestilent abomination pukes onto its prey to melt their flesh into faeces before consuming them.",
+"This pestilent abomination pukes onto its prey to melt their flesh into faeces before consuming them. However, its favourite pray is scrutifish, since it naturally has its preferred flavour without the need of puking onto it.",
 "This ferocious angry narwhal might be too reckless for its own good.",
 "A smart lobster that enjoys taunting its enemies while they freeze to death.",
 "This octopus has a brain that never stopped growing. After centuries, it became so big and powerful that it learned to subdue other creatures with mentally-charged electric blasts.",

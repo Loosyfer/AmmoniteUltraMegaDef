@@ -784,8 +784,8 @@ public class BattleSystem : MonoBehaviour
                     go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                     break;
             }
-            int m = Random.Range(0, 2);
-            if (m == 0)
+            int m = Random.Range(0, 100);
+            if (m >= 0 && m < 75)
             {
                 float l = Random.Range(0f, 100f);
                 if (l <= 3.25f)

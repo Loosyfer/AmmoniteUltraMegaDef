@@ -22,7 +22,7 @@ public class TotalDamage : MonoBehaviour
     void Update()
     {
         List<GameObject> members = battleSystem.GetComponent<BattleSystem>().members;
-        int crewPerformance = 100;
+        int crewPerformance = 20;
         foreach (GameObject member in members)
         {
             float performance = member.GetComponent<MemberHUD>().performance;
