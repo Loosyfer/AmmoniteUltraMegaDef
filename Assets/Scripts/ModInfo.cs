@@ -365,7 +365,7 @@ public class ModInfo : ScriptableObject
 
     public ModuleType[] moduleType = new ModuleType[235] { (ModuleType)1, (ModuleType)1, (ModuleType)1, (ModuleType)0, (ModuleType)1, (ModuleType)2, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)3,
     (ModuleType)1, (ModuleType)0, (ModuleType)3, (ModuleType)2, (ModuleType)0, (ModuleType)0, (ModuleType)3, (ModuleType)3, (ModuleType)3, (ModuleType)0, (ModuleType)2, (ModuleType)2, (ModuleType)3, (ModuleType)0, (ModuleType)2,
-    (ModuleType)3, (ModuleType)0, (ModuleType)0, (ModuleType)0, (ModuleType)3, (ModuleType)3, (ModuleType)1, (ModuleType)3, (ModuleType)0, (ModuleType)1, (ModuleType)0, (ModuleType)0, (ModuleType)1, (ModuleType)0, (ModuleType)3,
+    (ModuleType)3, (ModuleType)2, (ModuleType)2, (ModuleType)2, (ModuleType)3, (ModuleType)3, (ModuleType)1, (ModuleType)3, (ModuleType)0, (ModuleType)1, (ModuleType)0, (ModuleType)0, (ModuleType)1, (ModuleType)0, (ModuleType)3,
     (ModuleType)3, (ModuleType)3, (ModuleType)3, (ModuleType)0, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)4, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)2,
     (ModuleType)0, (ModuleType)2, (ModuleType)2, (ModuleType)1, (ModuleType)2, (ModuleType)4, (ModuleType)1, (ModuleType)1, (ModuleType)1, (ModuleType)1, (ModuleType)0, (ModuleType)1, (ModuleType)2, (ModuleType)3, (ModuleType)3,
     (ModuleType)2, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)2, (ModuleType)4, (ModuleType)4, (ModuleType)3, (ModuleType)4, (ModuleType)4, (ModuleType)1, (ModuleType)2, (ModuleType)4, (ModuleType)0, (ModuleType)2,
