@@ -650,7 +650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.81, y: -33.2}
+  m_AnchoredPosition: {x: 228.7, y: -33.2}
   m_SizeDelta: {x: 266.83, y: 174.0812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3357016990647385543
@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 4661750822173333790}
   - component: {fileID: 3883282036260760108}
   - component: {fileID: 3704373981708252632}
+  - component: {fileID: 7490776443237296477}
   m_Layer: 5
   m_Name: SecTraitDecpBG
   m_TagString: Untagged
@@ -879,8 +880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.80997, y: -159.96153}
-  m_SizeDelta: {x: 266.8301, y: 119.72}
+  m_AnchoredPosition: {x: 228.69992, y: -159.96153}
+  m_SizeDelta: {x: 266.8301, y: 119.6088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3883282036260760108
 CanvasRenderer:
@@ -920,6 +921,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &7490776443237296477
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2214102899716338405}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 11
+  m_TargetDisplay: 0
 --- !u!1 &2276106604882465598
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,10 +2221,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Shows another fake trait in shop. 15 turns after recruitment, the Undercover
-    Competitor trait will activate, and everything in the Shop will cost 50 coins
-    more. You still won\u2019t know who has Undercover Competitor as their hidden
-    secondary Trait."
+  m_text: "Only exists as a hidden secondary Trait. Once per battle, if another Crew
+    Member has 1 Health, they will be murdered and the Serial Killer Trait will activate.
+    Nonetheless, you won\u2019t know who has Serial Killer as their hidden secondary
+    Trait."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -2309,8 +2331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.927967, y: 7.949968}
-  m_SizeDelta: {x: 56.929, y: 48.8829}
+  m_AnchoredPosition: {x: 64.19744, y: 7.949968}
+  m_SizeDelta: {x: 61.4681, y: 48.8829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1064088501097746055
 CanvasRenderer:
@@ -2440,8 +2462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.18496418, y: -124.97422}
-  m_SizeDelta: {x: 285.19, y: 127.5186}
+  m_AnchoredPosition: {x: 1.1876, y: -126.750755}
+  m_SizeDelta: {x: 289.0184, y: 131.4752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8191628903924096165
 CanvasRenderer:
