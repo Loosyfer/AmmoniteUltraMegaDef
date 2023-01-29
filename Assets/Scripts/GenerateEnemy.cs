@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GenerateEnemy : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class GenerateEnemy : MonoBehaviour
                     enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
                     enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
                     enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
+                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
                     break;
                 case 1:
                     random = Random.Range(10, 19);
@@ -50,6 +52,7 @@ public class GenerateEnemy : MonoBehaviour
                     enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
                     enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
                     enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
+                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
                     break;
                 case 2:
                     random = Random.Range(22, 32);
@@ -62,6 +65,7 @@ public class GenerateEnemy : MonoBehaviour
                     enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
                     enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
                     enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
+                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
                     break;
                 case 3:
                     random = Random.Range(34, 44);
@@ -74,6 +78,7 @@ public class GenerateEnemy : MonoBehaviour
                     enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
                     enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
                     enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
+                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
                     break;
                 case 4:
                     random = Random.Range(46, 53);
@@ -86,6 +91,7 @@ public class GenerateEnemy : MonoBehaviour
                     enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
                     enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
                     enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
+                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
                     break;
             }
             monsterName.gameObject.SetActive(false);

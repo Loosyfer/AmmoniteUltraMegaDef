@@ -395,7 +395,7 @@ public class BattleSystem : MonoBehaviour
                 go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                 break;
         }
-        int m = Random.Range(0, 2);
+        /*int m = Random.Range(0, 2);
         if (m == 0)
         {
             float l = Random.Range(0f, 100f);
@@ -459,7 +459,7 @@ public class BattleSystem : MonoBehaviour
                 go.transform.GetChild(12).GetChild(28).gameObject.SetActive(true);
             if (l > 96.75f)
                 go.transform.GetChild(12).GetChild(29).gameObject.SetActive(true);
-        }
+        }*/
 
         Yrt.sliderLength = modInfo.cooldown[index];
         if (Yrt.sliderLength == 0)
@@ -546,6 +546,51 @@ public class BattleSystem : MonoBehaviour
                 stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
             if (stackeos[4] > 9)
                 stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
+        }
+        int n = Random.Range(0, 100);
+        if (n < 60)
+        {
+            Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
+            int l = Random.Range(0, all.Length);
+            Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
+            int p = Random.Range(0, 4);
+            switch (p)
+            {
+                case 0:
+                    Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                    break;
+                case 1:
+                    Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                    break;
+                case 2:
+                    Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                    break;
+                case 3:
+                    Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                    break;
+            }
+        }
+        if (n >= 90)
+        {
+            Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
+            int l = Random.Range(0, all.Length);
+            Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
+            int p = Random.Range(0, 4);
+            switch (p)
+            {
+                case 0:
+                    Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                    break;
+                case 1:
+                    Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                    break;
+                case 2:
+                    Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                    break;
+                case 3:
+                    Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                    break;
+            }
         }
     }
 
@@ -790,7 +835,7 @@ public class BattleSystem : MonoBehaviour
                     go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                     break;
             }
-            int m = Random.Range(0, 100);
+            /*int m = Random.Range(0, 100);
             if (m >= 0 && m < 75)
             {
                 float l = Random.Range(0f, 100f);
@@ -854,7 +899,7 @@ public class BattleSystem : MonoBehaviour
                     go.transform.GetChild(12).GetChild(28).gameObject.SetActive(true);
                 if (l > 96.75f)
                     go.transform.GetChild(12).GetChild(29).gameObject.SetActive(true);
-            }
+            }*/
 
             Yrt.sliderLength = modInfo.cooldown[j];
             if (Yrt.sliderLength == 0)
@@ -941,6 +986,51 @@ public class BattleSystem : MonoBehaviour
                     stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
                 if (stackeos[4] > 9)
                     stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
+            }
+            int n = Random.Range(0, 100);
+            if (n < 60)
+            {
+                Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
+                int l = Random.Range(0, all.Length);
+                Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
+                int p = Random.Range(0, 4);
+                switch (p)
+                {
+                    case 0:
+                        Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                        break;
+                    case 1:
+                        Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                        break;
+                    case 2:
+                        Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                        break;
+                    case 3:
+                        Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                        break;
+                }
+            }
+            if (n >= 90)
+            {
+                Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
+                int l = Random.Range(0, all.Length);
+                Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
+                int p = Random.Range(0, 4);
+                switch (p)
+                {
+                    case 0:
+                        Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                        break;
+                    case 1:
+                        Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                        break;
+                    case 2:
+                        Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                        break;
+                    case 3:
+                        Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                        break;
+                }
             }
         }
 

@@ -34,6 +34,7 @@ public class ModuleHUD : MonoBehaviour
     public bool automatised;
     public GameObject automatisedSprite;
     public GameObject wildMotion;
+    public GameObject sideEffect;
 
     public void SetHUD(Module module)
     {

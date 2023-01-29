@@ -1,0 +1,776 @@
+fileFormatVersion: 2
+guid: f36f00f6f34137747af352833219db1d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SideEffects_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3413.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0895cd80fd79e0943b9a9a94c4b3f60d
+      internalID: 1907409452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_1
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 3413.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3887303ab924b047b5bd9e8b28a15d6
+      internalID: -1376266213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_2
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 3413.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedddcb2ca1e84147a6f5d706715e860
+      internalID: -238971422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_3
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 3413.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babecc4d38d789849baaf82fdf1d3827
+      internalID: -214194884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_4
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 3413.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e92470b327526747aa9f60f8eac6f56
+      internalID: 2146298815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_5
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 3413.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934a2f2dbb7f2964fba646c234959d0f
+      internalID: 50012774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63b4d73c4dc18a4d958970e80e8ebc5
+      internalID: 1323768218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_7
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdf0a387732b6145b1ac966d443ea3c
+      internalID: 1293418718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_8
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9fea9d90681294ebe964a1e0868fae
+      internalID: 776829157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_9
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3784900d6986750449b60dbc7dcf1ddc
+      internalID: 1209035346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_10
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992dad000ef12b5428a7485a47f2f01a
+      internalID: 704527859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_11
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c815c32e543598d40b15d17bff2255cd
+      internalID: 707766350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2049.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb18f4c7b7f9994f8db4a2186fee27a
+      internalID: 951174935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_13
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 2049.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c3461c315e74543a0e08fb54e14b14
+      internalID: 294863744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_14
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 2049.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9142377e5eb0e6409a16ab3425d9eb1
+      internalID: 1474880477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_15
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 2049.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a836d039f3b26f4396b35cc41ebf769
+      internalID: 1001730431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_16
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 2049.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf7340b3cf92724bb5193c92c1287fc
+      internalID: -1997393163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_17
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 2049.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e16e59c097b2d44a98708d1f81f98f
+      internalID: 301315327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1367.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c1f6921065b004e8cf82a1152948e5
+      internalID: 1950689739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_19
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1367.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20e60f8a83c6bd4686b243ea48322e9
+      internalID: -1372592857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_20
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1367.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f67e69e482a43840b78ab9a45ec4426
+      internalID: -783475027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_21
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 1367.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e2d0fdfa3cb044e9e4fcfccad7f146
+      internalID: -1752296057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_22
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 1367.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5e065f5bd7c7b4f855db75704bf9a2
+      internalID: -1059064430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_23
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 1367.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d678f5ef995e9984ab189a1b418bbaf5
+      internalID: 689138678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 685.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca23e92662c25a147834239a3bee62f6
+      internalID: -444880286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_25
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 685.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f16c69938ed96e4dbb352ede4fcf175
+      internalID: -219555988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_26
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 685.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddb969b9bddc2744a7ae5bc4b695656
+      internalID: 1667224032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_27
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 685.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bb53fa2ce222a4b8188ec5760d919e
+      internalID: 470385617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideEffects_28
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 685.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60ca5dd03807a0488fd0bf326a63930
+      internalID: 478082854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SideEffects_10: 704527859
+      SideEffects_16: -1997393163
+      SideEffects_12: 951174935
+      SideEffects_1: -1376266213
+      SideEffects_7: 1293418718
+      SideEffects_26: 1667224032
+      SideEffects_20: -783475027
+      SideEffects_4: 2146298815
+      SideEffects_0: 1907409452
+      SideEffects_14: 1474880477
+      SideEffects_21: -1752296057
+      SideEffects_17: 301315327
+      SideEffects_28: 478082854
+      SideEffects_24: -444880286
+      SideEffects_27: 470385617
+      SideEffects_29: -669198314
+      SideEffects_30: 473092151
+      SideEffects_18: 1950689739
+      SideEffects_22: -1059064430
+      SideEffects_9: 1209035346
+      SideEffects_25: -219555988
+      SideEffects_5: 50012774
+      SideEffects_13: 294863744
+      SideEffects_23: 689138678
+      SideEffects_31: 1960607890
+      SideEffects_3: -214194884
+      SideEffects_15: 1001730431
+      SideEffects_11: 707766350
+      SideEffects_19: -1372592857
+      SideEffects_6: 1323768218
+      SideEffects_8: 776829157
+      SideEffects_2: -238971422
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

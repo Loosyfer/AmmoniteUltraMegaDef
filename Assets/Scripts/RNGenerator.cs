@@ -17,7 +17,9 @@ public class RNGenerator : MonoBehaviour
         apoyo = number.ToString();
         numberGenerated = apoyo + " %";
         transform.GetComponent<TextMeshProUGUI>().text = numberGenerated;
-        
+        this.transform.parent.GetChild(0).transform.GetComponent<Animator>().Play("RNGPress");
     }
+
+
 
 }
