@@ -26,4 +26,9 @@ public class SaveData
     public List<float> posX = new List<float>();
     public List<float> posY = new List<float>();
     public List<float> posZ = new List<float>();
+    public List<int> id = new List<int>();
+    public List<int> req = new List<int>();
+    public List<int> sideE = new List<int>();
+    public List<int> sEffectorDefect = new List<int>();
+    public List<int> sEffectSide = new List<int>();
 }

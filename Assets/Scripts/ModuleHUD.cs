@@ -35,7 +35,11 @@ public class ModuleHUD : MonoBehaviour
     public GameObject automatisedSprite;
     public GameObject wildMotion;
     public GameObject sideEffect;
-    public int sideEffectNumber;
+    public int sideEffectId;
+    public int sEffectSide;
+    public int sEffectorDefect;
+    public int id;
+    public int reqId;
 
     public void SetHUD(Module module)
     {

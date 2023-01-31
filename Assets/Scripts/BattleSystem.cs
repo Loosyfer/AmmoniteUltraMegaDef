@@ -315,9 +315,10 @@ public class BattleSystem : MonoBehaviour
         ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
         modules.Add(go);
         Yrt.nameText.text = modInfo.names[index];
-        Yrt.detailsText.text = modInfo.names[index] + " = " + modInfo.moduleDetails[index];
+        Yrt.detailsText.text = modInfo.moduleDetails[index];
         Yrt.price = modInfo.modulePrice[index];
         Yrt.type = modInfo.moduleType[index];
+        Yrt.id = index;
         switch (Yrt.type)
         {
             case (ModuleType)0:
@@ -352,42 +353,55 @@ public class BattleSystem : MonoBehaviour
                 {
                     case 0:
                         go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                        Yrt.reqId = 0;
                         break;
                     case 1:
                         go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                        Yrt.reqId = 1;
                         break;
                     case 2:
                         go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                        Yrt.reqId = 2;
                         break;
                     case 3:
                         go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                        Yrt.reqId = 3;
                         break;
                     case 4:
                         go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                        Yrt.reqId = 4;
                         break;
                     case 5:
                         go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                        Yrt.reqId = 5;
                         break;
                     case 6:
                         go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                        Yrt.reqId = 6;
                         break;
                     case 7:
                         go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                        Yrt.reqId = 7;
                         break;
                     case 8:
                         go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                        Yrt.reqId = 8;
                         break;
                     case 9:
                         go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                        Yrt.reqId = 9;
                         break;
                     case 10:
                         go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                        Yrt.reqId = 10;
                         break;
                     case 11:
                         go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                        Yrt.reqId = 11;
                         break;
                     case 12:
                         go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                        Yrt.reqId = 12;
                         break;
                 }
                 break;
@@ -550,25 +564,35 @@ public class BattleSystem : MonoBehaviour
                 stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
         }
         int n = Random.Range(0, 100);
+        Yrt.sEffectorDefect = 0;
         if (n < 60)
         {
             Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
             int l = Random.Range(0, all.Length);
+            Yrt.sideEffectId = l;
             Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
             int p = Random.Range(0, 4);
             switch (p)
             {
                 case 0:
                     Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 0;
                     break;
                 case 1:
                     Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 1;
                     break;
                 case 2:
                     Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 2;
                     break;
                 case 3:
                     Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 3;
                     break;
             }
         }
@@ -576,21 +600,30 @@ public class BattleSystem : MonoBehaviour
         {
             Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
             int l = Random.Range(0, all.Length);
+            Yrt.sideEffectId = l;
             Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
             int p = Random.Range(0, 4);
             switch (p)
             {
                 case 0:
                     Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 0;
                     break;
                 case 1:
                     Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 1;
                     break;
                 case 2:
                     Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 2;
                     break;
                 case 3:
                     Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 3;
                     break;
             }
         }
@@ -755,9 +788,10 @@ public class BattleSystem : MonoBehaviour
             modules.Add(go);
             Debug.Log(modInfo.names[j]);
             Yrt.nameText.text = modInfo.names[j];
-            Yrt.detailsText.text = modInfo.names[j] + " = " + modInfo.moduleDetails[j];
+            Yrt.detailsText.text = modInfo.moduleDetails[j];
             Yrt.price = modInfo.modulePrice[j];
             Yrt.type = modInfo.moduleType[j];
+            Yrt.id = j;
             switch (Yrt.type)
             {
                 case (ModuleType)0:
@@ -792,42 +826,55 @@ public class BattleSystem : MonoBehaviour
                     {
                         case 0:
                             go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                            Yrt.reqId = 0;
                             break;
                         case 1:
                             go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                            Yrt.reqId = 1;
                             break;
                         case 2:
                             go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                            Yrt.reqId = 2;
                             break;
                         case 3:
                             go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                            Yrt.reqId = 3;
                             break;
                         case 4:
                             go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                            Yrt.reqId = 4;
                             break;
                         case 5:
                             go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                            Yrt.reqId = 5;
                             break;
                         case 6:
                             go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                            Yrt.reqId = 6;
                             break;
                         case 7:
                             go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                            Yrt.reqId = 7;
                             break;
                         case 8:
                             go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                            Yrt.reqId = 8;
                             break;
                         case 9:
                             go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                            Yrt.reqId = 9;
                             break;
                         case 10:
                             go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                            Yrt.reqId = 10;
                             break;
                         case 11:
                             go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                            Yrt.reqId = 11;
                             break;
                         case 12:
                             go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                            Yrt.reqId = 12;
                             break;
                     }
                     break;
@@ -990,25 +1037,35 @@ public class BattleSystem : MonoBehaviour
                     stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
             }
             int n = Random.Range(0, 100);
+            Yrt.sEffectorDefect = 0;
             if (n < 60)
             {
                 Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
                 int l = Random.Range(0, all.Length);
+                Yrt.sideEffectId = l;
                 Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
                 int p = Random.Range(0, 4);
                 switch (p)
                 {
                     case 0:
                         Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                        Yrt.sEffectorDefect = 1;
+                        Yrt.sEffectSide = 0;
                         break;
                     case 1:
                         Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                        Yrt.sEffectorDefect = 1;
+                        Yrt.sEffectSide = 1;
                         break;
                     case 2:
                         Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                        Yrt.sEffectorDefect = 1;
+                        Yrt.sEffectSide = 2;
                         break;
                     case 3:
                         Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                        Yrt.sEffectorDefect = 1;
+                        Yrt.sEffectSide = 3;
                         break;
                 }
             }
@@ -1016,21 +1073,30 @@ public class BattleSystem : MonoBehaviour
             {
                 Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
                 int l = Random.Range(0, all.Length);
+                Yrt.sideEffectId = l;
                 Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
                 int p = Random.Range(0, 4);
                 switch (p)
                 {
                     case 0:
                         Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                        Yrt.sEffectorDefect = 2;
+                        Yrt.sEffectSide = 0;
                         break;
                     case 1:
                         Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                        Yrt.sEffectorDefect = 2;
+                        Yrt.sEffectSide = 1;
                         break;
                     case 2:
                         Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                        Yrt.sEffectorDefect = 2;
+                        Yrt.sEffectSide = 2;
                         break;
                     case 3:
                         Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                        Yrt.sEffectorDefect = 2;
+                        Yrt.sEffectSide = 3;
                         break;
                 }
             }
@@ -1848,11 +1914,26 @@ public class BattleSystem : MonoBehaviour
 
     public void OnSave()
     {
+
+        SaveData.current.posX.Clear();
+        SaveData.current.posY.Clear();
+        SaveData.current.posZ.Clear();
+        SaveData.current.id.Clear();
+        SaveData.current.req.Clear();
+        SaveData.current.sideE.Clear();
+        SaveData.current.sEffectorDefect.Clear();
+        SaveData.current.sEffectSide.Clear();
+
         foreach(GameObject module in modules)
         {
             SaveData.current.posX.Add(module.transform.position.x);
             SaveData.current.posY.Add(module.transform.position.y);
             SaveData.current.posZ.Add(module.transform.position.z);
+            SaveData.current.id.Add(module.transform.GetComponent<ModuleHUD>().id);
+            SaveData.current.req.Add(module.transform.GetComponent<ModuleHUD>().reqId);
+            SaveData.current.sideE.Add(module.transform.GetComponent<ModuleHUD>().sideEffectId);
+            SaveData.current.sEffectorDefect.Add(module.transform.GetComponent<ModuleHUD>().sEffectorDefect);
+            SaveData.current.sEffectSide.Add(module.transform.GetComponent<ModuleHUD>().sEffectSide);
         }
         //SaveData.current.posX = modules[0].transform.position.x;
         //SaveData.current.posY = modules[0].transform.position.y;
@@ -1868,6 +1949,184 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < SaveData.current.posX.Count; i++)
         {
             GameObject obj = Instantiate(moduleGenPrefab, new Vector3(SaveData.current.posX[i], SaveData.current.posY[i], SaveData.current.posZ[i]), Quaternion.identity) as GameObject;
+            GameObject canvas = GameObject.Find("/Malla");
+            GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
+            GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
+            obj.transform.parent = modulesFolder.transform;
+            ModuleHUD Yrt = obj.GetComponent<ModuleHUD>();
+            modules.Add(obj);
+            int j = SaveData.current.id[i];
+            Yrt.nameText.text = modInfo.names[j];
+            Yrt.detailsText.text = modInfo.moduleDetails[j];
+            Yrt.price = modInfo.modulePrice[j];
+            Yrt.type = modInfo.moduleType[j];
+            Yrt.id = j;
+            switch (Yrt.type)
+                {
+                    case (ModuleType)0:
+                        Yrt.typeDetails.text = modInfo.typeStacking[0];
+                        break;
+                    case (ModuleType)1:
+                        Yrt.typeDetails.text = modInfo.typeStacking[1];
+                        break;
+                    case (ModuleType)2:
+                        Yrt.typeDetails.text = modInfo.typeStacking[2];
+                        break;
+                    case (ModuleType)3:
+                        Yrt.typeDetails.text = modInfo.typeStacking[3];
+                        break;
+                    case (ModuleType)4:
+                        Yrt.typeDetails.text = modInfo.typeStacking[4];
+                        break;
+                    case (ModuleType)5:
+                        Yrt.typeDetails.text = modInfo.typeStacking[5];
+                        break;
+                }
+            switch (modInfo.req[j])
+            {
+                case "0":
+                    Yrt.req.text = "No Requirement";
+                    Yrt.reqType = 0;
+                    break;
+                case "1":
+                    Yrt.req.text = modInfo.randomReq[SaveData.current.req[i]].ToString();
+                    Yrt.reqType = 1;
+                    switch (SaveData.current.req[i])
+                    {
+                        case 0:
+                            obj.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                            break;
+                        case 1:
+                            obj.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                            break;
+                        case 2:
+                            obj.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                            break;
+                        case 3:
+                            obj.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                            break;
+                        case 4:
+                            obj.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                            break;
+                        case 5:
+                            obj.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                            break;
+                        case 6:
+                            obj.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                            break;
+                        case 7:
+                            obj.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                            break;
+                        case 8:
+                            obj.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                            break;
+                        case 9:
+                            obj.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                            break;
+                        case 10:
+                            obj.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                            break;
+                        case 11:
+                            obj.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                            break;
+                        case 12:
+                            obj.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                            break;
+                    }
+                    break;
+                default:
+                    Yrt.req.text = modInfo.req[j];
+                    Yrt.reqType = 2;
+                    obj.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
+                    break;
+
+            }
+                Yrt.sliderLength = modInfo.cooldown[j];
+                if (Yrt.sliderLength == 0)
+                {
+                    Destroy(obj.transform.GetChild(8).gameObject);
+                }
+                else
+                {
+                    obj.transform.GetChild(8).GetComponent<Slider>().maxValue = Yrt.sliderLength;
+                    obj.transform.GetChild(8).GetComponent<Slider>().value = Yrt.sliderLength;
+                }
+                Image imagen = obj.transform.GetComponent<Image>();
+                if (Yrt.type == (ModuleType)0)
+                {
+                    imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+                    
+                }
+                if (Yrt.type == (ModuleType)1)
+                {
+                    imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+                    
+                }
+                if (Yrt.type == (ModuleType)2)
+                {
+                    imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+                    
+                }
+                if (Yrt.type == (ModuleType)3)
+                {
+                    imagen.color = new Color(0.7f, 0.7f, 0.7f, 1);
+                    
+
+                }
+                if (Yrt.type == (ModuleType)4)
+                {
+                    imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+                    
+                }
+                if (Yrt.type == (ModuleType)5)
+                {
+                    imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
+                    
+                }
+                    Yrt.sEffectorDefect = SaveData.current.sEffectorDefect[i];
+                    Yrt.sEffectSide = SaveData.current.sEffectSide[i];
+                    Yrt.sideEffectId = SaveData.current.sideE[i];
+                    Debug.Log("La info que quieres en Step 1 es " + Yrt.sEffectorDefect + " " + Yrt.sEffectSide + " " + Yrt.sideEffectId);
+                if (Yrt.sEffectorDefect == 1)
+                {
+                    Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
+                    Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[Yrt.sideEffectId];
+                    switch (Yrt.sEffectSide)
+                    {
+                        case 0:
+                            Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                            break;
+                        case 1:
+                            Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                            break;
+                        case 2:
+                            Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                            break;
+                        case 3:
+                            Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                            break;
+                    }
+                }
+                if (Yrt.sEffectorDefect == 2)
+                {
+                    Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
+                    Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[Yrt.sideEffectId];
+                    switch (Yrt.sEffectSide)
+                    {
+                        case 0:
+                            Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                            break;
+                        case 1:
+                            Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                            break;
+                        case 2:
+                            Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                            break;
+                        case 3:
+                            Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                            break;
+                    }
+                }
         }
     }
 

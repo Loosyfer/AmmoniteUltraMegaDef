@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Fmod/Ammonite/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638100291759982266
+  lastModified: 638102875011734529
   FileSizes:
   - Name: 
     Value: 1008
@@ -90,7 +90,7 @@ MonoBehaviour:
   Path: Fmod/Ammonite/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638102849068443517
+  lastModified: 638102875011499488
   FileSizes: []
   Exists: 1
 --- !u!114 &-2387061253648985111
@@ -170,7 +170,7 @@ MonoBehaviour:
   - {fileID: -3708867045443387618}
   StringsBanks:
   - {fileID: -7739309998612832040}
-  cacheTime: 638102849068443517
+  cacheTime: 638102875011734529
   cacheVersion: 131601
 --- !u!114 &1764428182256140012
 MonoBehaviour:
