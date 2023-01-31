@@ -70,15 +70,15 @@ public class Monsters : ScriptableObject
 
     public string[] instructions = new string[56]
     {
-        "100HP. 10dpt. 300HP shell.",
+        "100HP. 20dpt. 300HP shell.",
 "400HP. 80dpt.",
-"600HP. 30dpt. If it hits a module with a Crew Member in it, it heals 70HP.",
+"600HP. 30dpt. If it hits a module with a Crew Member in it, it heals 10HP.",
 "300HP. 50dpt. 300HP shell.",
 "600HP. 50dpt.",
 "200HP. 50dpt. 400HP shell. Any module hit becomes flooded.",
 "300HP. 30dpt.",
 "700HP. 30dpt.",
-"1000HP. 50dpt. Will block the attacks from the highest-performing crew member.",
+"1000HP. 60dpt. Will block the attacks from the highest-performing crew member.",
 "700HP. 80dpt. Any module hit becomes flooded.",
 "200HP. 50dpt. 500HP shell.",
 "600HP. 50dpt. Any module hit becomes infested with tapeworms and the crew member becomes sick.",
@@ -193,7 +193,7 @@ public class Monsters : ScriptableObject
 
     public int[] dPT = new int[56]
     {
-        10, 80, 30, 50, 50, 50, 30, 30, 50, 80,
+        20, 80, 30, 50, 50, 50, 30, 30, 60, 80,
         50, 50, 50, 50, 70, 30, 50, 50, 50, 50,
         50, 70, 70, 80, 50, 70, 50, 50, 70, 100,
         50, 70, 70, 40, 100, 80, 40, 30, 150, 80,
@@ -204,7 +204,7 @@ public class Monsters : ScriptableObject
     public int[] health = new int[56]
     {
         400, 400, 600, 600, 600, 600, 300, 700, 1000, 700,
-        700, 600, 800, 700, 600, 900, 600, 800, 800, 700,
+        700, 600, 800, 700, 600, 900, 600, 800, 800, 1400,
         1000, 1000, 700, 800, 1000, 800, 700, 900, 900, 800,
         800, 800, 1400, 2500, 800, 800, 1400, 2000, 800, 800,
         1500, 1500, 1000, 1500, 2000, 2000, 1500, 2000, 2000, 1200,
