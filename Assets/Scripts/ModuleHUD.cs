@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+[System.Serializable]
 public class ModuleHUD : MonoBehaviour
 {
 
@@ -35,6 +35,7 @@ public class ModuleHUD : MonoBehaviour
     public GameObject automatisedSprite;
     public GameObject wildMotion;
     public GameObject sideEffect;
+    public int sideEffectNumber;
 
     public void SetHUD(Module module)
     {

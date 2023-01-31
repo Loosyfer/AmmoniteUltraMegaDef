@@ -5,10 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using TMPro;
-using BayatGames.SaveGameFree;
 using UnityEngine.Video;
+using BayatGames.SaveGameFree;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+
 
 public class BattleSystem : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerBattleHUD;
     public GameObject rockets;
     public GameObject spark;
+    public GameObject currency;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -1358,17 +1360,6 @@ public class BattleSystem : MonoBehaviour
             stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];
     }
 
-    void Save()
-    {
-
-        BattleSystem data = new BattleSystem();
-        data.modules = modules;
-        data.members = members;
-        data.megas = megas;
-        SaveGame.Save<BattleSystem>("allData", data);
-
-    }
-
     public void ResetTurns()
     {
 
@@ -1832,4 +1823,52 @@ public class BattleSystem : MonoBehaviour
             }
         }
     }
+
+    /*public void OnSave()
+    {
+        foreach (GameObject module in modules)
+        {
+            SaveData.current.modules.Add(module);
+        }
+        SerializationManager.Save("modules", SaveData.current);
+    }
+
+    public void OnLoad()
+    {
+        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/modules.save");
+
+        foreach (GameObject module in SaveData.current.modules)
+        {
+            GameObject obj = Instantiate(moduleGenPrefab, new Vector3(908, 960, 0), Quaternion.identity) as GameObject;
+            obj.GetComponent<ModuleHUD>().nameText.text = module.GetComponent<ModuleHUD>().nameText.text;
+            obj.GetComponent<ModuleHUD>().detailsText.text = module.GetComponent<ModuleHUD>().detailsText.text;
+            modules.Add(obj);
+        }
+    }*/
+
+    public void OnSave()
+    {
+        foreach(GameObject module in modules)
+        {
+            SaveData.current.posX.Add(module.transform.position.x);
+            SaveData.current.posY.Add(module.transform.position.y);
+            SaveData.current.posZ.Add(module.transform.position.z);
+        }
+        //SaveData.current.posX = modules[0].transform.position.x;
+        //SaveData.current.posY = modules[0].transform.position.y;
+        //SaveData.current.posZ = modules[0].transform.position.z;
+        SerializationManager.Save("module", SaveData.current);
+    }
+
+    public void OnLoad()
+    {
+        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/module.save");
+
+        //GameObject obj = Instantiate(moduleGenPrefab, new Vector3(SaveData.current.posX, SaveData.current.posY, SaveData.current.posZ), Quaternion.identity) as GameObject;
+        for (int i = 0; i < SaveData.current.posX.Count; i++)
+        {
+            GameObject obj = Instantiate(moduleGenPrefab, new Vector3(SaveData.current.posX[i], SaveData.current.posY[i], SaveData.current.posZ[i]), Quaternion.identity) as GameObject;
+        }
+    }
+
 }

@@ -28,16 +28,26 @@ public class TotalDamage : MonoBehaviour
             float performance = member.GetComponent<MemberHUD>().performance;
             if (member.gameObject.GetComponent<MemberHUD>().insideField)
             {
-                if (performance < 20)
+                if (performance >= 0 && performance < 10)
+                    crewPerformance += 1;
+                if (performance >= 10 && performance < 20)
                     crewPerformance += 3;
-                if (performance >= 20 && performance < 39)
+                if (performance >= 20 && performance < 30)
                     crewPerformance += 6;
-                if (performance >= 40 && performance < 59)
+                if (performance >= 30 && performance < 40)
                     crewPerformance += 10;
-                if (performance >= 60 && performance < 79)
-                    crewPerformance += 20;
-                if (performance >= 80 && performance < 99)
+                if (performance >= 40 && performance < 50)
+                    crewPerformance += 14;
+                if (performance >= 50 && performance < 60)
+                    crewPerformance += 18;
+                if (performance >= 60 && performance < 70)
+                    crewPerformance += 22;
+                if (performance >= 70 && performance < 80)
+                    crewPerformance += 26;
+                if (performance >= 80 && performance < 90)
                     crewPerformance += 30;
+                if (performance >= 90 && performance < 100)
+                    crewPerformance += 34;
                 if (performance == 100)
                     crewPerformance += 40;
             }
