@@ -39006,6 +39006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 171825948961776050, guid: f6b10fa77fcb3674ea9ce032309f2271, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 171825948961776055, guid: f6b10fa77fcb3674ea9ce032309f2271, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 2
@@ -45626,7 +45630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Active
+  m_text: Active & Others
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -45653,8 +45657,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.6
-  m_fontSizeBase: 19.6
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -45665,7 +45669,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -12
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -52207,7 +52211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -310.11, y: -224}
+  m_AnchoredPosition: {x: -310.11, y: -227.9}
   m_SizeDelta: {x: 78.6491, y: 50.953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490583686
@@ -62933,7 +62937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'O2:'
+  m_text: 'Fuel:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -62996,7 +63000,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -13.133789, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -67841,8 +67845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 620.39, y: -403.72913}
-  m_SizeDelta: {x: 624.8089, y: 212.0141}
+  m_AnchoredPosition: {x: 620.39, y: -252.22412}
+  m_SizeDelta: {x: 624.8089, y: 515.0217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1964881703
 Canvas:
@@ -67898,25 +67902,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Market info:
-
-    *Recruit applicants and buy modules
-
-    *You can sell
-    any non-damaged module for 50 coins
-
-
-    Hangar info:
-
-    *1 O2 = 50 shipcoins
-
-    *50
-    ship HP = 50 shipcoins
-
-    *1 ship slot = 100 shipcoins, in any direction/inside
-    layout
-
-    *1 bench slot  = 100 shipcoins (max 2 slots)'
+  m_Text: "Ship slots can be expanded in any direction/inside a given ship layout\r.\n\nUnstable
+    is now 25% chance of explosion\r.\n\nShip starts with 1000HP\n\n8 Fuel is the
+    starting and max amount\n\nBench heals every crew member +2HP and repairs damaged
+    modules.\n\n---Market info---\nSells 4 applicants and 4 modules\n*Recruit 1 applicant
+    = 4-6 coins\n*Buy 1 module = 4 coins\n*You can sell any non-damaged module for
+    1 coin\n*1 bench slot  = 2 coins (max 3 slots)\n\n---Hangar info---\n*1 O2 =
+    1 scrap\n*50 ship HP = 1 scrap\n*1 ship slot = 2 scraps, in any direction/inside
+    layout"
 --- !u!222 &1964881705
 CanvasRenderer:
   m_ObjectHideFlags: 0
