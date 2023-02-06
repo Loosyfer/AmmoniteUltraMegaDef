@@ -660,9 +660,9 @@ public class BattleSystem : MonoBehaviour
         if (m < 70f)
             Yrt.performance = 40;
         if (m >= 70f && m < 93f)
-            Yrt.performance = 50;
+            Yrt.performance = 45;
         if ( m >= 93f)
-            Yrt.performance = 60;
+            Yrt.performance = 50;
         /*mStackeos[index1]++;
         canvas.transform.GetChild(30).GetChild(index1 + 5).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[index1].ToString();*/
 
@@ -1149,9 +1149,9 @@ public class BattleSystem : MonoBehaviour
             if (m < 70f)
                 Yrt.performance = 40;
             if (m >= 70f && m < 93f)
-                Yrt.performance = 50;
+                Yrt.performance = 45;
             if (m >= 93f)
-                Yrt.performance = 60;
+                Yrt.performance = 50;
             SpriteRenderer imagen = go.GetComponent<SpriteRenderer>();
             /*mStackeos[k]++;
             canvas.transform.GetChild(30).GetChild(k + 5).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[k].ToString();*/
