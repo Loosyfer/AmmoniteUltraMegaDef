@@ -8,12 +8,12 @@ public class HoverOver : MonoBehaviour //, IPointerEnterHandler, IPointerExitHan
 {
     public GameObject HoverPanel;
 
-    public void Enter()
+    public void OnMouseOver()
     {
         HoverPanel.SetActive(true);
     }
 
-    public void Exit()
+    public void OnMouseExit()
     {
         HoverPanel.SetActive(false);
     }

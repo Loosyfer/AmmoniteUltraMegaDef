@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public class ModuleHUD : MonoBehaviour
@@ -40,6 +41,7 @@ public class ModuleHUD : MonoBehaviour
     public int sEffectorDefect;
     public int id;
     public int reqId;
+    public GameObject priceObject;
 
     public void SetHUD(Module module)
     {
@@ -63,6 +65,7 @@ public class ModuleHUD : MonoBehaviour
 
     void Update()
     {
+        priceObject.transform.GetComponent<TextMeshProUGUI>().text = price.ToString();
         if (selected)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.Video;
 using BayatGames.SaveGameFree;
+using System.Text.RegularExpressions;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -72,17 +73,20 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
     {
+        //Regex CSVParser = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+        //string[] data = CSVParser.Split(Resources.Load<TextAsset>("Modules/Modules").text);
+
         string[] data = Resources.Load<TextAsset>("Modules/Modules").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
 
-        int tableSize = (data.Length / 6) - 1;
+        int tableSize = (data.Length / 5) - 1;
         modExcel.myModules.modules = new ModExcel.Module[tableSize];
 
         for (int i = 0; i < tableSize; i++)
         {
             modExcel.myModules.modules[i] = new ModExcel.Module();
-            modExcel.myModules.modules[i].name = data[(6 * (i + 1)) + 1];
-            modExcel.myModules.modules[i].effect = data[(6 * (i + 1)) + 2];
-            switch (data[(6 * (i + 1)) + 3])
+            modExcel.myModules.modules[i].name = data[(5 * (i + 1))];
+            modExcel.myModules.modules[i].effect = data[(5 * (i + 1)) + 1];
+            switch (data[(5 * (i + 1)) + 2])
             {
                 case "Organic A":
                     modExcel.myModules.modules[i].type = (ModuleType)0;
@@ -103,8 +107,8 @@ public class BattleSystem : MonoBehaviour
                     modExcel.myModules.modules[i].type = (ModuleType)5;
                     break;
             }
-            modExcel.myModules.modules[i].requirement = data[(6 * (i + 1)) + 4];
-            if (int.TryParse(data[(6 * (i + 1)) + 5], out int pri))
+            modExcel.myModules.modules[i].requirement = data[(5 * (i + 1)) + 3];
+            if (int.TryParse(data[(5 * (i + 1)) + 4], out int pri))
                 modExcel.myModules.modules[i].price = pri;
             else
             {
@@ -695,6 +699,8 @@ public class BattleSystem : MonoBehaviour
         modules.Add(go);
         Yrt.nameText.text = modExcel.myModules.modules[index].name;
         Yrt.detailsText.text = modExcel.myModules.modules[index].effect;
+        Yrt.detailsText.text = Yrt.detailsText.text.Replace("*", ",");
+        Yrt.detailsText.text = Yrt.detailsText.text.Replace("&quote;", "");
         Yrt.price = modExcel.myModules.modules[index].price;
         Yrt.type = modExcel.myModules.modules[index].type;
         Yrt.id = index;
@@ -1156,6 +1162,8 @@ public class BattleSystem : MonoBehaviour
             Debug.Log(modInfo.names[j]);
             Yrt.nameText.text = modExcel.myModules.modules[j].name;
             Yrt.detailsText.text = modExcel.myModules.modules[j].effect;
+            Yrt.detailsText.text = Yrt.detailsText.text.Replace("*", ",");
+            Yrt.detailsText.text = Yrt.detailsText.text.Replace("&quote;", "");
             Yrt.price = modExcel.myModules.modules[j].price;
             Yrt.type = modExcel.myModules.modules[j].type;
             Yrt.id = j;
