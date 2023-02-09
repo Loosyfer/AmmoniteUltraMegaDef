@@ -16,6 +16,7 @@ TagManager:
   - EnemyHP
   - Slider
   - Item
+  - Malla
   layers:
   - Default
   - TransparentFX

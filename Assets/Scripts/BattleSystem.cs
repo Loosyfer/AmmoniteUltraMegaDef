@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -26,6 +27,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject megaHorPrefab;
     public GameObject megaVerPrefab;
     public ModInfo modInfo;
+    public ModExcel modExcel;
     public MemInfo membersInfo;
     public BioInfo bioInfo;
     public MegamodulesInfo megaInfo;
@@ -70,12 +72,52 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
     {
-        /*BattleSystem data = new BattleSystem();
-        data = SaveGame.Load<BattleSystem>("allData");
-        modules = data.modules;
-        members = data.members;
-        megas = data.megas;*/
-        state = BattleState.START;
+        string[] data = Resources.Load<TextAsset>("Modules/Modules").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
+
+        int tableSize = (data.Length / 6) - 1;
+        modExcel.myModules.modules = new ModExcel.Module[tableSize];
+
+        for (int i = 0; i < tableSize; i++)
+        {
+            modExcel.myModules.modules[i] = new ModExcel.Module();
+            modExcel.myModules.modules[i].name = data[(6 * (i + 1)) + 1];
+            modExcel.myModules.modules[i].effect = data[(6 * (i + 1)) + 2];
+            switch (data[(6 * (i + 1)) + 3])
+            {
+                case "Organic A":
+                    modExcel.myModules.modules[i].type = (ModuleType)0;
+                    break;
+                case "Offensive":
+                    modExcel.myModules.modules[i].type = (ModuleType)1;
+                    break;
+                case "Defensive":
+                    modExcel.myModules.modules[i].type = (ModuleType)2;
+                    break;
+                case "Scientific":
+                    modExcel.myModules.modules[i].type = (ModuleType)3;
+                    break;
+                case "Normal":
+                    modExcel.myModules.modules[i].type = (ModuleType)4;
+                    break;
+                case "Legendary":
+                    modExcel.myModules.modules[i].type = (ModuleType)5;
+                    break;
+            }
+            modExcel.myModules.modules[i].requirement = data[(6 * (i + 1)) + 4];
+            if (int.TryParse(data[(6 * (i + 1)) + 5], out int pri))
+                modExcel.myModules.modules[i].price = pri;
+            else
+            {
+                Debug.Log(i);
+                Debug.Log(data[(6 * (i + 1)) + 5]);
+            }
+        }
+            /*BattleSystem data = new BattleSystem();
+            data = SaveGame.Load<BattleSystem>("allData");
+            modules = data.modules;
+            members = data.members;
+            megas = data.megas;*/
+            state = BattleState.START;
         StartCoroutine(SetupBattle());
     }
 
@@ -256,7 +298,7 @@ public class BattleSystem : MonoBehaviour
                 if (slots[j].GetComponent<ActivateSlot>().activated && slots[j].GetComponent<ItemSlot>().module != null)
                     activatedModules.Add(slots[j]);
             }
-            int i = Random.Range(0, activatedModules.Count);
+            int i = UnityEngine.Random.Range(0, activatedModules.Count);
             Vector3 pos = activatedModules[i].transform.position;
             StartCoroutine(PlayExplosion(pos + new Vector3(-25, 0, 0)));
             StartCoroutine(AttackModule(activatedModules[i]));
@@ -298,7 +340,7 @@ public class BattleSystem : MonoBehaviour
             return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
-        int k = Random.Range(0, 13);
+        int k = UnityEngine.Random.Range(0, 13);
         if (!int.TryParse(s, out int index))
         {
             Debug.Log("Try inputting a valid integer");
@@ -411,10 +453,10 @@ public class BattleSystem : MonoBehaviour
                 go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                 break;
         }
-        /*int m = Random.Range(0, 2);
+        /*int m = System.Random.Range(0, 2);
         if (m == 0)
         {
-            float l = Random.Range(0f, 100f);
+            float l = System.Random.Range(0f, 100f);
             if (l <= 3.25f)
                 go.transform.GetChild(12).GetChild(0).gameObject.SetActive(true);
             if (l <= 6.5f && l > 3.25f)
@@ -563,15 +605,15 @@ public class BattleSystem : MonoBehaviour
             if (stackeos[4] > 9)
                 stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
         }
-        int n = Random.Range(0, 100);
+        int n = UnityEngine.Random.Range(0, 100);
         Yrt.sEffectorDefect = 0;
         if (n < 60)
         {
             Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
-            int l = Random.Range(0, all.Length);
+            int l = UnityEngine.Random.Range(0, all.Length);
             Yrt.sideEffectId = l;
             Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
-            int p = Random.Range(0, 4);
+            int p = UnityEngine.Random.Range(0, 4);
             switch (p)
             {
                 case 0:
@@ -599,10 +641,335 @@ public class BattleSystem : MonoBehaviour
         if (n >= 90)
         {
             Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
-            int l = Random.Range(0, all.Length);
+            int l = UnityEngine.Random.Range(0, all.Length);
             Yrt.sideEffectId = l;
             Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
-            int p = Random.Range(0, 4);
+            int p = UnityEngine.Random.Range(0, 4);
+            switch (p)
+            {
+                case 0:
+                    Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 0;
+                    break;
+                case 1:
+                    Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 1;
+                    break;
+                case 2:
+                    Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 2;
+                    break;
+                case 3:
+                    Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                    Yrt.sEffectorDefect = 2;
+                    Yrt.sEffectSide = 3;
+                    break;
+            }
+        }
+    }
+
+    public void GenerateModules2(string s)
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            return;
+        GameObject canvas = GameObject.Find("/Malla");
+        GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
+        int k = UnityEngine.Random.Range(0, 13);
+        if (!int.TryParse(s, out int index))
+        {
+            Debug.Log("Try inputting a valid integer");
+            return;
+        }
+
+        if (index > 233)
+        {
+            Debug.Log("Your number was too high");
+            return;
+        }
+        GameObject go = Instantiate(moduleGenPrefab, new Vector3(908, 960, 0), Quaternion.identity) as GameObject;
+        go.transform.parent = modulesFolder.transform;
+        ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
+        modules.Add(go);
+        Yrt.nameText.text = modExcel.myModules.modules[index].name;
+        Yrt.detailsText.text = modExcel.myModules.modules[index].effect;
+        Yrt.price = modExcel.myModules.modules[index].price;
+        Yrt.type = modExcel.myModules.modules[index].type;
+        Yrt.id = index;
+        switch (Yrt.type)
+        {
+            case (ModuleType)0:
+                Yrt.typeDetails.text = modInfo.typeStacking[0];
+                break;
+            case (ModuleType)1:
+                Yrt.typeDetails.text = modInfo.typeStacking[1];
+                break;
+            case (ModuleType)2:
+                Yrt.typeDetails.text = modInfo.typeStacking[2];
+                break;
+            case (ModuleType)3:
+                Yrt.typeDetails.text = modInfo.typeStacking[3];
+                break;
+            case (ModuleType)4:
+                Yrt.typeDetails.text = modInfo.typeStacking[4];
+                break;
+            case (ModuleType)5:
+                Yrt.typeDetails.text = modInfo.typeStacking[5];
+                break;
+        }
+        switch (modExcel.myModules.modules[index].requirement)
+        {
+            case "":
+                Yrt.req.text = modInfo.randomReq[k].ToString();
+                Yrt.reqType = 1;
+                switch (k)
+                {
+                    case 0:
+                        go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                        Yrt.reqId = 0;
+                        break;
+                    case 1:
+                        go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                        Yrt.reqId = 1;
+                        break;
+                    case 2:
+                        go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                        Yrt.reqId = 2;
+                        break;
+                    case 3:
+                        go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                        Yrt.reqId = 3;
+                        break;
+                    case 4:
+                        go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                        Yrt.reqId = 4;
+                        break;
+                    case 5:
+                        go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                        Yrt.reqId = 5;
+                        break;
+                    case 6:
+                        go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                        Yrt.reqId = 6;
+                        break;
+                    case 7:
+                        go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                        Yrt.reqId = 7;
+                        break;
+                    case 8:
+                        go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                        Yrt.reqId = 8;
+                        break;
+                    case 9:
+                        go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                        Yrt.reqId = 9;
+                        break;
+                    case 10:
+                        go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                        Yrt.reqId = 10;
+                        break;
+                    case 11:
+                        go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                        Yrt.reqId = 11;
+                        break;
+                    case 12:
+                        go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                        Yrt.reqId = 12;
+                        break;
+                }
+                break;
+            default:
+                Yrt.req.text = modExcel.myModules.modules[index].requirement;
+                Yrt.reqType = 2;
+                go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
+                break;
+        }
+        /*int m = System.Random.Range(0, 2);
+        if (m == 0)
+        {
+            float l = System.Random.Range(0f, 100f);
+            if (l <= 3.25f)
+                go.transform.GetChild(12).GetChild(0).gameObject.SetActive(true);
+            if (l <= 6.5f && l > 3.25f)
+                go.transform.GetChild(12).GetChild(1).gameObject.SetActive(true);
+            if (l <= 9.75f && l > 6.5f)
+                go.transform.GetChild(12).GetChild(2).gameObject.SetActive(true);
+            if (l <= 13f && l > 9.75f)
+                go.transform.GetChild(12).GetChild(3).gameObject.SetActive(true);
+            if (l <= 16.25f && l > 13f)
+                go.transform.GetChild(12).GetChild(4).gameObject.SetActive(true);
+            if (l <= 19.5f && l > 16.25f)
+                go.transform.GetChild(12).GetChild(5).gameObject.SetActive(true);
+            if (l <= 22.75f && l > 19.5f)
+                go.transform.GetChild(12).GetChild(6).gameObject.SetActive(true);
+            if (l <= 26f && l > 22.75f)
+                go.transform.GetChild(12).GetChild(7).gameObject.SetActive(true);
+            if (l <= 29.25f && l > 26f)
+                go.transform.GetChild(12).GetChild(8).gameObject.SetActive(true);
+            if (l <= 32.5f && l > 29.25f)
+                go.transform.GetChild(12).GetChild(9).gameObject.SetActive(true);
+            if (l <= 35.75f && l > 32.5f)
+                go.transform.GetChild(12).GetChild(10).gameObject.SetActive(true);
+            if (l <= 39 && l > 35.75f)
+                go.transform.GetChild(12).GetChild(11).gameObject.SetActive(true);
+            if (l <= 42 && l > 39f)
+                go.transform.GetChild(12).GetChild(12).gameObject.SetActive(true);
+            if (l <= 45 && l > 42f)
+                go.transform.GetChild(12).GetChild(13).gameObject.SetActive(true);
+            if (l <= 48 && l > 45f)
+                go.transform.GetChild(12).GetChild(14).gameObject.SetActive(true);
+            if (l <= 51 && l > 48f)
+                go.transform.GetChild(12).GetChild(15).gameObject.SetActive(true);
+            if (l <= 54 && l > 51f)
+                go.transform.GetChild(12).GetChild(16).gameObject.SetActive(true);
+            if (l <= 57 && l > 54f)
+                go.transform.GetChild(12).GetChild(17).gameObject.SetActive(true);
+            if (l <= 60.25f && l > 57f)
+                go.transform.GetChild(12).GetChild(18).gameObject.SetActive(true);
+            if (l <= 63.5f && l > 60.25f)
+                go.transform.GetChild(12).GetChild(19).gameObject.SetActive(true);
+            if (l <= 66.5 && l > 63.5f)
+                go.transform.GetChild(12).GetChild(20).gameObject.SetActive(true);
+            if (l <= 69.5f && l > 66.5f)
+                go.transform.GetChild(12).GetChild(21).gameObject.SetActive(true);
+            if (l <= 75.5 && l > 69.5f)
+                go.transform.GetChild(12).GetChild(22).gameObject.SetActive(true);
+            if (l <= 81.5f && l > 75.5f)
+                go.transform.GetChild(12).GetChild(23).gameObject.SetActive(true);
+            if (l <= 84.5 && l > 81.5f)
+                go.transform.GetChild(12).GetChild(24).gameObject.SetActive(true);
+            if (l <= 87.5f && l > 84.5f)
+                go.transform.GetChild(12).GetChild(25).gameObject.SetActive(true);
+            if (l <= 90.5 && l > 87.5)
+                go.transform.GetChild(12).GetChild(26).gameObject.SetActive(true);
+            if (l <= 93.5 && l > 90.5f)
+                go.transform.GetChild(12).GetChild(27).gameObject.SetActive(true);
+            if (l <= 96.75 && l > 93.5f)
+                go.transform.GetChild(12).GetChild(28).gameObject.SetActive(true);
+            if (l > 96.75f)
+                go.transform.GetChild(12).GetChild(29).gameObject.SetActive(true);
+        }*/
+
+
+        Destroy(go.transform.GetChild(8).gameObject);
+        Image imagen = go.transform.GetComponent<Image>();
+        if (Yrt.type == (ModuleType)0)
+        {
+            imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+            /*stackeos[0]++;
+            canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = stackeos[0].ToString();
+            if (stackeos[0] < 4)
+                stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[49];
+            else
+                stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];*/
+        }
+        if (Yrt.type == (ModuleType)1)
+        {
+            imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+            /*stackeos[1]++;
+            canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = stackeos[1].ToString();
+            if (stackeos[1] == 1)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[54];
+            if (stackeos[1] == 2 || stackeos[1] == 3)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[55];
+            if (stackeos[1] == 4 || stackeos[1] == 5)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[56];
+            if (stackeos[1] > 5)
+                stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[57];*/
+        }
+        if (Yrt.type == (ModuleType)2)
+        {
+            imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+            /*stackeos[2]++;
+            canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = stackeos[2].ToString();
+            if (stackeos[2] == 1)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[59];
+            if (stackeos[2] == 2 || stackeos[1] == 3)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[60];
+            if (stackeos[2] == 4 || stackeos[1] == 5)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[61];
+            if (stackeos[2] > 5)
+                stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[62];*/
+        }
+        if (Yrt.type == (ModuleType)3)
+        {
+            imagen.color = new Color(0.7f, 0.7f, 0.7f, 1);
+            /*stackeos[3]++;
+            canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
+            if (stackeos[3] < 4)
+                stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[69];
+            if (stackeos[3] > 3 && stackeos[3] < 8)
+                stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[71];
+            if (stackeos[3] > 7)
+                stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[72];*/
+
+        }
+        if (Yrt.type == (ModuleType)4)
+        {
+            imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+            /*stackeos[4]++;
+            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
+            if (stackeos[4] < 6)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
+            if (stackeos[4] > 5 && stackeos[4] < 10)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
+            if (stackeos[4] > 9)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
+        }
+        if (Yrt.type == (ModuleType)5)
+        {
+            imagen.color = new Color(0, 1, 1, 1);
+            /*stackeos[4]++;
+            canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
+            if (stackeos[4] < 6)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
+            if (stackeos[4] > 5 && stackeos[4] < 10)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
+            if (stackeos[4] > 9)
+                stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
+        }
+        int n = UnityEngine.Random.Range(0, 100);
+        Yrt.sEffectorDefect = 0;
+        if (n < 60)
+        {
+            Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
+            int l = UnityEngine.Random.Range(0, all.Length);
+            Yrt.sideEffectId = l;
+            Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
+            int p = UnityEngine.Random.Range(0, 4);
+            switch (p)
+            {
+                case 0:
+                    Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 0;
+                    break;
+                case 1:
+                    Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 1;
+                    break;
+                case 2:
+                    Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 2;
+                    break;
+                case 3:
+                    Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                    Yrt.sEffectorDefect = 1;
+                    Yrt.sEffectSide = 3;
+                    break;
+            }
+        }
+        if (n >= 90)
+        {
+            Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
+            int l = UnityEngine.Random.Range(0, all.Length);
+            Yrt.sideEffectId = l;
+            Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
+            int p = UnityEngine.Random.Range(0, 4);
             switch (p)
             {
                 case 0:
@@ -635,7 +1002,7 @@ public class BattleSystem : MonoBehaviour
             return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
-        int l = Random.Range(0, membersInfo.names.Length);
+        int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
         if (!int.TryParse(s, out int i))
         {
             Debug.Log("Try inputting a valid integer");
@@ -656,7 +1023,7 @@ public class BattleSystem : MonoBehaviour
         Yrt.profPrice.text = membersInfo.profPrice[index1].ToString();
         Yrt.traitPrice.text = Yrt.trait.text + "(" + membersInfo.traitPrice[index2].ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[index1] + membersInfo.traitPrice[index2]).ToString();
         Yrt.totalPrice.text = (membersInfo.profPrice[index1] + membersInfo.traitPrice[index2]).ToString();
-        float m = Random.Range(0f, 100f);
+        float m = UnityEngine.Random.Range(0f, 100f);
         if (m < 70f)
             Yrt.performance = 40;
         if (m >= 70f && m < 93f)
@@ -780,17 +1147,17 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = Random.Range(0, 225);
-            int k = Random.Range(0, 13);
+            int j = UnityEngine.Random.Range(0, 225);
+            int k = UnityEngine.Random.Range(0, 13);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
             modules.Add(go);
             Debug.Log(modInfo.names[j]);
-            Yrt.nameText.text = modInfo.names[j];
-            Yrt.detailsText.text = modInfo.moduleDetails[j];
-            Yrt.price = modInfo.modulePrice[j];
-            Yrt.type = modInfo.moduleType[j];
+            Yrt.nameText.text = modExcel.myModules.modules[j].name;
+            Yrt.detailsText.text = modExcel.myModules.modules[j].effect;
+            Yrt.price = modExcel.myModules.modules[j].price;
+            Yrt.type = modExcel.myModules.modules[j].type;
             Yrt.id = j;
             switch (Yrt.type)
             {
@@ -813,13 +1180,9 @@ public class BattleSystem : MonoBehaviour
                     Yrt.typeDetails.text = modInfo.typeStacking[5];
                     break;
             }
-            switch (modInfo.req[j])
+            switch (modExcel.myModules.modules[j].requirement)
             {
-                case "0":
-                    Yrt.req.text = "No Requirement";
-                    Yrt.reqType = 0;
-                    break;
-                case "1":
+                case "":
                     Yrt.req.text = modInfo.randomReq[k].ToString();
                     Yrt.reqType = 1;
                     switch (k)
@@ -879,15 +1242,15 @@ public class BattleSystem : MonoBehaviour
                     }
                     break;
                 default:
-                    Yrt.req.text = modInfo.req[j];
+                    Yrt.req.text = modExcel.myModules.modules[j].requirement;
                     Yrt.reqType = 2;
                     go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                     break;
             }
-            /*int m = Random.Range(0, 100);
+            /*int m = System.Random.Range(0, 100);
             if (m >= 0 && m < 75)
             {
-                float l = Random.Range(0f, 100f);
+                float l = System.Random.Range(0f, 100f);
                 if (l <= 3.25f)
                     go.transform.GetChild(12).GetChild(0).gameObject.SetActive(true);
                 if (l <= 6.5f && l > 3.25f)
@@ -950,16 +1313,8 @@ public class BattleSystem : MonoBehaviour
                     go.transform.GetChild(12).GetChild(29).gameObject.SetActive(true);
             }*/
 
-            Yrt.sliderLength = modInfo.cooldown[j];
-            if (Yrt.sliderLength == 0)
-            {
-                Destroy(go.transform.GetChild(8).gameObject);
-            }
-            else
-            {
-                go.transform.GetChild(8).GetComponent<Slider>().maxValue = Yrt.sliderLength;
-                go.transform.GetChild(8).GetComponent<Slider>().value = Yrt.sliderLength;
-            }
+
+            Destroy(go.transform.GetChild(8).gameObject);
             Image imagen = go.transform.GetComponent<Image>();
             if (Yrt.type == (ModuleType)0)
             {
@@ -1026,7 +1381,7 @@ public class BattleSystem : MonoBehaviour
             }
             if (Yrt.type == (ModuleType)5)
             {
-                imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
+                imagen.color = new Color(0, 1, 1, 1);
                 /*stackeos[4]++;
                 canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
                 if (stackeos[4] < 6)
@@ -1036,15 +1391,15 @@ public class BattleSystem : MonoBehaviour
                 if (stackeos[4] > 9)
                     stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];*/
             }
-            int n = Random.Range(0, 100);
+            int n = UnityEngine.Random.Range(0, 100);
             Yrt.sEffectorDefect = 0;
             if (n < 60)
             {
                 Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
-                int l = Random.Range(0, all.Length);
+                int l = UnityEngine.Random.Range(0, all.Length);
                 Yrt.sideEffectId = l;
                 Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
-                int p = Random.Range(0, 4);
+                int p = UnityEngine.Random.Range(0, 4);
                 switch (p)
                 {
                     case 0:
@@ -1072,10 +1427,10 @@ public class BattleSystem : MonoBehaviour
             if (n >= 90)
             {
                 Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
-                int l = Random.Range(0, all.Length);
+                int l = UnityEngine.Random.Range(0, all.Length);
                 Yrt.sideEffectId = l;
                 Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[l];
-                int p = Random.Range(0, 4);
+                int p = UnityEngine.Random.Range(0, 4);
                 switch (p)
                 {
                     case 0:
@@ -1104,10 +1459,10 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = Random.Range(0, 230);
-            int l = Random.Range(0, membersInfo.names.Length);
+            int j = UnityEngine.Random.Range(0, 230);
+            int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = 0;
-            float random = Random.Range(0f, 100f);
+            float random = UnityEngine.Random.Range(0f, 100f);
             if (random < 9f)
                 k = 0;
             if (random >= 9f && random < 18f)
@@ -1145,7 +1500,7 @@ public class BattleSystem : MonoBehaviour
             Yrt.profPrice.text = membersInfo.profPrice[k].ToString();
             Yrt.traitPrice.text = Yrt.trait.text + "(" + membersInfo.traitPrice[j].ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
             Yrt.totalPrice.text = (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
-            float m = Random.Range(0f, 100f);
+            float m = UnityEngine.Random.Range(0f, 100f);
             if (m < 70f)
                 Yrt.performance = 40;
             if (m >= 70f && m < 93f)

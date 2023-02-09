@@ -1896,6 +1896,7 @@ GameObject:
   - component: {fileID: 8624567755035938011}
   - component: {fileID: 1828431053626925986}
   - component: {fileID: 4784882667540412168}
+  - component: {fileID: 8085953362007293831}
   m_Layer: 5
   m_Name: PerfNo
   m_TagString: Untagged
@@ -2041,6 +2042,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
+--- !u!114 &8085953362007293831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240820937847014235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d685ac481c862e4eac686647215e49b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5280530289507821911
 GameObject:
   m_ObjectHideFlags: 0

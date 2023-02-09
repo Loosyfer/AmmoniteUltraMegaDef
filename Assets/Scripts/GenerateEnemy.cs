@@ -19,6 +19,7 @@ public class GenerateEnemy : MonoBehaviour
     {
         int random;
         index = malla2.transform.GetComponent<MapSwitcher>().index;
+        monster.SetActive(true);
         if (monster.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Monster_Scope") && monster.GetComponent<SpriteRenderer>().sprite != null)
         {
             monster.GetComponent<Animator>().Play("Monster_Idle");

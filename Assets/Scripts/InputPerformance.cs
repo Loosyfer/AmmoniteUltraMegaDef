@@ -15,7 +15,7 @@ public class InputPerformance : MonoBehaviour
             if (int.TryParse(s, out int number))
             {
                 member = transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
-                member.GetComponent<MemberHUD>().performance = number;
+                member.GetComponent<MemberHUD>().performance += number;
             }
 
         }

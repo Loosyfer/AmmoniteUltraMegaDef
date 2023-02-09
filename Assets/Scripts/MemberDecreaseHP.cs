@@ -16,7 +16,7 @@ public class MemberDecreaseHP : MonoBehaviour
 
         if (member.tag == "Member")
         {
-            member.transform.GetComponent<MemberHUD>().health = int.Parse(s);
+            member.transform.GetComponent<MemberHUD>().health += int.Parse(s);
         }
 
         switch (int.Parse(s))
