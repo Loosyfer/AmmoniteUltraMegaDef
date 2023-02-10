@@ -36,7 +36,7 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = .6f;
+        canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = false;
         objectDragged = true;
         if (member != null)
