@@ -29,6 +29,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject megaVerPrefab;
     public ModInfo modInfo;
     public ModExcel modExcel;
+    public MemberExcel memExcel;
     public MemInfo membersInfo;
     public BioInfo bioInfo;
     public MegamodulesInfo megaInfo;
@@ -76,17 +77,17 @@ public class BattleSystem : MonoBehaviour
         //Regex CSVParser = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
         //string[] data = CSVParser.Split(Resources.Load<TextAsset>("Modules/Modules").text);
 
-        string[] data = Resources.Load<TextAsset>("Modules/Modules").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
+        string[] modData = Resources.Load<TextAsset>("Excel/Modules").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
 
-        int tableSize = (data.Length / 5) - 1;
+        int tableSize = (modData.Length / 5) - 1;
         modExcel.myModules.modules = new ModExcel.Module[tableSize];
 
         for (int i = 0; i < tableSize; i++)
         {
             modExcel.myModules.modules[i] = new ModExcel.Module();
-            modExcel.myModules.modules[i].name = data[(5 * (i + 1))];
-            modExcel.myModules.modules[i].effect = data[(5 * (i + 1)) + 1];
-            switch (data[(5 * (i + 1)) + 2])
+            modExcel.myModules.modules[i].name = modData[(5 * (i + 1))];
+            modExcel.myModules.modules[i].effect = modData[(5 * (i + 1)) + 1];
+            switch (modData[(5 * (i + 1)) + 2])
             {
                 case "Organic A":
                     modExcel.myModules.modules[i].type = (ModuleType)0;
@@ -107,21 +108,70 @@ public class BattleSystem : MonoBehaviour
                     modExcel.myModules.modules[i].type = (ModuleType)5;
                     break;
             }
-            modExcel.myModules.modules[i].requirement = data[(5 * (i + 1)) + 3];
-            if (int.TryParse(data[(5 * (i + 1)) + 4], out int pri))
+            modExcel.myModules.modules[i].requirement = modData[(5 * (i + 1)) + 3];
+            if (int.TryParse(modData[(5 * (i + 1)) + 4], out int pri))
                 modExcel.myModules.modules[i].price = pri;
             else
             {
                 Debug.Log(i);
-                Debug.Log(data[(6 * (i + 1)) + 5]);
+                Debug.Log(modData[(6 * (i + 1)) + 5]);
             }
         }
-            /*BattleSystem data = new BattleSystem();
-            data = SaveGame.Load<BattleSystem>("allData");
-            modules = data.modules;
-            members = data.members;
-            megas = data.megas;*/
-            state = BattleState.START;
+
+        string[] memData = Resources.Load<TextAsset>("Excel/Members").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
+
+        tableSize = (memData.Length / 4) - 1;
+        memExcel.myMembers.members = new MemberExcel.Member[tableSize];
+
+        for (int j = 0; j < tableSize; j++)
+        {
+            memExcel.myMembers.members[j] = new MemberExcel.Member();
+            memExcel.myMembers.members[j].trait = memData[(4 * (j + 1))];
+            memExcel.myMembers.members[j].tEffect = memData[(4 * (j + 1)) + 1];
+            switch (memData[(4 * (j + 1)) + 2])
+            {
+
+                case "Positive":
+                    memExcel.myMembers.members[j].positive = true;
+                    memExcel.myMembers.members[j].super = false;
+                    memExcel.myMembers.members[j].exclusive = false;
+                    memExcel.myMembers.members[j].erudite = false;
+                    break;
+                case "Erudite":
+                    memExcel.myMembers.members[j].positive = false;
+                    memExcel.myMembers.members[j].super = false;
+                    memExcel.myMembers.members[j].exclusive = false;
+                    memExcel.myMembers.members[j].erudite = true;
+                    break;
+                case "Super":
+                    memExcel.myMembers.members[j].positive = false;
+                    memExcel.myMembers.members[j].super = true;
+                    memExcel.myMembers.members[j].exclusive = false;
+                    memExcel.myMembers.members[j].erudite = false;
+                    break;
+                case "Exclusive":
+                    memExcel.myMembers.members[j].positive = false;
+                    memExcel.myMembers.members[j].super = false;
+                    memExcel.myMembers.members[j].exclusive = true;
+                    memExcel.myMembers.members[j].erudite = false;
+                    break;
+            }
+            if (int.TryParse(memData[(4 * (j + 1)) + 3], out int prise))
+                memExcel.myMembers.members[j].price = prise;
+            else
+            {
+                Debug.Log(j);
+                Debug.Log(memData[(4 * (j + 1)) + 3]);
+            }
+        }
+
+
+        /*BattleSystem data = new BattleSystem();
+        data = SaveGame.Load<BattleSystem>("allData");
+        modules = data.modules;
+        members = data.members;
+        megas = data.megas;*/
+        state = BattleState.START;
         StartCoroutine(SetupBattle());
     }
 
@@ -1133,6 +1183,46 @@ public class BattleSystem : MonoBehaviour
         }*/
     }
 
+    public void GenerateMembers2(string s)
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            return;
+        GameObject canvas = GameObject.Find("/Malla");
+        GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
+        int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
+        if (!int.TryParse(s, out int i))
+        {
+            Debug.Log("Try inputting a valid integer");
+            return;
+        }
+        int index1 = (int)Mathf.Floor(i / 1000);
+        int index2 = (int)(i - index1 * 1000);
+        Debug.Log(index1 + index2);
+        GameObject go = Instantiate(memberGenPrefab, new Vector3(820, 1025, 0), Quaternion.identity) as GameObject;
+        go.transform.parent = membersFolder.transform;
+        MemberHUD Yrt = go.GetComponent<MemberHUD>();
+        members.Add(go);
+        Yrt.nameText.text = membersInfo.names[l];
+        Yrt.profDetailsText.text = (ProfessionType)index1 + " = " + membersInfo.profDescription[index1];
+        Yrt.traitDetailsText.text = memExcel.myMembers.members[index2].trait + " = " + memExcel.myMembers.members[index2].tEffect;
+        Yrt.traitDetailsText.text = Yrt.traitDetailsText.text.Replace("*", ",");
+        Yrt.trait.text = memExcel.myMembers.members[index2].trait;
+        Yrt.profession = (ProfessionType)index1;
+        Yrt.profPrice.text = membersInfo.profPrice[index1].ToString();
+        Yrt.traitPrice.text = Yrt.trait.text + "(" + memExcel.myMembers.members[index2].price.ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[index1] + memExcel.myMembers.members[index2].price).ToString();
+        Yrt.totalPrice.text = (membersInfo.profPrice[index1] + memExcel.myMembers.members[index2].price).ToString();
+        Yrt.id = index2;
+        Yrt.professionId = index1;
+        float m = UnityEngine.Random.Range(0f, 100f);
+        if (m < 70f)
+            Yrt.performance = 40;
+        if (m >= 70f && m < 93f)
+            Yrt.performance = 45;
+        if (m >= 93f)
+            Yrt.performance = 50;
+        
+    }
+
     public void Generate(string s)
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -1502,12 +1592,15 @@ public class BattleSystem : MonoBehaviour
             MemberHUD Yrt = go.GetComponent<MemberHUD>();
             Yrt.nameText.text = membersInfo.names[l];
             Yrt.profDetailsText.text = (ProfessionType)k + " = " + membersInfo.profDescription[k];
-            Yrt.traitDetailsText.text = membersInfo.traitList[j] + " = " + membersInfo.tDescription[j];
-            Yrt.trait.text = membersInfo.traitList[j];
+            Yrt.traitDetailsText.text = memExcel.myMembers.members[j].trait + " = " + memExcel.myMembers.members[j].tEffect;
+            Yrt.traitDetailsText.text = Yrt.traitDetailsText.text.Replace("*", ",");
+            Yrt.trait.text = memExcel.myMembers.members[j].trait;
             Yrt.profession = (ProfessionType)k;
             Yrt.profPrice.text = membersInfo.profPrice[k].ToString();
-            Yrt.traitPrice.text = Yrt.trait.text + "(" + membersInfo.traitPrice[j].ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
-            Yrt.totalPrice.text = (membersInfo.profPrice[k] + membersInfo.traitPrice[j]).ToString();
+            Yrt.traitPrice.text = Yrt.trait.text + "(" + memExcel.myMembers.members[j].price.ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[k] + memExcel.myMembers.members[j].price).ToString();
+            Yrt.totalPrice.text = (membersInfo.profPrice[k] + memExcel.myMembers.members[j].price).ToString();
+            Yrt.id = j;
+            Yrt.professionId = k;
             float m = UnityEngine.Random.Range(0f, 100f);
             if (m < 70f)
                 Yrt.performance = 40;
@@ -2286,6 +2379,14 @@ public class BattleSystem : MonoBehaviour
         SaveData.current.sideE.Clear();
         SaveData.current.sEffectorDefect.Clear();
         SaveData.current.sEffectSide.Clear();
+        SaveData.current.memPosX.Clear();
+        SaveData.current.memPosY.Clear();
+        SaveData.current.memPosZ.Clear();
+        SaveData.current.memId.Clear();
+        SaveData.current.memId2.Clear();
+        SaveData.current.memHealth.Clear();
+        SaveData.current.memPerformance.Clear();
+        SaveData.current.memProfessionId.Clear();
 
         foreach(GameObject module in modules)
         {
@@ -2298,15 +2399,27 @@ public class BattleSystem : MonoBehaviour
             SaveData.current.sEffectorDefect.Add(module.transform.GetComponent<ModuleHUD>().sEffectorDefect);
             SaveData.current.sEffectSide.Add(module.transform.GetComponent<ModuleHUD>().sEffectSide);
         }
+        foreach (GameObject member in members)
+        {
+            SaveData.current.memPosX.Add(member.transform.position.x);
+            SaveData.current.memPosY.Add(member.transform.position.y);
+            SaveData.current.memPosZ.Add(member.transform.position.z);
+            SaveData.current.memId.Add(member.transform.GetComponent<MemberHUD>().id);
+            SaveData.current.memId2.Add(member.transform.GetComponent<MemberHUD>().id2);
+            SaveData.current.memHealth.Add(member.transform.GetComponent<MemberHUD>().health);
+            SaveData.current.memPerformance.Add(member.transform.GetComponent<MemberHUD>().performance);
+            SaveData.current.memProfessionId.Add(member.transform.GetComponent<MemberHUD>().professionId);
+
+        }
         //SaveData.current.posX = modules[0].transform.position.x;
         //SaveData.current.posY = modules[0].transform.position.y;
         //SaveData.current.posZ = modules[0].transform.position.z;
-        SerializationManager.Save("module", SaveData.current);
+        SerializationManager.Save("savedGame", SaveData.current);
     }
 
     public void OnLoad()
     {
-        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/module.save");
+        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/savedGame.save");
 
         //GameObject obj = Instantiate(moduleGenPrefab, new Vector3(SaveData.current.posX, SaveData.current.posY, SaveData.current.posZ), Quaternion.identity) as GameObject;
         for (int i = 0; i < SaveData.current.posX.Count; i++)
@@ -2319,10 +2432,12 @@ public class BattleSystem : MonoBehaviour
             ModuleHUD Yrt = obj.GetComponent<ModuleHUD>();
             modules.Add(obj);
             int j = SaveData.current.id[i];
-            Yrt.nameText.text = modInfo.names[j];
-            Yrt.detailsText.text = modInfo.moduleDetails[j];
-            Yrt.price = modInfo.modulePrice[j];
-            Yrt.type = modInfo.moduleType[j];
+            Yrt.nameText.text = modExcel.myModules.modules[j].name;
+            Yrt.detailsText.text = modExcel.myModules.modules[j].effect;
+            Yrt.detailsText.text = Yrt.detailsText.text.Replace("*", ",");
+            Yrt.detailsText.text = Yrt.detailsText.text.Replace("&quote;", "");
+            Yrt.price = modExcel.myModules.modules[j].price;
+            Yrt.type = modExcel.myModules.modules[j].type;
             Yrt.id = j;
             switch (Yrt.type)
                 {
@@ -2345,108 +2460,108 @@ public class BattleSystem : MonoBehaviour
                         Yrt.typeDetails.text = modInfo.typeStacking[5];
                         break;
                 }
-            switch (modInfo.req[j])
+            switch (modExcel.myModules.modules[j].requirement)
             {
-                case "0":
-                    Yrt.req.text = "No Requirement";
-                    Yrt.reqType = 0;
-                    break;
-                case "1":
-                    Yrt.req.text = modInfo.randomReq[SaveData.current.req[i]].ToString();
+                case "":
+                    int k = UnityEngine.Random.Range(0, 13);
+                    Yrt.req.text = modInfo.randomReq[k].ToString();
                     Yrt.reqType = 1;
-                    switch (SaveData.current.req[i])
+                    switch (k)
                     {
                         case 0:
                             obj.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                            Yrt.reqId = 0;
                             break;
                         case 1:
                             obj.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                            Yrt.reqId = 1;
                             break;
                         case 2:
                             obj.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                            Yrt.reqId = 2;
                             break;
                         case 3:
                             obj.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                            Yrt.reqId = 3;
                             break;
                         case 4:
                             obj.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                            Yrt.reqId = 4;
                             break;
                         case 5:
                             obj.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                            Yrt.reqId = 5;
                             break;
                         case 6:
                             obj.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                            Yrt.reqId = 6;
                             break;
                         case 7:
                             obj.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                            Yrt.reqId = 7;
                             break;
                         case 8:
                             obj.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                            Yrt.reqId = 8;
                             break;
                         case 9:
                             obj.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                            Yrt.reqId = 9;
                             break;
                         case 10:
                             obj.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                            Yrt.reqId = 10;
                             break;
                         case 11:
                             obj.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                            Yrt.reqId = 11;
                             break;
                         case 12:
                             obj.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                            Yrt.reqId = 12;
                             break;
                     }
                     break;
                 default:
-                    Yrt.req.text = modInfo.req[j];
+                    Yrt.req.text = modExcel.myModules.modules[j].requirement;
                     Yrt.reqType = 2;
                     obj.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
                     break;
+            }
+            Destroy(obj.transform.GetChild(8).gameObject);
+            Image imagen = obj.transform.GetComponent<Image>();
+            if (Yrt.type == (ModuleType)0)
+            {
+                imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
+                
+            }
+            if (Yrt.type == (ModuleType)1)
+            {
+                imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
+                
+            }
+            if (Yrt.type == (ModuleType)2)
+            {
+                imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
+                
+            }
+            if (Yrt.type == (ModuleType)3)
+            {
+                imagen.color = new Color(0.7f, 0.7f, 0.7f, 1);
+                
 
             }
-                Yrt.sliderLength = modInfo.cooldown[j];
-                if (Yrt.sliderLength == 0)
-                {
-                    Destroy(obj.transform.GetChild(8).gameObject);
-                }
-                else
-                {
-                    obj.transform.GetChild(8).GetComponent<Slider>().maxValue = Yrt.sliderLength;
-                    obj.transform.GetChild(8).GetComponent<Slider>().value = Yrt.sliderLength;
-                }
-                Image imagen = obj.transform.GetComponent<Image>();
-                if (Yrt.type == (ModuleType)0)
-                {
-                    imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
-                    
-                }
-                if (Yrt.type == (ModuleType)1)
-                {
-                    imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
-                    
-                }
-                if (Yrt.type == (ModuleType)2)
-                {
-                    imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
-                    
-                }
-                if (Yrt.type == (ModuleType)3)
-                {
-                    imagen.color = new Color(0.7f, 0.7f, 0.7f, 1);
-                    
-
-                }
-                if (Yrt.type == (ModuleType)4)
-                {
-                    imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
-                    
-                }
-                if (Yrt.type == (ModuleType)5)
-                {
-                    imagen.color = new Color(0.9843f, 1, 0.2196f, 1);
-                    
-                }
-                    Yrt.sEffectorDefect = SaveData.current.sEffectorDefect[i];
+            if (Yrt.type == (ModuleType)4)
+            {
+                imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
+               
+            }
+            if (Yrt.type == (ModuleType)5)
+            {
+                imagen.color = new Color(0, 1, 1, 1);
+                
+            }
+            Yrt.sEffectorDefect = SaveData.current.sEffectorDefect[i];
                     Yrt.sEffectSide = SaveData.current.sEffectSide[i];
                     Yrt.sideEffectId = SaveData.current.sideE[i];
                     Debug.Log("La info que quieres en Step 1 es " + Yrt.sEffectorDefect + " " + Yrt.sEffectSide + " " + Yrt.sideEffectId);
@@ -2490,6 +2605,32 @@ public class BattleSystem : MonoBehaviour
                             break;
                     }
                 }
+        }
+        for (int i = 0; i < SaveData.current.memPosX.Count; i++)
+        {
+            GameObject obj = Instantiate(memberGenPrefab, new Vector3(SaveData.current.memPosX[i], SaveData.current.memPosY[i], SaveData.current.memPosZ[i]), Quaternion.identity) as GameObject;
+            GameObject canvas = GameObject.Find("/Malla");
+            GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
+            GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
+            obj.transform.parent = membersFolder.transform;
+            MemberHUD Yrt = obj.GetComponent<MemberHUD>();
+            members.Add(obj);
+            int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
+            int k = SaveData.current.memId[i];
+            int m = SaveData.current.memProfessionId[i];
+            Yrt.nameText.text = membersInfo.names[l];
+            Yrt.profDetailsText.text = (ProfessionType)m + " = " + membersInfo.profDescription[m];
+            Yrt.traitDetailsText.text = memExcel.myMembers.members[k].trait + " = " + memExcel.myMembers.members[k].tEffect;
+            Yrt.traitDetailsText.text = Yrt.traitDetailsText.text.Replace("*", ",");
+            Yrt.trait.text = memExcel.myMembers.members[k].trait;
+            Yrt.profession = (ProfessionType)m;
+            Yrt.profPrice.text = membersInfo.profPrice[m].ToString();
+            Yrt.traitPrice.text = Yrt.trait.text + "(" + memExcel.myMembers.members[k].price.ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[m] + memExcel.myMembers.members[k].price).ToString();
+            Yrt.totalPrice.text = (membersInfo.profPrice[m] + memExcel.myMembers.members[k].price).ToString();
+            Yrt.id = k;
+            Yrt.professionId = m;
+            Yrt.performance = SaveData.current.memPerformance[i];
+            Yrt.health = SaveData.current.memHealth[i];
         }
     }
 

@@ -26,9 +26,8 @@ public class ModExcel : ScriptableObject
 
     public ModuleList myModules = new ModuleList();
 
-    void Awake()
+    /*void Awake()
     {
-        Debug.Log("HOLAMUBUENACOMOESTAMOS");
         string[] data = Resources.Load<TextAsset>("Modules/Modules").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
 
         int tableSize = (data.Length / 6) - 1;
@@ -65,5 +64,5 @@ public class ModExcel : ScriptableObject
             myModules.modules[i].price = int.Parse(data[(6 * (i + 1)) + 5]);
 
         }
-    }
+    }*/
 }

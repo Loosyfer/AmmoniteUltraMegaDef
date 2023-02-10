@@ -5,7 +5,7 @@ using UnityEngine;
 public class AddSecondTrait : MonoBehaviour
 {
     private GameObject memberorModule;
-    public MemInfo membersInfo;
+    public BattleSystem script;
 
     public void AddTrait(string s)
     {
@@ -15,8 +15,8 @@ public class AddSecondTrait : MonoBehaviour
             {
                 memberorModule = this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
-                memberHUD.secTrait.text = membersInfo.traitList[int.Parse(s)];
-                memberHUD.secTraitDescription.text = membersInfo.tDescription[int.Parse(s)];
+                memberHUD.secTrait.text = script.memExcel.myMembers.members[int.Parse(s)].trait;
+                memberHUD.secTraitDescription.text = script.memExcel.myMembers.members[int.Parse(s)].tEffect;
                 // membersInfo.traitList[int.Parse(s)] + " = " + 
             }
         }

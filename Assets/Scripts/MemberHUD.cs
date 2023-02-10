@@ -23,6 +23,9 @@ public class MemberHUD : MonoBehaviour
     public bool selected;
     public int health;
     public bool insideField = false;
+    public int id;
+    public int id2;
+    public int professionId;
 
     public void SetHUD(Member member)
     {

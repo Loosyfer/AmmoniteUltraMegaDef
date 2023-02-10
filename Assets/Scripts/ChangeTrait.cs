@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangeTrait : MonoBehaviour
 {
 
-    public MemInfo script;
+    public BattleSystem script;
     private int index;
 
     public void Change(string s)
@@ -14,8 +14,8 @@ public class ChangeTrait : MonoBehaviour
         {
             if (int.TryParse(s, out int index))
             {
-                transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().trait.text = script.traitList[index];
-                transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().traitDetailsText.text = script.tDescription[index];
+                transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().trait.text = script.memExcel.myMembers.members[index].trait;
+                transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().traitDetailsText.text = script.memExcel.myMembers.members[index].tEffect;
             }
         }
     }

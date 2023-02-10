@@ -13256,7 +13256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c79f5d015473d4a8cb0b9b7b594e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialTraits: {fileID: 11400000, guid: 7f56d244d95534449a514f8255d17cc5, type: 2}
+  script: {fileID: 383572965}
+  memExcel: {fileID: 11400000, guid: d7284c36d05bab541b729a5dbe8fb815, type: 2}
 --- !u!1 &376208074
 GameObject:
   m_ObjectHideFlags: 0
@@ -13433,6 +13434,7 @@ MonoBehaviour:
   megaVerPrefab: {fileID: 2397283752231528814, guid: b1a9d52ecbe1fb642b5cf0a163506dbf, type: 3}
   modInfo: {fileID: 11400000, guid: 8851d5a100d27ec4f94fb952f0f4833c, type: 2}
   modExcel: {fileID: 11400000, guid: 3db8389f0a512eb43b14fed31e28be26, type: 2}
+  memExcel: {fileID: 11400000, guid: d7284c36d05bab541b729a5dbe8fb815, type: 2}
   membersInfo: {fileID: 11400000, guid: 1de7570251df35847b027f405e81b956, type: 2}
   bioInfo: {fileID: 11400000, guid: 89cc52d3649d2b449bb6da3fc8a05282, type: 2}
   megaInfo: {fileID: 11400000, guid: 29cb11a25fa273444b05090b0a298606, type: 2}
@@ -16929,7 +16931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d06c8d8a35ec74b8331dde0e2a2309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 11400000, guid: 1de7570251df35847b027f405e81b956, type: 2}
+  script: {fileID: 383572965}
 --- !u!114 &453864728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18926,7 +18928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d710cf840cc1a2d47b15ffd941b8ba70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialTraits: {fileID: 11400000, guid: 7f56d244d95534449a514f8255d17cc5, type: 2}
+  script: {fileID: 383572965}
+  memExcel: {fileID: 11400000, guid: d7284c36d05bab541b729a5dbe8fb815, type: 2}
 --- !u!1001 &512694423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27151,7 +27154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10e31ffec8437d488b5e0326de640e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  membersInfo: {fileID: 11400000, guid: 1de7570251df35847b027f405e81b956, type: 2}
+  script: {fileID: 383572965}
 --- !u!114 &745757806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29398,7 +29401,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 383572965}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: GenerateMembers
+        m_MethodName: GenerateMembers2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29695,7 +29698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c2eb84b2b7775479b124918710cae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positiveTraits: {fileID: 11400000, guid: 064fea3603ede654487a01581d92c1b2, type: 2}
+  script: {fileID: 383572965}
+  memExcel: {fileID: 11400000, guid: d7284c36d05bab541b729a5dbe8fb815, type: 2}
 --- !u!114 &826083950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66352,7 +66356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc88dca09c7bb148abd3d0e2348a6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  membersInfo: {fileID: 11400000, guid: 1de7570251df35847b027f405e81b956, type: 2}
+  script: {fileID: 383572965}
 --- !u!114 &1857903458
 MonoBehaviour:
   m_ObjectHideFlags: 0

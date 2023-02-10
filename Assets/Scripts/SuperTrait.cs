@@ -5,8 +5,21 @@ using UnityEngine;
 public class SuperTrait : MonoBehaviour
 {
 
+    public BattleSystem script;
     private GameObject memberorModule;
-    public SpecialTraits specialTraits;
+    public MemberExcel memExcel;
+    private List<MemberExcel.Member> superTraits = new List<MemberExcel.Member>();
+
+    private void Awake()
+    {
+        for (int j = 0; j < script.memExcel.myMembers.members.Length; j++)
+        {
+            if (script.memExcel.myMembers.members[j].super)
+            {
+                superTraits.Add(script.memExcel.myMembers.members[j]);
+            }
+        }
+    }
 
     public void SetSuperTrait()
     {
@@ -14,11 +27,11 @@ public class SuperTrait : MonoBehaviour
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
             {
-                int random = Random.Range(15, 33);
+                int random = Random.Range(0, superTraits.Count);
                 memberorModule = this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
-                memberHUD.secTrait.text = specialTraits.names[random];
-                memberHUD.secTraitDescription.text = specialTraits.names[random] + " = " + specialTraits.description[random];
+                memberHUD.secTrait.text = superTraits[random].trait;
+                memberHUD.secTraitDescription.text = superTraits[random].trait + " = " + superTraits[random].tEffect;
             }
         }
     }

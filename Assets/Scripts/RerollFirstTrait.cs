@@ -5,7 +5,7 @@ using UnityEngine;
 public class RerollFirstTrait : MonoBehaviour
 {
     private GameObject memberorModule;
-    public MemInfo membersInfo;
+    public BattleSystem script;
 
     public void Reroll()
     {
@@ -13,11 +13,11 @@ public class RerollFirstTrait : MonoBehaviour
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
             {
-                int random = Random.Range(0, 230);
+                int random = Random.Range(0, 253);
                 memberorModule = this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
-                memberHUD.trait.text = membersInfo.traitList[random];
-                memberHUD.traitDetailsText.text = membersInfo.traitList[random] + " = " + membersInfo.tDescription[random];
+                memberHUD.trait.text = script.memExcel.myMembers.members[random].trait;
+                memberHUD.traitDetailsText.text = script.memExcel.myMembers.members[random].trait + " = " + script.memExcel.myMembers.members[random].tEffect;
             }
         }
     }

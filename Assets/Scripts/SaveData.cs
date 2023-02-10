@@ -31,4 +31,12 @@ public class SaveData
     public List<int> sideE = new List<int>();
     public List<int> sEffectorDefect = new List<int>();
     public List<int> sEffectSide = new List<int>();
+    public List<float> memPosX = new List<float>();
+    public List<float> memPosY = new List<float>();
+    public List<float> memPosZ = new List<float>();
+    public List<int> memId = new List<int>();
+    public List<int> memId2 = new List<int>();
+    public List<int> memProfessionId = new List<int>();
+    public List<int> memHealth = new List<int>();
+    public List<float> memPerformance = new List<float>();
 }
