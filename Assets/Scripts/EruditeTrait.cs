@@ -23,6 +23,14 @@ public class EruditeTrait : MonoBehaviour
 
     public void SetEruditeTrait()
     {
+        for (int j = 0; j < script.memExcel.myMembers.members.Length; j++)
+        {
+            if (script.memExcel.myMembers.members[j].erudite)
+            {
+                eruditeTraits.Add(script.memExcel.myMembers.members[j]);
+            }
+        }
+
         if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember != null)
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")

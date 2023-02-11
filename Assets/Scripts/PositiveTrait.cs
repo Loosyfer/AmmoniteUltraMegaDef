@@ -12,6 +12,13 @@ public class PositiveTrait : MonoBehaviour
 
     private void Awake()
     {
+        
+    }
+
+
+    public void SetPositiveTrait()
+    {
+
         for (int j = 0; j < script.memExcel.myMembers.members.Length; j++)
         {
             if (script.memExcel.myMembers.members[j].positive)
@@ -20,11 +27,6 @@ public class PositiveTrait : MonoBehaviour
             }
         }
 
-    }
-
-
-    public void SetPositiveTrait()
-    {
 
         if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember != null)
         {

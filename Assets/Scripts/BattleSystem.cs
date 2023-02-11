@@ -54,6 +54,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject rockets;
     public GameObject spark;
     public GameObject currency;
+    public GameObject ReqOnOff;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -1278,72 +1279,75 @@ public class BattleSystem : MonoBehaviour
                     Yrt.typeDetails.text = modInfo.typeStacking[5];
                     break;
             }
-            switch (modExcel.myModules.modules[j].requirement)
+            if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)
             {
-                case "":
-                    Yrt.req.text = modInfo.randomReq[k].ToString();
-                    Yrt.reqType = 1;
-                    switch (k)
-                    {
-                        case 0:
-                            go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
-                            Yrt.reqId = 0;
-                            break;
-                        case 1:
-                            go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
-                            Yrt.reqId = 1;
-                            break;
-                        case 2:
-                            go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
-                            Yrt.reqId = 2;
-                            break;
-                        case 3:
-                            go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
-                            Yrt.reqId = 3;
-                            break;
-                        case 4:
-                            go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
-                            Yrt.reqId = 4;
-                            break;
-                        case 5:
-                            go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
-                            Yrt.reqId = 5;
-                            break;
-                        case 6:
-                            go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
-                            Yrt.reqId = 6;
-                            break;
-                        case 7:
-                            go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
-                            Yrt.reqId = 7;
-                            break;
-                        case 8:
-                            go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
-                            Yrt.reqId = 8;
-                            break;
-                        case 9:
-                            go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
-                            Yrt.reqId = 9;
-                            break;
-                        case 10:
-                            go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
-                            Yrt.reqId = 10;
-                            break;
-                        case 11:
-                            go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
-                            Yrt.reqId = 11;
-                            break;
-                        case 12:
-                            go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
-                            Yrt.reqId = 12;
-                            break;
-                    }
-                    break;
-                default:
-                    Yrt.req.text = modExcel.myModules.modules[j].requirement;
-                    Yrt.reqType = 2;
-                    go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
-                    break;
+                switch (modExcel.myModules.modules[j].requirement)
+                {
+                    case "":
+                        Yrt.req.text = modInfo.randomReq[k].ToString();
+                        Yrt.reqType = 1;
+                        switch (k)
+                        {
+                            case 0:
+                                go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                                Yrt.reqId = 0;
+                                break;
+                            case 1:
+                                go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                                Yrt.reqId = 1;
+                                break;
+                            case 2:
+                                go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                                Yrt.reqId = 2;
+                                break;
+                            case 3:
+                                go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                                Yrt.reqId = 3;
+                                break;
+                            case 4:
+                                go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                                Yrt.reqId = 4;
+                                break;
+                            case 5:
+                                go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                                Yrt.reqId = 5;
+                                break;
+                            case 6:
+                                go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                                Yrt.reqId = 6;
+                                break;
+                            case 7:
+                                go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                                Yrt.reqId = 7;
+                                break;
+                            case 8:
+                                go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                                Yrt.reqId = 8;
+                                break;
+                            case 9:
+                                go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                                Yrt.reqId = 9;
+                                break;
+                            case 10:
+                                go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                                Yrt.reqId = 10;
+                                break;
+                            case 11:
+                                go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                                Yrt.reqId = 11;
+                                break;
+                            case 12:
+                                go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                                Yrt.reqId = 12;
+                                break;
+                        }
+                        break;
+                    default:
+                        Yrt.req.text = modExcel.myModules.modules[j].requirement;
+                        Yrt.reqType = 2;
+                        go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
+                        break;
+                }
             }
             /*int m = System.Random.Range(0, 100);
             if (m >= 0 && m < 75)

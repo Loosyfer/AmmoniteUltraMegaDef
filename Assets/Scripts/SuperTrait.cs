@@ -23,6 +23,14 @@ public class SuperTrait : MonoBehaviour
 
     public void SetSuperTrait()
     {
+        for (int j = 0; j < script.memExcel.myMembers.members.Length; j++)
+        {
+            if (script.memExcel.myMembers.members[j].super)
+            {
+                superTraits.Add(script.memExcel.myMembers.members[j]);
+            }
+        }
+
         if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember != null)
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
