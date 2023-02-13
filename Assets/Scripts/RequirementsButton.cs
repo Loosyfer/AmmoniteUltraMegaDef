@@ -11,8 +11,8 @@ public class RequirementsButton : MonoBehaviour
     {
         state = !state;
         if (state)
-            this.transform.GetComponent<Image>().color = new Color(0, 1, 0, 1);
+            this.transform.GetComponent<Image>().color = new Color32(156, 247, 255, 255);
         else
-            this.transform.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+            this.transform.GetComponent<Image>().color = new Color32(224, 136, 153, 255);
     }
 }
