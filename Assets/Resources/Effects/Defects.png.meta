@@ -326,6 +326,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Defects_10
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36929139cf77ecb4aaaf84d17b4ac839
+      internalID: 1249178616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defects_11
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 2731.3333
+        width: 682.6667
+        height: 682.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d431063d68143c547b08cf6fc2dbc885
+      internalID: -28750552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -347,6 +389,7 @@ TextureImporter:
       Defects_9: 1879220502
       Defects_3: 102032986
       Defects_6: 91061756
+      Defects_11: -28750552
       Defects_10: 1249178616
   spritePackingTag: 
   pSDRemoveMatte: 0

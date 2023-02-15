@@ -14,11 +14,11 @@ public class EventGenerator : MonoBehaviour
             this.transform.GetChild(2).GetComponent<Text>().text = "Strong Enemy";
         if (number >= 43f && number < 62f)
             this.transform.GetChild(2).GetComponent<Text>().text = "Market";
-        if (number >= 62f && number < 81f)
+        if (number >= 62f && number < 79f)
             this.transform.GetChild(2).GetComponent<Text>().text = "Hangar";
-        if (number >= 81f && number < 97f)
+        if (number >= 79f && number < 98f)
             this.transform.GetChild(2).GetComponent<Text>().text = "Rare Event";
-        if (number >= 97f)
+        if (number >= 98f)
             this.transform.GetChild(2).GetComponent<Text>().text = "Ultra Rare Event";
     }
 }

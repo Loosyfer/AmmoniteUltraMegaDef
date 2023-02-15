@@ -285,8 +285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -311.26675, y: 156.6}
-  m_SizeDelta: {x: 31.5744, y: 475.5657}
+  m_AnchoredPosition: {x: -304.9, y: 74.7}
+  m_SizeDelta: {x: 32.815, y: 323.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14350412
 MonoBehaviour:
@@ -4840,7 +4840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.78, y: 140.56}
+  m_AnchoredPosition: {x: -1.1999803, y: 140.56}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &141570810
@@ -6271,8 +6271,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.44238, y: 137.6}
-  m_SizeDelta: {x: 43.2225, y: 448.4453}
+  m_AnchoredPosition: {x: -305.44238, y: 74.69998}
+  m_SizeDelta: {x: 43.2225, y: 323.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &171512297
 Canvas:
@@ -8535,6 +8535,90 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 171825948961776050, guid: f6b10fa77fcb3674ea9ce032309f2271, type: 3}
   m_PrefabInstance: {fileID: 114115896}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &220817187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220817188}
+  - component: {fileID: 220817189}
+  m_Layer: 0
+  m_Name: Shops
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &220817188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220817187}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 621, y: -17, z: 0}
+  m_LocalScale: {x: 81.1, y: 81.1, z: 81.1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 723143978}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &220817189
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220817187}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9b84565e70044bc419013ff73a6ca3cc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 7.67, y: 8.23}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &231706617
 GameObject:
   m_ObjectHideFlags: 0
@@ -17239,8 +17323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209.56255, y: -387.4537}
-  m_SizeDelta: {x: 226.2849, y: 258.4507}
+  m_AnchoredPosition: {x: -211.73, y: -387.4537}
+  m_SizeDelta: {x: 230.63, y: 258.4507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &464083970
 MonoBehaviour:
@@ -24221,7 +24305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9561195, y: -19.650002}
+  m_AnchoredPosition: {x: -1.0238609, y: -19.650002}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &682095923
@@ -25998,6 +26082,7 @@ RectTransform:
   - {fileID: 827193667}
   - {fileID: 1776199455}
   - {fileID: 1664841781}
+  - {fileID: 220817188}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26154,7 +26239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9941187, y: 20.439995}
+  m_AnchoredPosition: {x: -0.9858618, y: 20.439995}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &730432962
@@ -28100,7 +28185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &757164999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28118,7 +28203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.78, y: -219.9}
+  m_AnchoredPosition: {x: -1.1999803, y: -219.9}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &757165000
@@ -28782,7 +28867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &782833516
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28800,7 +28885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.78, y: -139.68001}
+  m_AnchoredPosition: {x: -1.1999803, y: -139.68001}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &782833517
@@ -33631,8 +33716,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 620.39, y: 404.6184}
-  m_SizeDelta: {x: -1295.2, y: -846.9812}
+  m_AnchoredPosition: {x: 620.39, y: 423.04175}
+  m_SizeDelta: {x: -1295.2, y: -883.8278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881854076
 MonoBehaviour:
@@ -34379,7 +34464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9561195, y: 60.459995}
+  m_AnchoredPosition: {x: -1.0238609, y: 60.459995}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &922514473
@@ -36709,7 +36794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.78, y: 100.35}
+  m_AnchoredPosition: {x: -1.1999803, y: 100.35}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &976751920
@@ -46774,8 +46859,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -208.7, y: -172.09628}
-  m_SizeDelta: {x: 228.01, y: 152.0922}
+  m_AnchoredPosition: {x: -210.87, y: -172.09628}
+  m_SizeDelta: {x: 232.36, y: 152.0922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296978950
 MonoBehaviour:
@@ -51703,7 +51788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.78, y: 180.25}
+  m_AnchoredPosition: {x: -1.2, y: -99.5}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1449224997
@@ -54931,7 +55016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1527303179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54949,7 +55034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9561195, y: -99.66}
+  m_AnchoredPosition: {x: -1.0238609, y: -99.66}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1527303180
@@ -56401,7 +56486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.78, y: -179.6}
+  m_AnchoredPosition: {x: -1.1999803, y: -138.8}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1576548398
@@ -68608,7 +68693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9561195, y: -59.460007}
+  m_AnchoredPosition: {x: -1.0238609, y: -59.460007}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1912428387
@@ -70736,8 +70821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 620.39, y: -122.63}
-  m_SizeDelta: {x: 624.8089, y: 788.1}
+  m_AnchoredPosition: {x: 621.57043, y: -436.1933}
+  m_SizeDelta: {x: 622.4391, y: 160.9731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1964881703
 Canvas:
@@ -70782,7 +70867,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
@@ -70793,23 +70878,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ship slots can be expanded in any direction/inside a given ship layout\r.\nStart
-    with 3 slots, and no bench.\nUnstable is now 25% chance of explosion\r.\nShip
-    starts with 1000HP.\n8 Fuel is the starting and max amount.\nBench heals crew
-    members and repairs damaged modules.\n2 Emporiums hidden per level\n\n-----MARKET_COINS-----\n*Recruit
-    applicants from a selection of 5/4/6 (70/20/10%)\n*Buy modules from a selection
-    of 5/4/6 (70/20/10%)\n*Buy items (25% chance of 1 = 1 coin)\n*10% chance of 1
-    extra surprise = 5 coins\n*Sell non-damaged module in a different shop = +2 coins,
-    +0 if damaged\n\n-----HANGAR_SCRAP-----\n*1 ship slot = 2 scrap (max 20 slots,
-    30 for 12xArchitect)\n*1 bench slot  = 2 scrap (max 3 slots, 6 for 12xArchitect)\n*Top
-    up Fuel = 1 scrap // free once per shop // 1 Fuel = 1 scrap\n*Repair damaged
-    module = 1 scrap\n*Heal ship HP = 1 scrap per 50 HP // free max HP once per shop\n*1
-    // 2 random upgrades appear (upgrade ship scope = see enemy type in node, upgrade
-    ship processor = 50% chance enemy yields 1 item, upgrade speed is unavailable.)\n\n15%
-    chance that Hangar is running a promo and has 1 of those for half the price (1
-    divided by 2=free, only 1 upgrade half price).\n\n-----EMPORIUM_COINS+SCRAP-----\n*Has
-    a Market but with a selection of 8 modules & applicants, and 5 items on sale.\n*Has
-    a Hangar with 2 promos, and 5 upgrade trees available.\n\n"
+  m_Text: "Ship slots can be expanded in any direction/inside a given ship layout\r.\nAll
+    modules have requirements\nStart with 3 slots, and no bench.\nUnstable is now
+    25% chance of explosion\r.\nShip starts with 1000HP.\n8 Fuel is the starting
+    and max amount.\nBench heals crew members and repairs damaged modules.\n2 Emporiums
+    hidden per level\nUpgrade ship scope = see enemy type in node\r, upgrade ship
+    processor = 50% chance enemy yields 1 item\r, upgrade speed is unavailable\r\n"
 --- !u!222 &1964881705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71566,8 +71640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3297, y: 3.4898}
-  m_SizeDelta: {x: 608.4348, y: 216.4788}
+  m_AnchoredPosition: {x: 7.9484, y: -3.6782}
+  m_SizeDelta: {x: 595.1975, y: 188.8183}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002764486
 MonoBehaviour:
@@ -71621,8 +71695,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -71635,7 +71709,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20.76
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
