@@ -3011,6 +3011,7 @@ MonoBehaviour:
   sEffectorDefect: 0
   id: 0
   reqId: 0
+  reqActive: 0
   priceObject: {fileID: 1327145551661578455}
 --- !u!225 &5252401854985802036
 CanvasGroup:
@@ -3844,7 +3845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2828536703130778474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.16, y: 0.83, z: 0}
+  m_LocalPosition: {x: -7.16, y: -1.05, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7848,7 +7849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7029294750228010027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.1, y: 0.83, z: 0}
+  m_LocalPosition: {x: 7.1, y: -1.05, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
