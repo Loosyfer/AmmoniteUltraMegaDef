@@ -102,6 +102,18 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -131,29 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0895cd80fd79e0943b9a9a94c4b3f60d
-      internalID: 1907409452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_1
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 3413.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3887303ab924b047b5bd9e8b28a15d6
-      internalID: -1376266213
+      spriteID: caf07d84968f5ca4e8ad8800cc94ccaf
+      internalID: -1814311137
       vertices: []
       indices: 
       edges: []
@@ -173,71 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fedddcb2ca1e84147a6f5d706715e860
-      internalID: -238971422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_3
-      rect:
-        serializedVersion: 2
-        x: 2046
-        y: 3413.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: babecc4d38d789849baaf82fdf1d3827
-      internalID: -214194884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_4
-      rect:
-        serializedVersion: 2
-        x: 2728
-        y: 3413.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e92470b327526747aa9f60f8eac6f56
-      internalID: 2146298815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_5
-      rect:
-        serializedVersion: 2
-        x: 3410
-        y: 3413.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 934a2f2dbb7f2964fba646c234959d0f
-      internalID: 50012774
+      spriteID: 923b387cfa995df42a862545d556e355
+      internalID: 11453773
       vertices: []
       indices: 
       edges: []
@@ -257,29 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b63b4d73c4dc18a4d958970e80e8ebc5
-      internalID: 1323768218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_7
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 2731.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fdf0a387732b6145b1ac966d443ea3c
-      internalID: 1293418718
+      spriteID: 2ea5e2bb6abcd144e9b3a30c93178b90
+      internalID: 400344627
       vertices: []
       indices: 
       edges: []
@@ -299,50 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d9fea9d90681294ebe964a1e0868fae
-      internalID: 776829157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_9
-      rect:
-        serializedVersion: 2
-        x: 2046
-        y: 2731.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3784900d6986750449b60dbc7dcf1ddc
-      internalID: 1209035346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_10
-      rect:
-        serializedVersion: 2
-        x: 2728
-        y: 2731.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 992dad000ef12b5428a7485a47f2f01a
-      internalID: 704527859
+      spriteID: 00a67af6068bdfd4b9d1380fecf5c3f1
+      internalID: 1159324273
       vertices: []
       indices: 
       edges: []
@@ -362,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c815c32e543598d40b15d17bff2255cd
-      internalID: 707766350
+      spriteID: 87379c967bfd44540b0aac2a1b4975a3
+      internalID: -1490076538
       vertices: []
       indices: 
       edges: []
@@ -383,29 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbb18f4c7b7f9994f8db4a2186fee27a
-      internalID: 951174935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_13
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 2049.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53c3461c315e74543a0e08fb54e14b14
-      internalID: 294863744
+      spriteID: a97e18f5b2a386749977ae7c52419248
+      internalID: -1164685911
       vertices: []
       indices: 
       edges: []
@@ -425,29 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9142377e5eb0e6409a16ab3425d9eb1
-      internalID: 1474880477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_15
-      rect:
-        serializedVersion: 2
-        x: 2046
-        y: 2049.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a836d039f3b26f4396b35cc41ebf769
-      internalID: 1001730431
+      spriteID: f41940958f5033442a044187c67f1092
+      internalID: 849888149
       vertices: []
       indices: 
       edges: []
@@ -467,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf7340b3cf92724bb5193c92c1287fc
-      internalID: -1997393163
+      spriteID: 37cc9dfa78f664048afd8d542c887b3d
+      internalID: 454200858
       vertices: []
       indices: 
       edges: []
@@ -488,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7e16e59c097b2d44a98708d1f81f98f
-      internalID: 301315327
+      spriteID: 590e66ca03cdec94096b3372c5bc5cae
+      internalID: 887501381
       vertices: []
       indices: 
       edges: []
@@ -509,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c1f6921065b004e8cf82a1152948e5
-      internalID: 1950689739
+      spriteID: fd9a774cbd00d414bb2bcfc96fe4c77f
+      internalID: -44344895
       vertices: []
       indices: 
       edges: []
@@ -530,134 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d20e60f8a83c6bd4686b243ea48322e9
-      internalID: -1372592857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_20
-      rect:
-        serializedVersion: 2
-        x: 1364
-        y: 1367.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f67e69e482a43840b78ab9a45ec4426
-      internalID: -783475027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_21
-      rect:
-        serializedVersion: 2
-        x: 2046
-        y: 1367.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4e2d0fdfa3cb044e9e4fcfccad7f146
-      internalID: -1752296057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_22
-      rect:
-        serializedVersion: 2
-        x: 2728
-        y: 1367.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f5e065f5bd7c7b4f855db75704bf9a2
-      internalID: -1059064430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_23
-      rect:
-        serializedVersion: 2
-        x: 3410
-        y: 1367.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d678f5ef995e9984ab189a1b418bbaf5
-      internalID: 689138678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 685.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca23e92662c25a147834239a3bee62f6
-      internalID: -444880286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SideEffects_25
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 685.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f16c69938ed96e4dbb352ede4fcf175
-      internalID: -219555988
+      spriteID: a3056e64cf5b4cb4bb75f16429b070b1
+      internalID: -889112133
       vertices: []
       indices: 
       edges: []
@@ -677,8 +374,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dddb969b9bddc2744a7ae5bc4b695656
-      internalID: 1667224032
+      spriteID: 1790db3f37fa22e4cbeca745cc6132bc
+      internalID: -824528626
       vertices: []
       indices: 
       edges: []
@@ -698,8 +395,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74bb53fa2ce222a4b8188ec5760d919e
-      internalID: 470385617
+      spriteID: 30aedcb6c64fffa46a3d74e336d74939
+      internalID: 85053622
       vertices: []
       indices: 
       edges: []
@@ -719,8 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c60ca5dd03807a0488fd0bf326a63930
-      internalID: 478082854
+      spriteID: 81f65b98f6b19984da6bcc25ca63d570
+      internalID: -1662923486
       vertices: []
       indices: 
       edges: []
@@ -736,38 +433,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SideEffects_10: 704527859
-      SideEffects_16: -1997393163
-      SideEffects_12: 951174935
-      SideEffects_1: -1376266213
-      SideEffects_7: 1293418718
-      SideEffects_26: 1667224032
-      SideEffects_20: -783475027
-      SideEffects_4: 2146298815
-      SideEffects_0: 1907409452
-      SideEffects_14: 1474880477
-      SideEffects_21: -1752296057
-      SideEffects_17: 301315327
-      SideEffects_28: 478082854
-      SideEffects_24: -444880286
-      SideEffects_27: 470385617
-      SideEffects_29: -669198314
-      SideEffects_30: 473092151
-      SideEffects_18: 1950689739
-      SideEffects_22: -1059064430
-      SideEffects_9: 1209035346
-      SideEffects_25: -219555988
-      SideEffects_5: 50012774
-      SideEffects_13: 294863744
-      SideEffects_23: 689138678
-      SideEffects_31: 1960607890
-      SideEffects_3: -214194884
-      SideEffects_15: 1001730431
-      SideEffects_11: 707766350
-      SideEffects_19: -1372592857
-      SideEffects_6: 1323768218
-      SideEffects_8: 776829157
-      SideEffects_2: -238971422
+      SideEffects_10: 1050061924
+      SideEffects_16: 454200858
+      SideEffects_12: -1164685911
+      SideEffects_1: -1127981096
+      SideEffects_7: 1369480028
+      SideEffects_26: -824528626
+      SideEffects_20: -1041751323
+      SideEffects_4: 312911161
+      SideEffects_0: -1814311137
+      SideEffects_14: 849888149
+      SideEffects_21: 993202390
+      SideEffects_17: 887501381
+      SideEffects_28: -1662923486
+      SideEffects_24: -1621022753
+      SideEffects_27: 85053622
+      SideEffects_29: 853531732
+      SideEffects_30: -310510761
+      SideEffects_18: -44344895
+      SideEffects_22: 1626894576
+      SideEffects_9: 135872591
+      SideEffects_25: 914594730
+      SideEffects_5: 1574175544
+      SideEffects_13: -632306966
+      SideEffects_23: 1876319183
+      SideEffects_31: -1676795674
+      SideEffects_3: 600108879
+      SideEffects_15: -868606139
+      SideEffects_11: -1490076538
+      SideEffects_19: -889112133
+      SideEffects_6: 400344627
+      SideEffects_8: 1159324273
+      SideEffects_2: 11453773
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

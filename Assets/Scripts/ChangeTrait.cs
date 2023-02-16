@@ -16,6 +16,7 @@ public class ChangeTrait : MonoBehaviour
             {
                 transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().trait.text = script.memExcel.myMembers.members[index].trait;
                 transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().traitDetailsText.text = script.memExcel.myMembers.members[index].tEffect;
+                transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<MemberHUD>().id = index;
             }
         }
     }

@@ -18,6 +18,7 @@ public class RerollFirstTrait : MonoBehaviour
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.trait.text = script.memExcel.myMembers.members[random].trait;
                 memberHUD.traitDetailsText.text = script.memExcel.myMembers.members[random].trait + " = " + script.memExcel.myMembers.members[random].tEffect;
+                memberHUD.id = random;
             }
         }
     }

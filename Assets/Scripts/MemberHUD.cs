@@ -25,6 +25,7 @@ public class MemberHUD : MonoBehaviour
     public bool insideField = false;
     public int id;
     public int id2;
+    public bool id2Active;
     public int professionId;
 
     public void SetHUD(Member member)
@@ -41,6 +42,7 @@ public class MemberHUD : MonoBehaviour
         traitPrice.text = member.traitPrice.ToString();
         performance = member.performance;
         health = member.health;
+        id2Active = false;
 
     }
 

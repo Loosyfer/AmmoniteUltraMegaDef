@@ -9,16 +9,11 @@ public class SuperTrait : MonoBehaviour
     private GameObject memberorModule;
     public MemberExcel memExcel;
     private List<MemberExcel.Member> superTraits = new List<MemberExcel.Member>();
+    private List<int> indexes = new List<int>();
 
     private void Awake()
     {
-        for (int j = 0; j < script.memExcel.myMembers.members.Length; j++)
-        {
-            if (script.memExcel.myMembers.members[j].super)
-            {
-                superTraits.Add(script.memExcel.myMembers.members[j]);
-            }
-        }
+
     }
 
     public void SetSuperTrait()
@@ -28,6 +23,7 @@ public class SuperTrait : MonoBehaviour
             if (script.memExcel.myMembers.members[j].super)
             {
                 superTraits.Add(script.memExcel.myMembers.members[j]);
+                indexes.Add(j);
             }
         }
 
@@ -40,6 +36,9 @@ public class SuperTrait : MonoBehaviour
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.secTrait.text = superTraits[random].trait;
                 memberHUD.secTraitDescription.text = superTraits[random].trait + " = " + superTraits[random].tEffect;
+                memberHUD.secTraitDescription.text = memberHUD.secTraitDescription.text.Replace("*", ",");
+                memberHUD.id2 = indexes[random];
+                memberHUD.id2Active = true;
             }
         }
     }

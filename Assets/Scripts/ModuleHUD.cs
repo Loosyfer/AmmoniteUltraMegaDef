@@ -41,6 +41,7 @@ public class ModuleHUD : MonoBehaviour
     public int sEffectorDefect;
     public int id;
     public int reqId;
+    public bool reqActive;
     public GameObject priceObject;
 
     public void SetHUD(Module module)
@@ -61,6 +62,7 @@ public class ModuleHUD : MonoBehaviour
         unstable = false;
         detached = false;
         wild = false;
+        reqActive = false;
     }
 
     void Update()

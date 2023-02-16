@@ -9,16 +9,11 @@ public class EruditeTrait : MonoBehaviour
     private GameObject memberorModule;
     public MemberExcel memExcel;
     private List<MemberExcel.Member> eruditeTraits = new List<MemberExcel.Member>();
+    private List<int> indexes = new List<int>();
 
     private void Awake()
     {
-        for (int j = 0; j < script.memExcel.myMembers.members.Length; j++)
-        {
-            if (script.memExcel.myMembers.members[j].erudite)
-            {
-                eruditeTraits.Add(script.memExcel.myMembers.members[j]);
-            }
-        }
+
     }
 
     public void SetEruditeTrait()
@@ -28,6 +23,7 @@ public class EruditeTrait : MonoBehaviour
             if (script.memExcel.myMembers.members[j].erudite)
             {
                 eruditeTraits.Add(script.memExcel.myMembers.members[j]);
+                indexes.Add(j);
             }
         }
 
@@ -40,6 +36,9 @@ public class EruditeTrait : MonoBehaviour
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.secTrait.text = eruditeTraits[random].trait;
                 memberHUD.secTraitDescription.text = eruditeTraits[random].trait + " = " + eruditeTraits[random].tEffect;
+                memberHUD.secTraitDescription.text = memberHUD.secTraitDescription.text.Replace("*", ",");
+                memberHUD.id2 = indexes[random];
+                memberHUD.id2Active = true;
             }
         }
     }

@@ -732,7 +732,7 @@ public class BattleSystem : MonoBehaviour
             return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
-        int k = UnityEngine.Random.Range(0, 13);
+        int k = UnityEngine.Random.Range(0, 10);
         if (!int.TryParse(s, out int index))
         {
             Debug.Log("Try inputting a valid integer");
@@ -755,6 +755,7 @@ public class BattleSystem : MonoBehaviour
         Yrt.price = modExcel.myModules.modules[index].price;
         Yrt.type = modExcel.myModules.modules[index].type;
         Yrt.id = index;
+        Yrt.reqActive = true;
         switch (Yrt.type)
         {
             case (ModuleType)0:
@@ -788,50 +789,56 @@ public class BattleSystem : MonoBehaviour
                         Yrt.reqId = 0;
                         break;
                     case 1:
-                        go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
-                        Yrt.reqId = 1;
+                        int l = UnityEngine.Random.Range(0, 4);
+                        switch (l)
+                        {
+                            case 0:
+                                go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                                Yrt.reqId = 1;
+                                break;
+                            case 1:
+                                go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                                Yrt.reqId = 2;
+                                break;
+                            case 2:
+                                go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                                Yrt.reqId = 3;
+                                break;
+                            case 3:
+                                go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                                Yrt.reqId = 4;
+                                break;
+                        }
                         break;
                     case 2:
-                        go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
-                        Yrt.reqId = 2;
-                        break;
-                    case 3:
-                        go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
-                        Yrt.reqId = 3;
-                        break;
-                    case 4:
-                        go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
-                        Yrt.reqId = 4;
-                        break;
-                    case 5:
                         go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
                         Yrt.reqId = 5;
                         break;
-                    case 6:
+                    case 3:
                         go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
                         Yrt.reqId = 6;
                         break;
-                    case 7:
+                    case 4:
                         go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
                         Yrt.reqId = 7;
                         break;
-                    case 8:
+                    case 5:
                         go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
                         Yrt.reqId = 8;
                         break;
-                    case 9:
+                    case 6:
                         go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
                         Yrt.reqId = 9;
                         break;
-                    case 10:
+                    case 7:
                         go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
                         Yrt.reqId = 10;
                         break;
-                    case 11:
+                    case 8:
                         go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
                         Yrt.reqId = 11;
                         break;
-                    case 12:
+                    case 9:
                         go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
                         Yrt.reqId = 12;
                         break;
@@ -1245,7 +1252,7 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < cyclelength; i++)
         {
             int j = UnityEngine.Random.Range(0, 225);
-            int k = UnityEngine.Random.Range(0, 13);
+            int k = UnityEngine.Random.Range(0, 10);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
@@ -1281,6 +1288,7 @@ public class BattleSystem : MonoBehaviour
             }
             if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)
             {
+                Yrt.reqActive = true;
                 switch (modExcel.myModules.modules[j].requirement)
                 {
                     case "":
@@ -1293,50 +1301,56 @@ public class BattleSystem : MonoBehaviour
                                 Yrt.reqId = 0;
                                 break;
                             case 1:
-                                go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
-                                Yrt.reqId = 1;
+                                int l = UnityEngine.Random.Range(0, 4);
+                                switch (l)
+                                {
+                                    case 0:
+                                        go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                                        Yrt.reqId = 1;
+                                        break;
+                                    case 1:
+                                        go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                                        Yrt.reqId = 2;
+                                        break;
+                                    case 2:
+                                        go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                                        Yrt.reqId = 3;
+                                        break;
+                                    case 3:
+                                        go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                                        Yrt.reqId = 4;
+                                        break;
+                                }
                                 break;
                             case 2:
-                                go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
-                                Yrt.reqId = 2;
-                                break;
-                            case 3:
-                                go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
-                                Yrt.reqId = 3;
-                                break;
-                            case 4:
-                                go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
-                                Yrt.reqId = 4;
-                                break;
-                            case 5:
                                 go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
                                 Yrt.reqId = 5;
                                 break;
-                            case 6:
+                            case 3:
                                 go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
                                 Yrt.reqId = 6;
                                 break;
-                            case 7:
+                            case 4:
                                 go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
                                 Yrt.reqId = 7;
                                 break;
-                            case 8:
+                            case 5:
                                 go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
                                 Yrt.reqId = 8;
                                 break;
-                            case 9:
+                            case 6:
                                 go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
                                 Yrt.reqId = 9;
                                 break;
-                            case 10:
+                            case 7:
                                 go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
                                 Yrt.reqId = 10;
                                 break;
-                            case 11:
+                            case 8:
                                 go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
                                 Yrt.reqId = 11;
                                 break;
-                            case 12:
+                            case 9:
                                 go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
                                 Yrt.reqId = 12;
                                 break;
@@ -2383,6 +2397,7 @@ public class BattleSystem : MonoBehaviour
         SaveData.current.sideE.Clear();
         SaveData.current.sEffectorDefect.Clear();
         SaveData.current.sEffectSide.Clear();
+        SaveData.current.reqActive.Clear();
         SaveData.current.memPosX.Clear();
         SaveData.current.memPosY.Clear();
         SaveData.current.memPosZ.Clear();
@@ -2391,6 +2406,7 @@ public class BattleSystem : MonoBehaviour
         SaveData.current.memHealth.Clear();
         SaveData.current.memPerformance.Clear();
         SaveData.current.memProfessionId.Clear();
+        SaveData.current.memId2Active.Clear();
 
         foreach(GameObject module in modules)
         {
@@ -2402,6 +2418,7 @@ public class BattleSystem : MonoBehaviour
             SaveData.current.sideE.Add(module.transform.GetComponent<ModuleHUD>().sideEffectId);
             SaveData.current.sEffectorDefect.Add(module.transform.GetComponent<ModuleHUD>().sEffectorDefect);
             SaveData.current.sEffectSide.Add(module.transform.GetComponent<ModuleHUD>().sEffectSide);
+            SaveData.current.reqActive.Add(module.transform.GetComponent<ModuleHUD>().reqActive);
         }
         foreach (GameObject member in members)
         {
@@ -2413,6 +2430,7 @@ public class BattleSystem : MonoBehaviour
             SaveData.current.memHealth.Add(member.transform.GetComponent<MemberHUD>().health);
             SaveData.current.memPerformance.Add(member.transform.GetComponent<MemberHUD>().performance);
             SaveData.current.memProfessionId.Add(member.transform.GetComponent<MemberHUD>().professionId);
+            SaveData.current.memId2Active.Add(member.transform.GetComponent<MemberHUD>().id2Active);
 
         }
         //SaveData.current.posX = modules[0].transform.position.x;
@@ -2443,6 +2461,7 @@ public class BattleSystem : MonoBehaviour
             Yrt.price = modExcel.myModules.modules[j].price;
             Yrt.type = modExcel.myModules.modules[j].type;
             Yrt.id = j;
+            Yrt.reqId = SaveData.current.req[i];
             switch (Yrt.type)
                 {
                     case (ModuleType)0:
@@ -2464,73 +2483,74 @@ public class BattleSystem : MonoBehaviour
                         Yrt.typeDetails.text = modInfo.typeStacking[5];
                         break;
                 }
-            switch (modExcel.myModules.modules[j].requirement)
+            if (SaveData.current.reqActive[i])
             {
-                case "":
-                    int k = UnityEngine.Random.Range(0, 13);
-                    Yrt.req.text = modInfo.randomReq[k].ToString();
-                    Yrt.reqType = 1;
-                    switch (k)
-                    {
-                        case 0:
-                            obj.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
-                            Yrt.reqId = 0;
-                            break;
-                        case 1:
-                            obj.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
-                            Yrt.reqId = 1;
-                            break;
-                        case 2:
-                            obj.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
-                            Yrt.reqId = 2;
-                            break;
-                        case 3:
-                            obj.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
-                            Yrt.reqId = 3;
-                            break;
-                        case 4:
-                            obj.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
-                            Yrt.reqId = 4;
-                            break;
-                        case 5:
-                            obj.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
-                            Yrt.reqId = 5;
-                            break;
-                        case 6:
-                            obj.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
-                            Yrt.reqId = 6;
-                            break;
-                        case 7:
-                            obj.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
-                            Yrt.reqId = 7;
-                            break;
-                        case 8:
-                            obj.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
-                            Yrt.reqId = 8;
-                            break;
-                        case 9:
-                            obj.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
-                            Yrt.reqId = 9;
-                            break;
-                        case 10:
-                            obj.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
-                            Yrt.reqId = 10;
-                            break;
-                        case 11:
-                            obj.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
-                            Yrt.reqId = 11;
-                            break;
-                        case 12:
-                            obj.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
-                            Yrt.reqId = 12;
-                            break;
-                    }
-                    break;
-                default:
-                    Yrt.req.text = modExcel.myModules.modules[j].requirement;
-                    Yrt.reqType = 2;
-                    obj.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
-                    break;
+                switch (modExcel.myModules.modules[j].requirement)
+                {
+                    case "":
+                        Yrt.reqType = 1;
+                        switch (Yrt.reqId)
+                        {
+                            case 0:
+                                obj.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                                Yrt.reqId = 0;
+                                break;
+                            case 1:
+                                obj.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                                Yrt.reqId = 1;
+                                break;
+                            case 2:
+                                obj.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                                Yrt.reqId = 2;
+                                break;
+                            case 3:
+                                obj.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                                Yrt.reqId = 3;
+                                break;
+                            case 4:
+                                obj.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                                Yrt.reqId = 4;
+                                break;
+                            case 5:
+                                obj.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                                Yrt.reqId = 5;
+                                break;
+                            case 6:
+                                obj.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                                Yrt.reqId = 6;
+                                break;
+                            case 7:
+                                obj.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                                Yrt.reqId = 7;
+                                break;
+                            case 8:
+                                obj.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                                Yrt.reqId = 8;
+                                break;
+                            case 9:
+                                obj.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                                Yrt.reqId = 9;
+                                break;
+                            case 10:
+                                obj.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                                Yrt.reqId = 10;
+                                break;
+                            case 11:
+                                obj.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                                Yrt.reqId = 11;
+                                break;
+                            case 12:
+                                obj.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                                Yrt.reqId = 12;
+                                break;
+                        }
+                        break;
+                    default:
+                        Yrt.req.text = modExcel.myModules.modules[j].requirement;
+                        Yrt.reqType = 2;
+                        obj.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
+                        break;
+                }
             }
             Destroy(obj.transform.GetChild(8).gameObject);
             Image imagen = obj.transform.GetComponent<Image>();
@@ -2622,6 +2642,7 @@ public class BattleSystem : MonoBehaviour
             int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = SaveData.current.memId[i];
             int m = SaveData.current.memProfessionId[i];
+            int n = SaveData.current.memId2[i];
             Yrt.nameText.text = membersInfo.names[l];
             Yrt.profDetailsText.text = (ProfessionType)m + " = " + membersInfo.profDescription[m];
             Yrt.traitDetailsText.text = memExcel.myMembers.members[k].trait + " = " + memExcel.myMembers.members[k].tEffect;
@@ -2632,6 +2653,13 @@ public class BattleSystem : MonoBehaviour
             Yrt.traitPrice.text = Yrt.trait.text + "(" + memExcel.myMembers.members[k].price.ToString() + ") + " + Yrt.profession + "(" + Yrt.profPrice.text + ") = " + (membersInfo.profPrice[m] + memExcel.myMembers.members[k].price).ToString();
             Yrt.totalPrice.text = (membersInfo.profPrice[m] + memExcel.myMembers.members[k].price).ToString();
             Yrt.id = k;
+            Yrt.id2 = n;
+            if (SaveData.current.memId2Active[i])
+                {
+                    Yrt.secTrait.text = memExcel.myMembers.members[n].trait;
+                    Yrt.secTraitDescription.text = memExcel.myMembers.members[n].trait + " = " + memExcel.myMembers.members[n].tEffect;
+                    Yrt.secTraitDescription.text = Yrt.secTraitDescription.text.Replace("*", ",");
+            }
             Yrt.professionId = m;
             Yrt.performance = SaveData.current.memPerformance[i];
             Yrt.health = SaveData.current.memHealth[i];
