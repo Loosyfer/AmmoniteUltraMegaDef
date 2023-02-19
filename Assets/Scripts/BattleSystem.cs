@@ -54,7 +54,11 @@ public class BattleSystem : MonoBehaviour
     public GameObject rockets;
     public GameObject spark;
     public GameObject currency;
+    public GameObject currency2;
+    public GameObject fuel;
     public GameObject ReqOnOff;
+    public GameObject surprise;
+    public GameObject itemSpawner;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -112,11 +116,6 @@ public class BattleSystem : MonoBehaviour
             modExcel.myModules.modules[i].requirement = modData[(5 * (i + 1)) + 3];
             if (int.TryParse(modData[(5 * (i + 1)) + 4], out int pri))
                 modExcel.myModules.modules[i].price = pri;
-            else
-            {
-                Debug.Log(i);
-                Debug.Log(modData[(6 * (i + 1)) + 5]);
-            }
         }
 
         string[] memData = Resources.Load<TextAsset>("Excel/Members").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
@@ -1231,6 +1230,29 @@ public class BattleSystem : MonoBehaviour
         
     }
 
+    public void Shop()
+    {
+        int l = UnityEngine.Random.Range(0, 100);
+        switch (l)
+        {
+            case int n when (n <= 70):
+                Generate("5");
+                break;
+            case int n when (n > 70 && n <= 90):
+                Generate("4");
+                break;
+            default:
+                Generate("6");
+                break;
+        }
+        l = UnityEngine.Random.Range(0, 100);
+        if (l <= 10)
+            surprise.gameObject.SetActive(true);
+        l = UnityEngine.Random.Range(0, 100);
+        if (l <= 25)
+            itemSpawner.gameObject.GetComponent<ItemSpawner>().SpawnObject();
+    }
+
     public void Generate(string s)
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -1241,7 +1263,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (cyclelength > 5)
+        if (cyclelength > 6)
         {
             Debug.Log("Your number was too high");
             return;
@@ -1915,7 +1937,7 @@ public class BattleSystem : MonoBehaviour
         if (slot.GetComponent<ItemSlot>().member != null)
         {
             if (slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health != 0)
-                slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health--;
+                slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health = slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health - monster.GetComponent<MonsterHUD>().crewDMG;
             switch (slot.GetComponent<ItemSlot>().member.GetComponent<MemberHUD>().health)
             {
                 case 4:
@@ -2398,6 +2420,7 @@ public class BattleSystem : MonoBehaviour
         SaveData.current.sEffectorDefect.Clear();
         SaveData.current.sEffectSide.Clear();
         SaveData.current.reqActive.Clear();
+        SaveData.current.memName.Clear();
         SaveData.current.memPosX.Clear();
         SaveData.current.memPosY.Clear();
         SaveData.current.memPosZ.Clear();
@@ -2407,6 +2430,10 @@ public class BattleSystem : MonoBehaviour
         SaveData.current.memPerformance.Clear();
         SaveData.current.memProfessionId.Clear();
         SaveData.current.memId2Active.Clear();
+        SaveData.current.coinsLeft = currency.transform.GetComponent<Currency>().money;
+        SaveData.current.scrapLeft = currency2.transform.GetComponent<Currency>().money;
+        SaveData.current.fuelLeft = fuel.transform.GetComponent<UpdateFuel>().fuel;
+        SaveData.current.healthLeft = playerHPBar.transform.GetComponent<Slider>().value;
 
         foreach(GameObject module in modules)
         {
@@ -2431,6 +2458,7 @@ public class BattleSystem : MonoBehaviour
             SaveData.current.memPerformance.Add(member.transform.GetComponent<MemberHUD>().performance);
             SaveData.current.memProfessionId.Add(member.transform.GetComponent<MemberHUD>().professionId);
             SaveData.current.memId2Active.Add(member.transform.GetComponent<MemberHUD>().id2Active);
+            SaveData.current.memName.Add(member.transform.GetComponent<MemberHUD>().nameText.text);
 
         }
         //SaveData.current.posX = modules[0].transform.position.x;
@@ -2443,6 +2471,10 @@ public class BattleSystem : MonoBehaviour
     {
         SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/savedGame.save");
 
+        currency.transform.GetComponent<Currency>().ChangeCurrency(SaveData.current.coinsLeft.ToString());
+        currency2.transform.GetComponent<Currency>().ChangeCurrency(SaveData.current.scrapLeft.ToString());
+        fuel.transform.GetComponent<UpdateFuel>().UpdateF((SaveData.current.fuelLeft - 8).ToString());
+        playerHPBar.transform.GetComponent<DecreaseHPShip>().ReadStringInput((-(3000 - SaveData.current.healthLeft)).ToString());
         //GameObject obj = Instantiate(moduleGenPrefab, new Vector3(SaveData.current.posX, SaveData.current.posY, SaveData.current.posZ), Quaternion.identity) as GameObject;
         for (int i = 0; i < SaveData.current.posX.Count; i++)
         {
@@ -2639,11 +2671,10 @@ public class BattleSystem : MonoBehaviour
             obj.transform.parent = membersFolder.transform;
             MemberHUD Yrt = obj.GetComponent<MemberHUD>();
             members.Add(obj);
-            int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = SaveData.current.memId[i];
             int m = SaveData.current.memProfessionId[i];
             int n = SaveData.current.memId2[i];
-            Yrt.nameText.text = membersInfo.names[l];
+            Yrt.nameText.text = SaveData.current.memName[i];
             Yrt.profDetailsText.text = (ProfessionType)m + " = " + membersInfo.profDescription[m];
             Yrt.traitDetailsText.text = memExcel.myMembers.members[k].trait + " = " + memExcel.myMembers.members[k].tEffect;
             Yrt.traitDetailsText.text = Yrt.traitDetailsText.text.Replace("*", ",");

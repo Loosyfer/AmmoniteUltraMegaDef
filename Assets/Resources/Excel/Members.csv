@@ -6,16 +6,16 @@ Cannibal,Every 2 turns they will bite an adjacent crew member for -1HP while the
 Claustrophobic,If their module isn't isolated* they become Lunatic at the end of the battle.,,0
 Hypochondriac,If adjacent to someone sick or poisoned* they become Lunatic.,,0
 Constipated,Upon death* they explode and shit flies everywhere* making their module and all adjacent modules excrement-flooded.,,0
-Scared of the Dark,60/50/40/30/20% Performance depending on the level of depth of the Dive.,,-1
+Scared of the Dark,60/50/40/30/20% Performance depending on the level of depth of the expedition.,,-1
 Mysterious,Once recruited* they gain a random secondary trait.,,0
-Glutton,If they are healed by Tasty Fish Meal* Tasty Pizza* Expired Sushi* Box of Chocolates or Acid Lemons* they gain 1 max HP.,,2
+Glutton,If they are healed by Tasty Seafood* Tasty Pizza* Expired Sushi* Box of Chocolates or Acid Lemons* they gain 1 max HP. // They heal 2HP instead of 1HP from those items. // 1st effect is kinda broken whenever you can reliably produce food* so probably needs to be the 2nd effect* and then Sushi Lover RIP.,,2
 Rookie,50% chance they are Stunned at the start of the battle.,,-1
 Rebel,At the start of each battle* they move to a random adjacent module.,,-1
 Prone to Panic Attacks,If their module is hit* they become stunned.,,-1
 Big D Energy,Until the end of the battle* copies the trait of a random adjacent crew member.,Positive,2
-Copycat,Copies the trait of a random adjacent crew member.,Positive,3
+Lacks Personality,Copies the trait of a random adjacent crew member.,Positive,3
 Pervert,-20%P if adjacent to a crew member of the opposite gender.,,0
-Messy,After 8 turns* their module becomes excrement flooded.,,0
+Messy,The module that they were in will be excrement-flooded at the start of the next battle* for one battle only.,,0
 Competitive,-20%P if alone* but it will increase to match the best-performing adjacent crew member.,Positive,3
 Dictator,+5%P to adjacent crew members* but those exposed to Dictator will forever have -10% base performance when not adjacent to Dictator.,,1
 Quitter,After each battle* there's a 20% chance they quit the expedition for good.,,-1
@@ -56,7 +56,7 @@ Elderly,15% chance of dropping dead at the end of a battle.,,-1
 Boss Wannabe,At battle start* 1 random module will swap around with another.,,-1
 Masochist,-20%P* but +10%P every time they lose HP.,,2
 Sadistic,If an adjacent crew member loses health* +10%P.,Positive,3
-Could be 2 Kids in a Trenchcoat,50% chance that after being recruited they divide into two cadets with 40% base performance.,,2
+Could be 2 Kids in a Trenchcoat,50% chance that after being recruited they divide into two cadets with 40% base performance.,,3
 Cthulhu Worshipper,If an enemy has tentacles* every 2 turns there’s a 20% chance they leave the ship to embrace the enemy and die.,,0
 Selfish,If they're about to get hit by the enemy* they swap modules with the nearest crew member right before the hit.,,2
 Procrastinator,Every battle* they won’t have a profession until 5 turns have passed.,,0
@@ -108,7 +108,7 @@ Passionate About Science,+10%P if they are a Doctor* Scientist or Biologist. If 
 Massage Expert,+5%P to the crew member adjacent to the left.,Positive,2
 Chronic Masturbator,After 5 battles they will go blind and gain Bad Eyesight as their secondary trait.,,0
 Uncontrolled Illusionist,5 turns after a battle starts* there’s a 50% chance the enemy turns out to be a different kind of enemy.,,-1
-Allergic to Seafood,Will be Sick for as long as they’re not in the rightmost column in the ship.,,-1
+Allergic to Seafood,Will be Sick for as long as they’re not in the rightmost column in the ship. Instead of healing* -1HP if they take Expired Sushi or Tasty Seafood.,,-1
 Having a Bad Break,At battle start* there’s a 50% chance they become afflicted with 1 random Ailment (except for Lunatic).,,-1
 Escape Artist,If their module explodes* they escape to the nearest empty module or to the bench right before the explosion.,Positive,2
 Speaks Fish Language,Every time the enemy attacks* there’s a 20% chance they talk a small enemy creature into not attacking and the hit is cancelled.,Positive,2
@@ -130,11 +130,11 @@ Plays With Boogers,Once placed in their module* they get stuck and can’t be mo
 He Pisses Himself,If this or an adjacent module is hit* 50% chance their module becomes water-flooded.,,-1
 Shoddy Plumber,If their or an adjacent module becomes water-flooded* they will fix it in 2 turns. 4 turns later* there’s a 50% chance the plumbing collapses and the module becomes excrement-flooded.,,0
 Cleaning Freak,If their module is water-flooded or excrement-flooded* they become Lunatic* but +5%P while there's no flooding at all in the ship.,,1
-Sushi Chef,If hit by the enemy* produces 1 Tasty Fish Meal.,Positive,3
+Sushi Chef,If hit by the enemy* 33% chance that it produces 1 Tasty Seafood.,Positive,3
 One-trick Pony,+10%P in modules of the same type as the first module they were ever placed in* and -20%P in other types of module.,,1
 Short-tempered,If adjacent crew members are under 40%P* their trait will change to Lunatic until the end of the battle.,,0
 Easily Distracted,If an adjacent module is disturbed* -20%P for 2 turns.,,0
-Seafood Lover,Once every 4 turns* they will move closer to the nearest Organic module. When adjacent to one* they will eat it (the occupant relocates to an empty module or dies) and heal to full HP.,,1
+Seafood Eater,Once every 4 turns* they will move closer to the nearest Organic module. When adjacent to one* they will eat it (the occupant relocates to an empty module or dies) and heal to full HP.,,1
 Ate an Expired Yoghourt,At battle start* there's a 40% chance they excrement-flood their module. After not excrement-flooding twice in a row* they never do it again.,,0
 Heavy Smoker,Every 4 turns* a Smoke Bubble is formed in the vicinity (even if you don’t have an available slot)* but at the end of each battle -1HP.,,1
 Infested with Bedbugs,Any module that they’re in is marked because it becomes infested with bedbugs. Any other crew member in that module has a 50% chance of becoming Lunatic at the end of the battle.,,0
@@ -152,7 +152,7 @@ Alien-looking,60% base performance* but at the start of a battle* 40% chance of 
 Caveman,-20%P in Scientific modules* +10%P Organic modules and those with the wild element.,,1
 Had Plastic Surgery,At the end of each battle* there's an increase in 20% chance that their trait changes to Caveman* starting at 0%.,,1
 All-nighter Metalhead 2,In the next battle after a victorious battle* those that were adjacent to them will become Sleepy.,,0
-Sushi Lover,Heals +2HP instead of +1HP when eating a Tasty Fish Meal. Eats Monstrous crew members and enemy parasites healing +2HP.,Positive,3
+Sushi Lover,Heals +2HP instead of +1HP when eating a Tasty Seafood or Expired Sushi. Eats Monstrous crew members and enemy parasites healing +2HP. // It kinda overlaps with Glutton.,Positive,3
 Never Reads Manuals,If their module has requirements* they’re ignored but the module is due to become permanently unstable after 5 battles.,,1
 Home Chef,After every battle* any adjacent members will have a 3% chance of gaining the Glutton trait.,Positive,2
 Also a Bartender,After every battle* any adjacent members will have a 33% chance of gaining the Drunkard trait.,,0
@@ -179,7 +179,7 @@ Loves Comfort,+5%P in Normal modules* -10%P in other types of module.,,1
 Professor,If adjacent to a Cadet for 2 battles in a row* the Cadet will become their profession.,Positive,3
 Loves Fireworks,If a Module explodes* +20%P.,Positive,2
 Posh Millionaire,-20%P unless their module cost 8 coins* in which case there's a 50% chance they tip you 1 coin at the end of each battle.,Positive,3
-Creepy Stalker,-20% Performance unless their Module is adjacent to the Captain. Unless they die* they will be likely to show up in future Dives (on average showing once every 4 Shops).,,0
+Creepy Stalker,-20% Performance unless their Module is adjacent to the Captain. Unless they die* they will be likely to show up in future expeditions (on average showing once every 4 Shops).,,0
 Kidnapper,At the end of the battle* there's a 30% chance an adjacent crew member disappears and doesn't return unless you pay 1 coin.,,-1
 Builds Ships in Bottles,If disturbed by an adjacent module* -1 HP to the crew member in the module the disturbance came from. If undisturbed for a battle* produces the item Ship in a bottle.,,1
 Gifted,Only applies to men. At the end of battle* there's a 25% chance that a random woman on the ship becomes Pregnant.,Positive,3
@@ -253,6 +253,8 @@ Special Bonding,Will bond to a random adjacent crew member in their first battle
 Loves Instruction Manuals,+10%P If they’re in a module with fulfilled requirements.,Positive,3
 Hates Complex Work,-20%P but +10%P instead if their module is inactive.,,0
 Flirter,-20%P* but +5%P instead if they're adjacent to someone of the opposite sex.,,1
+Copycat,At turn 8 and until the end of battle* their module copies a random adjacent module. // At battle start* their module copies a random module in the bench or ship.,Positive,3
+Careless Tenant,Will pay you a rent of 1 coin at the end of each battle* however they don't treat their module well* so it will gain a defect at the end of the battle* and if it already had one* then it becomes damaged.,,0
 Monstrous,Every 4 turns* -1HP to an adjacent crew member* unless they’re also Monstrous. If hit by the enemy* they hit back for 50 damage.,Exclusive,
 Doomed,Performance is halved and will inevitably die after 20 turns.,Exclusive,
 Reanimated,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -1%/2turns.,Exclusive,

@@ -14,6 +14,7 @@ public class MonsterHUD : MonoBehaviour
     public string flavour;
     public int dPT;
     public int health;
+    public int crewDMG;
     public TMP_Text instructionsPanel;
     public TMP_Text flavourPanel;
 

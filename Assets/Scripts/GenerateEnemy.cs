@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class GenerateEnemy : MonoBehaviour
 {
@@ -14,10 +15,35 @@ public class GenerateEnemy : MonoBehaviour
     public GameObject enemyHB;
     public GameObject monster;
     public GameObject monsterName;
+    public EnemiesExcel enemiesExcel;
+
+    private void Start()
+    {
+        string[] enemiesData = Resources.Load<TextAsset>("Excel/Enemies").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
+        int tableSize = (enemiesData.Length / 8) - 1;
+        enemiesExcel.myEnemies.enemies = new EnemiesExcel.Enemy[tableSize];
+
+        for (int i = 0; i < tableSize; i++)
+        {
+            enemiesExcel.myEnemies.enemies[i] = new EnemiesExcel.Enemy();
+            enemiesExcel.myEnemies.enemies[i].name = enemiesData[(8 * (i + 1))];
+            enemiesExcel.myEnemies.enemies[i].health = int.Parse(enemiesData[(8 * (i + 1)) + 1]);
+            enemiesExcel.myEnemies.enemies[i].dPT = int.Parse(enemiesData[(8 * (i + 1)) + 2]);
+            enemiesExcel.myEnemies.enemies[i].effect = enemiesData[(8 * (i + 1)) + 3];
+            enemiesExcel.myEnemies.enemies[i].flavour = enemiesData[(8 * (i + 1)) + 4];
+            enemiesExcel.myEnemies.enemies[i].level = int.Parse(enemiesData[(8 * (i + 1)) + 5]);
+            if (enemiesData[(8 * (i + 1)) + 6] == "Boss")
+                enemiesExcel.myEnemies.enemies[i].type = true;
+            else
+                enemiesExcel.myEnemies.enemies[i].type = false;
+            enemiesExcel.myEnemies.enemies[i].crewDMG = int.Parse(enemiesData[(8 * (i + 1)) + 7]);
+        }
+    }
+
 
     public void Generate()
     {
-        int random;
+        int random = 0;
         index = malla2.transform.GetComponent<MapSwitcher>().index;
         monster.SetActive(true);
         if (monster.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Monster_Scope") && monster.GetComponent<SpriteRenderer>().sprite != null)
@@ -30,71 +56,36 @@ public class GenerateEnemy : MonoBehaviour
             switch (index)
             {
                 case 0:
-                    random = Random.Range(0, 8);
-                    malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
-                    enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
-                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
+                    random = UnityEngine.Random.Range(0, 4);
                     break;
                 case 1:
-                    random = Random.Range(10, 19);
-                    malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
-                    enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
-                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
+                    random = UnityEngine.Random.Range(5, 9);
                     break;
                 case 2:
-                    random = Random.Range(22, 32);
-                    malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
-                    enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
-                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
+                    random = UnityEngine.Random.Range(10, 19);
                     break;
                 case 3:
-                    random = Random.Range(34, 44);
-                    malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
-                    enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
-                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
+                    random = UnityEngine.Random.Range(21, 32);
                     break;
                 case 4:
-                    random = Random.Range(46, 53);
-                    malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = monsters.instructions[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = monsters.flavour[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = monsters.names[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = monsters.dPT[random];
-                    malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().maxValue = monsters.health[random];
-                    enemyHB.transform.GetComponent<Slider>().value = monsters.health[random];
-                    enemyHB.transform.GetChild(3).GetComponent<Text>().text = monsters.health[random].ToString() + " HP / " + monsters.health[random].ToString() + " HP";
-                    enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = monster.transform.GetComponent<MonsterHUD>().dPT + " DPT ";
+                    random = UnityEngine.Random.Range(34, 44);
                     break;
+                case 5:
+                    random = UnityEngine.Random.Range(46, 53);
+                    break;
+
             }
+            malla.transform.GetChild(34).GetComponent<SpriteRenderer>().sprite = monsters.icons[random];
+            malla.transform.GetChild(34).GetComponent<MonsterHUD>().instructions = enemiesExcel.myEnemies.enemies[random].effect;
+            malla.transform.GetChild(34).GetComponent<MonsterHUD>().flavour = enemiesExcel.myEnemies.enemies[random].flavour;
+            malla.transform.GetChild(34).GetComponent<MonsterHUD>().name = enemiesExcel.myEnemies.enemies[random].name;
+            malla.transform.GetChild(34).GetComponent<MonsterHUD>().dPT = enemiesExcel.myEnemies.enemies[random].dPT;
+            malla.transform.GetChild(34).GetComponent<MonsterHUD>().health = enemiesExcel.myEnemies.enemies[random].health;
+            malla.transform.GetChild(34).GetComponent<MonsterHUD>().crewDMG = enemiesExcel.myEnemies.enemies[random].crewDMG;
+            enemyHB.transform.GetComponent<Slider>().maxValue = enemiesExcel.myEnemies.enemies[random].health;
+            enemyHB.transform.GetComponent<Slider>().value = enemiesExcel.myEnemies.enemies[random].health;
+            enemyHB.transform.GetChild(3).GetComponent<Text>().text = enemiesExcel.myEnemies.enemies[random].health.ToString() + " HP / " + enemiesExcel.myEnemies.enemies[random].health.ToString() + " HP";
+            enemyHB.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = enemiesExcel.myEnemies.enemies[random].dPT + " DPT ";
             monsterName.gameObject.SetActive(false);
             monster.GetComponent<Animator>().Play("Monster_Scope");
         }

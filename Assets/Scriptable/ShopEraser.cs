@@ -10,6 +10,7 @@ public class ShopEraser : MonoBehaviour
     private Vector2 minPosition = new Vector2(189.6f, 912.5f);
     private Vector2 maxPosition = new Vector2(1004.4f, 1063.85f);
     private List<GameObject> extraList = new List<GameObject>();
+    public ItemSpawner itemSpawner;
 
     public void Erase()
     {
@@ -54,5 +55,20 @@ public class ShopEraser : MonoBehaviour
             Destroy(mega);
         }
         extraList.Clear();
+
+        foreach (GameObject objeto in itemSpawner.objectList)
+        {
+            if (!(objeto.transform.position.x < minPosition[0] || objeto.transform.position.x > maxPosition[1] || objeto.transform.position.y < minPosition[1] || objeto.transform.position.y > maxPosition[1]))
+            {
+                extraList.Add(objeto);
+            }
+        }
+        foreach(GameObject objeto in extraList)
+        {
+            itemSpawner.objectList.Remove(objeto);
+            Destroy(objeto);
+        }
+        
+       
     }
 }

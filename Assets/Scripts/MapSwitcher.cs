@@ -11,7 +11,7 @@ public class MapSwitcher : MonoBehaviour
 
     public void Switch()
     {
-        if (index != 4)
+        if (index != 5)
         {
             index++;
             this.transform.GetChild(0).GetComponent<RawImage>().texture = mapas.maps[index];

@@ -6,7 +6,7 @@ using TMPro;
 public class UpdateFuel : MonoBehaviour
 {
 
-    private int fuel;
+    public int fuel;
 
     private void Awake()
     {

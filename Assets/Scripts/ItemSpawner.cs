@@ -8,6 +8,7 @@ public class ItemSpawner : MonoBehaviour
 
     public Objects objects;
     public GameObject objectPrefab;
+    public List<GameObject> objectList = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +27,6 @@ public class ItemSpawner : MonoBehaviour
         objeto.GetComponent<ObjectHUD>().name = objects.names[i];
         objeto.GetComponent<ObjectHUD>().description = objects.description[i];
         objeto.GetComponent<Image>().sprite = objects.sprites[i];
+        objectList.Add(objeto);
     }
 }

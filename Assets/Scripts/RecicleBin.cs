@@ -14,6 +14,7 @@ public class RecicleBin : MonoBehaviour, IDropHandler
     [SerializeField]
     public GameObject stackingFolder;
     public StackingIcons stackingIcons;
+    public ItemSpawner itemSpawner;
 
 
     private void Awake()
@@ -243,6 +244,11 @@ public class RecicleBin : MonoBehaviour, IDropHandler
                 }*/
                 script.members.Remove(eventData.pointerDrag);
             }
+            if (eventData.pointerDrag.tag == "Item")
+            {
+                itemSpawner.objectList.Remove(eventData.pointerDrag);
+            }
+
             if (eventData.pointerDrag.transform.tag != "Malla")
                 Destroy(eventData.pointerDrag);
             SceneManager.GetActiveScene().GetRootGameObjects()[0].GetComponent<CameraZoomController>().movingOn = false;

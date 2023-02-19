@@ -32,6 +32,7 @@ public class SaveData
     public List<int> sEffectorDefect = new List<int>();
     public List<int> sEffectSide = new List<int>();
     public List<bool> reqActive = new List<bool>();
+    public List<string> memName = new List<string>();
     public List<float> memPosX = new List<float>();
     public List<float> memPosY = new List<float>();
     public List<float> memPosZ = new List<float>();
@@ -41,4 +42,8 @@ public class SaveData
     public List<int> memHealth = new List<int>();
     public List<float> memPerformance = new List<float>();
     public List<bool> memId2Active = new List<bool>();
+    public int coinsLeft;
+    public int scrapLeft;
+    public int fuelLeft;
+    public float healthLeft;
 }

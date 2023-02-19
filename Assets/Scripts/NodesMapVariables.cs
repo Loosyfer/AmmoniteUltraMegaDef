@@ -6,6 +6,6 @@ using UnityEngine;
 public class NodesMapVariables : ScriptableObject
 {
 
-    public Texture[] maps = new Texture[5];
+    public Texture[] maps = new Texture[6];
 
 }

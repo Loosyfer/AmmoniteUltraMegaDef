@@ -8,6 +8,7 @@ public class ObjectSpawner : MonoBehaviour
 
     public Objects objects;
     public GameObject objectPrefab;
+    public ItemSpawner itemSpawner;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class ObjectSpawner : MonoBehaviour
             objeto.GetComponent<ObjectHUD>().name = objects.names[n];
             objeto.GetComponent<ObjectHUD>().description = objects.description[n];
             objeto.GetComponent<Image>().sprite = objects.sprites[n];
+            itemSpawner.objectList.Add(objeto);
         }
     }
 }

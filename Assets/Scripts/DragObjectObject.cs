@@ -43,6 +43,8 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         {
             member.transform.GetComponent<DragObjectMember>().item = null;
         }
+        this.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(55f, 55f);
+        this.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(335, 190);
     }
 
     public void OnDrag(PointerEventData eventData)

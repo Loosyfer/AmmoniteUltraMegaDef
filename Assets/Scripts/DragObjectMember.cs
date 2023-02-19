@@ -162,13 +162,13 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Checkpoint1");
         if (eventData.pointerDrag != null)
         {
-            Debug.Log("Checkpoint2");
             if (eventData.pointerDrag.transform.tag == "Item")
             {
                 eventData.pointerDrag.transform.position = transform.position + new Vector3(23, 15, 0);
+                eventData.pointerDrag.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(38.5f, 38.5f);
+                eventData.pointerDrag.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(345,197);
                 item = eventData.pointerDrag.gameObject;
                 eventData.pointerDrag.transform.GetComponent<DragObjectObject>().member = this.gameObject;
             }
