@@ -6,7 +6,7 @@ using UnityEngine;
 public class Objects : ScriptableObject
 {
 
-    public Sprite[] sprites = new Sprite[166];
+    public Sprite[] sprites = new Sprite[217];
 
     public string[] names = new string[166]
     {

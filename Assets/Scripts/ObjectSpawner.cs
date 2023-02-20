@@ -21,13 +21,9 @@ public class ObjectSpawner : MonoBehaviour
 
     public void Spawner(string s)
     {
-        if (int.TryParse(s, out int n) && n > 0 && n < 166)
+        if (int.TryParse(s, out int n) && n > 0 && n < 217)
         {
-            GameObject objeto = Instantiate(objectPrefab, new Vector3(618, 197, 0), Quaternion.identity) as GameObject;
-            objeto.GetComponent<ObjectHUD>().name = objects.names[n];
-            objeto.GetComponent<ObjectHUD>().description = objects.description[n];
-            objeto.GetComponent<Image>().sprite = objects.sprites[n];
-            itemSpawner.objectList.Add(objeto);
+            itemSpawner.SpawnObjectWArg(n.ToString());
         }
     }
 }

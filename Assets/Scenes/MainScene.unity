@@ -4803,6 +4803,7 @@ MonoBehaviour:
   enemyHB: {fileID: 284734412}
   monster: {fileID: 1720324048}
   monsterName: {fileID: 1721542905}
+  enemiesExcel: {fileID: 11400000, guid: 5fdf786870ba87e4ab21adc9ed32cf1f, type: 2}
 --- !u!1 &141570808
 GameObject:
   m_ObjectHideFlags: 0
@@ -28224,6 +28225,7 @@ MonoBehaviour:
   objects: {fileID: 11400000, guid: f0569f12531dcb04e80eb85f51512b21, type: 2}
   objectPrefab: {fileID: 2583941292109328869, guid: 5f97bbbd149e45540b6b0d3bf07be33d, type: 3}
   objectList: []
+  itemsExcel: {fileID: 11400000, guid: d3f352b7bda843b46887762dcdd92d04, type: 2}
 --- !u!114 &747534542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54290,6 +54292,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7220c68dff7df574ea844b5446310cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventType: 
+  eventName: 
+  eventEffect: 
+  eventsExcel: {fileID: 11400000, guid: c28fbe5740cebfe4e8c238da2437deb8, type: 2}
+  eventEnemiesId: 
+  rareEventsId: 
+  ultraRareEventsId: 
+  explorerEventsId: 
+  namePanel: {fileID: 1715457071}
+  effectPanel: {fileID: 840530915}
 --- !u!114 &1484164301
 MonoBehaviour:
   m_ObjectHideFlags: 0

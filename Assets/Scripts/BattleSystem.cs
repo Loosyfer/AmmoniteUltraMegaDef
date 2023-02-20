@@ -738,7 +738,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (index > 233)
+        if (index > 255)
         {
             Debug.Log("Your number was too high");
             return;
@@ -1273,13 +1273,12 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 225);
+            int j = UnityEngine.Random.Range(0, 255);
             int k = UnityEngine.Random.Range(0, 10);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
             modules.Add(go);
-            Debug.Log(modInfo.names[j]);
             Yrt.nameText.text = modExcel.myModules.modules[j].name;
             Yrt.detailsText.text = modExcel.myModules.modules[j].effect;
             Yrt.detailsText.text = Yrt.detailsText.text.Replace("*", ",");

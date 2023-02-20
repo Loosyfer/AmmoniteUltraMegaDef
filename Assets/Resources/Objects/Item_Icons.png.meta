@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3602,69 +3614,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Item_Icons_167
-      rect:
-        serializedVersion: 2
-        x: 3150
-        y: 3
-        width: 306
-        height: 306
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84cb68654a292f54b87e5af291af3006
-      internalID: 1828706738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Item_Icons_168
-      rect:
-        serializedVersion: 2
-        x: 3466
-        y: 3
-        width: 305
-        height: 306
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ab3665019606f7428fb6d6102fec33e
-      internalID: 456524137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Item_Icons_169
-      rect:
-        serializedVersion: 2
-        x: 3780
-        y: 5
-        width: 307
-        height: 306
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da7b6aafcaaba8247b3b0c9e7dc2ad66
-      internalID: -1234790583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3754,8 +3703,8 @@ TextureImporter:
       Item_Icons_21: -1268898039
       Item_Icons_10: 392519185
       Item_Icons_16: 1584601836
-      Item_Icons_109: 389506100
       Item_Icons_85: 1549542470
+      Item_Icons_109: 389506100
       Item_Icons_133: -2041867746
       Item_Icons_118: 1922471744
       Item_Icons_138: 1060975035
