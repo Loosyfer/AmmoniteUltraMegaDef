@@ -3,11 +3,11 @@ Normal Enemy,,,30
 Strong Enemy,,,10
 Event Enemy,,,8
 Market,,,22
-Hangar,,,14
-Rare Event,,,14
+Hangar,,,12
+Rare Event,,,16
 Ultra Rare Event,,,2
 Explorer Event,,,
-Enemy Ship (Neutral),They bribe you by offering 100-300 coins if you run away but you can also battle and if you win you get 200 coins and a 50% chance of receiving a reward of double the bribe.”,Eventenemy,
+Enemy Ship (Neutral),They bribe you by offering 100-300 coins if you run away but you can also battle and if you win you get 200 coins and a 50% chance of receiving a reward of double the bribe.,Eventenemy,
 Enemy Ship (Hostile),Will kidnap 1-2 of your crew members (depending on how many total crew members you have) or steal 100-200 of your coins and you can either run away or battle to get them/it back if you win plus an extra 400 coins.,Eventenemy,
 Rescue Mission,A helpless islander is being attacked by a monster and you can try to save them by defeating the monster. If the battle isn’t over after X number of turns they die and there’s no reward which is 200 coins and joining your crew.,Eventenemy,
 Dangerous Request,This fellow explorer has eyes on a nearby treasure however it is guarded by a powerful Alpha enemy and he’s not brave enough for the task so he asks if you can fetch it for him and you can both share the loot. “Dangerous Request: Enemy” will appear nearby in the node map and if you successfully win you’ll collect “Treasure”. If you go back to the fellow explorer using O2 to share it as promised you’ll only get 1 item instead of 2 but the explorer and their module will join your crew.,Eventenemy,
@@ -35,7 +35,7 @@ Boxing Ring,Choose two crew members that fight to the death. The loser (50/50) d
 Collector of Idiots,You can exchange a crew member with a bad trait (-1 cost) for 4 coins.,Rare,
 Dangerous Cave,Find 3 treasures in it but will need an expedition of 3 crew members. Each crew member has a 33% chance of having Missing an Arm and a Leg as their secondary trait and a 33% chance of not coming back from the expedition.,Rare,
 Underwater Tavern,You can choose to spend the night at the tavern and all crew members will heal +2HP but will have Drunkard as their secondary trait for the next fight.,Rare,
-Oceanic Gambler,"Gamble 2 to 7 coins once choosing any of the three options: (50% x2 / 50% x0,5) (33% x3 / 66% x0,33) (25% x4 / 75% x0,25). // 50% x0,5? should't it be 50% x0?",Rare,
+Oceanic Gambler,Gamble 2 to 7 coins once choosing any of the three options: (50% x2 / 50% x0*5) (33% x3 / 66% x0*33) (25% x4 / 75% x0*25). // 50% x0*5? should't it be 50% x0?,Rare,
 Nuclear Waste Dump,Gain Nuclear Fission Disintegrator1 but will add Radioactive as a secondary trait to 1-2 crew members.,Rare,
 Rapture City,Send 3 crew members to investigate and loot this mysterious city to receive 2-4 items and each crew member will have a 25% chance of returning with Big Daddy as their secondary trait and a 25% chance of becoming Lunatic.,Rare,
 Forgotten Submarine,Submarine that was trapped decades ago. His crew member Morgan still lives there as a Ghost he will thank you for the rescue and both him and his ghostly module will join your crew.,Rare,
