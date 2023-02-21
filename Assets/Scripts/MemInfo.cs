@@ -250,7 +250,7 @@ public class MemInfo : ScriptableObject
         "They rescue from death and send to the bench up to 4 crew members, after which they quit the Dive to help in other places."
 
     };
-    public string[] profDescription = new string[] { "Once per Architect, can change the requirements of one module to another random requirement. \n 3x = Opportunity to change your layout to architect-exclusive layouts. \n 6x = if the layout is full, it becomes a megastructure that prevents enemy flooding/destruction of modules and has a 20% chance of deflecting a hit.",
+    public string[] profDescription = new string[] { "Each architect has an extra free slot in any adjacent space. \n 4x = After each battle, you can reroll the requirement of one module. \n 8x = You can move around your placed slots freely. \n 12x = If you have more than 24 modules in your ship, it becomes a mega structure that deflects 20% of attacks.",
         "After being adjacent to a crew member during a battle, you can reroll their trait. 20T CD. \n 3x = When you reroll someone's trait, choose one from a random selection of 3. \n 6x = Can add a random Erudite Trait as secondary traits to crew members",
         "Once per Biologist, after participating in a victorious monster battle, can build a Basic Fishcapsule. \n 4x = once per biologist, can build an exclusive organic module depending on the defeated sea creature. \n 8x = Can build organic mega-modules from abysmal bosses shown in the Logbook.",
         "Once per Developer, after being in a module during a battle, can automatise that module. \n 3x = Increase module recharge speeds by 25%. \n 6x = Increase module recharge speeds by 40%, and if a crew member dies, they will be replaced by a copy of them with the Robot trait.",

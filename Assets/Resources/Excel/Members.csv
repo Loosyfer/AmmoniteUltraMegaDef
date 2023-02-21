@@ -255,7 +255,7 @@ Hates Complex Work,-20%P but +10%P instead if their module is inactive.,,0
 Flirter,-20%P* but +5%P instead if they're adjacent to someone of the opposite sex.,,1
 Copycat,At turn 8 and until the end of battle* their module copies a random adjacent module. // At battle start* their module copies a random module in the bench or ship.,Positive,3
 Careless Tenant,Will pay you a rent of 1 coin at the end of each battle* however they don't treat their module well* so it will gain a defect at the end of the battle* and if it already had one* then it becomes damaged.,,0
-Monstrous,Every 4 turns* -1HP to an adjacent crew member* unless they’re also Monstrous. If hit by the enemy* they hit back for 50 damage.,Exclusive,
+Monstrous,Every 4 turns* -1HP to an adjacent crew member* unless they’re also Monstrous. If hit by the enemy* they hit back for 50 damage. If their module is destroyed* instead of dying they return to an available module or the bench.,Exclusive,
 Doomed,Performance is halved and will inevitably die after 20 turns.,Exclusive,
 Reanimated,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -1%/2turns.,Exclusive,
 The Chosen One,They will have 16 Health* 100% base performance and are immune to explosions* but if they die you lose the expedition.,Exclusive,

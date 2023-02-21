@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -304.9, y: 74.7}
+  m_AnchoredPosition: {x: -304.99, y: 111.9}
   m_SizeDelta: {x: 32.815, y: 323.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14350412
@@ -2520,6 +2520,7 @@ RectTransform:
   - {fileID: 1277988301}
   - {fileID: 1663221163}
   - {fileID: 1537132727}
+  - {fileID: 1476361903}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4843,7 +4844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: 181.72}
+  m_AnchoredPosition: {x: -0.77, y: 141.9}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &141570810
@@ -5541,8 +5542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187.66, y: -3.5847}
-  m_SizeDelta: {x: 246.51, y: 28.1607}
+  m_AnchoredPosition: {x: 282.43, y: -3.5847}
+  m_SizeDelta: {x: 430.26, y: 28.1607}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159937832
 MonoBehaviour:
@@ -6791,6 +6792,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181879095}
+  m_CullTransparentMesh: 1
+--- !u!1 &185840767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185840768}
+  - component: {fileID: 185840770}
+  - component: {fileID: 185840769}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &185840768
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185840767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 659969605}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2, y: 0}
+  m_SizeDelta: {x: 29.7972, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &185840769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185840767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b81287bd62bcb024dbd328e463c9796e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &185840770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185840767}
   m_CullTransparentMesh: 1
 --- !u!1 &190562851
 GameObject:
@@ -11875,18 +11952,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Once per Engineer, after being in a module during a battle, can rebuild
-    it into another random module.
-
-
-    3x When rebuilding a module choose 1 of
-    a random selection of 3.
-
-
-    6x = can fuse two modules to get a random mega-module
-    of the same type as the fused modules.
-
-'
+  m_text: "Once per Engineer, after being in a module during a battle, can rebuild
+    it into another random module of the same type but with the same requirements,
+    defects and side effects.\r\n\n4x = Engineer-built modules cannot be damaged
+    or explode. // If a module explodes, recycle it into another random module of
+    the same type.\r\n\n8x = Up to 3 times, create a copy of a non-mega module (max
+    once per module).\r\n\n12x = Once per engineer, use 3 engineers to fuse two modules
+    into a random mega-module of the same type.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -16319,7 +16391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00011253, y: -1.285}
+  m_AnchoredPosition: {x: -0.00011253357, y: -1.285}
   m_SizeDelta: {x: 81.959, y: 45.7691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448958514
@@ -16329,7 +16401,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448958512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -18329,7 +18401,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489022298}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -23076,7 +23148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &636639794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23096,7 +23168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376.4301, y: -0.000030517578}
+  m_AnchoredPosition: {x: 188.51996, y: 142.94998}
   m_SizeDelta: {x: 175.7, y: 40.2043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636639795
@@ -23518,6 +23590,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655094626}
   m_CullTransparentMesh: 1
+--- !u!1 &659969604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659969605}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &659969605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659969604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 185840768}
+  m_Father: {fileID: 1476361903}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &661034899
 GameObject:
   m_ObjectHideFlags: 0
@@ -24571,7 +24680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: -17.939995}
+  m_AnchoredPosition: {x: -0.77, y: 21.5}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &682095923
@@ -24898,7 +25007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 163.18115, y: -58.30005}
+  m_AnchoredPosition: {x: -24.729004, y: 84.64996}
   m_SizeDelta: {x: 479.9934, y: 28.2488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695230847
@@ -26568,7 +26677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &730432961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27251,18 +27360,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'After being adjacent to a crew member during a battle, you can reroll
-    their trait. 20T CD.
-
-
-    3x = When you reroll someone''s trait, choose one
-    from a random selection of 3.
-
-
-    6x = Can add a random Erudite Trait as secondary
-    traits to crew members
-
-'
+  m_text: "After being adjacent to a crew member during a battle, you can reroll
+    their trait.\r\n\n3x = When you reroll someone\u2019s trait, choose one from
+    a random selection of 2.\r\n\n6x = At the end of battle, you can add a random
+    Erudite Trait as a secondary trait, once per crew member.\r\n\n9x = Erudite crew
+    members have 120% performance cap.\r\n\n12x = Erudite crew members have +10%P
+    and 150% performance cap.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -28355,7 +28458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162.82196, y: -54.489037}
+  m_AnchoredPosition: {x: -25.088196, y: 88.460976}
   m_SizeDelta: {x: 501.1036, y: 40.0727}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754501375
@@ -28838,7 +28941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.13499832, y: -0.27009964}
+  m_AnchoredPosition: {x: -0.1349945, y: -0.27009964}
   m_SizeDelta: {x: -9.0201, y: -0.5403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769877766
@@ -28861,7 +28964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SHOP BIN
+  m_text: BIN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28888,17 +28991,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 16
+  m_characterSpacing: 28.4
   m_wordSpacing: 0
   m_lineSpacing: -10.75
   m_lineSpacingMax: 0
@@ -29770,7 +29873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 188.51, y: -174.85}
+  m_AnchoredPosition: {x: 0.6, y: -31.9}
   m_SizeDelta: {x: 552.73, y: 171.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795418103
@@ -30665,16 +30768,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Once per Biologist, after participating in a victorious monster battle,
-    can build a Basic Fishcapsule.
+  m_text: 'Once per biologist, can build an organic A module at the end of the battle.
 
 
-    4x = once per biologist, can build an exclusive
-    organic module depending on the defeated sea creature.
+    4x
+    = after each battle, receive an Organic B module based on the defeated enemy.
 
 
-    8x = Can build organic
-    mega-modules from abysmal bosses shown in the Logbook.
+    8x
+    = If an organic module is destroyed, recycle it into another random organic module.
+
+
+    12x
+    = at battle start, summon the previously defeated monster as a zombie by your
+    side with 30% of their DPT and HP, and it absorbs hits until its body disintegrates.
 
 '
   m_isRightToLeft: 0
@@ -31253,7 +31360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 189.88, y: -176.89621}
+  m_AnchoredPosition: {x: 1.9698486, y: -33.946198}
   m_SizeDelta: {x: 548.55, y: 167.1823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840530915
@@ -34825,7 +34932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: 101.619995}
+  m_AnchoredPosition: {x: -0.77, y: 61.599976}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &922514473
@@ -35691,7 +35798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &942314222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35710,7 +35817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376.3, y: 55.2}
+  m_AnchoredPosition: {x: 188.38983, y: 198.15001}
   m_SizeDelta: {x: 175.7, y: 40.204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942314223
@@ -37277,7 +37384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: 141.51001}
+  m_AnchoredPosition: {x: -0.77, y: 102.1}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &976751920
@@ -40867,7 +40974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1099905566
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40885,8 +40992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.07021332, y: 0}
-  m_SizeDelta: {x: 0.13991, y: 0}
+  m_AnchoredPosition: {x: 1.9698792, y: -3.8527}
+  m_SizeDelta: {x: 0.1399, y: -7.7054}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099905567
 MonoBehaviour:
@@ -40895,7 +41002,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099905565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -41481,6 +41588,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109050306}
+  m_CullTransparentMesh: 1
+--- !u!1 &1116660941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116660942}
+  - component: {fileID: 1116660944}
+  - component: {fileID: 1116660943}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1116660942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116660941}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1476361903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1116660943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116660941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1116660944
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116660941}
   m_CullTransparentMesh: 1
 --- !u!1 &1118844309
 GameObject:
@@ -45774,15 +45957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'No special effects, but cheap.
-
-
-    4x + GO = Cadets will count as GO
-    for module requirements.
-
-
-    8x + GO = If the GO dies, upgrade one Cadet to
-    be the new GO.'
+  m_text: No special effects, but cheap.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -51354,6 +51529,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cecc86103c756694a8b27db6e4a51041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1420296811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1420296812}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1420296812
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420296811}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1680716471}
+  m_Father: {fileID: 1476361903}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5.000061, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1420614934
 GameObject:
   m_ObjectHideFlags: 0
@@ -51400,8 +51612,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182.14, y: 391.80002}
-  m_SizeDelta: {x: 175.7, y: 40.2043}
+  m_AnchoredPosition: {x: 6.0734, y: 244.80008}
+  m_SizeDelta: {x: 552.13, y: 232.4053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420614936
 MonoBehaviour:
@@ -51479,7 +51691,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420614934}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -52433,7 +52645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: 21.510004}
+  m_AnchoredPosition: {x: -0.77, y: -17.940008}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1449224997
@@ -53847,6 +54059,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474678431}
   m_CullTransparentMesh: 1
+--- !u!1 &1476361902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476361903}
+  - component: {fileID: 1476361904}
+  m_Layer: 5
+  m_Name: O2meter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1476361903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476361902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1116660942}
+  - {fileID: 1420296812}
+  - {fileID: 659969605}
+  m_Father: {fileID: 80194502}
+  m_RootOrder: 67
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -131.48378, y: 361.9}
+  m_SizeDelta: {x: 1725.2675, y: 30.2257}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1476361904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476361902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 185840769}
+  m_FillRect: {fileID: 1680716471}
+  m_HandleRect: {fileID: 185840768}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.513
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1477953750
 GameObject:
   m_ObjectHideFlags: 0
@@ -54277,8 +54580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -221.5797, y: 445.68002}
-  m_SizeDelta: {x: 96.8208, y: 40.2043}
+  m_AnchoredPosition: {x: -181.58, y: 388.6}
+  m_SizeDelta: {x: 174.65, y: 40.2043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484164300
 MonoBehaviour:
@@ -55671,7 +55974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1527303179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55689,7 +55992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: -58.5}
+  m_AnchoredPosition: {x: -0.77, y: -139.21002}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1527303180
@@ -56066,20 +56369,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Once per Architect, can change the requirements of one module to another
-    random requirement.
+  m_text: 'Each architect has an extra free slot in any adjacent space.
 
 
-    3x = Opportunity to change your layout to architect-exclusive
-    layouts.
+    4x
+    = After each battle, you can reroll the requirement of one module.
 
 
-    6x = if the layout is full, it becomes a megastructure that prevents
-    enemy flooding/destruction of modules and has a 20% chance of deflecting a hit.
+    8x =
+    You can move around your placed slots freely.
 
 
-
-'
+    12x = If you have more than
+    24 modules in your ship, it becomes a mega structure that deflects 20% of attacks.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -57288,7 +57590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: -139.21}
+  m_AnchoredPosition: {x: -0.77, y: -175.4}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1576548398
@@ -61855,6 +62157,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputGiven: 0
+--- !u!1 &1680716470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680716471}
+  - component: {fileID: 1680716473}
+  - component: {fileID: 1680716472}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1680716471
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680716470}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1420296812}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1680716472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680716470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1680716473
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680716470}
+  m_CullTransparentMesh: 1
 --- !u!1 &1683305867
 GameObject:
   m_ObjectHideFlags: 0
@@ -62869,7 +63247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162.63965, y: -58.3}
+  m_AnchoredPosition: {x: -25.270508, y: 84.65001}
   m_SizeDelta: {x: 480.5866, y: 28.2488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1715457071
@@ -67496,8 +67874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187.91855, y: 0.000022888}
-  m_SizeDelta: {x: 253.6098, y: 39.6769}
+  m_AnchoredPosition: {x: 282.723, y: 0.000022888}
+  m_SizeDelta: {x: 362.8692, y: 39.6769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841572122
 MonoBehaviour:
@@ -69105,7 +69483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1894863627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -69125,7 +69503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 186.94014, y: -0.000030517578}
+  m_AnchoredPosition: {x: -0.9700165, y: 142.94998}
   m_SizeDelta: {x: 175.7, y: 40.2043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894863628
@@ -71988,9 +72366,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Ship slots can be expanded in any direction/inside a given ship layout\r.\nAll
-    modules have requirements\nStart with 3 slots, and no bench.\nUnstable is now
-    25% chance of explosion\r.\nShip starts with 1000HP.\n8 Fuel is the starting
-    and max amount.\nBench heals crew members and repairs damaged modules.\n2 Emporiums
+    modules have requirements\nStart with 3 slots and 1 bench.\nUnstable is now 25%
+    chance of explosion\r.\nShip starts with 1000HP.\n5 Fuel is the starting and
+    max amount.\nBench heals crew members and repairs damaged modules.\n2 Emporiums
     hidden per level\nUpgrade ship scope = see enemy type in node\r, upgrade ship
     processor = 50% chance enemy yields 1 item\r, upgrade speed is unavailable\r\n"
 --- !u!222 &1964881705
@@ -75321,8 +75699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85.1, y: -0.00011265}
-  m_SizeDelta: {x: 81.0391, y: 48.339}
+  m_AnchoredPosition: {x: -42.31997, y: -0.00011265}
+  m_SizeDelta: {x: 166.6, y: 48.339}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087000283
 MonoBehaviour:

@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.4333, y: -66.1682}
+  m_AnchoredPosition: {x: 204.23, y: -96.298}
   m_SizeDelta: {x: 337.576, y: 190.0753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2548785900289834155
@@ -363,8 +363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000066385, y: -1.2204}
-  m_SizeDelta: {x: 329.4083, y: 48.9408}
+  m_AnchoredPosition: {x: -0.0000066385, y: 0.8}
+  m_SizeDelta: {x: 329.4083, y: 23.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &217231193954405568
 CanvasRenderer:
@@ -394,11 +394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "If the holder has 60%P or more and is undisturbed, at the end of the battle
-    there\u2019s a 50% chance they produce Recipe Book (0-10), Book of the Dead (11-20),
-    Ancient Volume of Wisdom (21-30), Lost Page (31-40), Treasure Map (41-50), Love
-    Letter (51-60), Suspicious Magazines (61-70), Military Propaganda (71-80), Notice
-    of Termination (81-90) or University Diploma (91-100)."
+  m_text: Name Blabla Bloblo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -643,8 +639,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.4333, y: 75.4}
-  m_SizeDelta: {x: 337.576, y: 46.5}
+  m_AnchoredPosition: {x: 204.17346, y: 17}
+  m_SizeDelta: {x: 334.4279, y: 23.2073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3206871571031376598
 CanvasRenderer:
