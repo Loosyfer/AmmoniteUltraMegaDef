@@ -2429,6 +2429,10 @@ public class BattleSystem : MonoBehaviour
         SaveData.current.memPerformance.Clear();
         SaveData.current.memProfessionId.Clear();
         SaveData.current.memId2Active.Clear();
+        SaveData.current.itemPosX.Clear();
+        SaveData.current.itemPosY.Clear();
+        SaveData.current.itemPosZ.Clear();
+        SaveData.current.objectsId.Clear();
         SaveData.current.coinsLeft = currency.transform.GetComponent<Currency>().money;
         SaveData.current.scrapLeft = currency2.transform.GetComponent<Currency>().money;
         SaveData.current.fuelLeft = fuel.transform.GetComponent<UpdateFuel>().fuel;
@@ -2460,9 +2464,15 @@ public class BattleSystem : MonoBehaviour
             SaveData.current.memName.Add(member.transform.GetComponent<MemberHUD>().nameText.text);
 
         }
-        //SaveData.current.posX = modules[0].transform.position.x;
-        //SaveData.current.posY = modules[0].transform.position.y;
-        //SaveData.current.posZ = modules[0].transform.position.z;
+
+        foreach (GameObject objeto in itemSpawner.transform.GetComponent<ItemSpawner>().objectList)
+        {
+            SaveData.current.objectsId.Add(itemSpawner.transform.GetComponent<ItemSpawner>().objectListId[itemSpawner.transform.GetComponent<ItemSpawner>().objectList.IndexOf(objeto)]);
+            SaveData.current.itemPosX.Add(objeto.transform.position.x);
+            SaveData.current.itemPosY.Add(objeto.transform.position.y);
+            SaveData.current.itemPosZ.Add(objeto.transform.position.z);
+        }
+
         SerializationManager.Save("savedGame", SaveData.current);
     }
 
@@ -2493,6 +2503,7 @@ public class BattleSystem : MonoBehaviour
             Yrt.type = modExcel.myModules.modules[j].type;
             Yrt.id = j;
             Yrt.reqId = SaveData.current.req[i];
+            Yrt.reqActive = SaveData.current.reqActive[i];
             switch (Yrt.type)
                 {
                     case (ModuleType)0:
@@ -2514,7 +2525,7 @@ public class BattleSystem : MonoBehaviour
                         Yrt.typeDetails.text = modInfo.typeStacking[5];
                         break;
                 }
-            if (SaveData.current.reqActive[i])
+            if (Yrt.reqActive)
             {
                 switch (modExcel.myModules.modules[j].requirement)
                 {
@@ -2524,55 +2535,42 @@ public class BattleSystem : MonoBehaviour
                         {
                             case 0:
                                 obj.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
-                                Yrt.reqId = 0;
                                 break;
                             case 1:
                                 obj.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
-                                Yrt.reqId = 1;
                                 break;
                             case 2:
                                 obj.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
-                                Yrt.reqId = 2;
                                 break;
                             case 3:
                                 obj.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
-                                Yrt.reqId = 3;
                                 break;
                             case 4:
                                 obj.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
-                                Yrt.reqId = 4;
                                 break;
                             case 5:
                                 obj.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
-                                Yrt.reqId = 5;
                                 break;
                             case 6:
                                 obj.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
-                                Yrt.reqId = 6;
                                 break;
                             case 7:
                                 obj.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
-                                Yrt.reqId = 7;
                                 break;
                             case 8:
                                 obj.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
-                                Yrt.reqId = 8;
                                 break;
                             case 9:
                                 obj.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
-                                Yrt.reqId = 9;
                                 break;
                             case 10:
                                 obj.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
-                                Yrt.reqId = 10;
                                 break;
                             case 11:
                                 obj.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
-                                Yrt.reqId = 11;
                                 break;
                             case 12:
                                 obj.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
-                                Yrt.reqId = 12;
                                 break;
                         }
                         break;
@@ -2693,6 +2691,12 @@ public class BattleSystem : MonoBehaviour
             Yrt.professionId = m;
             Yrt.performance = SaveData.current.memPerformance[i];
             Yrt.health = SaveData.current.memHealth[i];
+        }
+
+        for (int i = 0; i < SaveData.current.objectsId.Count; i++)
+        {
+            itemSpawner.transform.GetComponent<ItemSpawner>().SpawnObjectWArg2(SaveData.current.objectsId[i].ToString(), SaveData.current.itemPosX[i], SaveData.current.itemPosY[i], SaveData.current.itemPosZ[i]);
+
         }
     }
 

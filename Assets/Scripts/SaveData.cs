@@ -42,6 +42,10 @@ public class SaveData
     public List<int> memHealth = new List<int>();
     public List<float> memPerformance = new List<float>();
     public List<bool> memId2Active = new List<bool>();
+    public List<int> objectsId = new List<int>();
+    public List<float> itemPosX = new List<float>();
+    public List<float> itemPosY = new List<float>();
+    public List<float> itemPosZ = new List<float>();
     public int coinsLeft;
     public int scrapLeft;
     public int fuelLeft;

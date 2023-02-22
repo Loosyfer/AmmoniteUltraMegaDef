@@ -10,6 +10,7 @@ public class ItemSpawner : MonoBehaviour
     public Objects objects;
     public GameObject objectPrefab;
     public List<GameObject> objectList = new List<GameObject>();
+    public List<int> objectListId = new List<int>();
     public ItemsExcel itemsExcel;
     private string[] itemsData;
 
@@ -49,6 +50,7 @@ public class ItemSpawner : MonoBehaviour
         objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;
         objeto.GetComponent<ObjectHUD>().description = itemsExcel.myItems.items[i].effect;
         objectList.Add(objeto);
+        objectListId.Add(i);
     }
 
     public void SpawnObjectWArg(string s)
@@ -59,5 +61,18 @@ public class ItemSpawner : MonoBehaviour
         objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;
         objeto.GetComponent<ObjectHUD>().description = itemsExcel.myItems.items[i].effect;
         objectList.Add(objeto);
+        objectListId.Add(i);
+    }
+
+    public void SpawnObjectWArg2(string s, float x, float y, float z)
+    {
+        int i = int.Parse(s);
+        GameObject objeto = Instantiate(objectPrefab, new Vector3(618, 197, 0), Quaternion.identity) as GameObject;
+        objeto.GetComponent<Image>().sprite = objects.sprites[i];
+        objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;
+        objeto.GetComponent<ObjectHUD>().description = itemsExcel.myItems.items[i].effect;
+        objectList.Add(objeto);
+        objectListId.Add(i);
+        objeto.transform.position = new Vector3(x, y, z);
     }
 }

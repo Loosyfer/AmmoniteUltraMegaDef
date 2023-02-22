@@ -48,7 +48,7 @@ public class MemberHUD : MonoBehaviour
 
     private void Awake()
     {
-        health = 6;
+        health = 5;
     }
 
     void Update()

@@ -65,6 +65,7 @@ public class ShopEraser : MonoBehaviour
         }
         foreach(GameObject objeto in extraList)
         {
+            itemSpawner.objectListId.RemoveAt(itemSpawner.objectList.IndexOf(objeto));
             itemSpawner.objectList.Remove(objeto);
             Destroy(objeto);
         }

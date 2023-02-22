@@ -246,6 +246,7 @@ public class RecicleBin : MonoBehaviour, IDropHandler
             }
             if (eventData.pointerDrag.tag == "Item")
             {
+                itemSpawner.objectListId.RemoveAt(itemSpawner.objectList.IndexOf(eventData.pointerDrag));
                 itemSpawner.objectList.Remove(eventData.pointerDrag);
             }
 

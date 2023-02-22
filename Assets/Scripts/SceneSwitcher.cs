@@ -27,7 +27,7 @@ public class SceneSwitcher : MonoBehaviour
         mapOn = true;
         mainCamera.SetActive(false);
         camera2.SetActive(true);
-        malla.SetActive(false);
+        //malla.SetActive(false);
         canvas2.SetActive(true);
     }
     private void Update()
@@ -71,7 +71,7 @@ public class SceneSwitcher : MonoBehaviour
     public void MainGame()
     {
         mapOn = false;
-        malla.SetActive(true);
+        //malla.SetActive(true);
         camera2.SetActive(false);
         StartCoroutine(Screenshot(camera3));
         StartCoroutine(DeactivateCanvas());
