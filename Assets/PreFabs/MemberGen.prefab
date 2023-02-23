@@ -722,8 +722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.4813, y: -9.69}
-  m_SizeDelta: {x: 87.4593, y: 33.2993}
+  m_AnchoredPosition: {x: -45.8476, y: -9.69}
+  m_SizeDelta: {x: 90.1919, y: 33.2993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8170566678214117061
 CanvasRenderer:
@@ -766,7 +766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.65
-  m_Text: Could be 2 Kids in a Trenchcoat
+  m_Text: Has an Imaginary Friend
 --- !u!114 &7868038701298675278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,6 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverPanel: {fileID: 1822753675341052214}
+  HoverPanel2: {fileID: 0}
 --- !u!114 &5677321860246499782
 MonoBehaviour:
   m_ObjectHideFlags: 0

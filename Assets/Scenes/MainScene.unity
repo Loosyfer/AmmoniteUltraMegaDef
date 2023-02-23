@@ -79806,8 +79806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 619.21, y: -423.20007}
-  m_SizeDelta: {x: 622.4391, y: 229.6}
+  m_AnchoredPosition: {x: 619.21, y: -424.43848}
+  m_SizeDelta: {x: 622.4391, y: 227.1232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1964881703
 Canvas:
@@ -79863,14 +79863,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1) Enemies are in node paths and each node has 40% chance of Fuel and
-    40% chance of slot. \n(slot costs 2 scrap?)\n\n2) Enemies are in nodes and each
-    node has a 25% chance of Fuel and 25% chance of slot. \n(slot costs 2 scrap?)\n\nShip
+  m_Text: "A) Enemies are in node paths and each node has 40% chance of Fuel and
+    40% chance of Slot. \n(slot costs 2 scrap?)\n\nB) Enemies are in nodes and each
+    node has a 25% chance of Fuel and 25% chance of Slot. \n(slot costs 2 scrap?)\n\nShip
     slots can be expanded in any direction/inside a given ship layout\r.\nAll modules
     have requirements.\nStart with 1 slot and 0 bench.\nUnstable is now 25% chance
-    of explosion\r.\nShip starts with 1000HP.\n6 Fuel is the starting and max amount.\nBench
-    heals crew members and repairs damaged modules.\n2 Emporiums hidden per level\nUpgrade
-    ship processor = 50% chance enemy yields 1 item\r, upgrade speed is unavailable\r\n"
+    of explosion\r.\nShip starts with 1000HP.\n6 Fuel is the starting and max amount.
+    Entering new level tops up Fuel.\nBench heals crew members and repairs damaged
+    modules.\n2 Emporiums hidden per level\nUpgrade ship processor = 50% chance enemy
+    yields 1 item\r, upgrade speed is unavailable\r\n"
 --- !u!222 &1964881705
 CanvasRenderer:
   m_ObjectHideFlags: 0
