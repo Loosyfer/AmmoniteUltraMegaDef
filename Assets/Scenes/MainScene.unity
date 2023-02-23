@@ -955,7 +955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1704216, y: -510.8}
+  m_AnchoredPosition: {x: 0.17042542, y: -510.8}
   m_SizeDelta: {x: 174.8109, y: 257.5617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20080866
@@ -15547,6 +15547,8 @@ MonoBehaviour:
   healthChanger: {fileID: 872701131}
   performanceChanger: {fileID: 422011978}
   rngObject: {fileID: 524463468}
+  BG: {fileID: 1044336501}
+  imagen: {fileID: 1378895831}
   showInfoButton: {fileID: 2028419354}
 --- !u!114 &383572967
 MonoBehaviour:
@@ -16597,7 +16599,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414861873}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17390,7 +17392,7 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
@@ -72081,7 +72083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1400, y: -881.1553}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!222 &1765688018

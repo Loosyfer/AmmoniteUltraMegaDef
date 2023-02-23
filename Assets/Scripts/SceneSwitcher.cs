@@ -18,6 +18,8 @@ public class SceneSwitcher : MonoBehaviour
     public GameObject healthChanger;
     public GameObject performanceChanger;
     public GameObject rngObject;
+    public GameObject BG;
+    public GameObject imagen;
     WaitForEndOfFrame frameEnd = new WaitForEndOfFrame();
     private bool mapOn = false;
     public GameObject showInfoButton;
@@ -25,9 +27,11 @@ public class SceneSwitcher : MonoBehaviour
     public void NodeMap()
     {
         mapOn = true;
+        malla.transform.GetComponent<Canvas>().enabled = false;
+        BG.SetActive(false);
+        imagen.SetActive(false);
         mainCamera.SetActive(false);
         camera2.SetActive(true);
-        //malla.SetActive(false);
         canvas2.SetActive(true);
     }
     private void Update()
@@ -70,8 +74,10 @@ public class SceneSwitcher : MonoBehaviour
 
     public void MainGame()
     {
+        malla.transform.GetComponent<Canvas>().enabled = true;
+        BG.SetActive(true);
+        imagen.SetActive(true);
         mapOn = false;
-        //malla.SetActive(true);
         camera2.SetActive(false);
         StartCoroutine(Screenshot(camera3));
         StartCoroutine(DeactivateCanvas());
