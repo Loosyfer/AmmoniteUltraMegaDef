@@ -21,7 +21,7 @@ public class ObjectSpawner : MonoBehaviour
 
     public void Spawner(string s)
     {
-        if (int.TryParse(s, out int n) && n > 0 && n < 217)
+        if (int.TryParse(s, out int n) && n > 0 && n < 218)
         {
             itemSpawner.SpawnObjectWArg(n.ToString());
         }

@@ -230,6 +230,7 @@ MonoBehaviour:
   - {fileID: 566702607, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
   - {fileID: 1797697247, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
   - {fileID: -1079965566, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: 2104870018, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
   names:
   - Lobster Claw
   - Shell Shield

@@ -406,12 +406,11 @@ RectTransform:
   - {fileID: 141570809}
   - {fileID: 1576548397}
   - {fileID: 976751919}
-  - {fileID: 757164999}
   - {fileID: 922514472}
-  - {fileID: 730432961}
   - {fileID: 682095922}
   - {fileID: 1912428386}
   - {fileID: 1527303179}
+  - {fileID: 2120314022}
   m_Father: {fileID: 723143978}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6311,7 +6310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.311, y: -1.7226}
+  m_AnchoredPosition: {x: -3.8, y: 22}
   m_SizeDelta: {x: 298.72, y: 131.8459}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147294335
@@ -12732,8 +12731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2426, y: -2.2534}
-  m_SizeDelta: {x: 303.2255, y: 235.7726}
+  m_AnchoredPosition: {x: 0.000046283, y: -1.3471}
+  m_SizeDelta: {x: 303.2255, y: 209.4669}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301089877
 MonoBehaviour:
@@ -25117,7 +25116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.1257253, y: 0.31}
+  m_AnchoredPosition: {x: -7.1257253, y: -0.8}
   m_SizeDelta: {x: 24.4955, y: 14.74485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &631173845
@@ -27270,7 +27269,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 14350411}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -28057,7 +28056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.3358, y: -1.589}
+  m_AnchoredPosition: {x: -0.000015438, y: 29.1}
   m_SizeDelta: {x: 303.7441, y: 290.0272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698769815
@@ -29506,17 +29505,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730432960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_LocalScale: {x: 1.09, y: 1.09, z: 1.09}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 14350411}
-  m_RootOrder: 7
+  m_Father: {fileID: 2120314022}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: 207.7}
+  m_AnchoredPosition: {x: 0.000019550323, y: 16.249924}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &730432962
@@ -31702,17 +31701,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757164998}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_LocalScale: {x: 1.09, y: 1.09, z: 1.09}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 14350411}
-  m_RootOrder: 5
+  m_Father: {fileID: 2120314022}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: 175.2}
+  m_AnchoredPosition: {x: 0.000019550323, y: -19.1}
   m_SizeDelta: {x: 28.5674, y: 28.5674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &757165000
@@ -34060,7 +34059,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Once per Biologist, can build an organic A module at the end of the battle.-\r\n\n4x
-    = after each battle, receive an Organic B module based on the defeated enemy.\r\n\n8x
+    = After each battle, receive an Organic B module based on the defeated enemy.\r\n\n8x
     = If an organic module is destroyed, recycle it into another random organic module.\r\n\n12x
     = at battle start, summon the previously defeated monster as a zombie by your
     side with 33% of their DPT and 10% of their HP, and it absorbs hits until its
@@ -38207,7 +38206,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 14350411}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -42125,6 +42124,7 @@ GameObject:
   - component: {fileID: 1008045871}
   - component: {fileID: 1008045873}
   - component: {fileID: 1008045872}
+  - component: {fileID: 1008045874}
   m_Layer: 5
   m_Name: Stacking
   m_TagString: Untagged
@@ -42210,6 +42210,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008045870}
   m_CullTransparentMesh: 1
+--- !u!223 &1008045874
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008045870}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1009853664
 GameObject:
   m_ObjectHideFlags: 0
@@ -47271,8 +47292,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Instead of normal autos, Wizards cast magic beams that deal x1.3 damage.\n\n6x
     = Once per Wizard, after spending a battle in a normal module, it transforms
-    into a random magic module.\r\n\n12x = After each battle, choose one Wizard to
-    be elevated to Archwizard, healing to full HP and gaining a random Spell.\r"
+    into a random magic module. // Once per Wizard, at the end of the battle creates
+    one random magic module.\n\n12x = After each battle, choose one Wizard to be
+    elevated to Archwizard, healing to full HP and gaining a random Spell.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -50794,8 +50816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1966, y: -3.0606}
-  m_SizeDelta: {x: 304.0871, y: 188.9216}
+  m_AnchoredPosition: {x: -0.000055268, y: 1.0483}
+  m_SizeDelta: {x: 304.0871, y: 30.2105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253836307
 MonoBehaviour:
@@ -51298,8 +51320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.841337, y: 0.81903327}
-  m_SizeDelta: {x: 324.69998, y: 242.56194}
+  m_AnchoredPosition: {x: -28.841337, y: -0.36472}
+  m_SizeDelta: {x: 324.69995, y: 218.88678}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1263635725
 Canvas:
@@ -52357,7 +52379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -743.1268, y: -363.99}
+  m_AnchoredPosition: {x: -747.7, y: -365.3}
   m_SizeDelta: {x: 489.4636, y: 39.903}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1291719077
@@ -54278,8 +54300,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.825768, y: 10.802494}
-  m_SizeDelta: {x: 324.7311, y: 293.135}
+  m_AnchoredPosition: {x: -28.825768, y: 14.353769}
+  m_SizeDelta: {x: 324.73108, y: 364.16052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1346538375
 Canvas:
@@ -55248,7 +55270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wizard (4/8/12)
+  m_text: Wizard (6/12)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -57391,8 +57413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.850193, y: 0.0906868}
-  m_SizeDelta: {x: 324.68155, y: 183.61862}
+  m_AnchoredPosition: {x: -28.850193, y: 1.36}
+  m_SizeDelta: {x: 324.68158, y: 23.15376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1426211846
 Canvas:
@@ -61421,8 +61443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.759268, y: 0.15623832}
-  m_SizeDelta: {x: 324.5738, y: 137.08752}
+  m_AnchoredPosition: {x: -28.75927, y: 2.7429678}
+  m_SizeDelta: {x: 324.57382, y: 188.82211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1525672980
 Canvas:
@@ -61706,7 +61728,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 14350411}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -61760,7 +61782,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 477754015, guid: dcc3b4e0df221b748802c56aa0b7bf11, type: 3}
+  m_Sprite: {fileID: 1347448849, guid: dcc3b4e0df221b748802c56aa0b7bf11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77279,7 +77301,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 14350411}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -77333,7 +77355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1141050781, guid: dcc3b4e0df221b748802c56aa0b7bf11, type: 3}
+  m_Sprite: {fileID: 477754015, guid: dcc3b4e0df221b748802c56aa0b7bf11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -78113,7 +78135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.2616863, y: 0.41302052}
+  m_AnchoredPosition: {x: -7.2616863, y: -0.39}
   m_SizeDelta: {x: 23.58923, y: 14.058}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925604999
@@ -79784,8 +79806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 621.57043, y: -436.1933}
-  m_SizeDelta: {x: 622.4391, y: 160.9731}
+  m_AnchoredPosition: {x: 619.21, y: -423.20007}
+  m_SizeDelta: {x: 622.4391, y: 229.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1964881703
 Canvas:
@@ -79830,7 +79852,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
@@ -79841,12 +79863,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ship slots can be expanded in any direction/inside a given ship layout\r.\nAll
-    modules have requirements.\nStart with 1 slot and 0 bench.\nUnstable is now 25%
-    chance of explosion\r.\nShip starts with 1000HP.\n6 Fuel is the starting and
-    max amount.\nBench heals crew members and repairs damaged modules.\n2 Emporiums
-    hidden per level\nUpgrade ship processor = 50% chance enemy yields 1 item\r,
-    upgrade speed is unavailable\r\n"
+  m_Text: "1) Enemies are in node paths and each node has 40% chance of Fuel and
+    40% chance of slot. \n(slot costs 2 scrap?)\n\n2) Enemies are in nodes and each
+    node has a 25% chance of Fuel and 25% chance of slot. \n(slot costs 2 scrap?)\n\nShip
+    slots can be expanded in any direction/inside a given ship layout\r.\nAll modules
+    have requirements.\nStart with 1 slot and 0 bench.\nUnstable is now 25% chance
+    of explosion\r.\nShip starts with 1000HP.\n6 Fuel is the starting and max amount.\nBench
+    heals crew members and repairs damaged modules.\n2 Emporiums hidden per level\nUpgrade
+    ship processor = 50% chance enemy yields 1 item\r, upgrade speed is unavailable\r\n"
 --- !u!222 &1964881705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -84952,6 +84976,44 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &2120314021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120314022}
+  m_Layer: 5
+  m_Name: IconsMini
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2120314022
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120314021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 757164999}
+  - {fileID: 730432961}
+  m_Father: {fileID: 14350411}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.77, y: 191.45}
+  m_SizeDelta: {x: 24.282291, y: 56.782288}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2124499469
 GameObject:
   m_ObjectHideFlags: 0
