@@ -1203,8 +1203,8 @@ TextureImporter:
       name: Item_Icons_2_51
       rect:
         serializedVersion: 2
-        x: 3465
-        y: 2507
+        x: 3782
+        y: 2839
         width: 310
         height: 310
       alignment: 0
@@ -1220,6 +1220,174 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_52
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2522
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55441362d1efdc419cf4e82c21ba3b6
+      internalID: 176366897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_53
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 2523
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156ed805759afd74e997cf4c64defdb9
+      internalID: 1849170538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_54
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 2522
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a10d85769d09294082786d0edfadfb6
+      internalID: 134076902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_55
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 2524
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12cf13f80284c74bb459cfd39bd94ac
+      internalID: -229033507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_56
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 2523
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a41f0cbf83d9e4fb0fe115456f053e
+      internalID: 450193043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_57
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 2523
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d03bd3075c58d43ac8ff9d76bbd55b
+      internalID: 2061705086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_58
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 2522
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7d0e40e9e8a0d45a1ec34cf78064c3
+      internalID: -1477215677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Icons_2_59
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 2521
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e623a3bd6457d479ec0e826f76e560
+      internalID: -695199104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1231,58 +1399,66 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Item_Icons_2_21: 1752279933
-      Item_Icons_2_37: 365827048
-      Item_Icons_2_23: -196861879
-      Item_Icons_2_16: -992253487
-      Item_Icons_2_8: 1395365228
-      Item_Icons_2_33: 1600762922
-      Item_Icons_2_18: -1727227273
-      Item_Icons_2_24: 260718561
-      Item_Icons_2_4: -1059435637
-      Item_Icons_2_13: -1918625900
-      Item_Icons_2_43: 2114177527
-      Item_Icons_2_28: -1620936922
-      Item_Icons_2_5: -1512622502
-      Item_Icons_2_51: 2104870018
-      Item_Icons_2_12: 915824937
-      Item_Icons_2_35: -1130270441
-      Item_Icons_2_10: 1741446755
-      Item_Icons_2_41: 1493621701
-      Item_Icons_2_31: -1809906569
-      Item_Icons_2_46: 1305982425
-      Item_Icons_2_30: 891516583
-      Item_Icons_2_44: -1133825718
-      Item_Icons_2_11: 143738799
-      Item_Icons_2_45: -357711230
-      Item_Icons_2_17: 813900979
-      Item_Icons_2_26: -312259220
-      Item_Icons_2_29: -17780813
-      Item_Icons_2_39: 1554279054
-      Item_Icons_2_2: 776585315
-      Item_Icons_2_19: 782930711
-      Item_Icons_2_32: 1552646155
-      Item_Icons_2_50: -1079965566
-      Item_Icons_2_1: -628757769
-      Item_Icons_2_22: 1452869386
-      Item_Icons_2_38: 1803298157
-      Item_Icons_2_40: 1576871027
-      Item_Icons_2_27: -1142588309
-      Item_Icons_2_34: 1479626241
-      Item_Icons_2_49: 1797697247
-      Item_Icons_2_42: -666224650
-      Item_Icons_2_6: 39892921
-      Item_Icons_2_48: 566702607
-      Item_Icons_2_14: 2027194490
-      Item_Icons_2_0: -796531345
-      Item_Icons_2_36: 1719881258
-      Item_Icons_2_7: 925231620
-      Item_Icons_2_25: 1738475876
-      Item_Icons_2_9: 974244093
-      Item_Icons_2_20: 740254344
-      Item_Icons_2_15: -197687313
-      Item_Icons_2_47: -1445018650
-      Item_Icons_2_3: -1154523743
+      Item_Icons_2_21: -796531345
+      Item_Icons_2_37: -628757769
+      Item_Icons_2_23: 776585315
+      Item_Icons_2_16: -1154523743
+      Item_Icons_2_58: 2132744555
+      Item_Icons_2_8: -1059435637
+      Item_Icons_2_33: -1512622502
+      Item_Icons_2_18: 39892921
+      Item_Icons_2_24: 925231620
+      Item_Icons_2_4: 1395365228
+      Item_Icons_2_13: 974244093
+      Item_Icons_2_43: 1741446755
+      Item_Icons_2_28: 143738799
+      Item_Icons_2_5: 915824937
+      Item_Icons_2_51: -1918625900
+      Item_Icons_2_12: 2027194490
+      Item_Icons_2_35: -197687313
+      Item_Icons_2_55: -437726560
+      Item_Icons_2_10: -992253487
+      Item_Icons_2_41: 813900979
+      Item_Icons_2_31: -1727227273
+      Item_Icons_2_57: -991949218
+      Item_Icons_2_46: 782930711
+      Item_Icons_2_30: 740254344
+      Item_Icons_2_44: 1752279933
+      Item_Icons_2_11: 260718561
+      Item_Icons_2_17: 1452869386
+      Item_Icons_2_45: -196861879
+      Item_Icons_2_59: -1116477374
+      Item_Icons_2_26: 1738475876
+      Item_Icons_2_29: -312259220
+      Item_Icons_2_39: -1142588309
+      Item_Icons_2_2: -1620936922
+      Item_Icons_2_19: -17780813
+      Item_Icons_2_32: 891516583
+      Item_Icons_2_50: -1809906569
+      Item_Icons_2_1: 1552646155
+      Item_Icons_2_22: 1600762922
+      Item_Icons_2_38: 1479626241
+      Item_Icons_2_40: -1130270441
+      Item_Icons_2_27: 1719881258
+      Item_Icons_2_34: 365827048
+      Item_Icons_2_49: 1803298157
+      Item_Icons_2_42: 1554279054
+      Item_Icons_2_6: 1576871027
+      Item_Icons_2_52: 37524680
+      Item_Icons_2_48: 1493621701
+      Item_Icons_2_14: -666224650
+      Item_Icons_2_0: 2114177527
+      Item_Icons_2_36: -1133825718
+      Item_Icons_2_53: 174693178
+      Item_Icons_2_7: -357711230
+      Item_Icons_2_25: 1305982425
+      Item_Icons_2_9: -1445018650
+      Item_Icons_2_20: 566702607
+      Item_Icons_2_15: 1797697247
+      Item_Icons_2_47: -1079965566
+      Item_Icons_2_56: -1046783244
+      Item_Icons_2_54: -166098497
+      Item_Icons_2_3: 2104870018
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

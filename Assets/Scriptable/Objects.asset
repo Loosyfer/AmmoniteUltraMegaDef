@@ -231,6 +231,14 @@ MonoBehaviour:
   - {fileID: 1797697247, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
   - {fileID: -1079965566, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
   - {fileID: 2104870018, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: 176366897, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: 1849170538, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: 134076902, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: -229033507, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: 450193043, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: 2061705086, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: -1477215677, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
+  - {fileID: -695199104, guid: 6fc7b7faa2bf120429a900bf55015aae, type: 3}
   names:
   - Lobster Claw
   - Shell Shield

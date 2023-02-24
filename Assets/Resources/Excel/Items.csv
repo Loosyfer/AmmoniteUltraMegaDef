@@ -5,7 +5,7 @@ Treasure,If equipped* it opens at the end of 2 battles and grants 2 random items
 Anchor,The crew member cannot be moved from this module in battle* and the module can’t become detached.,,,Someone doesn’t stop moving around? Tie them to this anchor.
 Bombs,If hit* there’s a 50% chance of -1 HP and dealing 100 damage to the enemy.,,,These bombs pack a punch but harm the user too.
 Pirate Prosthetic Hook,Only works when not full HP. If hit by the enemy* there’s a high chance they hit the same module again. For every hit* 50% chance you receive a Tasty Seafood.,,,Turn a crippled holder into a pirate that hooks onto the enemy.
-Poisonous Seaweed,The holder becomes poisoned* but so does the enemy if it hits them.,,,Poisons anything that touches it.
+Poisonous Seaweed,The holder becomes poisoned* but so does the enemy if it hits them. // Terrible in the lategame with lots of modules* but the problem isn't this item* is how shitty and random the targeting mechanic becomes when having lots of modules.,,,Poisons anything that touches it.
 Drowned Islander,Makes the holder sick* but if they’re a Doctor or Scientist* after 2 battles it becomes a random crew member.,,,A Doctor or Scientist might bring them back to life.
 Octo Ink Sack,Once per battle* if the crew member gets hit and the ship has an empty module* they avoid the hit and move to the nearest empty module.,,,Evacuate the holder if hit.
 Hallucinogenic Anemone,At battle start* the holder gets a random trait until the end of that battle.,,,The holder will hallucinate in every battle.
@@ -193,7 +193,7 @@ Temporary Boost,Grants its module another random side effect* but it's consumed 
 Temporary Hack,Eliminates the requirements of the module it's in* but it's consumed at the end of battle.,,,
 Tranquiliser Dart,If the holder is undisturbed for 6 turns* throw a dart that puts the enemy to sleep.,,,
 Snowballs,If set on fire or flooded this item is destroyed. Every 2 turns the holder throws a snowball at the enemy that deals 1 damage. At three snowballs* the enemy is frozen.,,,
-Loose Stalactites,If hit* they drop dealing 50 damage to the enemy and -1HP to the holder. If hit twice in the same battle* the enemy becomes frozen.,,,
+Loose Stalactites,This module is frozen. If hit* they drop dealing 100 damage to the enemy and -1HP to the holder. If hit twice in the same battle* the enemy becomes frozen.,,,
 Cooking Hobs,If hit by the enemy* deal 50 damage and produce 1 Tasty Seafood. If hit twice by the enemy* inflict burn.,,,
 Swinging Watch,If in the leftmost column and undisturbed for 4 turns* puts the enemy to sleep.,,,
 Flashbang,If hit by the enemy* -30%P* the enemy is blinded and this item is consumed.,,,
@@ -202,7 +202,7 @@ Taming Fish Food,Every 4 turns* throw fish food at the enemy that heals it for 5
 Perfect On Button,The module will be active regardless of requirements.,Super,,
 Sticky Bomb,If hit by the enemy* this item is consumed* and in 4 turns* it will explode dealing 200 damage to the enemy.,,,
 Elemental Blastgun,If this module is flooded* frozen* set on fire or wild* shoot 40dpt at the enemy.,Super,,
-Magic Mirror,At the end of combat* if the holder was undisturbed* gain an exact copy of that crew member. If disturbed* the holder simply becomes Lunatic.,,,
+Magic Mirror,At the end of combat* this item is consumed and if the holder was undisturbed* gain an exact copy of that crew member* or if disturbed the holder simply becomes Lunatic.,,,
 Item Rematerialiser,Any items placed in the same module as this one will change to other random items at the end of the battle.,Super,,
 Artifact Booster,Adjacent modules with items in them have +10%P.,Super,,
 Technology Absorber,Any items placed in the same module as this one will be consumed at battle start to heal 300 ship health.,Super,,
@@ -215,5 +215,13 @@ Divine Immunity,Once per expedition* activate this item to consume it and make i
 Eject Button,Activate to eject this module and its occupant away from the battle into a node further down* even in response to an incoming enemy attack.,,Active,
 Irresistible Bait Escape,Activaste to consume this item* throwing it at the enemy to distract them while you escape the battle. However* that particular enemy will grow stronger from the food and will be sure to reappear later with increased strength.,,Active,
 Unsustainable Brain,+20%P* -1HP/4turns.,,,
-Bedrock Disintegrator,Eliminate an adjacent map node and the nodes adjacent to the eliminated node will become direct paths* and then this item is consumed.,,Active,
+Bedrock Disintegrator,Eliminate a non-boss adjacent map node* and the nodes adjacent to the eliminated node will become direct paths* after which this item is consumed.,,Active,
 Stacking Bonus Marker,Stacking Bonus Marker,,,
+Wild Seeds,At the end of the battle* this item is consumed and this module becomes Wild.,,,
+Aloe Vera Cream,The holder is immune to Set on Fire.,,,
+Magic Tree,This module is Wild for as long as this item is in it. If this module is damaged* Magic Tree repairs it in battle.,,,
+Compost Factory,If this module becomes excrement-flooded* after 2 turns it instead becomes Wild* and the occupant heals 1 HP.,,,
+Shower of Cold Water,-3HP at batlte start* but at the end of battle the occupier is healed back to full HP.,,,
+Contaminated Medical Kit,At battle start* 50% chance of +1HP* 50% chance of -1HP.,,,
+Cursed Book of Revival,If the holder dies* 50% chance they revive to full HP* 50% chance a random adjacent crew member also dies* and this item returns to the bench.,,,
+Hologram Projector,All adjacent modules count as manned by 30% base performance crew members of no profession or trait.,Super,,

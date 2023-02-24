@@ -12,4 +12,1678 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120fb6506254fd84baddc6a22e6b6651, type: 3}
   m_Name: ModExcel
   m_EditorClassIdentifier: 
-  textAssetData: {fileID: 0}
+  myModules:
+    modules:
+    - name: Basic Torpedo Launcher
+      effect: +10dpt.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Exhausting Gun
+      effect: +20dpt but the occupant has their performance halved. // Fires 100
+        dmg at turn 4* after which the occupant will have their performance halved
+        for the rest of the battle.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Flesh Cannon
+      effect: 60 dmg every 4turns* but the occupant loses -1HP each time.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Blood Beam
+      effect: Every time a crew member loses HP* +5dpt for the rest of the battle.
+        // At turn 10* fire a blood beam that deals 40 damage for every 1HP that
+        a crew member lost this battle.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Excrelaser
+      effect: "Permanently excrement-flooded. Deals +10dpt for every adjacent module
+        that\u2019s excrement-flooded including this one. Every time it's hit* excrement-flood
+        a random adjacent module."
+      requirement: 
+      type: 1
+      price: 4
+    - name: Excretor
+      effect: If this module becomes excrement-flooded* undo the flooding and throw
+        the excrement at the enemy dealing 50 dmg and causing poisoning.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Corpse Shield
+      effect: If a crew member dies* their corpse will be launched to block the next
+        attack entirely.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Cult Headquarters
+      effect: The occupier's trait will be Cult Leader.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Portable Nursing Home
+      effect: At the start of battle* generate a no-profession centenarian in an
+        adjacent module.
+      requirement: 
+      type: 4
+      price: 8
+    - name: Stuck Rocket Launcher
+      effect: It's stuck* so it doesn't fire unless the module is hit by the enemy.
+        Once per battle deals 150 damage.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Dream Extractor
+      effect: Once per battle if the occupant falls asleep* cover the ship in a 150
+        HP shield of dreamy clouds.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Triumphant Regenerator
+      effect: If you finished a battle with no more than (20% of the monster health
+        less) than you started it* heal 5% of your Ship Health max.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Jelly Flexi-Membrane
+      effect: Once per battle* if this module is hit by the enemy* block the attack
+        entirely and deal damage equal to the attack deflected.
+      requirement: 
+      type: 0
+      price: 6
+    - name: War General AI
+      effect: Unmanned. This module counts for having a War General in it.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Adjacent Automatiser
+      effect: Automatises a random adjacent empty module that needs to be manned.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Mind Control Unit
+      effect: The occupier will have the same trait as the crew member adjacent to
+        the left.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Motherly Jellycarer
+      effect: If this module was hit* heal it's occupier +2HP and the ship 50HP at
+        the end of the battle.
+      requirement: 
+      type: 0
+      price: 6
+    - name: Temporary Buffer
+      effect: If this module is hit* your ship takes no damage. If this module is
+        hit 4 times* counting previous battles* it explodes.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Chamber of Sacrifice
+      effect: At turn 12* the occupant will be sacrificed and you gain 300 ship health.
+        // If hit* you take no ship damage* the occupant will be sacrificed and you
+        gain 100 ship health.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Mimic Room
+      effect: At the start of battle it transforms into an identical copy of a random
+        adjacent module* until the end of the battle.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Coral Golem
+      effect: "Unmanned. Every time it\u2019s hit the ship takes no damage. With
+        every hit it will become more damaged* and after 5 hits this module explodes."
+      requirement: Only works if adjacent to a Defensive module.
+      type: 0
+      price: 4
+    - name: Virtual Gun Materialiser
+      effect: +20dpt and -5%P every 2 turns. If manned by a Cadet* +40dpt instead.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Mini-Hospital
+      effect: At turn 12* heal +1HP to a random adjacent crew member* or +1HP to
+        each adjacent crew member if manned by a Doctor.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Passive Regenerator
+      effect: +10hpt. // +5hpt* +10hpt if manned by a War General.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Robot Factory
+      effect: At the end of battle* consumes 1 Fuel and you gain a random crew member
+        with Robot trait. This crew member will expire at the end of its first battle.
+        // Consumes 1 Fuel to generate a random crew member with Robot trait at the
+        start of the battle. This crew member will expire at the end of the battle.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Rulebreaker
+      effect: The module below has its requirements obviated. If manned by an Engineer*
+        both the modules below and above have their requirements obviated.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Harpoon Launcher
+      effect: Every 4 turns* fires a harpoon that deals 50 damage. Every subsequent
+        harpoon deals 10 less damage than the previous one down to a minimum of 10
+        damage.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Anglerfish Glare
+      effect: At turn 4* blind the enemy. // At turn 10* blind the enemy.
+      requirement: Must be placed on the leftmost column.
+      type: 0
+      price: 6
+    - name: "Commander\u2019s Cockpit"
+      effect: If manned by a Cadet or Lieutenant for 3 battles in a row* they become
+        a War General. If manned by a War General* +5%P for each adjacent Cadet or
+        Lieutenant. // +2dpt for each adjacent Cadet or Lieutenant. If manned by
+        a War General* +5dpt.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Stingray Fin
+      effect: 'Attack before the enemy in every battle. // Must be placed in the
+        rightmost column available in your current ship* or the rightmost column
+        available in the invisible grid? latter option is a better requirement for
+        such a strong module* but only works if the layout grid is finite. '
+      requirement: Must be placed on the rightmost column.
+      type: 0
+      price: 8
+    - name: Urchin Megacarapace 1
+      effect: If the enemy hits this module* it takes 50 damage. If this happens
+        twice* the enemy becomes poisoned.
+      requirement: 
+      type: 0
+      price: 6
+    - name: Charging Laser Beam
+      effect: If undisturbed for 8 turns in a row* it shoots a 200 damage lase beam.
+      requirement: 
+      type: 1
+      price: 8
+    - name: Magicoral
+      effect: If this module wasn't disturbed* heal the occupant and all adjacent
+        crew members for 1 HP at the end of the battle. // 2 HP.
+      requirement: 
+      type: 0
+      price: 8
+    - name: Hygienic Chamber
+      effect: Undo excrement-flooding* sick and poisoning immediately. // Chance
+        to undo excrement-flooding* sick and poisoning at will.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Electroconvulsive Therapy Chamber.
+      effect: At the end of the battle* there's an 80% chance the occupier has their
+        trait changed to a positive trait and lunatic ailment is removed* and a 20%
+        chance they die.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Organic Recycler
+      effect: Every time an adjacent crew member dies* you gain 2 Fuel.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Submarine Recycler
+      effect: Every time an adjacent module is destroyed* you receive the same module
+        but with no side effects and an extra different random defect. // When a
+        module with 4 defects is destroyed* it's no longer recreated.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Item Recycler 1
+      effect: Every time an item is consumed or destroyed* you receive another random
+        item that will expire at the end of its first battle.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Biotransformer
+      effect: For every 3 defeated monsters* you gain a random Organic A module*
+        or Organic B if manned by a Biologist.
+      requirement: 
+      type: 0
+      price: 8
+    - name: Isolation Bunker
+      effect: 'This module is indestructible and its occupier can''t take damage
+        from the enemy. However* the first occupant placed in this module can''t
+        ever be moved out* and they will be classed as adjacent to no other module
+        or crew member. // After 10 battles* the occupant becomes Lunatic. '
+      requirement: 
+      type: 2
+      price: 6
+    - name: Stick Pod
+      effect: This module doesn't require a purchased slot to be placed. Always comes
+        with a side effect.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Ritual Chamber
+      effect: At the start of battle* will summon a random crew member in each empty
+        adjacent module with the trait Ghost that disappear at the end of the battle.
+        // Will summon 1-2 random crew members in random adjacent modules with the
+        trait Ghost and no profession.
+      requirement: 
+      type: 0
+      price: 6
+    - name: Casino
+      effect: Any percentage-based effect inside this module will have a higher chance
+        of having a positive outcome instead of a negative one. // In adjacent modules.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Weed Garden
+      effect: This module is permanently Wild. The occupant's trait will be Stoned
+        for as long as they're in this module.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Defensive Accumulator
+      effect: For every defensive module connected in a defensive path to this one*
+        increase your ship's max health by 20. // by 50.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Pharmacy
+      effect: The occupant will have Doctor as their profession while in this module.
+        At the end of the battle* if an adjacent crew member lost HP* gain one Doctor
+        Kit.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Gym
+      effect: If the occupant stays in this module for 2 battles in a row* their
+        trait is changed to Bodybuilder and +5% base performance* up to once per
+        crew member.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Excreshield
+      effect: Once per battle* if this module becomes excrement-flooded* empty it
+        to create an excrement shield that will completely block the next enemy attack.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Repair Station
+      effect: If an adjacent module becomes damaged* it fixes it in 2 turns.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Defensive Synergiser
+      effect: Every time an adjacent defensive module's effect triggers* gain 20
+        ship health. // gain 40 ship health.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Greedy Buffet
+      effect: +1HP/4turns* but if they heal HP while at 6HP* the occupant becomes
+        sick.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Military School
+      effect: If a cadet or lieutenant spends 1 battle in this module* +5% base performance*
+        up to once per crew member.
+      requirement: 
+      type: 4
+      price: 8
+    - name: Impact Buffer
+      effect: The first hit on this module per battle doesn't damage the ship or
+        its crew member.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Self-Destruct module
+      effect: Activate this module for it to separate from the ship* and launch itself
+        with its brave crew member into the enemy* causing a 400 dmg explosion that
+        destroys both module and occupier. If operated by a War General* it deals
+        700 damage instead.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Net Gun
+      effect: Every 6 turns* throws a fishing net that deals 10 damage and lowers
+        enemy dpt by 10. If a fishing net is thrown during the attack that defeats
+        a monster* catch the monster instead and it yields an extra item.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Explosive Redirector
+      effect: Every time an adjacent module explodes* deal 150 damage to the enemy.
+        // 300 damage.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Coin Bullet Gun
+      effect: Compresses your saved currency into hard golden bullets that deal more
+        damage the more coins you have. 0dpt if you have 0 coins* and 10-100dpt for
+        1-50 coins. Every 4 turns* it consumes 1 coin to use. // Only consumes 1
+        coin every 8 turns if you have more than 25 coins.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Fuel Rockets
+      effect: They run on the same fuel as your ship* so it consumes 1 Fuel every
+        8 turns to throw a 100 damage rocket. // Can be activated/deactivated at
+        any time. // At turn 2* throw a rocket that deals 100 damage and consumes
+        2 Fuel.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Flamethrower
+      effect: At turn 8* fires flames that deal 60 damage for every adjacent module
+        that's set on fire* including this module* and also burns the enemy.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Sticky Seaworm
+      effect: Sticks to adjacent modules for the first 5 battles after it is first
+        placed. +1HP/4turns and immunity to ailments.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Combo Bomb
+      effect: If you activate 3 effects in the same turn* launch a combo bomb that
+        deals 150 dmg.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Combo Regenerator
+      effect: If you activate 3 effects in the same turn* heal for 100 Ship Health.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Mental Reversal Capsule
+      effect: Inverts the performance of the crew member in it. The formula is [NewP
+        = 90-P] if P > 20* and [NewP = 100-P] if P < 20.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Emergency Escape Engine
+      effect: Use this module to eject the whole ship away from a battle* and this
+        module is destroyed.
+      requirement: 
+      type: 2
+      price: 8
+    - name: Plumbing System
+      effect: Extracts any flooding from anywhere in the ship. If this module gets
+        hit* it becomes excrement-flooded.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Flesh Connection Pods
+      effect: They always appear as a pair in the shop. Whenever the occupant loses
+        or gains HP in one of the modules* the occupant of the other module loses/gains
+        the HP instead.
+      requirement: 
+      type: 4
+      price: 3
+    - name: Fuel Converter
+      effect: At the end of the battle* consume 1 Fuel to heal the occupant 2HP.
+        // 3HP.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Fishing Bait Pod
+      effect: The enemy has a 33% chance in each of its attacks to target this module.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Mystery Room
+      effect: "At battle start and until the end of the battle* this module turns
+        into another random module that isn\u2019t a Mega-module (retaining the same
+        requirements* defects and side effects)."
+      requirement: 
+      type: 4
+      price: 4
+    - name: Magical Storage Room
+      effect: Can work unmmaned* and items can be placed without a holder in this
+        module. At the end of battle* the item in this module will transform into
+        a different item.
+      requirement: 
+      type: 0
+      price: 6
+    - name: Perfect Balance
+      effect: "Once per expedition* equalise the enemy's HP with the ship\u2019s
+        HP* calculating the mean of both values and applying it to the enemy and
+        the ship. MAYBE IT SHOULD BE A SUPER ITEM."
+      requirement: Only works when adjacent to two offensive and two defensive modules.
+      type: 4
+      price: 8
+    - name: Chronic Beam
+      effect: At turn 8* shoot a beam at the enemy that deals 150 damage for every
+        Ailment the enemy has (only works if enemy can have more than 1 ailment).
+        // +40dpt for as long as the enemy has an ailment.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Defensive Perfection
+      effect: If manned by a War General* the enemy deals 75% the normal damage to
+        our ship unless it first lands a hit onto this or any of its adjacent modules.
+      requirement: Only works when adjacent to 4 defensive modules.
+      type: 2
+      price: 8
+    - name: Offensive Perfection
+      effect: If manned by a War General* +60dpt unless it first lands a hit onto
+        this or any of its adjacent modules.
+      requirement: Only works when adjacent to 4 offensive modules.
+      type: 1
+      price: 8
+    - name: Beautiful Fish Tank
+      effect: Unmanned. This module is permanently water-flooded. At the end of battle*
+        you receive 1 Tasty Seafood.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Decompression Core
+      effect: "This and adjacent modules can\u2019t explode."
+      requirement: 
+      type: 2
+      price: 6
+    - name: Fuel Extractor
+      effect: If this module gets flooded* it produces 1 Fuel at the end of the battle.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Danger Thunder
+      effect: Deals 150-0dpt depending on whether your ship has 50-500HP left.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Brain Giga-Aumentator
+      effect: +10%P. The occupant has an increased performance cap of 150%.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Portable Mini-University
+      effect: At the end of the battle* the occupant's profession will permanently
+        change to a different random profession.
+      requirement: 
+      type: 4
+      price: 8
+    - name: Interdimensional Training
+      effect: At battle start it closes its doors and transports the crew member
+        into another dimension for 3 battles* during which it cannot be used. Then*
+        they return transformed into an improved being with two positive traits*
+        fully healed* 8 max HP and 70% base performance. There is a 20% chance the
+        crew member returns as a centenarian that shits himself.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Blood Absorber
+      effect: If your crew has taken 8HP damage or more this battle* +150 ship health.
+      requirement: 
+      type: 0
+      price: 4
+    - name: The Golden Chamber
+      effect: Costs 30 coins and comes more easily to players with lots of coins.
+        Offers maximum comfort to its occupant* however it is extremely delicate
+        as it is beautiful. If undisturbed for a battle* its occupant will give you
+        1 coin + 1 extra coin for every undisturbed battle in a row. If the module
+        is disturbed* the counter resets back to 1 coin of reward.
+      requirement: 
+      type: 4
+      price: 30
+    - name: Sadomasochism Dungeon
+      effect: If a crew member takes damage in this module* they gain Masochist as
+        their secondary trait permanently.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Electric Shockwave
+      effect: At turn 4* electrocute the enemy for 100 damage* but there's a 40%
+        chance it also damages your ship for 50 damage (15% chance if operated by
+        a War General).
+      requirement: 
+      type: 1
+      price: 4
+    - name: Lunatic Brutaliser
+      effect: The occupant will become Lunatic at the end of the battle. If a monster
+        hits a module with a Lunatic* deal 100 damage.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Death Coffin
+      effect: Every 3 enemy hits* there's a 50% chance that this module is hit* and
+        the crew member in it takes double damage from hits.
+      requirement: 
+      type: 4
+      price: 3
+    - name: Magical Swap Box
+      effect: The occupant* right before getting hit* will swap places with another
+        random crew member.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Military Waking Alarm
+      effect: Every 4 turns* removes Stunned* Sleepy and Asleep from all crew members*
+        and +5%P to all adjacent Cadets and Lieutenants. // If operated by a War
+        General* all adjacent crew members get a 10%P boost
+      requirement: 
+      type: 4
+      price: 8
+    - name: Trash Compactor
+      effect: If an adjacent module is damaged* at the end of the battle you can
+        recycle it into 250 ship health.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Man Buffer
+      effect: If this module gets hit* -2HP extra to the occupant but the ship takes
+        no damage.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Kinetic Absorber
+      effect: Any time 1 crew member moves* it fires a kinetic blast to the enemy
+        that deals 100 dmg. 100-300dmg.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Discharge Sponge
+      effect: If this module is hit* reduce enemy dmg by 20% for 4 turns* and stop
+        berserk status. // -> 50% for 8 turns.
+      requirement: 
+      type: 0
+      price: 6
+    - name: Health Weaponiser
+      effect: At turn 2* sacrifice 100 ship HP to launch a blast that deals 200 dmg.
+        If operated by a War General* sacrifices 200 ship HP to deal 500 dmg. 150-400
+        dmg* 250-700dmg.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Danger Alert
+      effect: When the ship is below 1/3 HP* +5%P to this an adjacent crew members.
+        If operated by a War General* +10%P instead when below 1/4 HP. // 2-40% +20-60%.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Laser of Death
+      effect: Grim Reaper themed. Every time a crew member dies* the damage of this
+        module permanently increases +10* to a maximum of +100dpt. +2-20dpt* max
+        200dpt. // At turn 2* blast the enemy with a laser of death that deals 100
+        damage for every crew member that died in the previous battle.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Restructurator
+      effect: During the next prep phase* you can move to another place the slot
+        that this module was in. If so* +5%P to the occupant of that slot in the
+        next battle.
+      requirement: Must be adjacent to all other 4 module types. Is this requirement
+        still necessary?
+      type: 4
+      price: 4
+    - name: Business Centre
+      effect: Recruiters and Businessmen in/adjacent to this module have a 50% chance
+        of yielding 1 coin at the end of the battle. 1-3.
+      requirement: 
+      type: 4
+      price: 3
+    - name: Megaton Core
+      effect: "Extremely heavy nucleus that can\u2019t be manned. It increases your
+        ship\u2019s HP by 100* and charges adjacent defensive modules 50% faster.
+        Once placed in a slot of the layout* it can\u2019t ever be moved from there.
+        10-200* 10-100%."
+      requirement: 
+      type: 2
+      price: 6
+    - name: Tentacollector
+      effect: It uses its long tentacles to pick up items every now and then. 50%
+        chance of item at the end of battle.
+      requirement: 
+      type: 0
+      price: 8
+    - name: Chef Academy
+      effect: At the end of the battle* the occupier will gain Sushi Chef as their
+        secondary trait. Works with up to 3 different crew members.
+      requirement: 
+      type: 4
+      price: 8
+    - name: Explosive Charger
+      effect: If a module explodes* absorb energy from the explosion to charge up
+        your modules for 50% and fix any damaged/unstable module. 10-100%.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Pain Transformer
+      effect: If a crew member loses HP in this module* it fires a piercing pain
+        blast of 80 dmg into the enemy. 50-250%.
+      requirement: 
+      type: 1
+      price: 8
+    - name: Contagion Beam
+      effect: At turn 10* shoot a diseased beam that deals 100 damage for each crew
+        member with an ailment.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Water-Based Doping module
+      effect: When flooded* injects the water with enhancing drugs. +5%P in this
+        or any water-flooded module. However if this module gets hit* the enemy will
+        have +20%dpt in its next attack.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Arctic Hull
+      effect: Both parts always appear as a pair in the shop* for 300 each. Freeze
+        the water around the ship to create an ice barrier that creates a 300 ship
+        HP shield at the beginning of every battle. // The barrier* however* will
+        disappear if any of the two modules is disturbed. 50-400 HP shield.
+      requirement: One must be placed in the highest row of the Layout* and the other
+        in the lowest row.
+      type: 2
+      price: 4
+    - name: Chamber of Infinite Wisdom
+      effect: The crew member in this module will have a profession of your choice*
+        and their performance cap will be 150%.
+      requirement: 
+      type: 4
+      price: 8
+    - name: Resourceful Blocker
+      effect: Twice per battle* can throw an item at will to block an enemy attack.
+        Block 25-100% of the damage.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Systemic Freezer
+      effect: When a module floods* it instantly becomes frozen. If the enemy hits
+        a frozen module* it becomes frozen.
+      requirement: 
+      type: 2
+      price: 3
+    - name: Gambletron 3000
+      effect: At the end of a battle* earn more currency the ship health you lost.
+        +1-10 coins from 300-0 SHP lost. +50-150 to +300-800 currency.
+      requirement: 
+      type: 4
+      price: 3
+    - name: Seafood Absorber
+      effect: Every time you win a battle* +20 to your ship HP* stacks up to 10 times.
+        +5-20.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Recruitbot 3000
+      effect: You can insert 3 coins in it* and at the end of battle it will produce
+        a random crew member.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Item Multiplier
+      effect: After 4 battles with an item in it* it will produce a copy of that
+        item. 50-20 turns. // The occupier will be holding the same items as the
+        occupier adjacent to the right.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Steamthrower
+      effect: When this or an adjacent module floods* instantly boils away the water
+        to shoot scalding steam at the enemy that deals 100 dmg. Any crew member
+        in the flooded module will take 1 HP dmg. 50-200 dmg.
+      requirement: 
+      type: 1
+      price: 4
+    - name: "Co-pilot\u2019s Cockpit"
+      effect: Once per battle* during 1 turn* double any Offensive or Defensive effects
+        that your other modules used.
+      requirement: Must be adjacent to the Captain.
+      type: 4
+      price: 6
+    - name: Autopilot Navigator
+      effect: Unmanned. If this module was placed in the ship* after a successfull
+        battle the ship will mark the juiciest Nodes nearby in the Node Map. 1-5
+        juicy nodes.
+      requirement: Must be adjacent to the Captain.
+      type: 4
+      price: 4
+    - name: Kidnaptron 3000
+      effect: Once a crew member is placed in this module* they can't be moved unless
+        you pay Kidnaptron 1 coin. The traumatic experience of being kidnapped by
+        Kidnaptron causes the crew member that exits the module to have a different
+        random trait. // And 20% chance of dodging enemy attacks.
+      requirement: 
+      type: 4
+      price: 3
+    - name: Professional Union
+      effect: Unmanned. Only works when adjacent to 4 crew members of the same profession.
+        When any of them die* this module will replace their Stacking Bonus count.
+        Adjacent to 4-1 crew members of the same profession.
+      requirement: Only works when adjacent to 4 crew members of the same profession.
+      type: 4
+      price: 4
+    - name: Corruption Node
+      effect: Each non-organic module adjacent to this one has a 20% chance of changing
+        into a random organic module at the end of a battle. 5-40% chance.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Grand Professional Abduction
+      effect: "Every time you place a new type of professional in this module* it
+        is consumed. If this module consumes 7 types of different professionals*
+        it will grant the basic Stacking Bonus of every type of professional* but
+        you can\u2019t receive the bigger Stacking Bonuses. // Consumes one of each
+        type of professional."
+      requirement: 
+      type: 4
+      price: 6
+    - name: Desperate Disintegrator
+      effect: If you have 100 SHP or less* blast the enemy with a Nuclear Disintegrator
+        that has a 50% chance of obliterating it and healing you for 500 SHP* and
+        a 50% chance of destroying your own ship instead. There is only one per expedition.
+      requirement: 
+      type: 1
+      price: 8
+    - name: Greed Pact
+      effect: -20dpt. After 10 victorious battles* +50dpt instead. -60-30dpt* then
+        +50-80dpt.
+      requirement: 
+      type: 0
+      price: 6
+    - name: Mirror Room
+      effect: "The occupant will disappear at battle start. At the end of the battle*
+        there\u2019s a 30% chance they come out as Lunatic and a 70% chance both
+        them and an exact copy exit the module."
+      requirement: 
+      type: 0
+      price: 6
+    - name: Ineptitude Distiller
+      effect: The lower your total performance is* the more damage the ship does.
+        Only works if the occupant has 10% or less performance.
+      requirement: 
+      type: 5
+      price: 8
+    - name: Gleaming Ruby
+      effect: At battle start* all crew members become the same as the occupant of
+        Gleaming Ruby.
+      requirement: Only works when adjacent to 4 crew members.
+      type: 5
+      price: 8
+    - name: Sanatorium of Chaos
+      effect: +10%P to all crew members* however* every battle* each of them will
+        have a different random trait.
+      requirement: 
+      type: 5
+      price: 8
+    - name: Campus of Chaos
+      effect: +10%P to all crew members* however* every battle* all of them will
+        change to a random profession* but the same profession for all.
+      requirement: 
+      type: 5
+      price: 8
+    - name: Alien Takeover
+      effect: +100/200/300/400/500 total performance depending on the depth you're
+        in. Once per crew member* they will be abducted for 20 turns and then returned
+        with the Reanimated Trait.
+      requirement: 
+      type: 5
+      price: 8
+    - name: Gates of the Chosen One
+      effect: "This module can\u2019t be moved from its place in the layout. After
+        4 battles* the gates open and a crew member of a random profession and the
+        The Chosen One trait appears."
+      requirement: 
+      type: 5
+      price: 8
+    - name: Portable Wormhole
+      effect: At the start of every build phase* all of your modules and crew members
+        change to completely random ones* but if you achieve a mean performance of
+        50%+* it automatically increases all crew members performance by 25%.
+      requirement: 
+      type: 5
+      price: 8
+    - name: Gleaming Sapphire
+      effect: At battle start* all modules become the same as one of the modules
+        adjacent to Mirroring Diamond.
+      requirement: Only works when adjacent to 4 modules.
+      type: 5
+      price: 8
+    - name: Teleportation Laboratory
+      effect: Every 2 turns* all crew members will teleport to other modules randomly.
+        Every time a different crew member teleports into this module* deal 100 damage
+        to the enemy.
+      requirement: 
+      type: 5
+      price: 8
+    - name: Purge House
+      effect: All crew members will attack each other* dealing -1HP/2 turns. Every
+        time a crew member loses HP* this module deals 100 damage to the enemy* and
+        if a crew member dies* deals 300 damage instead.
+      requirement: 
+      type: 5
+      price: 8
+    - name: Profession Replicator
+      effect: "If this module hasn\u2019t been disturbed in battle gain 1 stacking
+        bonus count for the profession of the crew member inside this module. If
+        disturbed* the count of extra stacking bonus resets to 0."
+      requirement: 
+      type: 3
+      price: 6
+    - name: Escape Pod 1
+      effect: If this module is about to explode or occupant about to die* eject
+        the crew member to the bench while the module is ejected aiming to the enemy
+        and deals 100 damage. // Also works for adjacent modules.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Sleepy Sponge
+      effect: If the enemy hits this module inflict Asleep status. The crew member
+        in this module starts every battle Sleepy.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Poisoning Spike Chamber
+      effect: If this module is hit* the occupant takes the damage twice* and the
+        enemy becomes Poisoned.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Jacuzzi Module
+      effect: "If this module is water-flooded* there\u2019s no drawbacks and +1HP/4turns.
+        // +1HP/6turns"
+      requirement: 
+      type: 2
+      price: 4
+    - name: Seafood Producer
+      effect: If this module was hit produce 1 Tasty Seafood and 2 coins at the end
+        of the battle.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Crocodile Tank
+      effect: Every time the module is hit the crocodiles will bite the enemy for
+        100 dmg* but -1HP out of a total of 4HP. If the crocodiles are 0HP* this
+        module becomes inactive. If a crew member is placed in this module they will
+        die at battle start but fully heal the crocodiles.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Insane Augmentator
+      effect: +50%P* but -1HP/2turns and if they die this module explodes.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Item Bombardier
+      effect: If the crew member in this module holds an item you can launch it at
+        the enemy to deal 100 dmg.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Resourceful Blocker 2
+      effect: If the occupant holds an item* there's a 33% chance with every enemy
+        attack* that's thrown at the enemy to completely block the attack.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Item Recycler 2
+      effect: Every time an item is consumed or destroyed* 50% chance of receiving
+        another random item.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Unstable Channeler
+      effect: +40dpt. If at any moment it is not adjacent to 4 crew members* this
+        module explodes.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Electrifier 1
+      effect: Electrify this and all offensive modules chain-connected to this one.
+        20 damage every time the enemy hits an electrified module.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Magifish Spawn
+      effect: Releases Magifish to this and any other water-flooded modules in your
+        ship. Magifish heal their crew member +1HP/4 turns.
+      requirement: 
+      type: 0
+      price: 6
+    - name: Sea Urchin Spawn 2
+      effect: If hit* deal 100 damage to the enemy and release Sea Urchins to all
+        adjacent modules that will deal 100 damage to the enemy if also hit.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Uncontrolled Greenhouse
+      effect: Adjacent modules have a 33% chance of becoming Wild at the end of a
+        battle. Adjacent Wild modules have a 50% chance of protecting their occupant
+        from enemy damage.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Fire Station
+      effect: If this or an adjacent module is set on fire* put it off and redirect
+        it to the enemy to deal 100 damage.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Heat Beam
+      effect: +10dpt for each module* in the ship that's set on fire.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Sushi Kitchen
+      effect: If this module is hit* produce 1 Tasty Seafood.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Brick Oven
+      effect: If set on fire it will produce 1 Tasty Pizza at the end of the battle.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Forge
+      effect: If set on fire it will produce 1 metal weapon item at the end of the
+        battle.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Escape Pod 2
+      effect: "Activate this module\u2019s effect for it to escape the battle with
+        its occupier* and they'll reappear in a node further down."
+      requirement: 
+      type: 3
+      price: 4
+    - name: Isolator
+      effect: Every 4 turns an adjacent module becomes Detached.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Ephemeral Booster
+      effect: +10%P to the crew member in it. At turn 4 this module always becomes
+        detached.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Orbital Laser
+      effect: At turn 8 it deploys and detaches connecting with all other detached
+        modules. Together they ready a laser that's beamed at the enemy dealing 80
+        damage per detached module.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Petrifying Defender 1
+      effect: Adjacent modules are inactive. For each adjacent module* gain a shield
+        of 50 ship health.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Sperm Bank
+      effect: If undisturbed and if its occupant is female* at the end of the battle
+        they will have Pregnant as their secondary trait.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Mega Chimney
+      effect: If set on fire* +1HP/4turns to this and adjacent crew members as well
+        as preventing freezing.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Freezeitor 2000
+      effect: Once per battle you can freeze or defrost this or an adjacent module.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Missile Deflector
+      effect: If this module receives an ally hit* instead deflect the missile to
+        the enemy dealing 100 damage.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Rooted Core
+      effect: If this module is Wild* +40 HP for every Wild module at the start of
+        each battle.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Unstable Gatling Gun
+      effect: +80dpt* but this module is permanently unstable.*
+      requirement: 
+      type: 1
+      price: 4
+    - name: Overheat Laser
+      effect: Every 4 turns deals 50 damage and a random adjacent module will be
+        set on fire (70%) or become unstable (30%).
+      requirement: 
+      type: 1
+      price: 6
+    - name: Overheat Sparker
+      effect: +60dpt. Unless this or an adjacent module is flooded* it'll be set
+        on fire after 4 turns* and then become unstable in another 4 turns.
+      requirement: 
+      type: 1
+      price: 6
+    - name: High-precision Cutter
+      effect: +40dpt. If the crew member in it has less than 70% performance* this
+        module becomes unstable.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Confinement Room
+      effect: It's occupant or their items can't ever move from this module. Detaches
+        at the start of battle.
+      requirement: 
+      type: 4
+      price: 3
+    - name: Gravity Engine
+      effect: "Activate to un-detach all modules. Also* items and crew members in
+        this or adjacent modules can\u2019t move from their place during battle."
+      requirement: 
+      type: 3
+      price: 3
+    - name: Anti-gravity Blaster
+      effect: Every 4 turns* blasts the enemy for 80 damage but an adjacent module
+        becomes detached.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Contained Power Beam
+      effect: "Shoots a red beam that\u2019s very thin* but the more damaged the
+        module is* the more energy is released and the thicker the beam becomes.
+        +5dpt. +50dpt if this module is damaged. +80dpt if this module is unstable."
+      requirement: 
+      type: 1
+      price: 4
+    - name: Oil Platform
+      effect: If next to a Wild module during battle* produce 1 Fuel at the end of
+        battle.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Paper Factory
+      effect: 'At the end of the battle* 50% chance to produce one of the following
+        items: Recipe Book* Book of the Dead* Ancient Volume of Wisdom* Lost Page*
+        Treasure Map* Love Letter* Suspicious Magazines* Military Propaganda* Notice
+        of Termination* University Diploma or Cursed Book of Revival.'
+      requirement: 
+      type: 3
+      price: 8
+    - name: Guinea Pig Laboratory 1
+      effect: If a crew member dies in this module* all Scientists gain +10%P.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Brain Replacer
+      effect: "A laboratory with shelves full of brains in jars* and robot hands
+        that hang from the ceiling and transplant the brains. At the start of battle*
+        the occupant is rerolled* and at the end of battle they\u2019re returned
+        to normal."
+      requirement: 
+      type: 3
+      price: 3
+    - name: Prehistoric Portal
+      effect: This module is permanently Wild. Unmanned. At the start of each battle*
+        Vicious Dinosaur appears in this module until the end of the battle.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Crummy Deflector
+      effect: This module is permanently damaged. If the enemy hits this or an adjacent
+        module* the occupant and ship take no damage* and the enemy takes the damage
+        of its own hit.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Abandoned Laboratory
+      effect: "This module is permanently damaged. At the end of each battle* there\u2019s
+        a 50% chance you gain a random bad quality item that will expire at the end
+        of its first battle."
+      requirement: 
+      type: 3
+      price: 4
+    - name: Glacier Producer
+      effect: Unmanned. If this or an adjacent module is water-flooded* it becomes
+        frozen after 2 turns. Every time an enemy hits this or an adjacent module
+        being frozen* they freeze and take 50 damage.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Sewer
+      effect: Unmanned. This module is permanently excrement-flooded. If hit* the
+        enemy is poisoned* and it excrement-floods any adjacent module to the left
+        and right.
+      requirement: 
+      type: 4
+      price: 3
+    - name: Atlantis Portal
+      effect: Unmanned. While this module is surrounded by 4 water-flooded modules*
+        it will be occupied by Atlantis Elder until the end of the battle.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Human Catapult
+      effect: If this or an adjacent module is hit by the enemy* the catapult fires
+        the crew member in this module* who dies* dealing 400 dmg to the enemy.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Sushi Bar
+      effect: The crew member inside this module will have -30%P as they will be
+        busy preparing sushi* but they will produce one Tasty Seafood every 6 turns.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Mediocre Clinic
+      effect: "When a crew member in or adjacent to this module is inflicted with
+        an ailment that isn\u2019t Lunatic* reroll it to another ailment except for
+        Lunatic. // Has a 20% chance of curing the ailment."
+      requirement: 
+      type: 4
+      price: 3
+    - name: Element Changer
+      effect: When this or an adjacent module is inflicted with an element* reroll
+        it to another random element. // Has a 20% chance of leaving the module intact.
+      requirement: 
+      type: 4
+      price: 2
+    - name: Invasive Urchin 3
+      effect: Contaminate the modules adjacent to the right and left with urchins*
+        and if the enemy hits any of these 3 modules* they take 50 damage.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Forceful Activator
+      effect: All inactive adjacent modules will become active* even if unmanned
+        and requirements not met* however they will be unstable.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Cluster Suppressor
+      effect: Reduce the enemy dpt by 3 for every defensive module connected in a
+        defensive path to this one.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Consolatory Regenerator
+      effect: If you won a battle losing more than 500 health* heal 100 ship health.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Organic Headquarters
+      effect: This module is equivalent to 2 organic modules for stacking bonuses.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Offensive Headquarters
+      effect: This module is equivalent to 2 offensive modules for stacking bonuses.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Defensive Headquarters
+      effect: This module is equivalent to 2 defensive modules for stacking bonuses.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Scientific Headquarters
+      effect: This module is equivalent to 2 scientific modules for stacking bonuses.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Headquarters
+      effect: This module is equivalent to 2 normal modules for stacking bonuses.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Complex Gun Cockpit
+      effect: +5dpt for every 10%P the occupant has over 40%.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Complex Ship Renovator
+      effect: +5hpt for every 10%P the occupant has over 40%.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Requireroom
+      effect: +10%P to this and all adjacent modules.
+      requirement: Must be adjacent to 4 modules with requirements being fulfilled.
+      type: 3
+      price: 4
+    - name: Boost Absorber
+      effect: +5%P for every adjacent module with a side effect that affects this
+        module.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Anti-defective Garage
+      effect: Modules adjacent to this one have their defect nullified.
+      requirement: 
+      type: 3
+      price: 3
+    - name: Disaster Pod
+      effect: This module always comes with 4 defects and no side effects* but if
+        hit by the enemy* it inflicts 50 damage and a random status.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Defect Empowerer
+      effect: +5%P for every adjacent module with a defect.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Elemental Beam
+      effect: If this module gains an element* it's consumed and launched at the
+        enemy dealing 100 damage.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Enraging Blaster
+      effect: Every 4 turns fires a 100 blast at the enemy* but the enemy gains +15dpt
+        for the rest of the battle.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Element Absorber
+      effect: +10hpt as long as this module has an element.
+      requirement: 
+      type: 2
+      price: 6
+    - name: Super Laboratory
+      effect: +5%P in any scientific module connected to this one in a scientific
+        path.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Rainbow Producer
+      effect: +1 stacking bonus for each of the 5 types.
+      requirement: Must be adjacent to one module of each other type.
+      type: 4
+      price: 8
+    - name: Hyper Laser
+      effect: +10dpt for each offensive module in this row. // At turn 6* deal 50
+        damage for each offensive module in a row with this one.
+      requirement: Must be in a row with 5 other offensive modules.
+      type: 1
+      price: 6
+    - name: Ship Expander
+      effect: You have an extra slot in any space adjacent to this module. If the
+        occupant is an Engineer* you have 2 extra slots instead.
+      requirement: 
+      type: 3
+      price: 3
+    - name: Reflective Gem Cave
+      effect: This module is of the same type as the most abundant module type in
+        your ship* and counts as two stacking bonuses for its type. If no type is
+        more abundant than other* it defaults to Normal type.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Floating Shield
+      effect: If this module is detached* gain a 50HP shield this battle* and add
+        to that shield +20HP for every other detached module.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Structural Unlocker
+      effect: The module adjacent below has its requirements ignored.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Accumulating Shield
+      effect: Every 4 turns* create a 10HP shield. Each shield is 10HP thicker than
+        the previous one.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Extra-aggressor
+      effect: At battle start* a random adjacent module is designated and will have
+        its damage increased by 50% for the rest of the battle.
+      requirement: 
+      type: 1
+      price: 8
+    - name: Private Academy
+      effect: This module will consume 4 coins at battle start* otherwise will be
+        inactive. At the end of the battle* the occupant will gain a secondary trait
+        guaranteed to be positive.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Golden Safe
+      effect: Unmanned. If it explodes* you gain a random amount of coins between
+        4 and 12 coins.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Luxury Hotel
+      effect: When a crew member is placed in this module* they are fully healed.
+        However* they cannot be moved from this module unless you pay 2 coins.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Chamber of Painful Immortality 1
+      effect: -1HP/4turns to this and adjacent crew members. If the occupant reaches
+        0 HP* instead of dying they heal to full HP and deal to the enemy 40 damage
+        for each drained adjacent crew member.
+      requirement: At least 1 adjacent crew member.
+      type: 4
+      price: 4
+    - name: Chamber of Painful Immortality 3
+      effect: -30%P* -1HP/4turns. If the occupant reaches 0 HP* instead of dying
+        they heal to full HP and deal 50 damage to the enemy.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Selfish Death Avoider
+      effect: If the occupant reaches 0 HP* they don't die* they heal 2 HP and a
+        random adjacent crew member dies instead.
+      requirement: 
+      type: 4
+      price: 8
+    - name: Mind-supressing Pod
+      effect: The occupant's traits won't have any effect.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Infinity Garage
+      effect: At battle start* the occupant will be equipped with a random item that
+        will expire at the end of the battle.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Vertical Catapult
+      effect: +10dpt for each offensive module in this column. // At turn 6* deal
+        50 damage for each offensive module in a column with this one.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Petrifying Defender 2
+      effect: If an active adjacent module is hit* the hit is blocked and the ship
+        takes no damage* but the module becomes inactive.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Rotten Entrails
+      effect: Every 2 turns* 20% chance the occupier becomes sick. If hit by the
+        enemy* it becomes poisoned.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Guinea Pig Laboratory 2
+      effect: If a crew member dies in this module* all Scientists gain +1% base
+        performance permanently.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Ultrafast Server
+      effect: Unmanned. All Developers gain +5%P* but if this module suffers from
+        an element* -10%P to all Developers instead.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Concentration Chamber
+      effect: The occupant's performance can't be lowered.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Ice Beam
+      effect: At turn 6* shoots a beam of ice that does 200 damage* after which the
+        occupant will remain frozen.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Iglu
+      effect: If set on fire* this module disappears and its occupant drowns. If
+        hit by the enemy* they become frozen.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Ice Shield
+      effect: If the occupant is about to get hit* this module freezes to protect
+        them from the hit* and the occupant becomes frozen too.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Empowered Electrifier 2
+      effect: If this or a module connected in an offensive path to this one is hit
+        by the enemy* the enemy is shocked for 30 damage for each offensive module
+        connected* but all the occupants of the electrified modules suffer -1HP.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Portable Bank
+      effect: Put 5 coins in this module. If it was undisturbed* at the end of the
+        battle get the 5 coins back +1 extra coin. If it was disturbed* you lose
+        the 5 coins.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Pain-sharing Compartments
+      effect: Whenever a crew member takes damage in one of the modules* so will
+        the other one.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Hunting Settlement
+      effect: If this module is Wild* its crew member will throw wooden spears at
+        the enemy* +30dpt.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Idiot Cockpit
+      effect: "The lower the occupant\u2019s performance* the higher this module\u2019s
+        dpt is. 70/50/20/10/0 at 0/10/20/30/40%P respectively."
+      requirement: 
+      type: 1
+      price: 6
+    - name: Contaminating Fuel Refinery
+      effect: 'At the end of each battle* produce 1 Fuel* however the modules adjacent
+        to the left and right will be heavily contaminated and cause their occupiers
+        Poisoning. // 50% chance of +1 Fuel if enemies are in node paths* +2 if enemies
+        are in nodes? '
+      requirement: 
+      type: 3
+      price: 4
+    - name: Basic Fishcapsule
+      effect: "Module built by a Biologist from a creature that doesn\u2019t have
+        an exclusive module. Every enemy attack yas a 33% chance of targeting this
+        module. 5-50% chance to attract each attack."
+      requirement: 
+      type: 0
+      price: 4
+    - name: Sticky Node
+      effect: "Once a module is placed adjacent to this one* it can\u2019t be separated.
+        Every time the enemy hits this module* they lose 10% of their current dpt."
+      requirement: 
+      type: 2
+      price: 4
+    - name: Prehistoric Shelter
+      effect: The occupant won't lose HP from the first enemy hit each battle* but
+        after that hit the module becomes damaged unless its Wild.
+      requirement: 
+      type: 2
+      price: 4
+    - name: Multitype Capsule
+      effect: Every time you place this module in the layout* it's type changes in
+        order to the next of the 5 basic types.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Battle Synergiser
+      effect: If this module it's a different type than normal* at battle start and
+        until the end of battle it also transforms into a random module of that type.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Delicate Toilet 2
+      effect: Fixes excrement-flooding in this module instantly. However if hit by
+        the enemy* all modules under this one become excrement-flooded. // Similar
+        to Plumbing System but cooler.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Hologram Producer
+      effect: At battle start* if unmanned* produces an occupant of the same name*
+        gender* profession and trait as a random adjacent crew member* with 40% base
+        performance and 6 HP* that will expire at the end of the battle.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Untransformed Submarine
+      effect: At the end of its first battle* it permanently transforms into another
+        random module in your ship or bench.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Illusion Module
+      effect: This module works unmanned. The contents of this module will be identical
+        of those of the module adjacent to the right.
+      requirement: 
+      type: 0
+      price: 8
+    - name: Submarine Crypt
+      effect: If a crew member dies in this module* their corpse remains in it. They
+        will count for profession stacking bonus and nothing else.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Palpitating Viscera
+      effect: Every 4 turns* it palpitates aggressively and drains 1 HP from its
+        occupant* healing the ship 50 HP.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Defense Office
+      effect: Gain +5hpt for each 50 ship health above 1000 that your ship has* including
+        shields.
+      requirement: 
+      type: 2
+      price: 8
+    - name: Attack Office
+      effect: Increase your ship DPT by 5%.
+      requirement: 
+      type: 1
+      price: 8
+    - name: Bone Capsule
+      effect: If hit* there's a 33% chance it doesn't harm the occupier. // If hit
+        by a physical attack* it won't harm the occupier.
+      requirement: 
+      type: 0
+      price: 4
+    - name: Investment Agency
+      effect: If the occupant has 80% or more performance* gain 1 coin at the end
+        of the battle.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Hyperperformer
+      effect: x1*3 performance to a random adjacent module at the start of battle.
+      requirement: 
+      type: 3
+      price: 8
+    - name: Brain Swapper
+      effect: The occupant swaps their performance with the crew member adjacent
+        to the left.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Echo Channeler
+      effect: The module on the left has its first effect doubled* up to once per
+        battle.
+      requirement: 
+      type: 0
+      price: 8
+    - name: Maximum Concentration Laser
+      effect: If this or any adjacent modules have been disturbed* at turn 10 fire
+        a beam that deals 300 damage.
+      requirement: 
+      type: 1
+      price: 6
+    - name: Morgue
+      effect: Every time a crew member dies while this module is in the ship* increase
+        the counter in this module by 1. If this module expllodes* at the end of
+        the battle receive as many Drowned Islander items as counters this module
+        had.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Sacred Crematorium
+      effect: If the occupant dies* receive Mysterious Ashes at the end of the battle.
+      requirement: 
+      type: 0
+      price: 8
+    - name: Internship Program
+      effect: Can't place a crew member in this module during prep phase. At battle
+        start* a random intern will appear in this module until the end of the battle.
+        They will always have a trait of -1 cost.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Peaceful Garden 2
+      effect: This module is Wild when first adquired. +1HP/4turns.
+      requirement: Must be Wild.
+      type: 4
+      price: 4
+    - name: Peaceful Garden 2
+      effect: This module is permanently Wild. +1HP/4turns.
+      requirement: 
+      type: 4
+      price: 6
+    - name: Vegetable Greenhouse
+      effect: If this module is Wild* +1HP/4turns.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Compost Factory
+      effect: If this module becomes excrement-flooded* after 2 turns it instead
+        becomes Wild* and the occupant heals 1 HP.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Seafood Shipment
+      effect: If this module was frozen this battle* produce one Tasty Seafood at
+        the end of the battle. If it wasn't* receive Expired Sushi instead.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Blizzardmaker
+      effect: At turn 4* produce a Blizzard that freezes the enemy and also all modules
+        on this row to the left.
+      requirement: 
+      type: 3
+      price: 4
+    - name: Ice Cube Gun
+      effect: This module becomes frozen at battle start. Throws ice cubes as bullets.
+        +10dpt for each frozen module in your ship.
+      requirement: 
+      type: 1
+      price: 4
+    - name: Bad Restaurant 1
+      effect: 'The food might be good or bad: every 4 turns* 50% chance of +1HP*
+        50% chance of -1HP.'
+      requirement: 
+      type: 4
+      price: 4
+    - name: Bad Restaurant 2
+      effect: 'At battle start it''s decided if the food will be good or bad: 50%
+        chance of +1HP/4turns* 50% chance of -1HP/4turns.'
+      requirement: 
+      type: 4
+      price: 4
+    - name: Organ Transplant Centre
+      effect: If a crew member dies that isn't the occupant* 50% chance they revive
+        with 2 HP and another random crew member loses 1 HP.
+      requirement: Can only be manned by a Doctor
+      type: 3
+      price: 6
+    - name: Item Transformer 1
+      effect: At battle start* the item in this module permanently changes to another
+        random item.
+      requirement: 
+      type: 3
+      price: 6
+    - name: Item Transformer 2
+      effect: At battle start* the item in this module changes to another random
+        item until the end of battle.
+      requirement: 
+      type: 3
+      price: 4

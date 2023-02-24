@@ -1,372 +1,272 @@
-Name,Effect,Type,Special Req,Price,
-Basic Torpedo Launcher,+10dpt.,Offensive,,4,
-Exhausting Gun,+20dpt but the occupant has their performance halved. // Fires 100 dmg at turn 4* after which the occupant will have their performance halved for the rest of the battle.,Offensive,,4,
-Flesh Cannon,60 dmg every 4turns* but the occupant loses -1HP each time.,Offensive,,6,
-Blood Beam,Every time a crew member loses HP* +5dpt for the rest of the battle. // At turn 10* fire a blood beam that deals 40 damage for every 1HP that a crew member lost this battle.,Offensive,,6,
-Excrelaser,Permanently excrement-flooded. Deals +10dpt for every adjacent module that’s excrement-flooded including this one. Every time it's hit* excrement-flood a random adjacent module.,Offensive,,4,
-Excretor,If this module becomes excrement-flooded* undo the flooding and throw the excrement at the enemy dealing 50 dmg and causing poisoning.,Organic A,,4,
-Corpse Shield,If a crew member dies* their corpse will be launched to block the next attack entirely.,Defensive,,4,
-Cult Headquarters,The occupier's trait will be Cult Leader.,Normal,,4,
-Portable Nursing Home,At the start of battle* generate a no-profession centenarian in an adjacent module.,Normal,,8,
-Stuck Rocket Launcher,It's stuck* so it doesn't fire unless the module is hit by the enemy. Once per battle deals 150 damage.,Offensive,,6,
-Dream Extractor,Once per battle if the occupant falls asleep* cover the ship in a 150 HP shield of dreamy clouds.,Defensive,,4,
-Triumphant Regenerator,If you finished a battle with no more than (20% of the monster health less) than you started it* heal 5% of your Ship Health max.,Defensive,,4,
-Jelly Flexi-Membrane,Once per battle* if this module is hit by the enemy* block the attack entirely and deal damage equal to the attack deflected.,Organic A,,6,
-War General AI,Unmanned. This module counts for having a War General in it.,Scientific,,4,
-Adjacent Automatiser,Automatises a random adjacent empty module that needs to be manned.,Scientific,,4,
-Mind Control Unit,The occupier will have the same trait as the crew member adjacent to the left.,Scientific,,6,
-Motherly Jellycarer,If this module was hit* heal it's occupier +2HP and the ship 50HP at the end of the battle.,Organic A,,6,
-Temporary Buffer,If this module is hit* your ship takes no damage. If this module is hit 4 times* counting previous battles* it explodes.,Defensive,,4,
-Chamber of Sacrifice,At turn 12* the occupant will be sacrificed and you gain 300 ship health. // If hit* you take no ship damage* the occupant will be sacrificed and you gain 100 ship health.,Magic,,4,
-Mimic Room,At the start of battle it transforms into an identical copy of a random adjacent module* until the end of the battle.,Scientific,,8,
-Coral Golem,Unmanned. Every time it’s hit the ship takes no damage. With every hit it will become more damaged* and after 5 hits this module explodes.,Organic A,Only works if adjacent to a Defensive module.,4,
-Virtual Gun Materialiser,+20dpt and -5%P every 2 turns. If manned by a Cadet* +40dpt instead.,Scientific,,6,
-Mini-Hospital,At turn 12* heal +1HP to a random adjacent crew member* or +1HP to each adjacent crew member if manned by a Doctor.,Defensive,,6,
-Passive Regenerator,+10hpt. // +5hpt* +10hpt if manned by a War General.,Defensive,,6,
-Robot Factory,At the end of battle* consumes 1 Fuel and you gain a random crew member with Robot trait. This crew member will expire at the end of its first battle. // Consumes 1 Fuel to generate a random crew member with Robot trait at the start of the battle. This crew member will expire at the end of the battle.,Scientific,,8,
-Rulebreaker,The module below has its requirements obviated. If manned by an Engineer* both the modules below and above have their requirements obviated.,Scientific,,4,
-Harpoon Launcher,Every 4 turns* fires a harpoon that deals 50 damage. Every subsequent harpoon deals 10 less damage than the previous one down to a minimum of 10 damage.,Offensive,,6,
-Anglerfish Glare,At turn 4* blind the enemy. // At turn 10* blind the enemy.,Organic A,Must be placed on the leftmost column.,6,
-Commander’s Cockpit,If manned by a Cadet or Lieutenant for 3 battles in a row* they become a War General. If manned by a War General* +5%P for each adjacent Cadet or Lieutenant. // +2dpt for each adjacent Cadet or Lieutenant. If manned by a War General* +5dpt.,Offensive,,6,
-Stingray Fin,Attack before the enemy in every battle. // Must be placed in the rightmost column available in your current ship* or the rightmost column available in the invisible grid? latter option is a better requirement for such a strong module* but only works if the layout grid is finite. ,Organic A,Must be placed on the rightmost column.,8,
-Urchin Megacarapace 1,If the enemy hits this module* it takes 50 damage. If this happens twice* the enemy becomes poisoned.,Organic A,,6,
-Charging Laser Beam,If undisturbed for 8 turns in a row* it shoots a 200 damage lase beam.,Offensive,,8,
-Magicoral,If this module wasn't disturbed* heal the occupant and all adjacent crew members for 1 HP at the end of the battle. // 2 HP.,Organic A,,8,
-Hygienic Chamber,Undo excrement-flooding* sick and poisoning immediately. // Chance to undo excrement-flooding* sick and poisoning at will.,Scientific,,4,
-Electroconvulsive Therapy Chamber.,At the end of the battle* there's an 80% chance the occupier has their trait changed to a positive trait and lunatic ailment is removed* and a 20% chance they die.,Scientific,,6,
-Organic Recycler,Every time an adjacent crew member dies* you gain 2 Fuel.,Scientific,,8,
-Submarine Recycler,Every time an adjacent module is destroyed* you receive the same module but with no side effects and an extra different random defect. // When a module with 4 defects is destroyed* it's no longer recreated.,Scientific,,8,
-Item Recycler 1,Every time an item is consumed or destroyed* you receive another random item that will expire at the end of its first battle.,Scientific,,8,
-Biotransformer,For every 3 defeated monsters* you gain a random Organic A module* or Organic B if manned by a Biologist.,Organic A,,8,
-Isolation Bunker,This module is indestructible and its occupier can't take damage from the enemy. However* the first occupant placed in this module can't ever be moved out* and they will be classed as adjacent to no other module or crew member. // After 10 battles* the occupant becomes Lunatic. ,Defensive,,6,
-Stick Pod,This module doesn't require a purchased slot to be placed. Always comes with a side effect.,Scientific,,4,
-Ritual Chamber,At the start of battle* will summon a random crew member in each empty adjacent module with the trait Ghost that disappear at the end of the battle. // Will summon 1-2 random crew members in random adjacent modules with the trait Ghost and no profession.,Magic,,6,
-Casino,Any percentage-based effect inside this module will have a higher chance of having a positive outcome instead of a negative one. // In adjacent modules.,Normal,,6,
-Weed Garden,This module is permanently Wild. The occupant's trait will be Stoned for as long as they're in this module.,Normal,,4,
-Defensive Accumulator,For every defensive module connected in a defensive path to this one* increase your ship's max health by 20. // by 50.,Defensive,,6,
-Pharmacy,The occupant will have Doctor as their profession while in this module. At the end of the battle* if an adjacent crew member lost HP* gain one Doctor Kit.,Normal,,6,
-Gym,If the occupant stays in this module for 2 battles in a row* their trait is changed to Bodybuilder and +5% base performance* up to once per crew member.,Normal,,6,
-Excreshield,Once per battle* if this module becomes excrement-flooded* empty it to create an excrement shield that will completely block the next enemy attack.,Defensive,,4,
-Repair Station,If an adjacent module becomes damaged* it fixes it in 2 turns.,Scientific,,6,
-Defensive Synergiser,Every time an adjacent defensive module's effect triggers* gain 20 ship health. // gain 40 ship health.,Defensive,,6,
-Greedy Buffet,+1HP/4turns* but if they heal HP while at 6HP* the occupant becomes sick.,Normal,,4,
-Military School,If a cadet or lieutenant spends 1 battle in this module* +5% base performance* up to once per crew member.,Normal,,8,
-Impact Buffer,The first hit on this module per battle doesn't damage the ship or its crew member.,Defensive,,4,
-Self-Destruct module,Activate this module for it to separate from the ship* and launch itself with its brave crew member into the enemy* causing a 400 dmg explosion that destroys both module and occupier. If operated by a War General* it deals 700 damage instead.,Offensive,,6,
-Net Gun,Every 6 turns* throws a fishing net that deals 10 damage and lowers enemy dpt by 10. If a fishing net is thrown during the attack that defeats a monster* catch the monster instead and it yields an extra item.,Normal,,6,
-Explosive Redirector,Every time an adjacent module explodes* deal 150 damage to the enemy. // 300 damage.,Offensive,,4,
-Coin Bullet Gun,Compresses your saved currency into hard golden bullets that deal more damage the more coins you have. 0dpt if you have 0 coins* and 10-100dpt for 1-50 coins. Every 4 turns* it consumes 1 coin to use. // Only consumes 1 coin every 8 turns if you have more than 25 coins.,Offensive,,6,
-Fuel Rockets,They run on the same fuel as your ship* so it consumes 1 Fuel every 8 turns to throw a 100 damage rocket. // Can be activated/deactivated at any time. // At turn 2* throw a rocket that deals 200 damage and consumes 2 Fuel.,Offensive,,6,
-Flamethrower,At turn 8* fires flames that deal 60 damage for every adjacent module that was set on fire* including this module* and also burns the enemy.,Offensive,,6,
-Sticky Seaworm,Sticks to adjacent modules for the first 5 battles after it is first placed. +1HP/4turns and immunity to ailments.,Organic A,,4,
-Combo Bomb,If you activate 3 effects in the same turn* launch a combo bomb that deals 150 dmg.,Offensive,,6,
-Combo Regenerator,If you activate 3 effects in the same turn* heal for 100 Ship Health.,Defensive,,6,
-Mental Reversal Capsule,Inverts the performance of the crew member in it. The formula is [NewP = 90-P] if P > 20* and [NewP = 100-P] if P < 20.,Scientific,,8,
-Emergency Escape Engine,Use this module to eject the whole ship away from a battle* and this module is destroyed.,Defensive,,8,
-Plumbing System,Extracts any flooding from anywhere in the ship. If this module gets hit* it becomes excrement-flooded.,Scientific,,4,
-Flesh Connection Pods,They always appear as a pair in the shop. Whenever the occupant loses or gains HP in one of the modules* the occupant of the other module loses/gains the HP instead.,Normal,,3,
-Fuel Converter,At the end of the battle* consume 1 Fuel to heal the occupant 2HP. // 3HP.,Defensive,,6,
-Fishing Bait Pod,The enemy has a 33% chance in each of its attacks to target this module.,Normal,,6,
-Mystery Room,At battle start and until the end of the battle* this module turns into another random module that isn’t a Mega-module (retaining the same requirements* defects and side effects).,Normal,,4,
-Magical Storage Room,Can work unmmaned* and items can be placed without a holder in this module. At the end of battle* the item in this module will transform into a different item.,Magic,,6,
-Perfect Balance,Once per expedition* equalise the enemy's HP with the ship’s HP* calculating the mean of both values and applying it to the enemy and the ship. MAYBE IT SHOULD BE A SUPER ITEM.,Normal,Only works when adjacent to two offensive and two defensive modules.,8,
-Chronic Beam,At turn 8* shoot a beam at the enemy that does 150 dmg for every Ailment the enemy has (only works if enemy can have more than 1 ailment).,Offensive,,4,
-Defensive Perfection,If manned by a War General* the enemy deals 75% the normal damage to our ship unless it first lands a hit onto this or any of its adjacent modules.,Defensive,Only works when adjacent to 4 defensive modules.,8,
-Offensive Perfection,If manned by a War General* +60dpt unless it first lands a hit onto this or any of its adjacent modules.,Offensive,Only works when adjacent to 4 offensive modules.,8,
-Beautiful Fish Tank,Unmanned. This module is permanently water-flooded. At the end of battle* you receive 1 Tasty Seafood.,Normal,,4,
-Decompression Core,This and adjacent modules can’t explode.,Defensive,,6,
-Fuel Extractor,If this module gets flooded* it produces 1 Fuel at the end of the battle.,Scientific,,4,
-Danger Thunder,Deals 150-0dpt depending on whether your ship has 50-500HP left.,Offensive,,6,
-Brain Giga-Aumentator,+10%P. The occupant has an increased performance cap of 150%.,Scientific,,6,
-Portable Mini-University,At the end of the battle* the occupant's profession will permanently change to a different random profession.,Normal,,8,
-Interdimensional Training,At battle start it closes its doors and transports the crew member into another dimension for 3 battles* during which it cannot be used. Then* they return transformed into an improved being with two positive traits* fully healed* 8 max HP and 70% base performance. There is a 20% chance the crew member returns as a centenarian that shits himself.,Scientific,,6,
-Blood Absorber,If your crew has taken 8HP damage or more this battle* +150 ship health.,Organic A,,4,
-The Golden Chamber,Costs 30 coins and comes more easily to players with lots of coins. Offers maximum comfort to its occupant* however it is extremely delicate as it is beautiful. If undisturbed for a battle* its occupant will give you 1 coin + 1 extra coin for every undisturbed battle in a row. If the module is disturbed* the counter resets back to 1 coin of reward.,Normal,,30,
-Sadomasochism Dungeon,If a crew member takes damage in this module* they gain Masochist as their secondary trait permanently.,Normal,,6,
-Electric Shockwave,At turn 4* electrocute the enemy for 100 damage* but there's a 40% chance it also damages your ship for 50 damage (15% chance if operated by a War General).,Offensive,,4,
-Lunatic Brutaliser,The occupant will become Lunatic at the end of the battle. If a monster hits a module with a Lunatic* deal 100 damage.,Offensive,,4,
-Death Coffin,Every 3 enemy hits* there's a 50% chance that this module is hit* and the crew member in it takes double damage from hits.,Normal,,3,
-Magical Swap Box,The occupant* right before getting hit* will swap places with another random crew member.,Magic,,4,
-Military Waking Alarm,Every 4 turns* removes Stunned* Sleepy and Asleep from all crew members* and +5%P to all adjacent Cadets and Lieutenants. // If operated by a War General* all adjacent crew members get a 10%P boost,Normal,,8,
-Trash Compactor,If an adjacent module is damaged* at the end of the battle you can recycle it into 250 ship health.,Scientific,,4,
-Man Buffer,If this module gets hit* -2HP extra to the occupant but the ship takes no damage.,Defensive,,4,
-Kinetic Absorber,Any time 1 crew member moves* it fires a kinetic blast to the enemy that deals 100 dmg. 100-300dmg.,Offensive,,4,
-Discharge Sponge,If this module is hit* reduce enemy dmg by 20% for 4 turns* and stop berserk status. // -> 50% for 8 turns.,Organic A,,6,
-Health Weaponiser,At turn 2* sacrifice 100 ship HP to launch a blast that deals 200 dmg. If operated by a War General* sacrifices 200 ship HP to deal 500 dmg. 150-400 dmg* 250-700dmg.,Offensive,,6,
-Danger Alert,When the ship is below 1/3 HP* +5%P to this an adjacent crew members. If operated by a War General* +10%P instead when below 1/4 HP. // 2-40% +20-60%.,Offensive,,4,
-Laser of Death,Grim Reaper themed. Every time a crew member dies* the damage of this module permanently increases +10* to a maximum of +100dpt. +2-20dpt* max 200dpt. // At turn 2* blast the enemy with a laser of death that deals 100 damage for every crew member that died in the previous battle.,Offensive,,6,
-Restructurator,During the next prep phase* you can move to another place the slot that this module was in. If so* +5%P to the occupant of that slot in the next battle.,Normal,Must be adjacent to all other 4 module types. Is this requirement still necessary?,4,
-Business Centre,Recruiters and Businessmen in/adjacent to this module have a 50% chance of yielding 1 coin at the end of the battle. 1-3.,Normal,,3,
-Megaton Core,Extremely heavy nucleus that can’t be manned. It increases your ship’s HP by 100* and charges adjacent defensive modules 50% faster. Once placed in a slot of the layout* it can’t ever be moved from there. 10-200* 10-100%.,Defensive,,6,
-Tentacollector,It uses its long tentacles to pick up items every now and then. 50% chance of item at the end of battle.,Organic A,,8,
-Chef Academy,At the end of the battle* the occupier will gain Sushi Chef as their secondary trait. Works with up to 3 different crew members.,Normal,,8,
-Explosive Charger,If a module explodes* absorb energy from the explosion to charge up your modules for 50% and fix any damaged/unstable module. 10-100%.,Scientific,,4,
-Pain Transformer,If a crew member loses HP in this module* it fires a piercing pain blast of 80 dmg into the enemy. 50-250%.,Offensive,,8,
-Contagion Beam,At turn 10* shoot a diseased beam that deals 100 damage for each crew member with an ailment.,Offensive,,4,
-Water-Based Doping module,When flooded* injects the water with enhancing drugs. +5%P in this or any water-flooded module. However if this module gets hit* the enemy will have +20%dpt in its next attack.,Scientific,,4,
-Arctic Hull,Both parts always appear as a pair in the shop* for 300 each. Freeze the water around the ship to create an ice barrier that creates a 300 ship HP shield at the beginning of every battle. // The barrier* however* will disappear if any of the two modules is disturbed. 50-400 HP shield.,Defensive,One must be placed in the highest row of the Layout* and the other in the lowest row.,4,
-Chamber of Infinite Wisdom,The crew member in this module will have a profession of your choice* and their performance cap will be 150%.,Normal,,8,
-Resourceful Blocker,Twice per battle* can throw an item at will to block an enemy attack. Block 25-100% of the damage.,Defensive,,6,
-Systemic Freezer,When a module floods* it instantly becomes frozen. If the enemy hits a frozen module* it becomes frozen.,Defensive,,3,
-Gambletron 3000,At the end of a battle* earn more currency the ship health you lost. +1-10 coins from 300-0 SHP lost. +50-150 to +300-800 currency.,Normal,,3,
-Seafood Absorber,Every time you win a battle* +20 to your ship HP* stacks up to 10 times. +5-20.,Defensive,,4,
-Recruitbot 3000,You can insert 3 coins in it* and at the end of battle it will produce a random crew member.,Scientific,,4,
-Item Multiplier,After 4 battles with an item in it* it will produce a copy of that item. 50-20 turns. // The occupier will be holding the same items as the occupier adjacent to the right.,Scientific,,8,
-Steamthrower,When this or an adjacent module floods* instantly boils away the water to shoot scalding steam at the enemy that deals 100 dmg. Any crew member in the flooded module will take 1 HP dmg. 50-200 dmg.,Offensive,,4,
-Co-pilot’s Cockpit,Once per battle* during 1 turn* double any Offensive or Defensive effects that your other modules used.,Normal,Must be adjacent to the Captain.,6,
-Autopilot Navigator,Unmanned. If this module was placed in the ship* after a successfull battle the ship will mark the juiciest Nodes nearby in the Node Map. 1-5 juicy nodes.,Normal,Must be adjacent to the Captain.,4,
-Kidnaptron 3000,Once a crew member is placed in this module* they can't be moved unless you pay Kidnaptron 1 coin. The traumatic experience of being kidnapped by Kidnaptron causes the crew member that exits the module to have a different random trait. // And 20% chance of dodging enemy attacks.,Normal,,3,
-Professional Union,Unmanned. Only works when adjacent to 4 crew members of the same profession. When any of them die* this module will replace their Stacking Bonus count. Adjacent to 4-1 crew members of the same profession.,Normal,Only works when adjacent to 4 crew members of the same profession.,4,
-Corruption Node,Each non-organic module adjacent to this one has a 20% chance of changing into a random organic module at the end of a battle. 5-40% chance.,Organic A,,4,
-Grand Professional Abduction,Every time you place a new type of professional in this module* it is consumed. If this module consumes 7 types of different professionals* it will grant the basic Stacking Bonus of every type of professional* but you can’t receive the bigger Stacking Bonuses. // Consumes one of each type of professional.,Normal,,6,
-Desperate Disintegrator,If you have 100 SHP or less* blast the enemy with a Nuclear Disintegrator that has a 50% chance of obliterating it and healing you for 500 SHP* and a 50% chance of destroying your own ship instead. There is only one per expedition.,Offensive,,8,
-Greed Pact,-20dpt. After 10 victorious battles* +50dpt instead. -60-30dpt* then +50-80dpt.,Magic,,6,
-Mirror Room,The occupant will disappear at battle start. At the end of the battle* there’s a 30% chance they come out as Lunatic and a 70% chance both them and an exact copy exit the module.,Magic,,6,
-Ineptitude Distiller,The lower your total performance is* the more damage the ship does. Only works if the occupant has 10% or less performance.,Legendary,,8,
-Gleaming Ruby,At battle start* all crew members become the same as the occupant of Gleaming Ruby.,Legendary,Only works when adjacent to 4 crew members.,8,
-Sanatorium of Chaos,+10%P to all crew members* however* every battle* each of them will have a different random trait.,Legendary,,8,
-Campus of Chaos,+10%P to all crew members* however* every battle* all of them will change to a random profession* but the same profession for all.,Legendary,,8,
-Alien Takeover,+100/200/300/400/500 total performance depending on the depth you're in. Once per crew member* they will be abducted for 20 turns and then returned with the Reanimated Trait.,Legendary,,8,
-Gates of the Chosen One,This module can’t be moved from its place in the layout. After 4 battles* the gates open and a crew member of a random profession and the The Chosen One trait appears.,Legendary,,8,
-Portable Wormhole,At the start of every build phase* all of your modules and crew members change to completely random ones* but if you achieve a mean performance of 50%+* it automatically increases all crew members performance by 25%.,Legendary,,8,
-Gleaming Sapphire,At battle start* all modules become the same as one of the modules adjacent to Mirroring Diamond.,Legendary,Only works when adjacent to 4 modules.,8,
-Teleportation Laboratory,Every 2 turns* all crew members will teleport to other modules randomly. Every time a different crew member teleports into this module* deal 100 damage to the enemy.,Legendary,,8,
-Purge House,All crew members will attack each other* dealing -1HP/2 turns. Every time a crew member loses HP* this module deals 100 damage to the enemy* and if a crew member dies* deals 300 damage instead.,Legendary,,8,
-Profession Replicator,If this module hasn’t been disturbed in battle gain 1 stacking bonus count for the profession of the crew member inside this module. If disturbed* the count of extra stacking bonus resets to 0.,Scientific,,6,
-Escape Pod 1,If this module is about to explode or occupant about to die* eject the crew member to the bench while the module is ejected aiming to the enemy and deals 100 damage. // Also works for adjacent modules.,Scientific,,4,
-Sleepy Sponge,If the enemy hits this module inflict Asleep status. The crew member in this module starts every battle Sleepy.,Organic A,,4,
-Poisoning Spike Chamber,If this module is hit* the occupant takes the damage twice* and the enemy becomes Poisoned.,Normal,,4,
-Jacuzzi Module,If this module is water-flooded* there’s no drawbacks and +1HP/4turns. // +1HP/6turns,Defensive,,4,
-Seafood Producer,If this module was hit produce 1 Tasty Seafood and 2 coins at the end of the battle.,Normal,,4,
-Crocodile Tank,Every time the module is hit the crocodiles will bite the enemy for 100 dmg* but -1HP out of a total of 4HP. If the crocodiles are 0HP* this module becomes inactive. If a crew member is placed in this module they will die at battle start but fully heal the crocodiles.,Normal,,4,
-Insane Augmentator,+50%P* but -1HP/2turns and if they die this module explodes.,Scientific,,4,
-Item Bombardier,If the crew member in this module holds an item you can launch it at the enemy to deal 100 dmg.,Offensive,,6,
-Resourceful Blocker 2,If the occupant holds an item* there's a 33% chance with every enemy attack* that's thrown at the enemy to completely block the attack.,Defensive,,4,
-Item Recycler 2,Every time an item is consumed or destroyed* 50% chance of receiving another random item.,Scientific,,4,
-Unstable Channeler,+40dpt. If at any moment it is not adjacent to 4 crew members* this module explodes.,Offensive,,6,
-Electrifier 1,Electrify this and all offensive modules chain-connected to this one. 20 damage every time the enemy hits an electrified module.,Offensive,,4,
-Magifish Spawn,Releases Magifish to this and any other water-flooded modules in your ship. Magifish heal their crew member +1HP/4 turns.,Organic A,,6,
-Sea Urchin Spawn 2,If hit* deal 100 damage to the enemy and release Sea Urchins to all adjacent modules that will deal 100 damage to the enemy if also hit.,Organic A,,4,
-Uncontrolled Greenhouse,Adjacent modules have a 33% chance of becoming Wild at the end of a battle. Adjacent Wild modules have a 50% chance of protecting their occupant from enemy damage.,Organic A,,4,
-Fire Station,If this or an adjacent module is set on fire* put it off and redirect it to the enemy to deal 100 damage.,Normal,,4,
-Heat Beam,+10dpt for each module* in the ship that's set on fire.,Offensive,,6,
-Sushi Kitchen,If this module is hit* produce 1 Tasty Seafood.,Normal,,4,
-Brick Oven,If set on fire it will produce 1 Tasty Pizza at the end of the battle.,Normal,,4,
-Forge,If set on fire it will produce 1 metal weapon item at the end of the battle.,Normal,,4,
-Escape Pod 2,Activate this module’s effect for it to escape the battle with its occupier* and they'll reappear in a node further down.,Scientific,,4,
-Isolator,Every 4 turns an adjacent module becomes Detached.,Scientific,,4,
-Ephemeral Booster,+10%P to the crew member in it. At turn 4 this module always becomes detached.,Scientific,,4,
-Orbital Laser,At turn 8 it deploys and detaches connecting with all other detached modules. Together they ready a laser that's beamed at the enemy dealing 80 damage per detached module.,Offensive,,4,
-Petrifying Defender 1,Adjacent modules are inactive. For each adjacent module* gain a shield of 50 ship health.,Defensive,,4,
-Sperm Bank,If undisturbed and if its occupant is female* at the end of the battle they will have Pregnant as their secondary trait.,Scientific,,4,
-Mega Chimney,If set on fire* +1HP/4turns to this and adjacent crew members as well as preventing freezing.,Defensive,,4,
-Freezeitor 2000,Once per battle you can freeze or defrost this or an adjacent module.,Scientific,,4,
-Missile Deflector,If this module receives an ally hit* instead deflect the missile to the enemy dealing 100 damage.,Offensive,,6,
-Rooted Core,If this module is Wild* +40 HP for every Wild module at the start of each battle.,Defensive,,4,
-Unstable Gatling Gun,+80dpt* but this module is permanently unstable.*,Offensive,,4,
-Overheat Laser,Every 4 turns deals 50 damage and a random adjacent module will be set on fire (70%) or become unstable (30%).,Offensive,,6,
-Overheat Sparker,+60dpt. Unless this or an adjacent module is flooded* it'll be set on fire after 4 turns* and then become unstable in another 4 turns.,Offensive,,6,
-High-precision Cutter,+40dpt. If the crew member in it has less than 70% performance* this module becomes unstable.,Offensive,,6,
-Confinement Room,It's occupant or their items can't ever move from this module. Detaches at the start of battle.,Normal,,3,
-Gravity Engine,Activate to un-detach all modules. Also* items and crew members in this or adjacent modules can’t move from their place during battle.,Scientific,,3,
-Anti-gravity Blaster,Every 4 turns* blasts the enemy for 80 damage but an adjacent module becomes detached.,Offensive,,4,
-Contained Power Beam,Shoots a red beam that’s very thin* but the more damaged the module is* the more energy is released and the thicker the beam becomes. +5dpt. +50dpt if this module is damaged. +80dpt if this module is unstable.,Offensive,,4,
-Oil Platform,If next to a Wild module during battle* produce 1 Fuel at the end of battle.,Scientific,,4,
-Paper Factory,At the end of the battle* 50% chance to produce one of the following items: Recipe Book (0-10)* Book of the Dead (11-20)* Ancient Volume of Wisdom (21-30)* Lost Page (31-40)* Treasure Map (41-50)* Love Letter (51-60)* Suspicious Magazines (61-70)* Military Propaganda (71-80)* Notice of Termination (81-90) or University Diploma (91-100).,Scientific,,8,
-Guinea Pig Laboratory 1,If a crew member dies in this module* all Scientists gain +10%P.,Scientific,,6,
-Brain Replacer,A laboratory with shelves full of brains in jars* and robot hands that hang from the ceiling and transplant the brains. At the start of battle* the occupant is rerolled* and at the end of battle they’re returned to normal.,Scientific,,3,
-Prehistoric Portal,This module is permanently Wild. Unmanned. At the start of each battle* Vicious Dinosaur appears in this module until the end of the battle.,Normal,,4,
-Crummy Deflector,This module is permanently damaged. If the enemy hits this or an adjacent module* the occupant and ship take no damage* and the enemy takes the damage of its own hit.,Defensive,,4,
-Abandoned Laboratory,This module is permanently damaged. At the end of each battle* there’s a 50% chance you gain a random bad quality item that will expire at the end of its first battle.,Scientific,,4,
-Glacier Producer,Unmanned. If this or an adjacent module is water-flooded* it becomes frozen after 2 turns. Every time an enemy hits this or an adjacent module being frozen* they freeze and take 50 damage.,Scientific,,4,
-Sewer,Unmanned. This module is permanently excrement-flooded. If hit* the enemy is poisoned* and it excrement-floods any adjacent module to the left and right.,Normal,,3,
-Atlantis Portal,Unmanned. While this module is surrounded by 4 water-flooded modules* it will be occupied by Atlantis Elder until the end of the battle.,Normal,,6,
-Human Catapult,If this or an adjacent module is hit by the enemy* the catapult fires the crew member in this module* who dies* dealing 400 dmg to the enemy.,Offensive,,4,
-Sushi Bar,The crew member inside this module will have -30%P as they will be busy preparing sushi* but they will produce one Tasty Seafood every 6 turns.,Normal,,4,
-Mediocre Clinic,When a crew member in or adjacent to this module is inflicted with an ailment that isn’t Lunatic* reroll it to another ailment except for Lunatic. // Has a 20% chance of curing the ailment.,Normal,,3,
-Element Changer,When this or an adjacent module is inflicted with an element* reroll it to another random element. // Has a 20% chance of leaving the module intact.,Normal,,2,
-Invasive Urchin 3,Contaminate the modules adjacent to the right and left with urchins* and if the enemy hits any of these 3 modules* they take 50 damage.,Organic A,,4,
-Forceful Activator,All inactive adjacent modules will become active* even if unmanned and requirements not met* however they will be unstable.,Scientific,,4,
-Cluster Suppressor,Reduce the enemy dpt by 3 for every defensive module connected in a defensive path to this one.,Defensive,,6,
-Consolatory Regenerator,If you won a battle losing more than 500 health* heal 100 ship health.,Defensive,,4,
-Organic Headquarters,This module is equivalent to 2 organic modules for stacking bonuses.,Organic,,4,
-Offensive Headquarters,This module is equivalent to 2 offensive modules for stacking bonuses.,Offensive,,4,
-Defensive Headquarters,This module is equivalent to 2 defensive modules for stacking bonuses.,Defensive,,4,
-Scientific Headquarters,This module is equivalent to 2 scientific modules for stacking bonuses.,Scientific,,4,
-Headquarters,This module is equivalent to 2 normal modules for stacking bonuses.,Normal,,4,
-Complex Gun Cockpit,+5dpt for every 10%P the occupant has over 40%.,Offensive,,6,
-Complex Ship Renovator,+5hpt for every 10%P the occupant has over 40%.,Defensive,,6,
-Requireroom,+10%P to this and all adjacent modules.,Scientific,Must be adjacent to 4 modules with requirements being fulfilled.,4,
-Boost Absorber,+5%P for every adjacent module with a side effect that affects this module.,Scientific,,4,
-Anti-defective Garage,Modules adjacent to this one have their defect nullified.,Scientific,,3,
-Disaster Pod,This module always comes with 4 defects and no side effects* but if hit by the enemy* it inflicts 50 damage and a random status.,Offensive,,4,
-Defect Empowerer,+5%P for every adjacent module with a defect.,Scientific,,4,
-Elemental Beam,If this module gains an element* it's consumed and launched at the enemy dealing 100 damage.,Offensive,,6,
-Enraging Blaster,Every 4 turns fires a 100 blast at the enemy* but the enemy gains +15dpt for the rest of the battle.,Offensive,,4,
-Element Absorber,+10hpt as long as this module has an element.,Defensive,,6,
-Super Laboratory,+5%P in any scientific module connected to this one in a scientific path.,Scientific,,6,
-Rainbow Producer,+1 stacking bonus for each of the 5 types.,Normal,Must be adjacent to one module of each other type.,8,
-Hyper Laser,+10dpt for each offensive module in this row. // At turn 6* deal 50 damage for each offensive module in a row with this one.,Offensive,Must be in a row with 5 other offensive modules.,6,
-Ship Expander,You have an extra slot in any space adjacent to this module. If the occupant is an Engineer* you have 2 extra slots instead.,Scientific,,3,
-Reflective Gem Cave,This module is of the same type as the most abundant module type in your ship* and counts as two stacking bonuses for its type. If no type is more abundant than other* it defaults to Normal type.,Normal,,4,
-Floating Shield,If this module is detached* gain a 50HP shield this battle* and add to that shield +20HP for every other detached module.,Defensive,,4,
-Structural Unlocker,The module adjacent below has its requirements ignored.,Scientific,,4,
-Accumulating Shield,Every 4 turns* create a 10HP shield. Each shield is 10HP thicker than the previous one.,Defensive,,4,
-Extra-aggressor,At battle start* a random adjacent module is designated and will have its damage increased by 50% for the rest of the battle.,Offensive,,8,
-Private Academy,This module will consume 4 coins at battle start* otherwise will be inactive. At the end of the battle* the occupant will gain a secondary trait guaranteed to be positive.,Normal,,6,
-Golden Safe,Unmanned. If it explodes* you gain a random amount of coins between 4 and 12 coins.,Normal,,4,
-Luxury Hotel,When a crew member is placed in this module* they are fully healed. However* they cannot be moved from this module unless you pay 2 coins.,Normal,,4,
-Chamber of Painful Immortality 1,-1HP/4turns to this and adjacent crew members. If the occupant reaches 0 HP* instead of dying they heal to full HP and deal to the enemy 40 damage for each drained adjacent crew member.,Normal,At least 1 adjacent crew member.,4,
-Chamber of Painful Immortality 3,-30%P* -1HP/4turns. If the occupant reaches 0 HP* instead of dying they heal to full HP and deal 50 damage to the enemy.,Normal,,4,
-Selfish Death Avoider,If the occupant reaches 0 HP* they don't die* they heal 2 HP and a random adjacent crew member dies instead.,Normal,,8,
-Mind-supressing Pod,The occupant's traits won't have any effect.,Scientific,,4,
-Infinity Garage,At battle start* the occupant will be equipped with a random item that will expire at the end of the battle.,Scientific,,4,
-Vertical Catapult,+10dpt for each offensive module in this column. // At turn 6* deal 50 damage for each offensive module in a column with this one.,Scientific,,6,
-Petrifying Defender 2,If an active adjacent module is hit* the hit is blocked and the ship takes no damage* but the module becomes inactive.,Defensive,,4,
-Rotten Entrails,Every 2 turns* 20% chance the occupier becomes sick. If hit by the enemy* it becomes poisoned.,Organic,,4,
-Guinea Pig Laboratory 2,If a crew member dies in this module* all Scientists gain +1% base performance permanently.,Scientific,,8,
-Ultrafast Server,Unmanned. All Developers gain +5%P* but if this module suffers from an element* -10%P to all Developers instead.,Scientific,,6,
-Concentration Chamber,The occupant's performance can't be lowered.,Normal,,4,
-Ice Beam,At turn 6* shoots a beam of ice that does 200 damage* after which the occupant will remain frozen.,Offensive,,6,
-Iglu,If set on fire* this module disappears and its occupant drowns. If hit by the enemy* they become frozen.,Defensive,,4,
-Ice Shield,If the occupant is about to get hit* this module freezes to protect them from the hit* and the occupant becomes frozen too.,Defensive,,4,
-Empowered Electrifier 2,If this or a module connected in an offensive path to this one is hit by the enemy* the enemy is shocked for 30 damage for each offensive module connected* but all the occupants of the electrified modules suffer -1HP.,Offensive,,6,
-Portable Bank,Put 5 coins in this module. If it was undisturbed* at the end of the battle get the 5 coins back +1 extra coin. If it was disturbed* you lose the 5 coins.,Normal,,4,
-Pain-sharing Compartments,Whenever a crew member takes damage in one of the modules* so will the other one.,Magic,,4,
-Hunting Settlement,If this module is Wild* its crew member will throw wooden spears at the enemy* +30dpt.,Offensive,,4,
-Idiot Cockpit,The lower the occupant’s performance* the higher this module’s dpt is. 70/50/20/10/0 at 0/10/20/30/40%P respectively.,Offensive,,6,
-Contaminating Fuel Refinery,At the end of each battle* produce 1 Fuel* however the modules adjacent to the left and right will be heavily contaminated and cause their occupiers Poisoning. // 50% chance of +1 Fuel if enemies are in node paths* +2 if enemies are in nodes? ,Scientific,,4,
-Basic Fishcapsule,Module built by a Biologist from a creature that doesn’t have an exclusive module. Every enemy attack yas a 33% chance of targeting this module. 5-50% chance to attract each attack.,Organic A,,4,
-Sticky Node,Once a module is placed adjacent to this one* it can’t be separated. Every time the enemy hits this module* they lose 10% of their current dpt.,Defensive,,4,
-Prehistoric Shelter,The occupant won't lose HP from the first enemy hit each battle* but after that hit the module becomes damaged unless its Wild.,Defensive,,4,
-Multitype Capsule,Every time you place this module in the layout* it's type changes in order to the next of the 5 basic types.,Normal,,4,
-Battle Synergiser,If this module it's a different type than normal* at battle start and until the end of battle it also transforms into a random module of that type.,Normal,,6,
-Delicate Toilet 2,Fixes excrement-flooding in this module instantly. However if hit by the enemy* all modules under this one become excrement-flooded. // Similar to Plumbing System but cooler.,Normal,,4,
-Hologram Producer,At battle start* if unmanned* produces an occupant of the same name* gender* profession and trait as a random adjacent crew member* with 40% base performance and 6 HP* that will expire at the end of the battle.,Scientific,,6,
-Untransformed Submarine,At the end of its first battle* it permanently transforms into another random module in your ship or bench.,Scientific,,6,
-Illusion Module,This module works unmanned. The contents of this module will be identical of those of the module adjacent to the right.,Magic,,8,
-Submarine Crypt,If a crew member dies in this module* their corpse remains in it. They will count for profession stacking bonus and nothing else.,Normal,,4,
-Palpitating Viscera,Every 4 turns* it palpitates aggressively and drains 1 HP from its occupant* healing the ship 50 HP.,Organic A,,4,
-Defense Office,Gain +5hpt for each 50 ship health above 1000 that your ship has* including shields.,Defensive,,8,
-Attack Office,Increase your ship DPT by 5%.,Offensive,,8,
-Bone Capsule,If hit* there's a 33% chance it doesn't harm the occupier. // If hit by a physical attack* it won't harm the occupier.,Organic A,,4,
-Investment Agency,If the occupant has 80% or more performance* gain 1 coin at the end of the battle.,Normal,,4,
-Hyperperformer,x1*3 performance to a random adjacent module at the start of battle.,Scientific,,8,
-Brain Swapper,The occupant swaps their performance with the crew member adjacent to the left.,Scientific,,4,
-Echo Channeler,The module on the left has its first effect doubled* up to once per battle.,Magic,,8,
-Maximum Concentration Laser,If this or any adjacent modules have been disturbed* at turn 10 fire a beam that deals 300 damage.,Offensive,,6,
-Morgue,Every time a crew member dies while this module is in the ship* increase the counter in this module by 1. If this module expllodes* at the end of the battle receive as many Drowned Islander items as counters this module had.,Normal,,,
-Sacred Crematorium,If the occupant dies* receive Mysterious Ashes at the end of the battle.,Magic,,8,
-Internship Program,Can't place a crew member in this module during prep phase. At battle start* a random intern will appear in this module until the end of the battle. They will always have a trait of -1 cost.,Normal,,4,
-Peaceful Garden 2,This module is Wild when first adquired. +1HP/4turns.,Normal,Must be Wild.,4,
-Peaceful Garden 2,This module is permanently Wild. +1HP/4turns.,Normal,,6,
-Vegetable Greenhouse,If this module is Wild* +1HP/4turns.,Normal,,4,
-Fart Bubble,Lasts until the end of battle. If hit* pops and disappears.,Normal_E,,,
-Tobacco Bubble,Lasts until the end of battle. If hit* pops and disappears.,Normal_E,,,
-Eye of the Calamity,This module can’t be bought or crafted. It is only born by leaving an available space surrounded by 4 organic modules after which it cannot be separated from its 4 adjacent modules. Every battle* Eye of the Calamity uses one offensive or defensive abyssal creature effect.,Organic_E,,,
-Pearlcore,This module can’t be bought or crafted. It is only born by having a Pearl equipped inside an Organic module that then absorbs the item and transforms into Pearlcore* which is unmanned so that holder is moved to the bench. Once per battle* heal everyone 1HP and +100 Ship HP.,Organic_E,,,
-Millennial Explorer,Place next to the Captain to reveal the contents of all nodes in the current level. Once placed it cannot be moved from its slot.,Normal_E,,,
-Morgan’s Submarine,Old and damaged module that will suffer a random module status at the start of each battle.,Organic_E,,,
-Selfless Whale,Unmanned and indestructible. Occupies 4 modules in a row and has to be placed at the very bottom of the slot layout. For as long as its in this position* halve Fuel consumption and increase your ship health by 300 HP.,Organic_E,,,
-Nuclear Fusion Energiser,All modules in this row charge up 50% faster.,Scientific_E,,,
-Nuclear Fission Disintegrator,Once per battle in turn 4 fire a nuclear blast at the enemy that deals 300 damage but it sets on fire all modules in this row.,Scientific_E,,,
-Eye of the Storm,Unmanned. All adjacent modules are permanently flooded. If the monster attacks this or an adjacent module there’s a 50% chance that the attack is repelled by the winds.,Defensive_E,,,
-Irritable Volcano,Unmanned. If hit deal 150 damage and each adjacent module has a 50% chance of being set on fire.,Offensive_E,,,
-Excreel Pump,Excreel-shaped module with an anus end that shoots turds every 4 turns that poison the enemy and deal 50 damage.,Organic_B,,4,Excreel
-Jellynfestor Babycrib,You are the one that sends cannibal-inducing baby parasites now* which will make the enemies attack each other. // Send parasites to the enemy that deal 1% max HP every turn and stacks with Poison.,Organic_B,,6,Jellynfestor
-Infectuna Guts,Its crew member and any adjacent crew members will have Explosive Diarrhea as their secondary trait at the start of battle.,Organic_B,,4,Infectuna
-Sluugi Vessel,Every now and then sends Sluugi into the enemy to die* that deal low damage to the enemy; +5dpt.,Organic_B,,4,Trapped Sluugi
-Arctic Exhaler,Freeze the enemy at the start of battle* or 1-2 enemies in a multi-battle.,Organic_B,,4,Polar Seabear
-Tusklauncher,Launch Narwhevil horns at the enemy that penetrate and heavily damage shells* dealing 100 damage every 4 turns.,Organic_B,,4,Narwhevil
-Monstercrewed Module,You are the one that sends little monsters that attack the enemy* dealing 1% max HP every turn that stacks with Poison.,Organic_B,,6,Monstercrewed Shipwreck
-Ophthalmonster Eye,Gain greater information on the types of events in nearby Nodes // Have greater range of sight in Node Map.,Organic_B,,4,Ophthalmonster
-Lobster Icicle Launcher,If this or an adjacent module is flooded or frozen* launch icicles into the enemy to deal +30dpt with a 33% chance of Freezing with every attack.,Organic_B,,4,Winter Gigalobster
-Crusty Weaponiser,Uses the activated effect from an adjacent defensive module* and instead transforms that effect into an aggressive blast that deals +150 damage.,Organic_B,,4,Brave Knight Crustaceous III
-Monstrous Accumulator,Crafted from defeating 5 different earlygame enemies* and looks like a bunch of small sea creatures clumped together. Every time you defeat a different creature species* +5dpt.,Organic_B,,4,Trapped Sluugi* Baby* Shark* Leech* Shellcrab* Trilobite* Blastshell* Octocute* Crustcoral
-Eternal Healer,This module cannot explode* and heals its and djacent crew members +1HP/4turns.,Organic_B,,8,Jelleternal
-Modular Oyster,At the end of each battle* if undisturbed* has a 33% chance of producing a Pearl.,Organic_B,,6,Vengeful Oyster* Clamtasm
-Hurling Tentamodule,Every 4 turns* grabs a random item from its interior or an adjacent module and throws it at the enemy to deal 150 damage.,Organic_B,,6,Anchoctopus
-Bloodsucking Node,If the enemy hits this module* once per battle deal 100 damage and heal 150 ship health.,Organic_B,,6,Leech
-Draconic Shield,If placed on the first column of the layout* blocks the first enemy attack onto the ship.,Organic_B,,6,Drakguardian
-Node of Spines,If hit* spikes will harm the enemy for 100 damage but all adjacent modules will be water-flooded.,Organic_B,,6,Sharpfish
-Ammonode,Live ammonite that collects food and shares it with the crew member in it* +1HP/4turns.,Organic_B,,6,Ammonite
-Puffy Spineball,If hit* spikes will Poision the enemy and excrement-flood all adjacent modules.,Organic_B,,4,Puffers
-Psychic Chamber,The occupier will have their trait randomly changed at the start of battle until the end of battle.,Organic_B,,4,Psychic Starfish
-Gigantic Pod,The occupier will be immune to the first 8 enemy hits* but it becomes permanently damaged after 5 hits* and unstable after 8 hits. If this module explodes* it poisons the enemy.,Organic_B,,6,Gigantopod
-Corrupted Ammonode,Live corrupted ammonite that sucks life from its crew member* -1HP/4turns. Live ammonite can’t become damaged or explode as long as it has a crew member in it.,Organic_B,,4,Corrupted Ammonite
-Muscle Peripheral,Huge muscular arm that can only be placed on the periphery of the ship* and if hit* punches back for 150 dmg.,Organic_B,Needs peripheral positioning.,6,Muscufish
-Kamebunker,Protective module shielded by the two turtle shells that Kameman left behind. Immune to damaged* and the crew member inside takes half the damage.,Organic_B,,6,Kameman
-Cage of Apes,Unmanned cage full of apes. Their performance will be completely random at the start of a battle. If they’re hit* deal 100 damage* but they also go apeshit and start flinging faeces at each other; the module is excrement-flooded and -20%P.,Organic_B,,4,Caged Waterape
-Net Attachment,Collects little and fish and food* grating 1 (60%) or 2 (40%) items that are either Tasty Seafood or Expired Sushi.,Organic_B,Needs peripheral positioning.,6,Netfish
-Structural Cetacea,Takes up 3 slots horizontally. Increases Ship HP by 400.,Organic_B,,6,Whalenormous
-Blast Capsule,If this or an adjacent module is hit* it explodes and the enemy is dealt 150 damage. This module cannot be destroyed by explosions* but its occupier can.,Organic_B,,6,Blasteel
-Baby Turtlearth,This and all adjacent modules are permanently Wild. Increase Ship HP by 500.,Organic_B,,6,Turtlearth
-Telescopic Augmentor,The enemy will be revealed sooner in the build phase.,Organic_B,,4,Scrutifish
-Angler Baiter,At battle start* a random adjacent module will get hit a lot more often for the remainer of the battle* having a 33% chance in each attack of receiving the hit.,Organic_B,,4,Cuadruplangler
-Shelter of the Overlord,If the crew member in this module is about to die* you can sacrifice another crew member instead.,Organic_B,,6,Rift Overlord
-Life-Absorbing Krakencore,Must be adjacent to a scientific module. If you kill a creature* the squid capsule redirects his life energy into the crew* healing every crew member for +1HP.,Organic_B,,8,Intellekraken
-Bulging Whale Corpse,Unmanned. Every time the enemy hits the ship* 4% chance it explodes. If it explodes* the enemy takes 600 damage* becomes Poisoned* and all adjacent crew members become Sick.,Organic_B,,6,Whalenormous
-Visceral Execution,If a creature has less than 400HP* you can execute it* but will be utterly disintegrated and you won’t be able to harvest it for items or organic modules. Charges up after 5 battles. If operated by a War General* it can be executed at 600 HP.,Offensive M,,50T,MegaHor
-Submabomber,Twice per battle* you can select a module from your ship* destroy it and turn it into a bomb that will deal 400 dmg to the enemy.,Offensive M,,,MegaHor
-Soul Crusher,For each crew member that died* this module has 1 Soul Bullet. Once per battle* shoot a Soul Bullet that will deal 400 dmg to the enemy. The Soul Bullet will carry the name of the deceased owner of the soul.,Offensive M,,,MegaHor
-Flesh Buffer,The occupant will take damage instead of the ship* losing 2 HP for every enemy attack.,Defensive M,,,MegaVer
-Colossal Expansion,This module counts as 4 Defensive modules for all effects and purposes. Only once per expedition* duplicate your ship health* and any amount above your original ship health will stay as a shield into future battles.,Defensive M,,,MegaVer
-Clone Lab,At the end of the battle* creates a clone of its occupant. If the module is disturbed during the cloning process* the resulting clone will be monstrous abomination with a bad trait.,Scientific M,Adjacent to a scientist.,,MegaVer
-Body Splicer,Fuse two crew members into one mega crew member of 100% base performance and 12 HP* having both professions and both their first traits. Takes 5 battles to recharge.,Scientific M,,50T,MegaHor
-Cryogenic Lab,When a crew member dies* it is cryo-preserved* up to a maximum of 3 at a time. If this module is occupied by a doctor or scientist* you can revive the crew member 1 battle after their death.,Scientific M,,,MegaHor
-Megabrain Core,Every other module in the ship will work even if unmanned.,Scientific M,Can only be manned by a Developer.,,MegaVer
-Cathedral of the Depths,At battle start* summon an Abyssal Beast that will fight by your side during this battle. Takes 5 battles to recharge.,Normal M,Only works when manned and adjacent to another 6 crew members.,50T,MegaVer
-Duplex Ship,All of your other modules except for this one are rerolled into random ones until the end of the fight. If you lose the battle* all your original modules return and you can continue with battle with the same amount of Ship HP you started with.,Scientific M,Must have 8x Engineers* and can only be manned by one.,,MegaVer
-Absolute Assembly,Once per battle* during your turn* you can pause time and rearrange your modules* except for this one.,Normal M,Can only be manned by an Architect.,,MegaHor
-Destiny Portal,Cannot place a crew member in it. At the beginning of the fight* the portal will open to reveal the otherworldly return of the first crew member that ever died this expedition* exactly as you remembered them* but with 20 base HP. They will always take aggro from the monster.,Normal M,Can only be used once* during an Abyssal Beast battle.,,MegaVer
-Extreme Hospital,If a crew member dies in or adjacent to this mega module* they return as a Zombie.,Scientific M,Requires a Doctor or Scientist in it.,,MegaVer
-Steel Sacrificer,If your ship is below 30% HP* a random adjacent module will be destroyed for every attack over 100 HP you were about to receive.,Defensive M,,,MegaVer
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
+Name,Effect,Type,Special Req,Price
+Basic Torpedo Launcher,+10dpt.,Offensive,,4
+Exhausting Gun,+20dpt but the occupant has their performance halved. // Fires 100 dmg at turn 4* after which the occupant will have their performance halved for the rest of the battle.,Offensive,,4
+Flesh Cannon,60 dmg every 4turns* but the occupant loses -1HP each time.,Offensive,,6
+Blood Beam,Every time a crew member loses HP* +5dpt for the rest of the battle. // At turn 10* fire a blood beam that deals 40 damage for every 1HP that a crew member lost this battle.,Offensive,,6
+Excrelaser,Permanently excrement-flooded. Deals +10dpt for every adjacent module that’s excrement-flooded including this one. Every time it's hit* excrement-flood a random adjacent module.,Offensive,,4
+Excretor,If this module becomes excrement-flooded* undo the flooding and throw the excrement at the enemy dealing 50 dmg and causing poisoning.,Organic A,,4
+Corpse Shield,If a crew member dies* their corpse will be launched to block the next attack entirely.,Defensive,,4
+Cult Headquarters,The occupier's trait will be Cult Leader.,Normal,,4
+Portable Nursing Home,At the start of battle* generate a no-profession centenarian in an adjacent module.,Normal,,8
+Stuck Rocket Launcher,It's stuck* so it doesn't fire unless the module is hit by the enemy. Once per battle deals 150 damage.,Offensive,,6
+Dream Extractor,Once per battle if the occupant falls asleep* cover the ship in a 150 HP shield of dreamy clouds.,Defensive,,4
+Triumphant Regenerator,If you finished a battle with no more than (20% of the monster health less) than you started it* heal 5% of your Ship Health max.,Defensive,,4
+Jelly Flexi-Membrane,Once per battle* if this module is hit by the enemy* block the attack entirely and deal damage equal to the attack deflected.,Organic A,,6
+War General AI,Unmanned. This module counts for having a War General in it.,Scientific,,4
+Adjacent Automatiser,Automatises a random adjacent empty module that needs to be manned.,Scientific,,4
+Mind Control Unit,The occupier will have the same trait as the crew member adjacent to the left.,Scientific,,6
+Motherly Jellycarer,If this module was hit* heal it's occupier +2HP and the ship 50HP at the end of the battle.,Organic A,,6
+Temporary Buffer,If this module is hit* your ship takes no damage. If this module is hit 4 times* counting previous battles* it explodes.,Defensive,,4
+Chamber of Sacrifice,At turn 12* the occupant will be sacrificed and you gain 300 ship health. // If hit* you take no ship damage* the occupant will be sacrificed and you gain 100 ship health.,Magic,,4
+Mimic Room,At the start of battle it transforms into an identical copy of a random adjacent module* until the end of the battle.,Scientific,,8
+Coral Golem,Unmanned. Every time it’s hit the ship takes no damage. With every hit it will become more damaged* and after 5 hits this module explodes.,Organic A,Only works if adjacent to a Defensive module.,4
+Virtual Gun Materialiser,+20dpt and -5%P every 2 turns. If manned by a Cadet* +40dpt instead.,Scientific,,6
+Mini-Hospital,At turn 12* heal +1HP to a random adjacent crew member* or +1HP to each adjacent crew member if manned by a Doctor.,Defensive,,6
+Passive Regenerator,+10hpt. // +5hpt* +10hpt if manned by a War General.,Defensive,,6
+Robot Factory,At the end of battle* consumes 1 Fuel and you gain a random crew member with Robot trait. This crew member will expire at the end of its first battle. // Consumes 1 Fuel to generate a random crew member with Robot trait at the start of the battle. This crew member will expire at the end of the battle.,Scientific,,8
+Rulebreaker,The module below has its requirements obviated. If manned by an Engineer* both the modules below and above have their requirements obviated.,Scientific,,4
+Harpoon Launcher,Every 4 turns* fires a harpoon that deals 50 damage. Every subsequent harpoon deals 10 less damage than the previous one down to a minimum of 10 damage.,Offensive,,6
+Anglerfish Glare,At turn 4* blind the enemy. // At turn 10* blind the enemy.,Organic A,Must be placed on the leftmost column.,6
+Commander’s Cockpit,If manned by a Cadet or Lieutenant for 3 battles in a row* they become a War General. If manned by a War General* +5%P for each adjacent Cadet or Lieutenant. // +2dpt for each adjacent Cadet or Lieutenant. If manned by a War General* +5dpt.,Offensive,,6
+Stingray Fin,Attack before the enemy in every battle. // Must be placed in the rightmost column available in your current ship* or the rightmost column available in the invisible grid? latter option is a better requirement for such a strong module* but only works if the layout grid is finite. ,Organic A,Must be placed on the rightmost column.,8
+Urchin Megacarapace 1,If the enemy hits this module* it takes 50 damage. If this happens twice* the enemy becomes poisoned.,Organic A,,6
+Charging Laser Beam,If undisturbed for 8 turns in a row* it shoots a 200 damage lase beam.,Offensive,,8
+Magicoral,If this module wasn't disturbed* heal the occupant and all adjacent crew members for 1 HP at the end of the battle. // 2 HP.,Organic A,,8
+Hygienic Chamber,Undo excrement-flooding* sick and poisoning immediately. // Chance to undo excrement-flooding* sick and poisoning at will.,Scientific,,4
+Electroconvulsive Therapy Chamber.,At the end of the battle* there's an 80% chance the occupier has their trait changed to a positive trait and lunatic ailment is removed* and a 20% chance they die.,Scientific,,6
+Organic Recycler,Every time an adjacent crew member dies* you gain 2 Fuel.,Scientific,,8
+Submarine Recycler,Every time an adjacent module is destroyed* you receive the same module but with no side effects and an extra different random defect. // When a module with 4 defects is destroyed* it's no longer recreated.,Scientific,,8
+Item Recycler 1,Every time an item is consumed or destroyed* you receive another random item that will expire at the end of its first battle.,Scientific,,8
+Biotransformer,For every 3 defeated monsters* you gain a random Organic A module* or Organic B if manned by a Biologist.,Organic A,,8
+Isolation Bunker,This module is indestructible and its occupier can't take damage from the enemy. However* the first occupant placed in this module can't ever be moved out* and they will be classed as adjacent to no other module or crew member. // After 10 battles* the occupant becomes Lunatic. ,Defensive,,6
+Stick Pod,This module doesn't require a purchased slot to be placed. Always comes with a side effect.,Scientific,,4
+Ritual Chamber,At the start of battle* will summon a random crew member in each empty adjacent module with the trait Ghost that disappear at the end of the battle. // Will summon 1-2 random crew members in random adjacent modules with the trait Ghost and no profession.,Magic,,6
+Casino,Any percentage-based effect inside this module will have a higher chance of having a positive outcome instead of a negative one. // In adjacent modules.,Normal,,6
+Weed Garden,This module is permanently Wild. The occupant's trait will be Stoned for as long as they're in this module.,Normal,,4
+Defensive Accumulator,For every defensive module connected in a defensive path to this one* increase your ship's max health by 20. // by 50.,Defensive,,6
+Pharmacy,The occupant will have Doctor as their profession while in this module. At the end of the battle* if an adjacent crew member lost HP* gain one Doctor Kit.,Normal,,6
+Gym,If the occupant stays in this module for 2 battles in a row* their trait is changed to Bodybuilder and +5% base performance* up to once per crew member.,Normal,,6
+Excreshield,Once per battle* if this module becomes excrement-flooded* empty it to create an excrement shield that will completely block the next enemy attack.,Defensive,,4
+Repair Station,If an adjacent module becomes damaged* it fixes it in 2 turns.,Scientific,,6
+Defensive Synergiser,Every time an adjacent defensive module's effect triggers* gain 20 ship health. // gain 40 ship health.,Defensive,,6
+Greedy Buffet,+1HP/4turns* but if they heal HP while at 6HP* the occupant becomes sick.,Normal,,4
+Military School,If a cadet or lieutenant spends 1 battle in this module* +5% base performance* up to once per crew member.,Normal,,8
+Impact Buffer,The first hit on this module per battle doesn't damage the ship or its crew member.,Defensive,,4
+Self-Destruct module,Activate this module for it to separate from the ship* and launch itself with its brave crew member into the enemy* causing a 400 dmg explosion that destroys both module and occupier. If operated by a War General* it deals 700 damage instead.,Offensive,,6
+Net Gun,Every 6 turns* throws a fishing net that deals 10 damage and lowers enemy dpt by 10. If a fishing net is thrown during the attack that defeats a monster* catch the monster instead and it yields an extra item.,Normal,,6
+Explosive Redirector,Every time an adjacent module explodes* deal 150 damage to the enemy. // 300 damage.,Offensive,,4
+Coin Bullet Gun,Compresses your saved currency into hard golden bullets that deal more damage the more coins you have. 0dpt if you have 0 coins* and 10-100dpt for 1-50 coins. Every 4 turns* it consumes 1 coin to use. // Only consumes 1 coin every 8 turns if you have more than 25 coins.,Offensive,,6
+Fuel Rockets,They run on the same fuel as your ship* so it consumes 1 Fuel every 8 turns to throw a 100 damage rocket. // Can be activated/deactivated at any time. // At turn 2* throw a rocket that deals 100 damage and consumes 2 Fuel.,Offensive,,6
+Flamethrower,At turn 8* fires flames that deal 60 damage for every adjacent module that's set on fire* including this module* and also burns the enemy.,Offensive,,6
+Sticky Seaworm,Sticks to adjacent modules for the first 5 battles after it is first placed. +1HP/4turns and immunity to ailments.,Organic A,,4
+Combo Bomb,If you activate 3 effects in the same turn* launch a combo bomb that deals 150 dmg.,Offensive,,6
+Combo Regenerator,If you activate 3 effects in the same turn* heal for 100 Ship Health.,Defensive,,6
+Mental Reversal Capsule,Inverts the performance of the crew member in it. The formula is [NewP = 90-P] if P > 20* and [NewP = 100-P] if P < 20.,Scientific,,8
+Emergency Escape Engine,Use this module to eject the whole ship away from a battle* and this module is destroyed.,Defensive,,8
+Plumbing System,Extracts any flooding from anywhere in the ship. If this module gets hit* it becomes excrement-flooded.,Scientific,,4
+Flesh Connection Pods,They always appear as a pair in the shop. Whenever the occupant loses or gains HP in one of the modules* the occupant of the other module loses/gains the HP instead.,Normal,,3
+Fuel Converter,At the end of the battle* consume 1 Fuel to heal the occupant 2HP. // 3HP.,Defensive,,6
+Fishing Bait Pod,The enemy has a 33% chance in each of its attacks to target this module.,Normal,,6
+Mystery Room,At battle start and until the end of the battle* this module turns into another random module that isn’t a Mega-module (retaining the same requirements* defects and side effects).,Normal,,4
+Magical Storage Room,Can work unmmaned* and items can be placed without a holder in this module. At the end of battle* the item in this module will transform into a different item.,Magic,,6
+Perfect Balance,Once per expedition* equalise the enemy's HP with the ship’s HP* calculating the mean of both values and applying it to the enemy and the ship. MAYBE IT SHOULD BE A SUPER ITEM.,Normal,Only works when adjacent to two offensive and two defensive modules.,8
+Chronic Beam,At turn 8* shoot a beam at the enemy that deals 150 damage for every Ailment the enemy has (only works if enemy can have more than 1 ailment). // +40dpt for as long as the enemy has an ailment.,Offensive,,4
+Defensive Perfection,If manned by a War General* the enemy deals 75% the normal damage to our ship unless it first lands a hit onto this or any of its adjacent modules.,Defensive,Only works when adjacent to 4 defensive modules.,8
+Offensive Perfection,If manned by a War General* +60dpt unless it first lands a hit onto this or any of its adjacent modules.,Offensive,Only works when adjacent to 4 offensive modules.,8
+Beautiful Fish Tank,Unmanned. This module is permanently water-flooded. At the end of battle* you receive 1 Tasty Seafood.,Normal,,4
+Decompression Core,This and adjacent modules can’t explode.,Defensive,,6
+Fuel Extractor,If this module gets flooded* it produces 1 Fuel at the end of the battle.,Scientific,,4
+Danger Thunder,Deals 150-0dpt depending on whether your ship has 50-500HP left.,Offensive,,6
+Brain Giga-Aumentator,+10%P. The occupant has an increased performance cap of 150%.,Scientific,,6
+Portable Mini-University,At the end of the battle* the occupant's profession will permanently change to a different random profession.,Normal,,8
+Interdimensional Training,At battle start it closes its doors and transports the crew member into another dimension for 3 battles* during which it cannot be used. Then* they return transformed into an improved being with two positive traits* fully healed* 8 max HP and 70% base performance. There is a 20% chance the crew member returns as a centenarian that shits himself.,Scientific,,6
+Blood Absorber,If your crew has taken 8HP damage or more this battle* +150 ship health.,Organic A,,4
+The Golden Chamber,Costs 30 coins and comes more easily to players with lots of coins. Offers maximum comfort to its occupant* however it is extremely delicate as it is beautiful. If undisturbed for a battle* its occupant will give you 1 coin + 1 extra coin for every undisturbed battle in a row. If the module is disturbed* the counter resets back to 1 coin of reward.,Normal,,30
+Sadomasochism Dungeon,If a crew member takes damage in this module* they gain Masochist as their secondary trait permanently.,Normal,,6
+Electric Shockwave,At turn 4* electrocute the enemy for 100 damage* but there's a 40% chance it also damages your ship for 50 damage (15% chance if operated by a War General).,Offensive,,4
+Lunatic Brutaliser,The occupant will become Lunatic at the end of the battle. If a monster hits a module with a Lunatic* deal 100 damage.,Offensive,,4
+Death Coffin,Every 3 enemy hits* there's a 50% chance that this module is hit* and the crew member in it takes double damage from hits.,Normal,,3
+Magical Swap Box,The occupant* right before getting hit* will swap places with another random crew member.,Magic,,4
+Military Waking Alarm,Every 4 turns* removes Stunned* Sleepy and Asleep from all crew members* and +5%P to all adjacent Cadets and Lieutenants. // If operated by a War General* all adjacent crew members get a 10%P boost,Normal,,8
+Trash Compactor,If an adjacent module is damaged* at the end of the battle you can recycle it into 250 ship health.,Scientific,,4
+Man Buffer,If this module gets hit* -2HP extra to the occupant but the ship takes no damage.,Defensive,,4
+Kinetic Absorber,Any time 1 crew member moves* it fires a kinetic blast to the enemy that deals 100 dmg. 100-300dmg.,Offensive,,4
+Discharge Sponge,If this module is hit* reduce enemy dmg by 20% for 4 turns* and stop berserk status. // -> 50% for 8 turns.,Organic A,,6
+Health Weaponiser,At turn 2* sacrifice 100 ship HP to launch a blast that deals 200 dmg. If operated by a War General* sacrifices 200 ship HP to deal 500 dmg. 150-400 dmg* 250-700dmg.,Offensive,,6
+Danger Alert,When the ship is below 1/3 HP* +5%P to this an adjacent crew members. If operated by a War General* +10%P instead when below 1/4 HP. // 2-40% +20-60%.,Offensive,,4
+Laser of Death,Grim Reaper themed. Every time a crew member dies* the damage of this module permanently increases +10* to a maximum of +100dpt. +2-20dpt* max 200dpt. // At turn 2* blast the enemy with a laser of death that deals 100 damage for every crew member that died in the previous battle.,Offensive,,6
+Restructurator,During the next prep phase* you can move to another place the slot that this module was in. If so* +5%P to the occupant of that slot in the next battle.,Normal,Must be adjacent to all other 4 module types. Is this requirement still necessary?,4
+Business Centre,Recruiters and Businessmen in/adjacent to this module have a 50% chance of yielding 1 coin at the end of the battle. 1-3.,Normal,,3
+Megaton Core,Extremely heavy nucleus that can’t be manned. It increases your ship’s HP by 100* and charges adjacent defensive modules 50% faster. Once placed in a slot of the layout* it can’t ever be moved from there. 10-200* 10-100%.,Defensive,,6
+Tentacollector,It uses its long tentacles to pick up items every now and then. 50% chance of item at the end of battle.,Organic A,,8
+Chef Academy,At the end of the battle* the occupier will gain Sushi Chef as their secondary trait. Works with up to 3 different crew members.,Normal,,8
+Explosive Charger,If a module explodes* absorb energy from the explosion to charge up your modules for 50% and fix any damaged/unstable module. 10-100%.,Scientific,,4
+Pain Transformer,If a crew member loses HP in this module* it fires a piercing pain blast of 80 dmg into the enemy. 50-250%.,Offensive,,8
+Contagion Beam,At turn 10* shoot a diseased beam that deals 100 damage for each crew member with an ailment.,Offensive,,4
+Water-Based Doping module,When flooded* injects the water with enhancing drugs. +5%P in this or any water-flooded module. However if this module gets hit* the enemy will have +20%dpt in its next attack.,Scientific,,4
+Arctic Hull,Both parts always appear as a pair in the shop* for 300 each. Freeze the water around the ship to create an ice barrier that creates a 300 ship HP shield at the beginning of every battle. // The barrier* however* will disappear if any of the two modules is disturbed. 50-400 HP shield.,Defensive,One must be placed in the highest row of the Layout* and the other in the lowest row.,4
+Chamber of Infinite Wisdom,The crew member in this module will have a profession of your choice* and their performance cap will be 150%.,Normal,,8
+Resourceful Blocker,Twice per battle* can throw an item at will to block an enemy attack. Block 25-100% of the damage.,Defensive,,6
+Systemic Freezer,When a module floods* it instantly becomes frozen. If the enemy hits a frozen module* it becomes frozen.,Defensive,,3
+Gambletron 3000,At the end of a battle* earn more currency the ship health you lost. +1-10 coins from 300-0 SHP lost. +50-150 to +300-800 currency.,Normal,,3
+Seafood Absorber,Every time you win a battle* +20 to your ship HP* stacks up to 10 times. +5-20.,Defensive,,4
+Recruitbot 3000,You can insert 3 coins in it* and at the end of battle it will produce a random crew member.,Scientific,,4
+Item Multiplier,After 4 battles with an item in it* it will produce a copy of that item. 50-20 turns. // The occupier will be holding the same items as the occupier adjacent to the right.,Scientific,,8
+Steamthrower,When this or an adjacent module floods* instantly boils away the water to shoot scalding steam at the enemy that deals 100 dmg. Any crew member in the flooded module will take 1 HP dmg. 50-200 dmg.,Offensive,,4
+Co-pilot’s Cockpit,Once per battle* during 1 turn* double any Offensive or Defensive effects that your other modules used.,Normal,Must be adjacent to the Captain.,6
+Autopilot Navigator,Unmanned. If this module was placed in the ship* after a successfull battle the ship will mark the juiciest Nodes nearby in the Node Map. 1-5 juicy nodes.,Normal,Must be adjacent to the Captain.,4
+Kidnaptron 3000,Once a crew member is placed in this module* they can't be moved unless you pay Kidnaptron 1 coin. The traumatic experience of being kidnapped by Kidnaptron causes the crew member that exits the module to have a different random trait. // And 20% chance of dodging enemy attacks.,Normal,,3
+Professional Union,Unmanned. Only works when adjacent to 4 crew members of the same profession. When any of them die* this module will replace their Stacking Bonus count. Adjacent to 4-1 crew members of the same profession.,Normal,Only works when adjacent to 4 crew members of the same profession.,4
+Corruption Node,Each non-organic module adjacent to this one has a 20% chance of changing into a random organic module at the end of a battle. 5-40% chance.,Organic A,,4
+Grand Professional Abduction,Every time you place a new type of professional in this module* it is consumed. If this module consumes 7 types of different professionals* it will grant the basic Stacking Bonus of every type of professional* but you can’t receive the bigger Stacking Bonuses. // Consumes one of each type of professional.,Normal,,6
+Desperate Disintegrator,If you have 100 SHP or less* blast the enemy with a Nuclear Disintegrator that has a 50% chance of obliterating it and healing you for 500 SHP* and a 50% chance of destroying your own ship instead. There is only one per expedition.,Offensive,,8
+Greed Pact,-20dpt. After 10 victorious battles* +50dpt instead. -60-30dpt* then +50-80dpt.,Magic,,6
+Mirror Room,The occupant will disappear at battle start. At the end of the battle* there’s a 30% chance they come out as Lunatic and a 70% chance both them and an exact copy exit the module.,Magic,,6
+Ineptitude Distiller,The lower your total performance is* the more damage the ship does. Only works if the occupant has 10% or less performance.,Legendary,,8
+Gleaming Ruby,At battle start* all crew members become the same as the occupant of Gleaming Ruby.,Legendary,Only works when adjacent to 4 crew members.,8
+Sanatorium of Chaos,+10%P to all crew members* however* every battle* each of them will have a different random trait.,Legendary,,8
+Campus of Chaos,+10%P to all crew members* however* every battle* all of them will change to a random profession* but the same profession for all.,Legendary,,8
+Alien Takeover,+100/200/300/400/500 total performance depending on the depth you're in. Once per crew member* they will be abducted for 20 turns and then returned with the Reanimated Trait.,Legendary,,8
+Gates of the Chosen One,This module can’t be moved from its place in the layout. After 4 battles* the gates open and a crew member of a random profession and the The Chosen One trait appears.,Legendary,,8
+Portable Wormhole,At the start of every build phase* all of your modules and crew members change to completely random ones* but if you achieve a mean performance of 50%+* it automatically increases all crew members performance by 25%.,Legendary,,8
+Gleaming Sapphire,At battle start* all modules become the same as one of the modules adjacent to Mirroring Diamond.,Legendary,Only works when adjacent to 4 modules.,8
+Teleportation Laboratory,Every 2 turns* all crew members will teleport to other modules randomly. Every time a different crew member teleports into this module* deal 100 damage to the enemy.,Legendary,,8
+Purge House,All crew members will attack each other* dealing -1HP/2 turns. Every time a crew member loses HP* this module deals 100 damage to the enemy* and if a crew member dies* deals 300 damage instead.,Legendary,,8
+Profession Replicator,If this module hasn’t been disturbed in battle gain 1 stacking bonus count for the profession of the crew member inside this module. If disturbed* the count of extra stacking bonus resets to 0.,Scientific,,6
+Escape Pod 1,If this module is about to explode or occupant about to die* eject the crew member to the bench while the module is ejected aiming to the enemy and deals 100 damage. // Also works for adjacent modules.,Scientific,,4
+Sleepy Sponge,If the enemy hits this module inflict Asleep status. The crew member in this module starts every battle Sleepy.,Organic A,,4
+Poisoning Spike Chamber,If this module is hit* the occupant takes the damage twice* and the enemy becomes Poisoned.,Normal,,4
+Jacuzzi Module,If this module is water-flooded* there’s no drawbacks and +1HP/4turns. // +1HP/6turns,Defensive,,4
+Seafood Producer,If this module was hit produce 1 Tasty Seafood and 2 coins at the end of the battle.,Normal,,4
+Crocodile Tank,Every time the module is hit the crocodiles will bite the enemy for 100 dmg* but -1HP out of a total of 4HP. If the crocodiles are 0HP* this module becomes inactive. If a crew member is placed in this module they will die at battle start but fully heal the crocodiles.,Normal,,4
+Insane Augmentator,+50%P* but -1HP/2turns and if they die this module explodes.,Scientific,,4
+Item Bombardier,If the crew member in this module holds an item you can launch it at the enemy to deal 100 dmg.,Offensive,,6
+Resourceful Blocker 2,If the occupant holds an item* there's a 33% chance with every enemy attack* that's thrown at the enemy to completely block the attack.,Defensive,,4
+Item Recycler 2,Every time an item is consumed or destroyed* 50% chance of receiving another random item.,Scientific,,4
+Unstable Channeler,+40dpt. If at any moment it is not adjacent to 4 crew members* this module explodes.,Offensive,,6
+Electrifier 1,Electrify this and all offensive modules chain-connected to this one. 20 damage every time the enemy hits an electrified module.,Offensive,,4
+Magifish Spawn,Releases Magifish to this and any other water-flooded modules in your ship. Magifish heal their crew member +1HP/4 turns.,Organic A,,6
+Sea Urchin Spawn 2,If hit* deal 100 damage to the enemy and release Sea Urchins to all adjacent modules that will deal 100 damage to the enemy if also hit.,Organic A,,4
+Uncontrolled Greenhouse,Adjacent modules have a 33% chance of becoming Wild at the end of a battle. Adjacent Wild modules have a 50% chance of protecting their occupant from enemy damage.,Organic A,,4
+Fire Station,If this or an adjacent module is set on fire* put it off and redirect it to the enemy to deal 100 damage.,Normal,,4
+Heat Beam,+10dpt for each module* in the ship that's set on fire.,Offensive,,6
+Sushi Kitchen,If this module is hit* produce 1 Tasty Seafood.,Normal,,4
+Brick Oven,If set on fire it will produce 1 Tasty Pizza at the end of the battle.,Normal,,4
+Forge,If set on fire it will produce 1 metal weapon item at the end of the battle.,Normal,,4
+Escape Pod 2,Activate this module’s effect for it to escape the battle with its occupier* and they'll reappear in a node further down.,Scientific,,4
+Isolator,Every 4 turns an adjacent module becomes Detached.,Scientific,,4
+Ephemeral Booster,+10%P to the crew member in it. At turn 4 this module always becomes detached.,Scientific,,4
+Orbital Laser,At turn 8 it deploys and detaches connecting with all other detached modules. Together they ready a laser that's beamed at the enemy dealing 80 damage per detached module.,Offensive,,4
+Petrifying Defender 1,Adjacent modules are inactive. For each adjacent module* gain a shield of 50 ship health.,Defensive,,4
+Sperm Bank,If undisturbed and if its occupant is female* at the end of the battle they will have Pregnant as their secondary trait.,Scientific,,4
+Mega Chimney,If set on fire* +1HP/4turns to this and adjacent crew members as well as preventing freezing.,Defensive,,4
+Freezeitor 2000,Once per battle you can freeze or defrost this or an adjacent module.,Scientific,,4
+Missile Deflector,If this module receives an ally hit* instead deflect the missile to the enemy dealing 100 damage.,Offensive,,6
+Rooted Core,If this module is Wild* +40 HP for every Wild module at the start of each battle.,Defensive,,4
+Unstable Gatling Gun,+80dpt* but this module is permanently unstable.*,Offensive,,4
+Overheat Laser,Every 4 turns deals 50 damage and a random adjacent module will be set on fire (70%) or become unstable (30%).,Offensive,,6
+Overheat Sparker,+60dpt. Unless this or an adjacent module is flooded* it'll be set on fire after 4 turns* and then become unstable in another 4 turns.,Offensive,,6
+High-precision Cutter,+40dpt. If the crew member in it has less than 70% performance* this module becomes unstable.,Offensive,,6
+Confinement Room,It's occupant or their items can't ever move from this module. Detaches at the start of battle.,Normal,,3
+Gravity Engine,Activate to un-detach all modules. Also* items and crew members in this or adjacent modules can’t move from their place during battle.,Scientific,,3
+Anti-gravity Blaster,Every 4 turns* blasts the enemy for 80 damage but an adjacent module becomes detached.,Offensive,,4
+Contained Power Beam,Shoots a red beam that’s very thin* but the more damaged the module is* the more energy is released and the thicker the beam becomes. +5dpt. +50dpt if this module is damaged. +80dpt if this module is unstable.,Offensive,,4
+Oil Platform,If next to a Wild module during battle* produce 1 Fuel at the end of battle.,Scientific,,4
+Paper Factory,At the end of the battle* 50% chance to produce one of the following items: Recipe Book* Book of the Dead* Ancient Volume of Wisdom* Lost Page* Treasure Map* Love Letter* Suspicious Magazines* Military Propaganda* Notice of Termination* University Diploma or Cursed Book of Revival.,Scientific,,8
+Guinea Pig Laboratory 1,If a crew member dies in this module* all Scientists gain +10%P.,Scientific,,6
+Brain Replacer,A laboratory with shelves full of brains in jars* and robot hands that hang from the ceiling and transplant the brains. At the start of battle* the occupant is rerolled* and at the end of battle they’re returned to normal.,Scientific,,3
+Prehistoric Portal,This module is permanently Wild. Unmanned. At the start of each battle* Vicious Dinosaur appears in this module until the end of the battle.,Normal,,4
+Crummy Deflector,This module is permanently damaged. If the enemy hits this or an adjacent module* the occupant and ship take no damage* and the enemy takes the damage of its own hit.,Defensive,,4
+Abandoned Laboratory,This module is permanently damaged. At the end of each battle* there’s a 50% chance you gain a random bad quality item that will expire at the end of its first battle.,Scientific,,4
+Glacier Producer,Unmanned. If this or an adjacent module is water-flooded* it becomes frozen after 2 turns. Every time an enemy hits this or an adjacent module being frozen* they freeze and take 50 damage.,Scientific,,4
+Sewer,Unmanned. This module is permanently excrement-flooded. If hit* the enemy is poisoned* and it excrement-floods any adjacent module to the left and right.,Normal,,3
+Atlantis Portal,Unmanned. While this module is surrounded by 4 water-flooded modules* it will be occupied by Atlantis Elder until the end of the battle.,Normal,,6
+Human Catapult,If this or an adjacent module is hit by the enemy* the catapult fires the crew member in this module* who dies* dealing 400 dmg to the enemy.,Offensive,,4
+Sushi Bar,The crew member inside this module will have -30%P as they will be busy preparing sushi* but they will produce one Tasty Seafood every 6 turns.,Normal,,4
+Mediocre Clinic,When a crew member in or adjacent to this module is inflicted with an ailment that isn’t Lunatic* reroll it to another ailment except for Lunatic. // Has a 20% chance of curing the ailment.,Normal,,3
+Element Changer,When this or an adjacent module is inflicted with an element* reroll it to another random element. // Has a 20% chance of leaving the module intact.,Normal,,2
+Invasive Urchin 3,Contaminate the modules adjacent to the right and left with urchins* and if the enemy hits any of these 3 modules* they take 50 damage.,Organic A,,4
+Forceful Activator,All inactive adjacent modules will become active* even if unmanned and requirements not met* however they will be unstable.,Scientific,,4
+Cluster Suppressor,Reduce the enemy dpt by 3 for every defensive module connected in a defensive path to this one.,Defensive,,6
+Consolatory Regenerator,If you won a battle losing more than 500 health* heal 100 ship health.,Defensive,,4
+Organic Headquarters,This module is equivalent to 2 organic modules for stacking bonuses.,Organic,,4
+Offensive Headquarters,This module is equivalent to 2 offensive modules for stacking bonuses.,Offensive,,4
+Defensive Headquarters,This module is equivalent to 2 defensive modules for stacking bonuses.,Defensive,,4
+Scientific Headquarters,This module is equivalent to 2 scientific modules for stacking bonuses.,Scientific,,4
+Headquarters,This module is equivalent to 2 normal modules for stacking bonuses.,Normal,,4
+Complex Gun Cockpit,+5dpt for every 10%P the occupant has over 40%.,Offensive,,6
+Complex Ship Renovator,+5hpt for every 10%P the occupant has over 40%.,Defensive,,6
+Requireroom,+10%P to this and all adjacent modules.,Scientific,Must be adjacent to 4 modules with requirements being fulfilled.,4
+Boost Absorber,+5%P for every adjacent module with a side effect that affects this module.,Scientific,,4
+Anti-defective Garage,Modules adjacent to this one have their defect nullified.,Scientific,,3
+Disaster Pod,This module always comes with 4 defects and no side effects* but if hit by the enemy* it inflicts 50 damage and a random status.,Offensive,,4
+Defect Empowerer,+5%P for every adjacent module with a defect.,Scientific,,4
+Elemental Beam,If this module gains an element* it's consumed and launched at the enemy dealing 100 damage.,Offensive,,6
+Enraging Blaster,Every 4 turns fires a 100 blast at the enemy* but the enemy gains +15dpt for the rest of the battle.,Offensive,,4
+Element Absorber,+10hpt as long as this module has an element.,Defensive,,6
+Super Laboratory,+5%P in any scientific module connected to this one in a scientific path.,Scientific,,6
+Rainbow Producer,+1 stacking bonus for each of the 5 types.,Normal,Must be adjacent to one module of each other type.,8
+Hyper Laser,+10dpt for each offensive module in this row. // At turn 6* deal 50 damage for each offensive module in a row with this one.,Offensive,Must be in a row with 5 other offensive modules.,6
+Ship Expander,You have an extra slot in any space adjacent to this module. If the occupant is an Engineer* you have 2 extra slots instead.,Scientific,,3
+Reflective Gem Cave,This module is of the same type as the most abundant module type in your ship* and counts as two stacking bonuses for its type. If no type is more abundant than other* it defaults to Normal type.,Normal,,4
+Floating Shield,If this module is detached* gain a 50HP shield this battle* and add to that shield +20HP for every other detached module.,Defensive,,4
+Structural Unlocker,The module adjacent below has its requirements ignored.,Scientific,,4
+Accumulating Shield,Every 4 turns* create a 10HP shield. Each shield is 10HP thicker than the previous one.,Defensive,,4
+Extra-aggressor,At battle start* a random adjacent module is designated and will have its damage increased by 50% for the rest of the battle.,Offensive,,8
+Private Academy,This module will consume 4 coins at battle start* otherwise will be inactive. At the end of the battle* the occupant will gain a secondary trait guaranteed to be positive.,Normal,,6
+Golden Safe,Unmanned. If it explodes* you gain a random amount of coins between 4 and 12 coins.,Normal,,4
+Luxury Hotel,When a crew member is placed in this module* they are fully healed. However* they cannot be moved from this module unless you pay 2 coins.,Normal,,4
+Chamber of Painful Immortality 1,-1HP/4turns to this and adjacent crew members. If the occupant reaches 0 HP* instead of dying they heal to full HP and deal to the enemy 40 damage for each drained adjacent crew member.,Normal,At least 1 adjacent crew member.,4
+Chamber of Painful Immortality 3,-30%P* -1HP/4turns. If the occupant reaches 0 HP* instead of dying they heal to full HP and deal 50 damage to the enemy.,Normal,,4
+Selfish Death Avoider,If the occupant reaches 0 HP* they don't die* they heal 2 HP and a random adjacent crew member dies instead.,Normal,,8
+Mind-supressing Pod,The occupant's traits won't have any effect.,Scientific,,4
+Infinity Garage,At battle start* the occupant will be equipped with a random item that will expire at the end of the battle.,Scientific,,4
+Vertical Catapult,+10dpt for each offensive module in this column. // At turn 6* deal 50 damage for each offensive module in a column with this one.,Scientific,,6
+Petrifying Defender 2,If an active adjacent module is hit* the hit is blocked and the ship takes no damage* but the module becomes inactive.,Defensive,,4
+Rotten Entrails,Every 2 turns* 20% chance the occupier becomes sick. If hit by the enemy* it becomes poisoned.,Organic,,4
+Guinea Pig Laboratory 2,If a crew member dies in this module* all Scientists gain +1% base performance permanently.,Scientific,,8
+Ultrafast Server,Unmanned. All Developers gain +5%P* but if this module suffers from an element* -10%P to all Developers instead.,Scientific,,6
+Concentration Chamber,The occupant's performance can't be lowered.,Normal,,4
+Ice Beam,At turn 6* shoots a beam of ice that does 200 damage* after which the occupant will remain frozen.,Offensive,,6
+Iglu,If set on fire* this module disappears and its occupant drowns. If hit by the enemy* they become frozen.,Defensive,,4
+Ice Shield,If the occupant is about to get hit* this module freezes to protect them from the hit* and the occupant becomes frozen too.,Defensive,,4
+Empowered Electrifier 2,If this or a module connected in an offensive path to this one is hit by the enemy* the enemy is shocked for 30 damage for each offensive module connected* but all the occupants of the electrified modules suffer -1HP.,Offensive,,6
+Portable Bank,Put 5 coins in this module. If it was undisturbed* at the end of the battle get the 5 coins back +1 extra coin. If it was disturbed* you lose the 5 coins.,Normal,,4
+Pain-sharing Compartments,Whenever a crew member takes damage in one of the modules* so will the other one.,Magic,,4
+Hunting Settlement,If this module is Wild* its crew member will throw wooden spears at the enemy* +30dpt.,Offensive,,4
+Idiot Cockpit,The lower the occupant’s performance* the higher this module’s dpt is. 70/50/20/10/0 at 0/10/20/30/40%P respectively.,Offensive,,6
+Contaminating Fuel Refinery,At the end of each battle* produce 1 Fuel* however the modules adjacent to the left and right will be heavily contaminated and cause their occupiers Poisoning. // 50% chance of +1 Fuel if enemies are in node paths* +2 if enemies are in nodes? ,Scientific,,4
+Basic Fishcapsule,Module built by a Biologist from a creature that doesn’t have an exclusive module. Every enemy attack yas a 33% chance of targeting this module. 5-50% chance to attract each attack.,Organic A,,4
+Sticky Node,Once a module is placed adjacent to this one* it can’t be separated. Every time the enemy hits this module* they lose 10% of their current dpt.,Defensive,,4
+Prehistoric Shelter,The occupant won't lose HP from the first enemy hit each battle* but after that hit the module becomes damaged unless its Wild.,Defensive,,4
+Multitype Capsule,Every time you place this module in the layout* it's type changes in order to the next of the 5 basic types.,Normal,,4
+Battle Synergiser,If this module it's a different type than normal* at battle start and until the end of battle it also transforms into a random module of that type.,Normal,,6
+Delicate Toilet 2,Fixes excrement-flooding in this module instantly. However if hit by the enemy* all modules under this one become excrement-flooded. // Similar to Plumbing System but cooler.,Normal,,4
+Hologram Producer,At battle start* if unmanned* produces an occupant of the same name* gender* profession and trait as a random adjacent crew member* with 40% base performance and 6 HP* that will expire at the end of the battle.,Scientific,,6
+Untransformed Submarine,At the end of its first battle* it permanently transforms into another random module in your ship or bench.,Scientific,,6
+Illusion Module,This module works unmanned. The contents of this module will be identical of those of the module adjacent to the right.,Magic,,8
+Submarine Crypt,If a crew member dies in this module* their corpse remains in it. They will count for profession stacking bonus and nothing else.,Normal,,4
+Palpitating Viscera,Every 4 turns* it palpitates aggressively and drains 1 HP from its occupant* healing the ship 50 HP.,Organic A,,4
+Defense Office,Gain +5hpt for each 50 ship health above 1000 that your ship has* including shields.,Defensive,,8
+Attack Office,Increase your ship DPT by 5%.,Offensive,,8
+Bone Capsule,If hit* there's a 33% chance it doesn't harm the occupier. // If hit by a physical attack* it won't harm the occupier.,Organic A,,4
+Investment Agency,If the occupant has 80% or more performance* gain 1 coin at the end of the battle.,Normal,,4
+Hyperperformer,x1*3 performance to a random adjacent module at the start of battle.,Scientific,,8
+Brain Swapper,The occupant swaps their performance with the crew member adjacent to the left.,Scientific,,4
+Echo Channeler,The module on the left has its first effect doubled* up to once per battle.,Magic,,8
+Maximum Concentration Laser,If this or any adjacent modules have been disturbed* at turn 10 fire a beam that deals 300 damage.,Offensive,,6
+Morgue,Every time a crew member dies while this module is in the ship* increase the counter in this module by 1. If this module expllodes* at the end of the battle receive as many Drowned Islander items as counters this module had.,Normal,,4
+Sacred Crematorium,If the occupant dies* receive Mysterious Ashes at the end of the battle.,Magic,,8
+Internship Program,Can't place a crew member in this module during prep phase. At battle start* a random intern will appear in this module until the end of the battle. They will always have a trait of -1 cost.,Normal,,4
+Peaceful Garden 2,This module is Wild when first adquired. +1HP/4turns.,Normal,Must be Wild.,4
+Peaceful Garden 2,This module is permanently Wild. +1HP/4turns.,Normal,,6
+Vegetable Greenhouse,If this module is Wild* +1HP/4turns.,Normal,,4
+Compost Factory,If this module becomes excrement-flooded* after 2 turns it instead becomes Wild* and the occupant heals 1 HP.,Scientific,,4
+Seafood Shipment,If this module was frozen this battle* produce one Tasty Seafood at the end of the battle. If it wasn't* receive Expired Sushi instead.,Normal,,4
+Blizzardmaker,At turn 4* produce a Blizzard that freezes the enemy and also all modules on this row to the left.,Scientific,,4
+Ice Cube Gun,This module becomes frozen at battle start. Throws ice cubes as bullets. +10dpt for each frozen module in your ship.,Offensive,,4
+Bad Restaurant 1,The food might be good or bad: every 4 turns* 50% chance of +1HP* 50% chance of -1HP.,Normal,,4
+Bad Restaurant 2,At battle start it's decided if the food will be good or bad: 50% chance of +1HP/4turns* 50% chance of -1HP/4turns.,Normal,,4
+Organ Transplant Centre,If a crew member dies that isn't the occupant* 50% chance they revive with 2 HP and another random crew member loses 1 HP.,Scientific,Can only be manned by a Doctor,6
+Item Transformer 1,At battle start* the item in this module permanently changes to another random item.,Scientific,,6
+Item Transformer 2,At battle start* the item in this module changes to another random item until the end of battle.,Scientific,,4

@@ -23,7 +23,7 @@ public class ItemSpawner : MonoBehaviour
             objects.sprites[i] = all[i];
         }
         Sprite[] all2 = Resources.LoadAll<Sprite>("Objects/Item_Icons_2");
-        for (int i = 0; i < 52; i++)
+        for (int i = 0; i < 60; i++)
         {
             objects.sprites[i + 166] = all2[i];
         }
@@ -42,10 +42,10 @@ public class ItemSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        int i = UnityEngine.Random.Range(0, 218);
+        int i = UnityEngine.Random.Range(0, 226);
         while (itemsExcel.myItems.items[i].type != "")
-            i = UnityEngine.Random.Range(0, 218);
-        GameObject objeto = Instantiate(objectPrefab, new Vector3(618 , 197 , 0), Quaternion.identity) as GameObject;
+            i = UnityEngine.Random.Range(0, 226);
+        GameObject objeto = Instantiate(objectPrefab, new Vector3(618 , 861 , 0), Quaternion.identity) as GameObject;
         objeto.GetComponent<Image>().sprite = objects.sprites[i];
         objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;
         objeto.GetComponent<ObjectHUD>().description = itemsExcel.myItems.items[i].effect;
@@ -56,7 +56,7 @@ public class ItemSpawner : MonoBehaviour
     public void SpawnObjectWArg(string s)
     {
         int i = int.Parse(s);
-        GameObject objeto = Instantiate(objectPrefab, new Vector3(618, 197, 0), Quaternion.identity) as GameObject;
+        GameObject objeto = Instantiate(objectPrefab, new Vector3(618, 861, 0), Quaternion.identity) as GameObject;
         objeto.GetComponent<Image>().sprite = objects.sprites[i];
         objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;
         objeto.GetComponent<ObjectHUD>().description = itemsExcel.myItems.items[i].effect;
@@ -67,7 +67,7 @@ public class ItemSpawner : MonoBehaviour
     public void SpawnObjectWArg2(string s, float x, float y, float z)
     {
         int i = int.Parse(s);
-        GameObject objeto = Instantiate(objectPrefab, new Vector3(618, 197, 0), Quaternion.identity) as GameObject;
+        GameObject objeto = Instantiate(objectPrefab, new Vector3(618, 861, 0), Quaternion.identity) as GameObject;
         objeto.GetComponent<Image>().sprite = objects.sprites[i];
         objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;
         objeto.GetComponent<ObjectHUD>().description = itemsExcel.myItems.items[i].effect;
