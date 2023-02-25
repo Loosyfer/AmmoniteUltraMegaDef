@@ -112,6 +112,9 @@ public class BattleSystem : MonoBehaviour
                 case "Legendary":
                     modExcel.myModules.modules[i].type = (ModuleType)5;
                     break;
+                case "Magic":
+                    modExcel.myModules.modules[i].type = (ModuleType)6;
+                    break;
             }
             modExcel.myModules.modules[i].requirement = modData[(5 * (i + 1)) + 3];
             if (int.TryParse(modData[(5 * (i + 1)) + 4], out int pri))
@@ -738,7 +741,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (index > 261)
+        if (index > 273)
         {
             Debug.Log("Your number was too high");
             return;
@@ -1273,8 +1276,10 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 261);
+            int j = UnityEngine.Random.Range(0, 274);
             int k = UnityEngine.Random.Range(0, 10);
+            while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6 )
+                j = UnityEngine.Random.Range(0, 274);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
@@ -1596,7 +1601,7 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 256);
+            int j = UnityEngine.Random.Range(0, 261);
             int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = 0;
             float random = UnityEngine.Random.Range(0f, 1000f);

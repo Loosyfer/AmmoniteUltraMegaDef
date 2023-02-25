@@ -261,7 +261,9 @@ public class MemInfo : ScriptableObject
         "Increases the chance of a module or applicant having a whopping discount. The more businessmen, the higher the chance and maximum size of discount. \n 3x = During Shop, you can invest a minimum of 500 currency and get it back with +20% interest during the next Shop phase. \n 6x = You can enter debt to buy in Shop,m in exchange of interest.",
         "Each scientist, when adjacent to a Scientific module with a crew member, can subject them to Radical Testing. After 10 turns: 10% chance +Lunatic, 40% chance +Doomed, 50% chance he becomes Augmented, fully healing and gaining +1 max HP. \n 3x = Enhance the body (+1 max HP) or the mind (+25% performance cap) of an Augmented crew member. \n 6x = Grant an Augmented crew member a random Super Trait.",
         "Can foresee the type of content of nearby nodes. \n 4x = Unlock new routes and nodes that you previously couldn't see, which may include exclusive events with unique rewards, such as exclusive modules, crew members and objects like fossil.",
-        "Unlocks extra power in certain modules. \n 4 Cadets + GO = Cadets will count as GO for moudle requirements. \n 8 Cadets + GO = If the GO dies, upgrade one Cadet to be the new GO." };
+        "Unlocks extra power in certain modules. \n 4 Cadets + GO = Cadets will count as GO for moudle requirements. \n 8 Cadets + GO = If the GO dies, upgrade one Cadet to be the new GO.",
+        "Once per Inventor, at the end of each battle create 1 item.",
+        "Instead of normal autos, Wizards cast magic beams that deal x1.3 damage."};
     public int[] traitPrice = new int[236] { 2, 0, 1, 0, 1, 1, 1, 1, 1, 2,
                                               1, 0, 0, 0, 2, 1, 0, 2, 1, 0,
                                               0, 0, 1, 0, 0, 1, 0, 1, 0, 1,
@@ -286,6 +288,6 @@ public class MemInfo : ScriptableObject
                                               2, 1, 1, 0, 1, 2, 0, 0, 0, 1,
                                               1, 2, 2, 1, 2, 2, 1, 1, 2, 1,
                                               0, 0, 0, 0, 0, 0};
-    public int[] profPrice = new int[] { 5, 5, 6, 5, 5, 4, 5, 8, 5, 5, 8, 8 };
+    public int[] profPrice = new int[] { 5, 5, 6, 5, 5, 4, 5, 8, 5, 5, 8, 8, 5, 6 };
 
 }

@@ -12,10 +12,10 @@ Glutton,If they are healed by Tasty Seafood* Tasty Pizza* Expired Sushi* Box of 
 Rookie,50% chance they are Stunned at the start of the battle.,,-1
 Rebel,At the start of each battle* they move to a random adjacent module.,,-1
 Prone to Panic Attacks,If their module is hit* they become stunned.,,-1
-Big D Energy,Until the end of the battle* copies the trait of a random adjacent crew member.,Positive,2
-Lacks Personality,Copies the trait of a random adjacent crew member.,Positive,3
+Big D Energy,If they get hit by the enemy* a random adjacent crew member sacrifices their own HP instead.,Positive,3
+Lacks Personality,Until the end of the battle* copies the trait of a random adjacent crew member.,Positive,3
 Pervert,-20%P if adjacent to a crew member of the opposite gender.,,0
-Messy,The module that they were in will be excrement-flooded at the start of the next battle* for one battle only.,,0
+Messy,If they say in the same module for 2 battles in a row* the module gains the defect filthy at the end of the battle.,,-1
 Competitive,-20%P if alone* but it will increase to match the best-performing adjacent crew member.,Positive,3
 Dictator,+5%P to adjacent crew members* but those exposed to Dictator will forever have -10% base performance when not adjacent to Dictator.,,1
 Quitter,After each battle* there's a 20% chance they quit the expedition for good.,,-1
@@ -143,7 +143,7 @@ Bone Architect,For every 2 crew members that die* receive one Bone Capsule.,Posi
 Corpse Looter,For every crew member that dies* +1HP and they give you 1 coins. If the corpse was of a Businessman* they give you 2 coins.,Positive,3
 Unleashed Power,If their module explodes* they survive and unleash newfound power changing their trait to Blastman/Blaswoman.,Positive,3
 Gruesome Body,If they die* they reappear after 2 battles with their trait changed to Monstrous.,,1
-Easily Bored,At turn 10 they become Sleepy.,,0
+Goes to Bed Early,At turn 10 they become Sleepy.,,0
 Obsessed Collector,+3% base performance for every different item they’ve ever held.,Positive,3
 Has OCD,+10%P If your ship is top-bottom symmetrical* but if it's not* -20%P instead* and if that happens two battles in a row they become Lunatic.,,1
 Hired Assassin,Their aim is to kill the War General. Will swap places to be adjacent to the War General* and then deal to them -1HP/2turns.,,0
@@ -183,7 +183,7 @@ Creepy Stalker,-20% Performance unless their Module is adjacent to the Captain. 
 Kidnapper,At the end of the battle* there's a 30% chance an adjacent crew member disappears and doesn't return unless you pay 1 coin.,,-1
 Builds Ships in Bottles,If disturbed by an adjacent module* -1 HP to the crew member in the module the disturbance came from. If undisturbed for a battle* produces the item Ship in a bottle.,,1
 Gifted,Only applies to men. At the end of battle* there's a 25% chance that a random woman on the ship becomes Pregnant.,Positive,3
-Recycling Fanatic,Each shop event* you can sell back 1 module in your bench for its original full coin value.,Positive,3
+Recycling Fanatic,If their module becomes damaged* at the end of the battle it becomes another random module.,,1
 Tap Dance Enthusiast,-20%P to the crew member below their module* but will also prevent them from becoming Sleepy or Asleep.,,0
 Hypothermic,Operates and performs normally even if their module is Frozen.,Positive,2
 Radioactive,Any crew member adjacent to them for 2 battles in a row will become permanently Sick.,,0
@@ -256,6 +256,10 @@ Flirter,-20%P* but +5%P instead if they're adjacent to someone of the opposite s
 Copycat,At turn 8 and until the end of battle* their module copies a random adjacent module. // At battle start* their module copies a random module in the bench or ship.,Positive,3
 Careless Tenant,Will pay you a rent of 1 coin at the end of each battle* however they don't treat their module well* so it will gain a defect at the end of the battle* and if it already had one* then it becomes damaged.,,0
 Recruiter,At the end of battle* you can pay 3 coins to receive one random crew member. // Kinda overlaps with CEO/Businessman x12.,Positive,3
+Scammer,Once per level* you can sell a module for it's full price instead of half the price.,Positive,3
+Reverse Engineer,At battle start* there's a 50% chance their item permanently changes to another item.,Positive,3
+Easily Bored,-10%P if they are in the same module as the previous battle.,,1
+Loves Change,+10%P if they are in a different module than in the previous battle.,Positive,2
 Monstrous,Every 4 turns* -1HP to an adjacent crew member* unless they’re also Monstrous. If hit by the enemy* they hit back for 50 damage. If their module is destroyed* instead of dying they return to an available module or the bench.,Exclusive,
 Doomed,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -2%/2turns* and -1HP/2turns.,Exclusive,
 Reanimated,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -2%/2turns.,Exclusive,

@@ -17,7 +17,7 @@ Adjacent Automatiser,Automatises a random adjacent empty module that needs to be
 Mind Control Unit,The occupier will have the same trait as the crew member adjacent to the left.,Scientific,,6
 Motherly Jellycarer,If this module was hit* heal it's occupier +2HP and the ship 50HP at the end of the battle.,Organic A,,6
 Temporary Buffer,If this module is hit* your ship takes no damage. If this module is hit 4 times* counting previous battles* it explodes.,Defensive,,4
-Chamber of Sacrifice,At turn 12* the occupant will be sacrificed and you gain 300 ship health. // If hit* you take no ship damage* the occupant will be sacrificed and you gain 100 ship health.,Magic,,4
+Chamber of Sacrifice,At turn 10* the occupant will be sacrificed and you gain 300 ship health. // If hit* you take no ship damage* the occupant will be sacrificed and you gain 100 ship health.,Magic,,4
 Mimic Room,At the start of battle it transforms into an identical copy of a random adjacent module* until the end of the battle.,Scientific,,8
 Coral Golem,Unmanned. Every time it’s hit the ship takes no damage. With every hit it will become more damaged* and after 5 hits this module explodes.,Organic A,Only works if adjacent to a Defensive module.,4
 Virtual Gun Materialiser,+20dpt and -5%P every 2 turns. If manned by a Cadet* +40dpt instead.,Scientific,,6
@@ -40,7 +40,7 @@ Item Recycler 1,Every time an item is consumed or destroyed* you receive another
 Biotransformer,For every 3 defeated monsters* you gain a random Organic A module* or Organic B if manned by a Biologist.,Organic A,,8
 Isolation Bunker,This module is indestructible and its occupier can't take damage from the enemy. However* the first occupant placed in this module can't ever be moved out* and they will be classed as adjacent to no other module or crew member. // After 10 battles* the occupant becomes Lunatic. ,Defensive,,6
 Stick Pod,This module doesn't require a purchased slot to be placed. Always comes with a side effect.,Scientific,,4
-Ritual Chamber,At the start of battle* will summon a random crew member in each empty adjacent module with the trait Ghost that disappear at the end of the battle. // Will summon 1-2 random crew members in random adjacent modules with the trait Ghost and no profession.,Magic,,6
+Ritual Chamber,At the start of battle* will summon a random crew member in each empty adjacent module with the trait Ghost that disappears at the end of the battle. // Will summon 1-2 random crew members in random adjacent modules with the trait Ghost and no profession.,Magic,,6
 Casino,Any percentage-based effect inside this module will have a higher chance of having a positive outcome instead of a negative one. // In adjacent modules.,Normal,,6
 Weed Garden,This module is permanently Wild. The occupant's trait will be Stoned for as long as they're in this module.,Normal,,4
 Defensive Accumulator,For every defensive module connected in a defensive path to this one* increase your ship's max health by 20. // by 50.,Defensive,,6
@@ -68,7 +68,7 @@ Flesh Connection Pods,They always appear as a pair in the shop. Whenever the occ
 Fuel Converter,At the end of the battle* consume 1 Fuel to heal the occupant 2HP. // 3HP.,Defensive,,6
 Fishing Bait Pod,The enemy has a 33% chance in each of its attacks to target this module.,Normal,,6
 Mystery Room,At battle start and until the end of the battle* this module turns into another random module that isn’t a Mega-module (retaining the same requirements* defects and side effects).,Normal,,4
-Magical Storage Room,Can work unmmaned* and items can be placed without a holder in this module. At the end of battle* the item in this module will transform into a different item.,Magic,,6
+Magical Storage Room,At the end of battle* the item in this module will transform into a different item.,Magic,,6
 Perfect Balance,Once per expedition* equalise the enemy's HP with the ship’s HP* calculating the mean of both values and applying it to the enemy and the ship. MAYBE IT SHOULD BE A SUPER ITEM.,Normal,Only works when adjacent to two offensive and two defensive modules.,8
 Chronic Beam,At turn 8* shoot a beam at the enemy that deals 150 damage for every Ailment the enemy has (only works if enemy can have more than 1 ailment). // +40dpt for as long as the enemy has an ailment.,Offensive,,4
 Defensive Perfection,If manned by a War General* the enemy deals 75% the normal damage to our ship unless it first lands a hit onto this or any of its adjacent modules.,Defensive,Only works when adjacent to 4 defensive modules.,8
@@ -243,7 +243,7 @@ Multitype Capsule,Every time you place this module in the layout* it's type chan
 Battle Synergiser,If this module it's a different type than normal* at battle start and until the end of battle it also transforms into a random module of that type.,Normal,,6
 Delicate Toilet 2,Fixes excrement-flooding in this module instantly. However if hit by the enemy* all modules under this one become excrement-flooded. // Similar to Plumbing System but cooler.,Normal,,4
 Hologram Producer,At battle start* if unmanned* produces an occupant of the same name* gender* profession and trait as a random adjacent crew member* with 40% base performance and 6 HP* that will expire at the end of the battle.,Scientific,,6
-Untransformed Submarine,At the end of its first battle* it permanently transforms into another random module in your ship or bench.,Scientific,,6
+Prime Submarine,At the end of its first battle* it permanently transforms into another random module in your ship or bench.,Scientific,,6
 Illusion Module,This module works unmanned. The contents of this module will be identical of those of the module adjacent to the right.,Magic,,8
 Submarine Crypt,If a crew member dies in this module* their corpse remains in it. They will count for profession stacking bonus and nothing else.,Normal,,4
 Palpitating Viscera,Every 4 turns* it palpitates aggressively and drains 1 HP from its occupant* healing the ship 50 HP.,Organic A,,4
@@ -268,5 +268,8 @@ Ice Cube Gun,This module becomes frozen at battle start. Throws ice cubes as bul
 Bad Restaurant 1,The food might be good or bad: every 4 turns* 50% chance of +1HP* 50% chance of -1HP.,Normal,,4
 Bad Restaurant 2,At battle start it's decided if the food will be good or bad: 50% chance of +1HP/4turns* 50% chance of -1HP/4turns.,Normal,,4
 Organ Transplant Centre,If a crew member dies that isn't the occupant* 50% chance they revive with 2 HP and another random crew member loses 1 HP.,Scientific,Can only be manned by a Doctor,6
-Item Transformer 1,At battle start* the item in this module permanently changes to another random item.,Scientific,,6
+Item Transformer 1,At battle start* the item in this module permanently changes to another random item. // Too similar to the magic module Magical Storage Room.,Scientific,,6
 Item Transformer 2,At battle start* the item in this module changes to another random item until the end of battle.,Scientific,,4
+Haunted Mansion,This module is unmanned. This and all adjacent modules will be inhabited by creepy spirits* and if the enemy hits any of these modules they suffer 100 damage and they won't hit them again. Modules with spirits have -5%P.,Magic,,6
+Possessed Chamber,The occupier is possessed and gains great strength* being immortal and hitting the enemy back for 100 damage if hit* but they become Lunatic at the end of the battle.,Magic,,4
+Arcane Library,If the occupier is a Wizard* +5%P* if not* their profession permanently changes to Wizard but they also become Lunatic.,Magic,,6
