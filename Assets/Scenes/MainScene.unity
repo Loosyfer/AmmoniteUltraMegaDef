@@ -1105,7 +1105,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1532,11 +1532,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 55
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.999985, y: 279.1}
+  m_AnchoredPosition: {x: 121, y: 279.1}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &35210207
@@ -2990,7 +2990,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3402,7 +3402,7 @@ RectTransform:
   m_GameObject: {fileID: 81529162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.085, y: 1.09, z: 1}
+  m_LocalScale: {x: 1.12, y: 1.03, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1588211447}
@@ -3412,7 +3412,6 @@ RectTransform:
   - {fileID: 1335900478}
   - {fileID: 1856964481}
   - {fileID: 1968185162}
-  - {fileID: 1510791417}
   - {fileID: 210089334}
   - {fileID: 942959106}
   - {fileID: 1707693920}
@@ -3466,9 +3465,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.788086, y: -182}
-  m_SizeDelta: {x: 284.5671, y: 601.2}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1228, y: -174.59}
+  m_SizeDelta: {x: 187.2462, y: 601.2}
+  m_Pivot: {x: 6.1, y: 0.5}
 --- !u!223 &81529164
 Canvas:
   m_ObjectHideFlags: 0
@@ -5282,12 +5281,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: -65.100006}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: 8.999878, y: -58.049}
+  m_SizeDelta: {x: 43, y: 19.034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &136785797
 BoxCollider2D:
@@ -6599,11 +6598,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: 187.1}
+  m_AnchoredPosition: {x: 8.999878, y: 187.1}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &158431301
@@ -9547,11 +9546,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: -279.09998}
+  m_AnchoredPosition: {x: -46.000015, y: -264.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &210089335
@@ -10312,8 +10311,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220817187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 620, y: -13, z: 0}
-  m_LocalScale: {x: 85.19475, y: 85.19475, z: 85.19475}
+  m_LocalPosition: {x: 621, y: -27, z: 0}
+  m_LocalScale: {x: 76.524055, y: 76.524055, z: 76.524055}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 723143978}
@@ -10404,11 +10403,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: -194.09998}
+  m_AnchoredPosition: {x: 8.999878, y: -207.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &224301836
@@ -10656,12 +10655,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.999985, y: -279.09998}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: 65, y: -248.92393}
+  m_SizeDelta: {x: 43, y: 27.2479}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &234492638
 BoxCollider2D:
@@ -11976,8 +11975,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: -21.899994}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: -46.000015, y: -33.0578}
+  m_SizeDelta: {x: 43, y: 20.6845}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &277709837
 BoxCollider2D:
@@ -18693,7 +18692,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18985,7 +18984,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20872,9 +20871,9 @@ MonoBehaviour:
     start, and give you back 6 coins at the end of battle.\r\n\n4x = One discount
     per Market, of 20% + 5% for each Businessman you have (min 1 coin).\r\n\n8x =
     You can pay 4 coins to reroll a Market or Hangar.\r\n// Once per Businessman,
-    you can reroll a Market or Hangar.\r\n\n\n12x = At the end of battle, you can
-    pay 2 coins to receive one random crew member. You can fire a crew member to
-    get 2 coins back.\r"
+    you can reroll a Market or Hangar.\r\n\n12x = At the end of battle, you can pay
+    2 coins to receive one random crew member or fire a crew member to get 2 coins
+    back."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -21660,7 +21659,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25269,12 +25268,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: -235.90002}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: 9.000122, y: -123.22}
+  m_SizeDelta: {x: 43, y: 19.3718}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &630570029
 BoxCollider2D:
@@ -25592,7 +25591,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26059,12 +26058,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 50
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.999985, y: -279.09998}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: 65, y: -274.38}
+  m_SizeDelta: {x: 43, y: 23.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &649350006
 BoxCollider2D:
@@ -27698,11 +27697,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: 63.100006}
+  m_AnchoredPosition: {x: 8.999878, y: 63.100006}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &685627554
@@ -28352,11 +28351,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "4x = at battle start 1 random module and occupant are called for assistance
-    and appear in a random slot until the end of the battle.\r\n\n8x = at battle
-    start 2 random module and occupant are called for assistance and appear in a
-    random slot until the end of the battle.\r\n\n12 = at battle start 3 random module
-    and occupant are called for assistance and appear in a random slot until the
-    end of the battle.\r"
+    and appear in a random slot until the end of the battle. Doesn\u2019t count for
+    stacking bonus.\r\n\n8x = at battle start 2 random module and occupant are called
+    for assistance and appear in a random slot until the end of the battle. Doesn\u2019t
+    count for stacking bonus.\r\n\n12 = at battle start 3 random module and occupant
+    are called for assistance and appear in a random slot until the end of the battle.
+    Doesn\u2019t count for stacking bonus.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -29251,11 +29251,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: 19.899994}
+  m_AnchoredPosition: {x: 8.999878, y: 19.899994}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &711724698
@@ -29941,11 +29941,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: 102.100006}
+  m_AnchoredPosition: {x: 8.999878, y: 102.100006}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &730653883
@@ -30233,7 +30233,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -30688,12 +30688,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Once per Psychologist, after being adjacent to a crew member during a
-    battle, you can reroll their trait.\r\n\n4x = When you reroll someone\u2019s
-    trait, choose one from a random selection of 3.\r\n\n8x = At the end of battle,
-    you can add one random Erudite Trait as a secondary trait to someone, once per
-    crew member.\r\n\n12x = Erudite crew members have +10%P and +20% performance
-    cap. At 120%P a crew member has an enlarged, palpitating brain with omnipotent
-    psychic powers.\r"
+    battle, you can either reroll their trait or remove their Lunatic ailment.\n\n4x
+    = When you reroll someone\u2019s trait, choose one from a random selection of
+    3.\r\n\n8x = At the end of battle, you can add one random Erudite Trait as a
+    secondary trait to someone, once per crew member.\r\n\n12x = Erudite crew members
+    have +10%P and +20% performance cap. At 120%P a crew member has an enlarged,
+    palpitating brain with omnipotent psychic powers.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -32268,11 +32268,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 51
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.999985, y: -235.90002}
+  m_AnchoredPosition: {x: 173.5, y: -164.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &768050785
@@ -32385,7 +32385,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -39692,12 +39692,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: -235.90002}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: -46, y: -124.86}
+  m_SizeDelta: {x: 43, y: 22.6535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &942959107
 BoxCollider2D:
@@ -41546,12 +41546,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: -150.90002}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: 9.000122, y: -99.581}
+  m_SizeDelta: {x: 43, y: 20.0282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &981687876
 BoxCollider2D:
@@ -42927,8 +42927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -67.3, y: -429.16}
-  m_SizeDelta: {x: 41.381, y: 175.0395}
+  m_AnchoredPosition: {x: 0.7, y: -496.56}
+  m_SizeDelta: {x: 175.88, y: 40.243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1014426951
 MonoBehaviour:
@@ -45702,7 +45702,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46344,11 +46344,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 54
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.999985, y: -106.900024}
+  m_AnchoredPosition: {x: 173.50006, y: -207.69998}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1119434805
@@ -46671,7 +46671,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46788,11 +46788,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.999985, y: -150.90002}
+  m_AnchoredPosition: {x: 64.999985, y: -164.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1132109731
@@ -47775,12 +47775,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: -21.899994}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: 8.999878, y: -33.058}
+  m_SizeDelta: {x: 43, y: 20.684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1145217696
 BoxCollider2D:
@@ -48052,11 +48052,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Instead of normal autos, Wizards cast magic beams that deal x1.3 damage.\n\n6x
-    = Once per Wizard, after spending a battle in a normal module, it transforms
-    into a random magic module. // Once per Wizard, at the end of the battle creates
-    one random magic module.\n\n12x = After each battle, choose one Wizard to be
-    elevated to Archwizard, healing to full HP and gaining a random Spell.\r"
+  m_text: "Instead of normal autos, Wizards cast magic beams that deal 5 extra dpt
+    // 20% more dpt.\n\n6x = Once per Wizard, after spending a battle in a normal
+    module, it transforms into a random magic module. // Once per Wizard, at the
+    end of the battle creates one random magic module.\n\n12x = After each battle,
+    choose one Wizard to be elevated to Archwizard, healing to full HP and gaining
+    a random Spell.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -49053,20 +49054,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Enemies are in node paths and each node has 40% chance of Fuel and 40%
-    chance of Slot (25% if enemies are in nodes).\n\nHangar:\n1-20:  one 2 for 1.\n21-40:
-    one 50% discount.\n41-60: four 50% discounts.\n61-100: no promotion.\n\nStrong
-    enemies = Alpha enemies. They appear less, are stronger, and give juicier rewards.
-    More intense experience overall. 1-50 double DPT, 51-100 double HP. Reward is
-    double the usual reward, Fuel top up, 1 Slot and 1 item.\n\nAutomatised modules
-    have a digital futuristic effect in them, and carry an automatic 50%P that doesn\u2019t
-    change, firing robot steel torpedoes. If they have an occupant, that occupant
-    receives +10%P.\n\nShip slots can be expanded in any direction/inside a given
-    ship layout\r.\n\nAll modules have requirements.\n\nStart with 1 slot and 0 bench.\n\nUnstable
-    is now 25% chance of explosion\r.\n\nShip starts with 1000HP.\n\n6 Fuel is the
-    starting and max amount. Entering new level tops up Fuel.\n\nBench heals crew
-    members and repairs damaged modules.\n\n2 Emporiums hidden per level.\n\nUpgrade
-    ship processor = 50% chance enemy yields 1 item\r, upgrade speed is unavailable\r.\n"
+  m_Text: "Each node has 20% chance Fuel, and 20% chance of slot.\n\nThere's a bin/Pok\xE9mon
+    box where all the \"impossible to fit\" stuff goes, and if we ever make space
+    for it, it comes back to the slot/bench.\n\nHangar:\n1-20:  one 2 for 1.\n21-40:
+    one 50% discount.\n41-60: four 50% discounts.\n61-100: no promotion.\n\nCrew
+    Members in the bench can't do their effects.\n\nStrong enemies = Alpha enemies.
+    They appear less, are stronger, and give juicier rewards. More intense experience
+    overall. 1-50 double DPT, 51-100 double HP. Reward is double the usual reward,
+    Fuel top up, 1 Slot and 1 item.\n\nAutomatised modules have a digital futuristic
+    effect in them, and carry an automatic 50%P that doesn\u2019t change, firing
+    robot steel torpedoes. If they have an occupant, that occupant receives +10%P.\n\nShip
+    slots can be expanded in any direction/inside a given ship layout\r.\n\nAll modules
+    have requirements.\n\nStart with 1 slot and 0 bench.\n\nUnstable is now 25% chance
+    of explosion\r.\n\nShip starts with 1000HP.\n\n6 Fuel is the starting and max
+    amount. Entering new level tops up Fuel.\n\nBench heals crew members and repairs
+    damaged modules.\n\n2 Emporiums hidden per level. // Only one. This depends on
+    how rewarded it is to scan the whole level. Right now it's very rewarding so
+    maybe 1 Emporium, in the future if it's not rewarding maybe 2 Emporium.\n\nUpgrade
+    ship processor = 50% chance enemy yields 1 item\r, upgrade speed is unavailable\r,
+    Upgrade recycle = module explode = 1 scrap and 2 coins.\n"
 --- !u!222 &1172000657
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49537,11 +49543,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: 279.1}
+  m_AnchoredPosition: {x: 8.999878, y: 279.1}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1196287449
@@ -49830,7 +49836,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 46
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -50440,12 +50446,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: -106.900024}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: 8.999878, y: -78.236}
+  m_SizeDelta: {x: 43, y: 21.3409}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1215803670
 BoxCollider2D:
@@ -51939,7 +51945,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -54917,11 +54923,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: -279.09998}
+  m_AnchoredPosition: {x: 12, y: -264.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1344231070
@@ -56235,7 +56241,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -58709,12 +58715,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: -106.900024}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: -46, y: -78.565}
+  m_SizeDelta: {x: 43, y: 21.9972}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1437345073
 BoxCollider2D:
@@ -61980,123 +61986,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501463370}
   m_CullTransparentMesh: 1
---- !u!1 &1510791416
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1510791417}
-  - component: {fileID: 1510791421}
-  - component: {fileID: 1510791420}
-  - component: {fileID: 1510791419}
-  - component: {fileID: 1510791418}
-  m_Layer: 5
-  m_Name: Button (86)
-  m_TagString: Node
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1510791417
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510791416}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 81529163}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: 230.30002}
-  m_SizeDelta: {x: 43, y: 43}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!61 &1510791418
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510791416}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.025024414, y: 0.09185791}
-  m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 30.900146, y: 30.532898}
-  m_EdgeRadius: 0
---- !u!114 &1510791419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510791416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b214badfd062f70429fd5d92d3db5423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 45606944}
---- !u!114 &1510791420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510791416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1510791421
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510791416}
-  m_CullTransparentMesh: 1
 --- !u!1 &1513361278
 GameObject:
   m_ObjectHideFlags: 0
@@ -62969,7 +62858,8 @@ MonoBehaviour:
     the side effect of one module.\r\n\n8x = After each battle, you can reroll the
     requirement of one module. After each battle, you can remove a module defect.\n\n12x
     = If you have more than 24 modules in your ship, it becomes a mega structure
-    that deflects 20% of attacks.\r"
+    that deflects 20% of attacks.\r // And also for every bench slot, you get an
+    extra bench slot?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -63346,7 +63236,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -64915,8 +64805,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: -65.100006}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: -46, y: -55.583084}
+  m_SizeDelta: {x: 43, y: 23.9662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1588211448
 BoxCollider2D:
@@ -67808,16 +67698,16 @@ RectTransform:
   m_GameObject: {fileID: 1664841780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.8, y: 19.8, z: 19.8}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 64.32, y: 69.6, z: 63.3}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 723143978}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122, y: -172.1}
-  m_SizeDelta: {x: 16.9837, y: 25.714}
+  m_AnchoredPosition: {x: 96.746, y: -148}
+  m_SizeDelta: {x: 6.0198, y: 9.3825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1664841782
 SpriteRenderer:
@@ -69088,12 +68978,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: -150.90002}
-  m_SizeDelta: {x: 43, y: 43}
+  m_AnchoredPosition: {x: -46, y: -101.55}
+  m_SizeDelta: {x: 43, y: 23.9662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1682326320
 BoxCollider2D:
@@ -70008,11 +69898,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 52
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.999985, y: -194.09998}
+  m_AnchoredPosition: {x: 121, y: -207.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1703425690
@@ -70125,11 +70015,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.000015, y: -194.09998}
+  m_AnchoredPosition: {x: -46.000015, y: -178.3}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1707693921
@@ -70498,7 +70388,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -71460,7 +71350,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -75955,11 +75845,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.999985, y: -235.90002}
+  m_AnchoredPosition: {x: 9.000244, y: -164.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1860954581
@@ -76783,7 +76673,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -77258,11 +77148,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999985, y: 230.30002}
+  m_AnchoredPosition: {x: 8.999878, y: 230.30002}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1892574101
@@ -77375,7 +77265,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -80085,11 +79975,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 53
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.999985, y: -150.90002}
+  m_AnchoredPosition: {x: 121, y: -164.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1956944511
@@ -80471,11 +80361,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.999985, y: -194.09998}
+  m_AnchoredPosition: {x: 65, y: -207.7}
   m_SizeDelta: {x: 43, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1959130722
@@ -80645,7 +80535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1964881702
 RectTransform:
   m_ObjectHideFlags: 0
@@ -81496,7 +81386,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 49
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -81854,8 +81744,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "At the end of battle, you can pay 2 coins to receive one random crew member.\r\n\nYou
-    can fire a crew member to get 2 coins back.\r"
+  m_text: "At the end of battle, you can pay 2 coins to receive one random crew member
+    or fire a crew member to get 2 coins back.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -82872,7 +82762,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 81529163}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -84282,19 +84172,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'T
-
-    E
-
-    S
-
-    T
-
-    I
-
-    N
-
-    G'
+  m_text: TESTING
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

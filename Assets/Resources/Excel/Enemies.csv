@@ -1,14 +1,14 @@
 Name,HP,DPT,Effect,Flavour,Level,Type,Crew DMG
-Trapped Sluugi,100,20,80HP shell.,Little Sluugi is trapped in a bottle that serves as a defensive carapace* without which Sluugi will tremble and panic.,1,,0
-Octocute,100,30,,Cute baby that looks for their mother. Its eyesight hasn’t developed yet so it just bumps into bigger objects.,1,,0
-Shellcrab,130,40,80HP shell.,Insecure about its own carapace* it hides in its shell most of the time. If exposed* it tries to look cute in the hopes that it will save its life.,1,,0
-Leech,120,30,If it hits a Crew Member it heals 10HP.,Fat greedy leech that sucks vitality from its prey.,1,,0
-Drakguardian,300,60,Will block the attacks from the highest-performing crew member.,A noble creature that guards the entrance to the depths of the sea from intruders that haven’t proved worthy to access its secrets.,1,Boss,1
+Trapped Sluugi,100,20,80HP shell. --No-Req area--,Little Sluugi is trapped in a bottle that serves as a defensive carapace* without which Sluugi will tremble and panic.,1,,0
+Octocute,120,30,--No-Req area--,Cute baby that looks for their mother. Its eyesight hasn’t developed yet so it just bumps into bigger objects.,1,,0
+Shellcrab,300,30,80HP shell. --Req-area--,Insecure about its own carapace* it hides in its shell most of the time. If exposed* it tries to look cute in the hopes that it will save its life.,1,,0
+Leech,250,30,--Req-area-- If it hits a Crew Member it heals 10HP.,Fat greedy leech that sucks vitality from its prey.,1,,0
+Drakguardian,500,60,Will block the attacks from the highest-performing crew member.,A noble creature that guards the entrance to the depths of the sea from intruders that haven’t proved worthy to access its secrets.,1,Boss,1
 Baby Shark,400,80,,Cute baby shark that munches at the ship because it thinks it’s food. It boasts a surprising amount of strength for its tiny size* which is a warning for how powerful the adults will be.,2,,1
 Trilobite,500,50,,Ancient critter that has survived eons of natural selection* but might not survive a blast to its face.,2,,1
 Blastshell,400,50,200HP shell. Any module hit becomes flooded.,Crafty being that stores urchins inside its shell and shoots them like bullets into unsuspecting enemies.,2,,1
 Crustcoral,700,30,,This piece of coral got tired of being anchored to bedrock* and imitated the form and movement of nearby crabs to free itself in search of food.,2,,1
-Sharpfish,700,80,Any module hit becomes flooded.,This spiny creature has become insane. It enjoys poking and torturing its pray* and it can’t find a mate because it pokes surrounding fish to death.,2,Boss,1
+Sharpfish,800,80,Any module hit becomes flooded.,This spiny creature has become insane. It enjoys poking and torturing its pray* and it can’t find a mate because it pokes surrounding fish to death.,2,Boss,1
 Ammonite,700,50,500HP shell.,Basic and common good old ammonite.,3,,1
 Tapeworms,600,50,Any module hit becomes infested with tapeworms and the crew member becomes sick.,These tapeworms were too weak to infect a creature individually* so instead they formed a menacing ball.,3,,1
 Shell-less Turtle,800,50,,This turtle had its carapace removed and somehow still survives in a zombie-like state.,3,,1

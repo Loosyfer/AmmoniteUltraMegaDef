@@ -1,6 +1,6 @@
 Name,Effect,Type,%
-Normal Enemy,,,30
-Strong Enemy,,,10
+Normal Enemy,,,35
+Alpha Enemy,,,5
 Event Enemy,,,8
 Market,,,22
 Hangar,,,12
@@ -73,6 +73,7 @@ Trinket Collector,You can sell any item for 2 coins each.,Rare,
 Cursed Seaman,A desperate seaman offers you 12 coins if you can take a cursed item from him and keep it with you. If you accept you receive Pendant of Curse Water.,Rare,
 Age-reversing Clinic,You can choose up to 3 crew members to turn into Lucky Baby.,Rare,
 Chef Academy,Give up to 3 crew members Sushi Chef as their secondary trait.,Rare,
+Trash Tornado,If you enter it* all your items will be rerolled at random* including the ones in the bench.,Rare,
 Mystical Temple Gate,They always appear in pairs in random Nodes of the same level. Enter one to reappear in the Node where the other gate is at no O2 cost.,Ultrarare,
 Mystery Portal,Throw in up to 7 crew members modules or items to get another random crew members modules or items respectively.,Ultrarare,
 Interdimensional Wormhole,Choose to enter it to move to a parallel reality permanently which resets all events in the Node Map.,Ultrarare,
