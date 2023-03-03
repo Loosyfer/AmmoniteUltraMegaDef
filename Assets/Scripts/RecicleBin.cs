@@ -104,7 +104,13 @@ public class RecicleBin : MonoBehaviour, IDropHandler
                 /*switch (eventData.pointerDrag.GetComponent<MemberHUD>().profession)
                 {
                     case (ProfessionType)0:
-                        script.mStackeos[0]--;
+                        script.
+                
+                
+                
+                
+                
+                [0]--;
                         canvas.transform.GetChild(30).GetChild(5).GetChild(0).GetComponent<TMP_Text>().text = script.mStackeos[0].ToString();
                         if (script.mStackeos[0] == 0)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[0];

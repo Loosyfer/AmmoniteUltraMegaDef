@@ -951,7 +951,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1008045871}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15641,6 +15641,7 @@ GameObject:
   - component: {fileID: 383572965}
   - component: {fileID: 383572966}
   - component: {fileID: 383572967}
+  - component: {fileID: 383572968}
   m_Layer: 0
   m_Name: Battle System
   m_TagString: Untagged
@@ -15698,7 +15699,7 @@ MonoBehaviour:
   totalPerformance: 0
   slots: []
   stackeos: 0000000000000000000000000000000000000000
-  mStackeos: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  mStackeos: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   stackingFolder: {fileID: 1008045870}
   stackingIcons: {fileID: 11400000, guid: 816f8a50e7abafd4f9e465a99c56411c, type: 2}
   turnCounter: {fileID: 1646518867}
@@ -15753,6 +15754,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShipHP: {fileID: 605540724}
   EnemyHP: {fileID: 461726771}
+--- !u!114 &383572968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383572959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba8fc17219c4e1489fc8c42a3aeff24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  moduleGenPrefab: {fileID: 0}
+  modulearray: []
+  activeSelf: 1
+  memberGenPrefab: {fileID: 0}
+  memberBioPrefab: {fileID: 0}
+  moduleSlotPrefab: {fileID: 0}
+  slotButtonPrefab: {fileID: 0}
+  megaHorPrefab: {fileID: 0}
+  megaVerPrefab: {fileID: 0}
+  modInfo: {fileID: 0}
+  modExcel: {fileID: 0}
+  memExcel: {fileID: 0}
+  membersInfo: {fileID: 0}
+  bioInfo: {fileID: 0}
+  megaInfo: {fileID: 0}
+  modules: []
+  members: []
+  megas: []
+  totalPerformance: 0
+  slots: []
+  stackeos: 0000000000000000000000000000000000000000
+  mStackeos: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  stackingFolder: {fileID: 0}
+  stackingIcons: {fileID: 0}
+  turnCounter: {fileID: 0}
+  playerHPBar: {fileID: 0}
+  enemyHPBar: {fileID: 0}
+  monster: {fileID: 0}
+  playerBattleHUD: {fileID: 0}
+  rockets: {fileID: 0}
+  spark: {fileID: 0}
+  currency: {fileID: 0}
+  currency2: {fileID: 0}
+  fuel: {fileID: 0}
+  ReqOnOff: {fileID: 0}
+  surprise: {fileID: 0}
+  itemSpawner: {fileID: 0}
+  dialogueText: {fileID: 0}
+  state: 0
 --- !u!1 &384327064
 GameObject:
   m_ObjectHideFlags: 0
@@ -20985,7 +21039,7 @@ RectTransform:
   - {fileID: 74974616}
   - {fileID: 1234310986}
   m_Father: {fileID: 1008045871}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -42640,9 +42694,9 @@ RectTransform:
   - {fileID: 913080245}
   - {fileID: 475195328}
   - {fileID: 1140081541}
-  - {fileID: 20080865}
-  - {fileID: 9198895}
   - {fileID: 495499153}
+  - {fileID: 9198895}
+  - {fileID: 20080865}
   m_Father: {fileID: 80194502}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43234,6 +43288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 11400000, guid: 1de7570251df35847b027f405e81b956, type: 2}
+  battleSystem: {fileID: 383572965}
 --- !u!114 &1018167941
 MonoBehaviour:
   m_ObjectHideFlags: 0

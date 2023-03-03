@@ -2,8 +2,8 @@ Name,HP,DPT,Effect,Flavour,Level,Type,Crew DMG
 Trapped Sluugi,100,20,80HP shell. --No-Req area--,Little Sluugi is trapped in a bottle that serves as a defensive carapace* without which Sluugi will tremble and panic.,1,,0
 Octocute,120,30,--No-Req area--,Cute baby that looks for their mother. Its eyesight hasn’t developed yet so it just bumps into bigger objects.,1,,0
 Shellcrab,300,30,80HP shell. --Req-area--,Insecure about its own carapace* it hides in its shell most of the time. If exposed* it tries to look cute in the hopes that it will save its life.,1,,0
-Leech,250,30,--Req-area-- If it hits a Crew Member it heals 10HP.,Fat greedy leech that sucks vitality from its prey.,1,,0
-Drakguardian,500,60,Will block the attacks from the highest-performing crew member.,A noble creature that guards the entrance to the depths of the sea from intruders that haven’t proved worthy to access its secrets.,1,Boss,1
+Baby Leech,270,20,--Req-area-- If it hits a crew member it gains +5HP.,Fat greedy leech that sucks vitality from its prey.,1,,0
+Drakguardian,500,60,,A noble creature that guards the entrance to the depths of the sea from intruders that haven’t proved worthy to access its secrets.,1,Boss,1
 Baby Shark,400,80,,Cute baby shark that munches at the ship because it thinks it’s food. It boasts a surprising amount of strength for its tiny size* which is a warning for how powerful the adults will be.,2,,1
 Trilobite,500,50,,Ancient critter that has survived eons of natural selection* but might not survive a blast to its face.,2,,1
 Blastshell,400,50,200HP shell. Any module hit becomes flooded.,Crafty being that stores urchins inside its shell and shoots them like bullets into unsuspecting enemies.,2,,1

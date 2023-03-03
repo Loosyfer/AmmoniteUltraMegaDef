@@ -42,7 +42,7 @@ public class BattleSystem : MonoBehaviour
     private GameObject[] buttons;
     private bool destroyedSlots;
     public int[] stackeos = new int[5];
-    public int[] mStackeos = new int[12];
+    public int[] mStackeos = new int[14];
     public GameObject stackingFolder;
     public StackingIcons stackingIcons;
     public GameObject turnCounter;
@@ -68,7 +68,7 @@ public class BattleSystem : MonoBehaviour
     ModuleHUD support;
     //ModuleHUD Yrt;
 
-    
+
 
     public Text dialogueText;
 
@@ -168,6 +168,7 @@ public class BattleSystem : MonoBehaviour
             }
         }
 
+        stackingIcons.sprites = Resources.LoadAll<Sprite>("Stacking/ButtonsSpriteSheet");
 
         /*BattleSystem data = new BattleSystem();
         data = SaveGame.Load<BattleSystem>("allData");
@@ -209,7 +210,7 @@ public class BattleSystem : MonoBehaviour
         
     }*/
 
-    void  PlayerTurn()
+    void PlayerTurn()
     {
 
         dialogueText.text = "Kick that monster's ass";
@@ -241,7 +242,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < 6; i++)
             {
-                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(745 + (i * 171), 300 + (102* j), 0), Quaternion.identity) as GameObject;
+                GameObject goo = Instantiate(moduleSlotPrefab, new Vector3(745 + (i * 171), 300 + (102 * j), 0), Quaternion.identity) as GameObject;
                 goo.transform.parent = slotFolder.transform;
                 string name = "";
                 name = name + j;
@@ -273,7 +274,7 @@ public class BattleSystem : MonoBehaviour
                 if ((j == 2 || j == 3) && i != 5 && i != 6)
                 {
                     goo.transform.GetComponent<ButtonFunction>().activated = true;
-                    goo.GetComponent<Image>().color = new  Color32(60, 200, 64, 255);
+                    goo.GetComponent<Image>().color = new Color32(60, 200, 64, 255);
                 }
                 else
                 {
@@ -295,7 +296,7 @@ public class BattleSystem : MonoBehaviour
             if (length == 0 || !active) { }
             else
             {
-                
+
                 float operation;
                 module.transform.GetChild(8).gameObject.GetComponent<Slider>().value -= 1;
                 module.gameObject.transform.GetChild(8).GetChild(1).GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
@@ -385,7 +386,7 @@ public class BattleSystem : MonoBehaviour
         int listLength = members.Count;
         foreach (GameObject member in members)
         {
-            sum += (float)(member.transform.GetComponent<MemberHUD>().performance)/ (float)listLength;
+            sum += (float)(member.transform.GetComponent<MemberHUD>().performance) / (float)listLength;
         }
         totalPerformance = sum;
 
@@ -598,7 +599,7 @@ public class BattleSystem : MonoBehaviour
                 stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];*/
         }
         if (Yrt.type == (ModuleType)1)
-        { 
+        {
             imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
             /*stackeos[1]++;
             canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = stackeos[1].ToString();
@@ -734,14 +735,14 @@ public class BattleSystem : MonoBehaviour
             return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
-        int k = UnityEngine.Random.Range(0, 10);
+        int k = UnityEngine.Random.Range(0, 11);
         if (!int.TryParse(s, out int index))
         {
             Debug.Log("Try inputting a valid integer");
             return;
         }
 
-        if (index > 273)
+        if (index > 258)
         {
             Debug.Log("Your number was too high");
             return;
@@ -779,78 +780,110 @@ public class BattleSystem : MonoBehaviour
                 Yrt.typeDetails.text = modInfo.typeStacking[5];
                 break;
         }
-        switch (modExcel.myModules.modules[index].requirement)
+
+        if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)
         {
-            case "":
-                Yrt.req.text = modInfo.randomReq[k].ToString();
-                Yrt.reqType = 1;
-                switch (k)
-                {
-                    case 0:
-                        go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
-                        Yrt.reqId = 0;
-                        break;
-                    case 1:
-                        int l = UnityEngine.Random.Range(0, 4);
-                        switch (l)
-                        {
-                            case 0:
-                                go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
-                                Yrt.reqId = 1;
-                                break;
-                            case 1:
-                                go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
-                                Yrt.reqId = 2;
-                                break;
-                            case 2:
-                                go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
-                                Yrt.reqId = 3;
-                                break;
-                            case 3:
-                                go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
-                                Yrt.reqId = 4;
-                                break;
-                        }
-                        break;
-                    case 2:
-                        go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
-                        Yrt.reqId = 5;
-                        break;
-                    case 3:
-                        go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
-                        Yrt.reqId = 6;
-                        break;
-                    case 4:
-                        go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
-                        Yrt.reqId = 7;
-                        break;
-                    case 5:
-                        go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
-                        Yrt.reqId = 8;
-                        break;
-                    case 6:
-                        go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
-                        Yrt.reqId = 9;
-                        break;
-                    case 7:
-                        go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
-                        Yrt.reqId = 10;
-                        break;
-                    case 8:
-                        go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
-                        Yrt.reqId = 11;
-                        break;
-                    case 9:
-                        go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
-                        Yrt.reqId = 12;
-                        break;
-                }
-                break;
-            default:
-                Yrt.req.text = modExcel.myModules.modules[index].requirement;
-                Yrt.reqType = 2;
-                go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
-                break;
+            Yrt.reqActive = true;
+            switch (modExcel.myModules.modules[index].requirement)
+            {
+                case "":
+                    Yrt.req.text = modInfo.randomReq[k].ToString();
+                    Yrt.reqType = 1;
+                    switch (k)
+                    {
+                        case 0:
+                            go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
+                            Yrt.reqId = 0;
+                            break;
+                        case int h when (h == 2 || h == 10):
+                            int l = UnityEngine.Random.Range(0, 4);
+                            switch (l)
+                            {
+                                case 0:
+                                    go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                                    Yrt.reqId = 1;
+                                    break;
+                                case 1:
+                                    go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                                    Yrt.reqId = 2;
+                                    break;
+                                case 2:
+                                    go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                                    Yrt.reqId = 3;
+                                    break;
+                                case 3:
+                                    go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                                    Yrt.reqId = 4;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                            Yrt.reqId = 5;
+                            break;
+                        case 3:
+                            go.transform.GetChild(11).GetChild(12).gameObject.SetActive(true);
+                            Yrt.reqId = 6;
+                            break;
+                        case 4:
+                            int q = UnityEngine.Random.Range(0, 2);
+                            if (q == 0)
+                            {
+                                go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                                Yrt.reqId = 7;
+                            }
+                            else
+                            {
+                                go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                                Yrt.reqId = 8;
+                            }
+                            break;
+                        case 5:
+                            int p = UnityEngine.Random.Range(0, 4);
+                            switch (p)
+                            {
+                                case 0:
+                                    go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                                    Yrt.reqId = 1;
+                                    break;
+                                case 1:
+                                    go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                                    Yrt.reqId = 2;
+                                    break;
+                                case 2:
+                                    go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                                    Yrt.reqId = 3;
+                                    break;
+                                case 3:
+                                    go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                                    Yrt.reqId = 4;
+                                    break;
+                            }
+                            break;
+                        case 6:
+                            go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
+                            Yrt.reqId = 9;
+                            break;
+                        case 7:
+                            go.transform.GetChild(11).GetChild(0).gameObject.SetActive(true);
+                            Yrt.reqId = 10;
+                            break;
+                        case 8:
+                            go.transform.GetChild(11).GetChild(10).gameObject.SetActive(true);
+                            Yrt.reqId = 11;
+                            break;
+                        case 9:
+                            go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
+                            Yrt.reqId = 12;
+                            break;
+                    }
+                    break;
+                default:
+                    Yrt.req.text = modExcel.myModules.modules[index].requirement;
+                    Yrt.reqType = 2;
+                    go.transform.GetChild(11).GetChild(13).gameObject.SetActive(true);
+                    break;
+            }
         }
         /*int m = System.Random.Range(0, 2);
         if (m == 0)
@@ -1094,7 +1127,7 @@ public class BattleSystem : MonoBehaviour
             Yrt.performance = 40;
         if (m >= 70f && m < 93f)
             Yrt.performance = 45;
-        if ( m >= 93f)
+        if (m >= 93f)
             Yrt.performance = 50;
         /*mStackeos[index1]++;
         canvas.transform.GetChild(30).GetChild(index1 + 5).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[index1].ToString();*/
@@ -1230,7 +1263,7 @@ public class BattleSystem : MonoBehaviour
             Yrt.performance = 45;
         if (m >= 93f)
             Yrt.performance = 50;
-        
+
     }
 
     public void Shop()
@@ -1276,10 +1309,10 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 276);
-            int k = UnityEngine.Random.Range(0, 10);
-            while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6 )
-                j = UnityEngine.Random.Range(0, 276);
+            int j = UnityEngine.Random.Range(0, 259);
+            int k = UnityEngine.Random.Range(0, 11);
+            while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6)
+                j = UnityEngine.Random.Range(0, 259);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
@@ -1326,7 +1359,7 @@ public class BattleSystem : MonoBehaviour
                                 go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
                                 Yrt.reqId = 0;
                                 break;
-                            case 1:
+                            case int p when (p == 1 || p == 10):
                                 int l = UnityEngine.Random.Range(0, 4);
                                 switch (l)
                                 {
@@ -1357,12 +1390,39 @@ public class BattleSystem : MonoBehaviour
                                 Yrt.reqId = 6;
                                 break;
                             case 4:
-                                go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
-                                Yrt.reqId = 7;
+                                int h = UnityEngine.Random.Range(0, 2);
+                                if (h == 0)
+                                {
+                                    go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
+                                    Yrt.reqId = 7;
+                                }
+                                else
+                                {
+                                    go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                                    Yrt.reqId = 8;
+                                }
                                 break;
                             case 5:
-                                go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
-                                Yrt.reqId = 8;
+                                int q = UnityEngine.Random.Range(0, 4);
+                                switch (q)
+                                {
+                                    case 0:
+                                        go.transform.GetChild(11).GetChild(5).gameObject.SetActive(true);
+                                        Yrt.reqId = 1;
+                                        break;
+                                    case 1:
+                                        go.transform.GetChild(11).GetChild(4).gameObject.SetActive(true);
+                                        Yrt.reqId = 2;
+                                        break;
+                                    case 2:
+                                        go.transform.GetChild(11).GetChild(6).gameObject.SetActive(true);
+                                        Yrt.reqId = 3;
+                                        break;
+                                    case 3:
+                                        go.transform.GetChild(11).GetChild(7).gameObject.SetActive(true);
+                                        Yrt.reqId = 4;
+                                        break;
+                                }
                                 break;
                             case 6:
                                 go.transform.GetChild(11).GetChild(1).gameObject.SetActive(true);
@@ -1601,7 +1661,7 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 266);
+            int j = UnityEngine.Random.Range(0, 224);
             int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = 0;
             float random = UnityEngine.Random.Range(0f, 1000f);
@@ -1819,7 +1879,7 @@ public class BattleSystem : MonoBehaviour
             {
                 imagen = go.transform.GetChild(13).GetComponent<SpriteRenderer>();
                 Destroy(go.transform.GetChild(12).gameObject);
-                
+
             }
             else
             {
@@ -1981,70 +2041,75 @@ public class BattleSystem : MonoBehaviour
                 {
                     stackeos[0]++;
                     canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = stackeos[0].ToString();
-                    if (stackeos[0] < 4)
+                    if (stackeos[0] < 6)
                         stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[49];
                     else
-                        stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[51];
+                        stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[93];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)1)
                 {
                     stackeos[1]++;
                     canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = stackeos[1].ToString();
-                    if (stackeos[1] == 1)
+                    if (stackeos[1] <= 3)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[53];
-                    if (stackeos[1] == 2 || stackeos[1] == 3)
+                    if (stackeos[1] >= 4 && stackeos[1] <= 7)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[54];
-                    if (stackeos[1] == 4 || stackeos[1] == 5)
+                    if (stackeos[1] >= 8 && stackeos[1] <= 11)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[55];
-                    if (stackeos[1] > 5)
+                    if (stackeos[1] >= 12)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[56];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)2)
                 {
                     stackeos[2]++;
                     canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = stackeos[2].ToString();
-                    if (stackeos[2] == 1)
+                    if (stackeos[2] <= 3)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[58];
-                    if (stackeos[2] == 2 || stackeos[2] == 3)
+                    if (stackeos[2] >= 4 && stackeos[2] <= 7)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[59];
-                    if (stackeos[2] == 4 || stackeos[2] == 5)
+                    if (stackeos[2] >= 8 && stackeos[2] <= 11)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[60];
-                    if (stackeos[2] > 5)
+                    if (stackeos[2] >= 12)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[61];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)3)
                 {
                     stackeos[3]++;
                     canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
-                    if (stackeos[3] < 4)
+                    if (stackeos[3] <= 3)
                         stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];
-                    if (stackeos[3] > 3 && stackeos[3] < 8)
+                    if (stackeos[3] >= 4 && stackeos[3] <= 7)
                         stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[68];
-                    if (stackeos[3] > 7)
+                    if (stackeos[3] >= 8 && stackeos[3] <= 11)
                         stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[69];
-
+                    if (stackeos[3] >= 12)
+                        stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[95];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)4)
                 {
                     stackeos[4]++;
                     canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
-                    if (stackeos[4] < 6)
+                    if (stackeos[4] <= 3)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[63];
-                    if (stackeos[4] > 5 && stackeos[4] < 10)
+                    if (stackeos[4] >= 4 && stackeos[4] <= 7)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
-                    if (stackeos[4] > 9)
+                    if (stackeos[4] >= 8 && stackeos[4] <= 11)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[65];
+                    if (stackeos[4] >= 12)
+                        stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[94];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)5)
                 {
                     stackeos[4]++;
                     canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
-                    if (stackeos[4] < 6)
+                    if (stackeos[4] <= 3)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[63];
-                    if (stackeos[4] > 5 && stackeos[4] < 10)
+                    if (stackeos[4] >= 4 && stackeos[4] <= 7)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
-                    if (stackeos[4] > 9)
+                    if (stackeos[4] >= 8 && stackeos[4] <= 11)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[65];
+                    if (stackeos[4] >= 12)
+                        stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[94];
                 }
                 module.GetComponent<ModuleHUD>().insideField = true;
             }
@@ -2057,10 +2122,10 @@ public class BattleSystem : MonoBehaviour
                     canvas.transform.GetChild(30).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = stackeos[0].ToString();
                     if (stackeos[0] == 0)
                         stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[48];
-                    if (stackeos[0] > 0 && stackeos[0] < 4)
+                    if (stackeos[0] > 0 && stackeos[0] < 6)
                         stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[49];
-                    if (stackeos[0] > 3)
-                        stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[51];
+                    if (stackeos[0] >= 6)
+                        stackingFolder.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[93];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)1)
                 {
@@ -2068,13 +2133,13 @@ public class BattleSystem : MonoBehaviour
                     canvas.transform.GetChild(30).GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = stackeos[1].ToString();
                     if (stackeos[1] == 0)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[52];
-                    if (stackeos[1] == 1)
+                    if (stackeos[1] <= 3 && stackeos[1] > 0)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[53];
-                    if (stackeos[1] == 2 || stackeos[1] == 3)
+                    if (stackeos[1] >= 4 && stackeos[1] <= 7)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[54];
-                    if (stackeos[1] == 4 || stackeos[1] == 5)
+                    if (stackeos[1] >= 8 && stackeos[1] <= 11)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[55];
-                    if (stackeos[1] > 5)
+                    if (stackeos[1] >= 12)
                         stackingFolder.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[56];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)2)
@@ -2083,13 +2148,13 @@ public class BattleSystem : MonoBehaviour
                     canvas.transform.GetChild(30).GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = stackeos[2].ToString();
                     if (stackeos[2] == 0)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[57];
-                    if (stackeos[2] == 1)
+                    if (stackeos[2] <= 3 && stackeos[2] > 0)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[58];
-                    if (stackeos[2] == 2 || stackeos[2] == 3)
+                    if (stackeos[2] >= 4 && stackeos[2] <= 7)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[59];
-                    if (stackeos[2] == 4 || stackeos[2] == 5)
+                    if (stackeos[2] >= 8 && stackeos[2] <= 11)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[60];
-                    if (stackeos[2] > 5)
+                    if (stackeos[2] >= 12)
                         stackingFolder.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[61];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)3)
@@ -2098,12 +2163,14 @@ public class BattleSystem : MonoBehaviour
                     canvas.transform.GetChild(30).GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = stackeos[3].ToString();
                     if (stackeos[3] == 0)
                         stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[66];
-                    if (stackeos[3] < 4 && stackeos[3] > 0)
+                    if (stackeos[3] <= 3 && stackeos[3] > 0)
                         stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[67];
-                    if (stackeos[3] > 3 && stackeos[3] < 8)
+                    if (stackeos[3] >= 4 && stackeos[3] <= 7)
                         stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[68];
-                    if (stackeos[3] > 7)
+                    if (stackeos[3] >= 8 && stackeos[3] <= 11)
                         stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[69];
+                    if (stackeos[3] >= 12)
+                        stackingFolder.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[95];
                 }
                 if (module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)4 || module.gameObject.GetComponent<ModuleHUD>().type == (ModuleType)5)
                 {
@@ -2111,17 +2178,19 @@ public class BattleSystem : MonoBehaviour
                     canvas.transform.GetChild(30).GetChild(4).GetChild(0).GetComponent<TMP_Text>().text = stackeos[4].ToString();
                     if (stackeos[4] == 0)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[62];
-                    if (stackeos[4] < 6 && stackeos[4] > 0)
+                    if (stackeos[4] <= 3 && stackeos[4] > 0)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[63];
-                    if (stackeos[4] > 5 && stackeos[4] < 10)
+                    if (stackeos[4] >= 4 && stackeos[4] <= 7)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[64];
-                    if (stackeos[4] > 9)
+                    if (stackeos[4] >= 8 && stackeos[4] <= 11)
                         stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[65];
+                    if (stackeos[4] >= 12)
+                        stackingFolder.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[94];
                 }
                 module.GetComponent<ModuleHUD>().insideField = false;
             }
         }
-        foreach(GameObject member in members)
+        foreach (GameObject member in members)
         {
             if (member.transform.position.x > 661.5f && member.transform.position.x < 1682.8f && member.transform.position.y > 267.1f && member.transform.position.y < 864.2 && member.GetComponent<MemberHUD>().insideField == false)
             {
@@ -2131,116 +2200,144 @@ public class BattleSystem : MonoBehaviour
                     case (ProfessionType)0:
                         mStackeos[0]++;
                         canvas.transform.GetChild(30).GetChild(5).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[0].ToString();
-                        if (mStackeos[0] > 0 && mStackeos[0] < 3)
+                        if (mStackeos[0] > 0 && mStackeos[0] < 4)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[1];
-                        if (mStackeos[0] > 2 && mStackeos[0] < 6)
+                        if (mStackeos[0] >= 4 && mStackeos[0] <= 7)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[2];
-                        if (mStackeos[0] > 5)
+                        if (mStackeos[0] >= 8 && mStackeos[0] <= 11)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[3];
+                        if (mStackeos[0] >= 12)
+                            stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[70];
                         break;
                     case (ProfessionType)1:
                         mStackeos[1]++;
                         canvas.transform.GetChild(30).GetChild(6).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[1].ToString();
-                        if (mStackeos[1] > 0 && mStackeos[1] < 3)
+                        if (mStackeos[1] > 0 && mStackeos[1] < 4)
                             stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[5];
-                        if (mStackeos[1] > 2 && mStackeos[1] < 6)
+                        if (mStackeos[1] >= 4 && mStackeos[1] <= 7)
                             stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[6];
-                        if (mStackeos[1] > 5)
+                        if (mStackeos[1] >= 8 && mStackeos[1] <= 11)
                             stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[7];
+                        if (mStackeos[1] >= 12)
+                            stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[74];
                         break;
                     case (ProfessionType)2:
                         mStackeos[2]++;
                         canvas.transform.GetChild(30).GetChild(7).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[2].ToString();
                         if (mStackeos[2] > 0 && mStackeos[2] < 4)
                             stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[9];
-                        if (mStackeos[2] > 3 && mStackeos[2] < 8)
+                        if (mStackeos[2] >= 4 && mStackeos[2] <= 7)
                             stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[10];
-                        if (mStackeos[2] > 7)
+                        if (mStackeos[2] >= 8 && mStackeos[2] <= 11)
                             stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[11];
+                        if (mStackeos[2] >= 12)
+                            stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[73];
                         break;
                     case (ProfessionType)3:
                         mStackeos[3]++;
                         canvas.transform.GetChild(30).GetChild(8).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[3].ToString();
-                        if (mStackeos[3] > 0 && mStackeos[3] < 3)
+                        if (mStackeos[3] > 0 && mStackeos[3] < 4)
                             stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[13];
-                        if (mStackeos[3] > 2 && mStackeos[3] < 6)
+                        if (mStackeos[3] >= 4 && mStackeos[3] <= 7)
                             stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[14];
-                        if (mStackeos[3] > 5)
+                        if (mStackeos[3] >= 8 && mStackeos[3] <= 11)
                             stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[15];
+                        if (mStackeos[3] >= 12)
+                            stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[77];
                         break;
                     case (ProfessionType)4:
                         mStackeos[4]++;
                         canvas.transform.GetChild(30).GetChild(9).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[4].ToString();
-                        if (mStackeos[4] > 0 && mStackeos[4] < 3)
+                        if (mStackeos[4] > 0 && mStackeos[4] < 4)
                             stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[17];
-                        if (mStackeos[4] > 2 && mStackeos[4] < 6)
+                        if (mStackeos[4] >= 4 && mStackeos[4] <= 7)
                             stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[18];
-                        if (mStackeos[4] > 5)
+                        if (mStackeos[4] >= 8 && mStackeos[4] <= 11)
                             stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[19];
+                        if (mStackeos[4] >= 12)
+                            stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[76];
                         break;
                     case (ProfessionType)5:
                         mStackeos[5]++;
                         canvas.transform.GetChild(30).GetChild(10).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[5].ToString();
-                        if (mStackeos[5] > 0 && mStackeos[5] < 4)
-                            stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[21];
-                        if (mStackeos[5] > 3 && mStackeos[5] < 6)
-                            stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[22];
-                        if (mStackeos[5] > 5)
-                            stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[23];
+                        stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[21];
                         break;
                     case (ProfessionType)6:
                         mStackeos[6]++;
                         canvas.transform.GetChild(30).GetChild(11).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[6].ToString();
-                        if (mStackeos[6] > 0 && mStackeos[6] < 3)
+                        if (mStackeos[6] > 0 && mStackeos[6] < 4)
                             stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[25];
-                        if (mStackeos[6] > 2 && mStackeos[6] < 6)
+                        if (mStackeos[6] >= 4 && mStackeos[6] <= 7)
                             stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[26];
-                        if (mStackeos[6] > 5)
+                        if (mStackeos[6] >= 8 && mStackeos[6] <= 11)
                             stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[27];
+                        if (mStackeos[6] >= 12)
+                            stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[78];
                         break;
                     case (ProfessionType)7:
                         mStackeos[7]++;
                         canvas.transform.GetChild(30).GetChild(12).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[7].ToString();
-                        if (mStackeos[7] > 0 && mStackeos[7] < 2)
-                            stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[29];
-                        if (mStackeos[7] > 1 && mStackeos[7] < 4)
-                            stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[30];
-                        if (mStackeos[7] > 3)
-                            stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[31];
+                        stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[75];
                         break;
                     case (ProfessionType)8:
                         mStackeos[8]++;
                         canvas.transform.GetChild(30).GetChild(13).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[8].ToString();
-                        if (mStackeos[8] > 0 && mStackeos[8] < 3)
+                        if (mStackeos[8] > 0 && mStackeos[8] < 4)
                             stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[33];
-                        if (mStackeos[8] > 2 && mStackeos[8] < 6)
+                        if (mStackeos[8] >= 4 && mStackeos[8] <= 7)
                             stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[34];
-                        if (mStackeos[8] > 5)
+                        if (mStackeos[8] >= 8 && mStackeos[8] <= 11)
                             stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[35];
+                        if (mStackeos[8] >= 12)
+                            stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[80];
                         break;
                     case (ProfessionType)9:
                         mStackeos[9]++;
                         canvas.transform.GetChild(30).GetChild(14).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[9].ToString();
-                        if (mStackeos[9] > 0 && mStackeos[9] < 3)
+                        if (mStackeos[9] > 0 && mStackeos[9] < 4)
                             stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[37];
-                        if (mStackeos[9] > 2 && mStackeos[9] < 6)
+                        if (mStackeos[9] >= 4 && mStackeos[9] <= 7)
                             stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[38];
-                        if (mStackeos[9] > 5)
+                        if (mStackeos[9] >= 8 && mStackeos[9] <= 11)
                             stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[39];
+                        if (mStackeos[9] >= 12)
+                            stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[81];
                         break;
                     case (ProfessionType)10:
                         mStackeos[10]++;
                         canvas.transform.GetChild(30).GetChild(15).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[10].ToString();
-                        if (mStackeos[10] > 0 && mStackeos[10] < 4)
-                            stackingFolder.transform.GetChild(15).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[41];
-                        if (mStackeos[10] > 3)
-                            stackingFolder.transform.GetChild(15).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[43];
+                        stackingFolder.transform.GetChild(15).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[71];
                         break;
                     case (ProfessionType)11:
                         mStackeos[11]++;
                         canvas.transform.GetChild(30).GetChild(16).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[11].ToString();
-                        stackingFolder.transform.GetChild(16).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[47];
+                        stackingFolder.transform.GetChild(16).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[72];
                         break;
+                    case (ProfessionType)12:
+                        mStackeos[12]++;
+                        canvas.transform.GetChild(30).GetChild(17).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[12].ToString();
+                        if (mStackeos[12] > 0 && mStackeos[12] < 4)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[84];
+                        if (mStackeos[12] >= 4 && mStackeos[12] <= 7)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[86];
+                        if (mStackeos[12] >= 8 && mStackeos[12] <= 11)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[88];
+                        if (mStackeos[12] >= 12)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[90];
+                        break;
+                    case (ProfessionType)13:
+                        mStackeos[13]++;
+                        canvas.transform.GetChild(30).GetChild(18).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[13].ToString();
+                        if (mStackeos[13] > 0 && mStackeos[13] < 4)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[85];
+                        if (mStackeos[13] >= 4 && mStackeos[13] <= 7)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[87];
+                        if (mStackeos[13] >= 8 && mStackeos[13] <= 11)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[89];
+                        if (mStackeos[13] >= 12)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[91];
+                        break;
+
                 }
                 member.GetComponent<MemberHUD>().insideField = true;
             }
@@ -2254,24 +2351,28 @@ public class BattleSystem : MonoBehaviour
                         canvas.transform.GetChild(30).GetChild(5).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[0].ToString();
                         if (mStackeos[0] == 0)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[0];
-                        if (mStackeos[0] > 0 && mStackeos[0] < 3)
+                        if (mStackeos[0] > 0 && mStackeos[0] < 4)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[1];
-                        if (mStackeos[0] > 2 && mStackeos[0] < 6)
+                        if (mStackeos[0] >= 4 && mStackeos[0] <= 7)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[2];
-                        if (mStackeos[0] > 5)
+                        if (mStackeos[0] >= 8 && mStackeos[0] <= 11)
                             stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[3];
+                        if (mStackeos[0] >= 12)
+                            stackingFolder.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[70];
                         break;
                     case (ProfessionType)1:
                         mStackeos[1]--;
                         canvas.transform.GetChild(30).GetChild(6).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[1].ToString();
                         if (mStackeos[1] == 0)
                             stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[4];
-                        if (mStackeos[1] > 0 && mStackeos[1] < 3)
+                        if (mStackeos[1] > 0 && mStackeos[1] < 4)
                             stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[5];
-                        if (mStackeos[1] > 2 && mStackeos[1] < 6)
+                        if (mStackeos[1] >= 4 && mStackeos[1] <= 7)
                             stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[6];
-                        if (mStackeos[1] > 5)
+                        if (mStackeos[1] >= 8 && mStackeos[1] <= 11)
                             stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[7];
+                        if (mStackeos[1] >= 12)
+                            stackingFolder.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[74];
                         break;
                     case (ProfessionType)2:
                         mStackeos[2]--;
@@ -2280,112 +2381,142 @@ public class BattleSystem : MonoBehaviour
                             stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[8];
                         if (mStackeos[2] > 0 && mStackeos[2] < 4)
                             stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[9];
-                        if (mStackeos[2] > 3 && mStackeos[2] < 8)
+                        if (mStackeos[2] >= 4 && mStackeos[2] <= 7)
                             stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[10];
-                        if (mStackeos[2] > 7)
+                        if (mStackeos[2] >= 8 && mStackeos[2] <= 11)
                             stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[11];
+                        if (mStackeos[2] >= 12)
+                            stackingFolder.transform.GetChild(7).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[73];
                         break;
                     case (ProfessionType)3:
                         mStackeos[3]--;
                         canvas.transform.GetChild(30).GetChild(8).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[3].ToString();
                         if (mStackeos[3] == 0)
                             stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[12];
-                        if (mStackeos[3] > 0 && mStackeos[3] < 3)
+                        if (mStackeos[3] > 0 && mStackeos[3] < 4)
                             stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[13];
-                        if (mStackeos[3] > 2 && mStackeos[3] < 6)
+                        if (mStackeos[3] >= 4 && mStackeos[3] <= 7)
                             stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[14];
-                        if (mStackeos[3] > 5)
+                        if (mStackeos[3] >= 8 && mStackeos[3] <= 11)
                             stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[15];
+                        if (mStackeos[3] >= 12)
+                            stackingFolder.transform.GetChild(8).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[77];
                         break;
                     case (ProfessionType)4:
                         mStackeos[4]--;
                         canvas.transform.GetChild(30).GetChild(9).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[4].ToString();
                         if (mStackeos[4] == 0)
                             stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[16];
-                        if (mStackeos[4] > 0 && mStackeos[4] < 3)
+                        if (mStackeos[4] > 0 && mStackeos[4] < 4)
                             stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[17];
-                        if (mStackeos[4] > 2 && mStackeos[4] < 6)
+                        if (mStackeos[4] >= 4 && mStackeos[4] <= 7)
                             stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[18];
-                        if (mStackeos[4] > 5)
+                        if (mStackeos[4] >= 8 && mStackeos[4] <= 11)
                             stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[19];
+                        if (mStackeos[4] >= 12)
+                            stackingFolder.transform.GetChild(9).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[76];
                         break;
                     case (ProfessionType)5:
                         mStackeos[5]--;
                         canvas.transform.GetChild(30).GetChild(10).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[5].ToString();
                         if (mStackeos[5] == 0)
                             stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[20];
-                        if (mStackeos[5] > 0 && mStackeos[5] < 4)
+                        else
                             stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[21];
-                        if (mStackeos[5] > 3 && mStackeos[5] < 6)
-                            stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[22];
-                        if (mStackeos[5] > 5)
-                            stackingFolder.transform.GetChild(10).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[23];
                         break;
                     case (ProfessionType)6:
                         mStackeos[6]--;
                         canvas.transform.GetChild(30).GetChild(11).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[6].ToString();
                         if (mStackeos[6] == 0)
                             stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[24];
-                        if (mStackeos[6] > 0 && mStackeos[6] < 3)
+                        if (mStackeos[6] > 0 && mStackeos[6] < 4)
                             stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[25];
-                        if (mStackeos[6] > 2 && mStackeos[6] < 6)
+                        if (mStackeos[6] >= 4 && mStackeos[6] <= 7)
                             stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[26];
-                        if (mStackeos[6] > 5)
+                        if (mStackeos[6] >= 8 && mStackeos[6] <= 11)
                             stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[27];
+                        if (mStackeos[6] >= 12)
+                            stackingFolder.transform.GetChild(11).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[78];
                         break;
                     case (ProfessionType)7:
                         mStackeos[7]--;
                         canvas.transform.GetChild(30).GetChild(12).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[7].ToString();
                         if (mStackeos[7] == 0)
                             stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[28];
-                        if (mStackeos[7] > 0 && mStackeos[7] < 2)
-                            stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[29];
-                        if (mStackeos[7] > 1 && mStackeos[7] < 4)
-                            stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[30];
-                        if (mStackeos[7] > 3)
-                            stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[31];
+                        else
+                            stackingFolder.transform.GetChild(12).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[75];
                         break;
                     case (ProfessionType)8:
                         mStackeos[8]--;
                         canvas.transform.GetChild(30).GetChild(13).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[8].ToString();
                         if (mStackeos[8] == 0)
                             stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[32];
-                        if (mStackeos[8] > 0 && mStackeos[8] < 3)
+                        if (mStackeos[8] > 0 && mStackeos[8] < 4)
                             stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[33];
-                        if (mStackeos[8] > 2 && mStackeos[8] < 6)
+                        if (mStackeos[8] >= 4 && mStackeos[8] <= 7)
                             stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[34];
-                        if (mStackeos[8] > 5)
+                        if (mStackeos[8] >= 8 && mStackeos[8] <= 11)
                             stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[35];
+                        if (mStackeos[8] >= 12)
+                            stackingFolder.transform.GetChild(13).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[80];
                         break;
                     case (ProfessionType)9:
                         mStackeos[9]--;
                         canvas.transform.GetChild(30).GetChild(14).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[9].ToString();
                         if (mStackeos[9] == 0)
                             stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[36];
-                        if (mStackeos[9] > 0 && mStackeos[9] < 3)
+                        if (mStackeos[9] > 0 && mStackeos[9] < 4)
                             stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[37];
-                        if (mStackeos[9] > 2 && mStackeos[9] < 6)
+                        if (mStackeos[9] >= 4 && mStackeos[9] <= 7)
                             stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[38];
-                        if (mStackeos[9] > 5)
+                        if (mStackeos[9] >= 8 && mStackeos[9] <= 11)
                             stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[39];
+                        if (mStackeos[9] >= 12)
+                            stackingFolder.transform.GetChild(14).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[81];
                         break;
                     case (ProfessionType)10:
                         mStackeos[10]--;
                         canvas.transform.GetChild(30).GetChild(15).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[10].ToString();
                         if (mStackeos[10] == 0)
                             stackingFolder.transform.GetChild(15).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[40];
-                        if (mStackeos[10] > 0 && mStackeos[10] < 4)
-                            stackingFolder.transform.GetChild(15).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[41];
-                        if (mStackeos[10] > 3)
-                            stackingFolder.transform.GetChild(15).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[43];
+                        else
+                            stackingFolder.transform.GetChild(15).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[71];
                         break;
                     case (ProfessionType)11:
                         mStackeos[11]--;
                         canvas.transform.GetChild(30).GetChild(16).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[11].ToString();
                         if (mStackeos[11] == 0)
                             stackingFolder.transform.GetChild(16).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[44];
-                        if (mStackeos[11] > 0)
-                            stackingFolder.transform.GetChild(16).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[47];
+                        else
+                            stackingFolder.transform.GetChild(16).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[72];
+                        break;
+                    case (ProfessionType)12:
+                        mStackeos[12]--;
+                        canvas.transform.GetChild(30).GetChild(17).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[12].ToString();
+                        if (mStackeos[12] == 0)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[82];
+                        if (mStackeos[12] > 0 && mStackeos[12] < 4)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[84];
+                        if (mStackeos[12] >= 4 && mStackeos[12] <= 7)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[86];
+                        if (mStackeos[12] >= 8 && mStackeos[12] <= 11)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[88];
+                        if (mStackeos[12] >= 12)
+                            stackingFolder.transform.GetChild(17).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[90];
+                        break;
+                    case (ProfessionType)13:
+                        mStackeos[13]--;
+                        canvas.transform.GetChild(30).GetChild(18).GetChild(0).GetComponent<TMP_Text>().text = mStackeos[13].ToString();
+                        if (mStackeos[13] == 0)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[83];
+                        if (mStackeos[13] > 0 && mStackeos[13] < 4)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[85];
+                        if (mStackeos[13] >= 4 && mStackeos[13] <= 7)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[87];
+                        if (mStackeos[13] >= 8 && mStackeos[13] <= 11)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[89];
+                        if (mStackeos[13] >= 12)
+                            stackingFolder.transform.GetChild(18).GetComponent<SpriteRenderer>().sprite = stackingIcons.sprites[91];
                         break;
 
                 }
@@ -2447,7 +2578,7 @@ public class BattleSystem : MonoBehaviour
         SaveData.current.fuelLeft = fuel.transform.GetComponent<UpdateFuel>().fuel;
         SaveData.current.healthLeft = playerHPBar.transform.GetComponent<Slider>().value;
 
-        foreach(GameObject module in modules)
+        foreach (GameObject module in modules)
         {
             SaveData.current.posX.Add(module.transform.position.x);
             SaveData.current.posY.Add(module.transform.position.y);
@@ -2514,26 +2645,26 @@ public class BattleSystem : MonoBehaviour
             Yrt.reqId = SaveData.current.req[i];
             Yrt.reqActive = SaveData.current.reqActive[i];
             switch (Yrt.type)
-                {
-                    case (ModuleType)0:
-                        Yrt.typeDetails.text = modInfo.typeStacking[0];
-                        break;
-                    case (ModuleType)1:
-                        Yrt.typeDetails.text = modInfo.typeStacking[1];
-                        break;
-                    case (ModuleType)2:
-                        Yrt.typeDetails.text = modInfo.typeStacking[2];
-                        break;
-                    case (ModuleType)3:
-                        Yrt.typeDetails.text = modInfo.typeStacking[3];
-                        break;
-                    case (ModuleType)4:
-                        Yrt.typeDetails.text = modInfo.typeStacking[4];
-                        break;
-                    case (ModuleType)5:
-                        Yrt.typeDetails.text = modInfo.typeStacking[5];
-                        break;
-                }
+            {
+                case (ModuleType)0:
+                    Yrt.typeDetails.text = modInfo.typeStacking[0];
+                    break;
+                case (ModuleType)1:
+                    Yrt.typeDetails.text = modInfo.typeStacking[1];
+                    break;
+                case (ModuleType)2:
+                    Yrt.typeDetails.text = modInfo.typeStacking[2];
+                    break;
+                case (ModuleType)3:
+                    Yrt.typeDetails.text = modInfo.typeStacking[3];
+                    break;
+                case (ModuleType)4:
+                    Yrt.typeDetails.text = modInfo.typeStacking[4];
+                    break;
+                case (ModuleType)5:
+                    Yrt.typeDetails.text = modInfo.typeStacking[5];
+                    break;
+            }
             if (Yrt.reqActive)
             {
                 switch (modExcel.myModules.modules[j].requirement)
@@ -2595,78 +2726,78 @@ public class BattleSystem : MonoBehaviour
             if (Yrt.type == (ModuleType)0)
             {
                 imagen.color = new Color(0.4078f, 0.7294f, 0.5411f, 1);
-                
+
             }
             if (Yrt.type == (ModuleType)1)
             {
                 imagen.color = new Color(0.9333f, 0.4862f, 0.4235f, 1);
-                
+
             }
             if (Yrt.type == (ModuleType)2)
             {
                 imagen.color = new Color(0.55f, 0.7254f, 0.8784f, 1);
-                
+
             }
             if (Yrt.type == (ModuleType)3)
             {
                 imagen.color = new Color(0.7f, 0.7f, 0.7f, 1);
-                
+
 
             }
             if (Yrt.type == (ModuleType)4)
             {
                 imagen.color = new Color(0.99f, 0.84f, 0.4f, 1);
-               
+
             }
             if (Yrt.type == (ModuleType)5)
             {
                 imagen.color = new Color(0, 1, 1, 1);
-                
+
             }
             Yrt.sEffectorDefect = SaveData.current.sEffectorDefect[i];
-                    Yrt.sEffectSide = SaveData.current.sEffectSide[i];
-                    Yrt.sideEffectId = SaveData.current.sideE[i];
-                    Debug.Log("La info que quieres en Step 1 es " + Yrt.sEffectorDefect + " " + Yrt.sEffectSide + " " + Yrt.sideEffectId);
-                if (Yrt.sEffectorDefect == 1)
+            Yrt.sEffectSide = SaveData.current.sEffectSide[i];
+            Yrt.sideEffectId = SaveData.current.sideE[i];
+            Debug.Log("La info que quieres en Step 1 es " + Yrt.sEffectorDefect + " " + Yrt.sEffectSide + " " + Yrt.sideEffectId);
+            if (Yrt.sEffectorDefect == 1)
+            {
+                Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
+                Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[Yrt.sideEffectId];
+                switch (Yrt.sEffectSide)
                 {
-                    Sprite[] all = Resources.LoadAll<Sprite>("Effects/SideEffects");
-                    Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[Yrt.sideEffectId];
-                    switch (Yrt.sEffectSide)
-                    {
-                        case 0:
-                            Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
-                            break;
-                        case 1:
-                            Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
-                            break;
-                        case 2:
-                            Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
-                            break;
-                        case 3:
-                            Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
-                            break;
-                    }
+                    case 0:
+                        Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                        break;
+                    case 1:
+                        Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                        break;
+                    case 2:
+                        Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                        break;
+                    case 3:
+                        Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                        break;
                 }
-                if (Yrt.sEffectorDefect == 2)
+            }
+            if (Yrt.sEffectorDefect == 2)
+            {
+                Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
+                Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[Yrt.sideEffectId];
+                switch (Yrt.sEffectSide)
                 {
-                    Sprite[] all = Resources.LoadAll<Sprite>("Effects/Defects");
-                    Yrt.sideEffect.GetComponent<SpriteRenderer>().sprite = all[Yrt.sideEffectId];
-                    switch (Yrt.sEffectSide)
-                    {
-                        case 0:
-                            Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
-                            break;
-                        case 1:
-                            Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
-                            break;
-                        case 2:
-                            Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
-                            break;
-                        case 3:
-                            Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
-                            break;
-                    }
+                    case 0:
+                        Yrt.sideEffect.transform.position += new Vector3(0, 45, 0);
+                        break;
+                    case 1:
+                        Yrt.sideEffect.transform.position += new Vector3(0, -45, 0);
+                        break;
+                    case 2:
+                        Yrt.sideEffect.transform.position += new Vector3(80, 10, 0);
+                        break;
+                    case 3:
+                        Yrt.sideEffect.transform.position += new Vector3(-80, 10, 0);
+                        break;
                 }
+            }
         }
         for (int i = 0; i < SaveData.current.memPosX.Count; i++)
         {
@@ -2692,10 +2823,10 @@ public class BattleSystem : MonoBehaviour
             Yrt.id = k;
             Yrt.id2 = n;
             if (SaveData.current.memId2Active[i])
-                {
-                    Yrt.secTrait.text = memExcel.myMembers.members[n].trait;
-                    Yrt.secTraitDescription.text = memExcel.myMembers.members[n].trait + " = " + memExcel.myMembers.members[n].tEffect;
-                    Yrt.secTraitDescription.text = Yrt.secTraitDescription.text.Replace("*", ",");
+            {
+                Yrt.secTrait.text = memExcel.myMembers.members[n].trait;
+                Yrt.secTraitDescription.text = memExcel.myMembers.members[n].trait + " = " + memExcel.myMembers.members[n].tEffect;
+                Yrt.secTraitDescription.text = Yrt.secTraitDescription.text.Replace("*", ",");
             }
             Yrt.professionId = m;
             Yrt.performance = SaveData.current.memPerformance[i];

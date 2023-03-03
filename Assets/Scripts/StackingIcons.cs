@@ -7,6 +7,6 @@ using UnityEngine.UI;
 public class StackingIcons : ScriptableObject
 {
 
-    public Sprite[] sprites = new Sprite[73];
+    public Sprite[] sprites = new Sprite[96];
 
 }
