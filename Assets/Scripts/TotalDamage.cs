@@ -15,7 +15,7 @@ public class TotalDamage : MonoBehaviour
 
     void Awake()
     {
-        extraDmg = 0;
+        extraDmg = 10;
         sum = 0;
     }
 

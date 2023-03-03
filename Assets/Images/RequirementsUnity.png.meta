@@ -162,10 +162,10 @@ TextureImporter:
       name: RequirementsUnity_2
       rect:
         serializedVersion: 2
-        x: 2318
-        y: 3380
-        width: 102
-        height: 133
+        x: 2246
+        y: 3386
+        width: 81
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,10 +330,10 @@ TextureImporter:
       name: RequirementsUnity_10
       rect:
         serializedVersion: 2
-        x: 2187
+        x: 2197
         y: 1338
-        width: 251
-        height: 123
+        width: 237
+        height: 116
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -10,7 +10,7 @@ public class UpdateFuel : MonoBehaviour
 
     private void Awake()
     {
-        fuel = 6;
+        fuel = 15;
     }
 
     public void UpdateF(string s)

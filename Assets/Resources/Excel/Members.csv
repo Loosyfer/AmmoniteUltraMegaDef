@@ -16,7 +16,7 @@ Big D Energy,If they get hit by the enemy* a random adjacent crew member sacrifi
 Lacks Personality,Until the end of the battle* copies the trait of a random adjacent crew member.,Positive,3
 Pervert,-20%P if adjacent to a crew member of the opposite gender.,,0
 Messy,If they say in the same module for 2 battles in a row* the module gains the defect filthy at the end of the battle.,,-1
-Competitive,-20%P if alone* but it will increase to match the best-performing adjacent crew member.,Positive,3
+Competitive,-20%P* but their performance will increase to match the best-performing adjacent crew member.,Positive,3
 Dictator,+5%P to adjacent crew members* but those exposed to Dictator will forever have -10% base performance when not adjacent to Dictator.,,1
 Quitter,After each battle* there's a 20% chance they quit the expedition for good.,,-1
 Pyromaniac,Every 2 turns* there’s a 33% chance their module sets on fire.,,0
@@ -50,10 +50,10 @@ Vain,5% Performance* but -5% Performance to adjacent Crew Members.,,1
 Low Self-esteem,If their performance is lowered* then it is lowered an extra 20%.,,0
 Exhibitionist,Every 4 turns* they will stun a random adjacent crew member.,,-1
 Empathetic,When an adjacent crew member suffers an ailment* they also suffer the same ailment.,,0
-Argumentative,Once per battle* if adjacent to a crew member and after you lose 300 ship health* they both become Stunned for the rest of the battle.,,0
+Argumentative,Once per battle* if adjacent to a crew member and after you lose 300 ship health* they both become Stunned.,,0
 Bad Eyesight,-10%P versus small enemies* but +10%P instead versus big enemies.,,1
 Elderly,15% chance of dropping dead at the end of a battle.,,-1
-Boss Wannabe,At battle start* 1 random module will swap around with another.,,-1
+Boss Wannabe,At battle start* they order two other random crew members to switch places.,,-1
 Masochist,-20%P* but +10%P every time they lose HP.,,2
 Sadistic,If an adjacent crew member loses health* +10%P.,Positive,3
 Could be 2 Kids in a Trenchcoat,50% chance that after being recruited they divide into two cadets with 40% base performance.,,3
@@ -72,7 +72,7 @@ Full of Shit,Upon death* they explode and shit flies everywhere* making their mo
 Bully,-20%P to the lowest-performing crew member in the ship.,,-1
 Friendzoned,When recruited* a random crew member is selected* adjacent to which the Friendzoned will have -20%P.,,0
 Old-fashioned,Only appears in men. -20%P if adjacent to women.,,0
-Lazy and Rich,40% base performance. If their performance was lowered* receive 1 coin at the end of the battle.,,1
+Lazy and Rich,30% base performance. If their performance was lowered* receive 1 coin at the end of the battle.,,1
 Drunkard,If their module is attacked* there’s a 50% chance it’s set on fire.,,0
 Selfless,If a crew member is about to die* they sacrifice their own life instead.,Positive,2
 Hero Mindset,If your ship health runs out* they sacrifice themselves to avoid the defeat and your ship is rescued back to 200 health.,Positive,3
@@ -171,7 +171,7 @@ Has Amnesia,At battle start* 50% chance they don’t have their profession for t
 Also a Veterinarian,If an enemy at or below 10% HP* they heal the enemy once per battle for 5% of their HP.,,-1
 Apocalypse Paranoid,The first module that they’re placed in becomes an Isolation Bunker.,,1
 Night Owl,25% chance of becoming Sleepy every 2 turns.,,-1
-A Karen,When you buy from a market or emporium* there's a 50% chance the purchase is 1 coin cheaper. Always comes paired with Argumentative.,Positive,3
+A Karen,You can return modules and get back their full price instead of half. Always comes paired with Argumentative.,Positive,3
 Loves Rainbows,If you have 1 of each type of module* +10%P.,Positive,2
 Big Fan,If you don’t recruit this applicant* they will show up very frequently in the shop (every applicant has a 10% chance of being the same Big Fan).,,2
 BDSM Enthusiast,-1HP/4turns to a random adjcent crew member* and +5%P to the BDSM Enthusiast whenever that happens.,,1
@@ -200,7 +200,7 @@ Thinks This is All a Dream,If they wake up from being Asleep they will disappear
 Emotionally Attached,If an adjacent crew member dies* -10% base performance.,,0 
 Sleepwalker,If Asleep* every 4 turns moves to an adjacent module.,,0
 Has Sweet Dreams,If Asleep +1 HP every 4 turns.,,1
-Has Nightmares,If Asleep -1 HP every 4 turns.,,0
+Has Nightmares,If Asleep -1 HP every 4 turns* and their module becomes water-flooded with piss.,,0
 Does the Opposite,Their performance gains and losses are reversed.,Positive,3
 Gambling Addict,At the end of battle they gamble with your coins: if you have at least 2 coins* 50% chance you lose 2 coins and 50% chance you gain 2 coins.,,1
 Expert Gardener ,+10%P in a Wild module* and can be moved in and out of it.*,Positive,2
@@ -233,7 +233,7 @@ Sworn Enemy,When recruited* will declare another random crew member as their Swo
 Cult Leader,Adjacent crew members have +5%P but will also suffer the same ailment loss of HP and death of the occupier.,Positive,2
 Perfectionist,-20%P if there’s a requirement in your ship that isn’t being met but +10%P instead if all requirements are being met.,Positive,2
 Simple,-20%P but +10%P instead if their module has no requirements* side effects or defects.,Positive,2
-Nature Lover,-20%P but +10%P instead if their module has an element.,Positive,2
+Nature Lover,-20%P but +10%P instead if their module is Wild.,Positive,2
 Monster Tamer,Every time they’re hit by the enemy* the enemy loses 10dpt.,Positive,3
 Cocky Taunter,The enemy has a 33% chance of targeting them with each hit.,Positive,3
 Avoids Responsibilities,The first time per battle that they or their module are afflicted with an ailment or element* it’s instead passed onto a random adjacent module.,Positive,2
@@ -250,16 +250,21 @@ Juggler ,Can hold up to 3 items.,Positive,3
 Wall Painter,At the end of the battle* their module changes to another random type.,Positive,3
 Insecure Professional,-20%P for the next battle if a new applicant of the same profession was recruited.,,0
 Special Bonding,Will bond to a random adjacent crew member in their first battle changing their trait to also Special Bonding at the end of the battle. +10%P to both crew members but if they are ever separated they both die.,,1
-Loves Instruction Manuals,+10%P If they’re in a module with fulfilled requirements.,Positive,3
+Loves Instruction Manuals,+5%P If they’re in a module with fulfilled requirements.,Positive,2
 Hates Complex Work,-20%P but +10%P instead if their module is inactive.,,0
 Flirter,-20%P* but +5%P instead if they're adjacent to someone of the opposite sex.,,1
 Copycat,At turn 8 and until the end of battle* their module copies a random adjacent module. // At battle start* their module copies a random module in the bench or ship.,Positive,3
 Careless Tenant,Will pay you a rent of 1 coin at the end of each battle* however they don't treat their module well* so it will gain a defect at the end of the battle* and if it already had one* then it becomes damaged.,,0
 Recruiter,At the end of battle* you can pay 3 coins to receive one random crew member. // Kinda overlaps with CEO/Businessman x12.,Positive,3
-Scammer,Once per level* you can sell a module for it's full price instead of half the price.,Positive,3
+Scammer,Once per level* you can sell a module for 2 more coins than it was worth.,Positive,3
 Reverse Engineer,At battle start* there's a 50% chance their item permanently changes to another item.,Positive,3
-Easily Bored,-10%P if they are in the same module as the previous battle.,,1
-Loves Change,+10%P if they are in a different module than in the previous battle.,Positive,2
+Easily Bored,-10%P if they are in the same module as the previous battle.,,0
+Loves Change,+10%P if they are in a different module than in the previous battle.,Positive,3
+Workaholic,+5%P every 2 turns. If they reach 75%P* they become Lunatic.,,1
+Cannibal 2,If an adjacent crew member dies* +3HP.,Positive,3
+Identity Thief,If a crew member dies* they steal their name* gender* profession* trait and base performance permanently.,Positive,3
+Does the Bare Minimum,They'll copy the performance of the lowest performance crew member in the ship.,,0
+Needs to be Supervised,+5%P* but -5%P for every module away from the Captain.,,1
 Monstrous,Every 4 turns* -1HP to an adjacent crew member* unless they’re also Monstrous. If hit by the enemy* they hit back for 50 damage. If their module is destroyed* instead of dying they return to an available module or the bench.,Exclusive,
 Doomed,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -2%/2turns* and -1HP/2turns.,Exclusive,
 Reanimated,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -2%/2turns.,Exclusive,

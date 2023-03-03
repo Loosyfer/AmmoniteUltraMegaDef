@@ -1,4 +1,4 @@
-Name,Effect,Type,Special Req,Price
+﻿Name,Effect,Type,Special Req,Price
 Basic Torpedo Launcher,+10dpt.,Offensive,,4
 Exhausting Gun,+20dpt but the occupant has their performance halved. // Fires 100 dmg at turn 4* after which the occupant will have their performance halved for the rest of the battle.,Offensive,,4
 Flesh Cannon,60 dmg every 4turns* but the occupant loses -1HP each time.,Offensive,,6
@@ -85,7 +85,7 @@ The Golden Chamber,Costs 30 coins and comes more easily to players with lots of 
 Sadomasochism Dungeon,If a crew member takes damage in this module* they gain Masochist as their secondary trait permanently.,Normal,,6
 Electric Shockwave,At turn 4* electrocute the enemy for 100 damage* but there's a 40% chance it also damages your ship for 50 damage (15% chance if operated by a War General).,Offensive,,4
 Lunatic Brutaliser,The occupant will become Lunatic at the end of the battle. If a monster hits a module with a Lunatic* deal 100 damage.,Offensive,,4
-Death Coffin,Every 3 enemy hits* there's a 50% chance that this module is hit* and the crew member in it takes double damage from hits.,Normal,,3
+Irresistible Flesh Extractor,Every enemy attack yas a 33% chance of targeting this module* and the crew member in it takes double damage from enemy hits.,Normal,,3
 Magical Swap Box,The occupant* right before getting hit* will swap places with another random crew member.,Magic,,4
 Military Waking Alarm,Every 4 turns* removes Stunned* Sleepy and Asleep from all crew members* and +5%P to all adjacent Cadets and Lieutenants. // If operated by a War General* all adjacent crew members get a 10%P boost,Normal,,8
 Trash Compactor,If an adjacent module is damaged* at the end of the battle you can recycle it into 250 ship health.,Scientific,,4
@@ -104,7 +104,7 @@ Explosive Charger,If a module explodes* absorb energy from the explosion to char
 Pain Transformer,If a crew member loses HP in this module* it fires a piercing pain blast of 80 dmg into the enemy. 50-250%.,Offensive,,8
 Contagion Beam,At turn 10* shoot a diseased beam that deals 100 damage for each crew member with an ailment.,Offensive,,4
 Water-Based Doping module,When flooded* injects the water with enhancing drugs. +5%P in this or any water-flooded module. However if this module gets hit* the enemy will have +20%dpt in its next attack.,Scientific,,4
-Arctic Hull,Both parts always appear as a pair in the shop* for 300 each. Freeze the water around the ship to create an ice barrier that creates a 300 ship HP shield at the beginning of every battle. // The barrier* however* will disappear if any of the two modules is disturbed. 50-400 HP shield.,Defensive,One must be placed in the highest row of the Layout* and the other in the lowest row.,4
+Arctic Hull,Both parts always appear as a pair in the shop. Freeze the water around the ship to create an ice barrier that creates a 300 ship HP shield at the beginning of every battle. // The barrier* however* will disappear if any of the two modules is disturbed. 50-400 HP shield.,Defensive,One must be placed in the highest row of the Layout* and the other in the lowest row.,6
 Chamber of Infinite Wisdom,The crew member in this module will have a profession of your choice* and their performance cap will be 150%.,Normal,,8
 Resourceful Blocker,Twice per battle* can throw an item at will to block an enemy attack. Block 25-100% of the damage.,Defensive,,6
 Systemic Freezer,When a module floods* it instantly becomes frozen. If the enemy hits a frozen module* it becomes frozen.,Defensive,,3
@@ -239,7 +239,7 @@ Contaminating Fuel Refinery,At the end of each battle* produce 1 Fuel* however t
 Basic Fishcapsule,Module built by a Biologist from a creature that doesn’t have an exclusive module. Every enemy attack yas a 33% chance of targeting this module. 5-50% chance to attract each attack.,Organic A,,4
 Sticky Node,Once a module is placed adjacent to this one* it can’t be separated. Every time the enemy hits this module* they lose 10% of their current dpt.,Defensive,,4
 Prehistoric Shelter,The occupant won't lose HP from the first enemy hit each battle* but after that hit the module becomes damaged unless its Wild.,Defensive,,4
-Multitype Capsule,Every time you place this module in the layout* it's type changes in order to the next of the 5 basic types.,Normal,,4
+Multitype Capsule,Every time you place this module in the layout* it's type changes in order to the next of the 5 basic types* starting by being Normal type* and it counts as two stacking bonus for its current type.,Normal,,6
 Battle Synergiser,If this module it's a different type than normal* at battle start and until the end of battle it also transforms into a random module of that type.,Normal,,6
 Delicate Toilet 2,Fixes excrement-flooding in this module instantly. However if hit by the enemy* all modules under this one become excrement-flooded. // Similar to Plumbing System but cooler.,Normal,,4
 Hologram Producer,At battle start* if unmanned* produces an occupant of the same name* gender* profession and trait as a random adjacent crew member* with 40% base performance and 6 HP* that will expire at the end of the battle.,Scientific,,6
@@ -250,14 +250,13 @@ Palpitating Viscera,Every 4 turns* it palpitates aggressively and drains 1 HP fr
 Defense Office,Gain +5hpt for each 50 ship health above 1000 that your ship has* including shields.,Defensive,,8
 Attack Office,Increase your ship DPT by 5%.,Offensive,,8
 Bone Capsule,If hit* there's a 33% chance it doesn't harm the occupier. // If hit by a physical attack* it won't harm the occupier.,Organic A,,4
-Investment Agency,If the occupant has 80% or more performance* gain 1 coin at the end of the battle.,Normal,,4
+Investment Agency,If the occupant has 70% or more performance* gain 1 coin at the end of the battle.,Normal,,3
 Hyperperformer,x1*3 performance to a random adjacent module at the start of battle.,Scientific,,8
-Brain Swapper,The occupant swaps their performance with the crew member adjacent to the left.,Scientific,,4
 Echo Channeler,The module on the left has its first effect doubled* up to once per battle.,Magic,,8
 Maximum Concentration Laser,If this or any adjacent modules have been disturbed* at turn 10 fire a beam that deals 300 damage.,Offensive,,6
 Morgue,Every time a crew member dies while this module is in the ship* increase the counter in this module by 1. If this module expllodes* at the end of the battle receive as many Drowned Islander items as counters this module had.,Normal,,4
 Sacred Crematorium,If the occupant dies* receive Mysterious Ashes at the end of the battle.,Magic,,8
-Internship Program,Can't place a crew member in this module during prep phase. At battle start* a random intern will appear in this module until the end of the battle. They will always have a trait of -1 cost.,Normal,,4
+Internship Program 1,Can't place a crew member in this module during prep phase. At battle start* a random intern will appear in this module until the end of the battle. They will always have a trait of -1 cost.,Normal,,6
 Peaceful Garden 2,This module is Wild when first adquired. +1HP/4turns.,Normal,Must be Wild.,4
 Peaceful Garden 2,This module is permanently Wild. +1HP/4turns.,Normal,,6
 Vegetable Greenhouse,If this module is Wild* +1HP/4turns.,Normal,,4
@@ -265,11 +264,13 @@ Compost Factory,If this module becomes excrement-flooded* after 2 turns it inste
 Seafood Shipment,If this module was frozen this battle* produce one Tasty Seafood at the end of the battle. If it wasn't* receive Expired Sushi instead.,Normal,,4
 Blizzardmaker,At turn 4* produce a Blizzard that freezes the enemy and also all modules on this row to the left.,Scientific,,4
 Ice Cube Gun,This module becomes frozen at battle start. Throws ice cubes as bullets. +10dpt for each frozen module in your ship.,Offensive,,4
-Bad Restaurant 1,The food might be good or bad: every 4 turns* 50% chance of +1HP* 50% chance of -1HP.,Normal,,4
-Bad Restaurant 2,At battle start it's decided if the food will be good or bad: 50% chance of +1HP/4turns* 50% chance of -1HP/4turns.,Normal,,4
+Bad Restaurant 1,The food might be good or bad: every 4 turns* 50% chance of +2HP* 50% chance of -1HP.,Normal,,4
+Bad Restaurant 2,At battle start it's decided if the food will be good or bad: 50% chance of +2HP/4turns* 50% chance of -1HP/4turns.,Normal,,4
 Organ Transplant Centre,If a crew member dies that isn't the occupant* 50% chance they revive with 2 HP and another random crew member loses 1 HP.,Scientific,Can only be manned by a Doctor,6
 Item Transformer 1,At battle start* the item in this module permanently changes to another random item. // Too similar to the magic module Magical Storage Room.,Scientific,,6
 Item Transformer 2,At battle start* the item in this module changes to another random item until the end of battle.,Scientific,,4
 Haunted Mansion,This module is unmanned. This and all adjacent modules will be inhabited by creepy spirits* and if the enemy hits any of these modules they suffer 100 damage and they won't hit them again. Modules with spirits have -5%P.,Magic,,6
 Possessed Chamber,The occupier is possessed and gains great strength* being immortal and hitting the enemy back for 100 damage if hit* but they become Lunatic at the end of the battle.,Magic,,4
 Arcane Library,If the occupier is a Wizard* +5%P* if not* their profession permanently changes to Wizard but they also become Lunatic.,Magic,,6
+Cannibal Kitchen,If the occupant dies* each adjacent crew member heals +1HP.,Normal,,4
+Internship Program 2,Can't place a crew member in this module during prep phase. At battle start* a random intern will appear in this module until the end of the battle. They will always have a trait of -1 cost and Cadet profession.,Normal,,4

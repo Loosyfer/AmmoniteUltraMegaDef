@@ -1238,10 +1238,10 @@ public class BattleSystem : MonoBehaviour
         int l = UnityEngine.Random.Range(0, 100);
         switch (l)
         {
-            case int n when (n <= 70):
+            case int n when (n <= 75):
                 Generate("5");
                 break;
-            case int n when (n > 70 && n <= 90):
+            case int n when (n > 75 && n <= 90):
                 Generate("4");
                 break;
             default:
@@ -1276,10 +1276,10 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 274);
+            int j = UnityEngine.Random.Range(0, 276);
             int k = UnityEngine.Random.Range(0, 10);
             while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6 )
-                j = UnityEngine.Random.Range(0, 274);
+                j = UnityEngine.Random.Range(0, 276);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
@@ -1601,7 +1601,7 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 261);
+            int j = UnityEngine.Random.Range(0, 266);
             int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = 0;
             float random = UnityEngine.Random.Range(0f, 1000f);

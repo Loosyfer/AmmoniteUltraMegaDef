@@ -121,11 +121,11 @@ MonoBehaviour:
       type: 2
       price: 4
     - name: Chamber of Sacrifice
-      effect: At turn 12* the occupant will be sacrificed and you gain 300 ship health.
+      effect: At turn 10* the occupant will be sacrificed and you gain 300 ship health.
         // If hit* you take no ship damage* the occupant will be sacrificed and you
         gain 100 ship health.
       requirement: 
-      type: 0
+      type: 6
       price: 4
     - name: Mimic Room
       effect: At the start of battle it transforms into an identical copy of a random
@@ -267,11 +267,11 @@ MonoBehaviour:
       price: 4
     - name: Ritual Chamber
       effect: At the start of battle* will summon a random crew member in each empty
-        adjacent module with the trait Ghost that disappear at the end of the battle.
+        adjacent module with the trait Ghost that disappears at the end of the battle.
         // Will summon 1-2 random crew members in random adjacent modules with the
         trait Ghost and no profession.
       requirement: 
-      type: 0
+      type: 6
       price: 6
     - name: Casino
       effect: Any percentage-based effect inside this module will have a higher chance
@@ -444,11 +444,10 @@ MonoBehaviour:
       type: 4
       price: 4
     - name: Magical Storage Room
-      effect: Can work unmmaned* and items can be placed without a holder in this
-        module. At the end of battle* the item in this module will transform into
-        a different item.
+      effect: At the end of battle* the item in this module will transform into a
+        different item.
       requirement: 
-      type: 0
+      type: 6
       price: 6
     - name: Perfect Balance
       effect: "Once per expedition* equalise the enemy's HP with the ship\u2019s
@@ -550,9 +549,9 @@ MonoBehaviour:
       requirement: 
       type: 1
       price: 4
-    - name: Death Coffin
-      effect: Every 3 enemy hits* there's a 50% chance that this module is hit* and
-        the crew member in it takes double damage from hits.
+    - name: Irresistible Flesh Extractor
+      effect: Every enemy attack yas a 33% chance of targeting this module* and the
+        crew member in it takes double damage from enemy hits.
       requirement: 
       type: 4
       price: 3
@@ -560,7 +559,7 @@ MonoBehaviour:
       effect: The occupant* right before getting hit* will swap places with another
         random crew member.
       requirement: 
-      type: 0
+      type: 6
       price: 4
     - name: Military Waking Alarm
       effect: Every 4 turns* removes Stunned* Sleepy and Asleep from all crew members*
@@ -674,14 +673,14 @@ MonoBehaviour:
       type: 3
       price: 4
     - name: Arctic Hull
-      effect: Both parts always appear as a pair in the shop* for 300 each. Freeze
-        the water around the ship to create an ice barrier that creates a 300 ship
-        HP shield at the beginning of every battle. // The barrier* however* will
-        disappear if any of the two modules is disturbed. 50-400 HP shield.
+      effect: Both parts always appear as a pair in the shop. Freeze the water around
+        the ship to create an ice barrier that creates a 300 ship HP shield at the
+        beginning of every battle. // The barrier* however* will disappear if any
+        of the two modules is disturbed. 50-400 HP shield.
       requirement: One must be placed in the highest row of the Layout* and the other
         in the lowest row.
       type: 2
-      price: 4
+      price: 6
     - name: Chamber of Infinite Wisdom
       effect: The crew member in this module will have a profession of your choice*
         and their performance cap will be 150%.
@@ -786,14 +785,14 @@ MonoBehaviour:
       effect: -20dpt. After 10 victorious battles* +50dpt instead. -60-30dpt* then
         +50-80dpt.
       requirement: 
-      type: 0
+      type: 6
       price: 6
     - name: Mirror Room
       effect: "The occupant will disappear at battle start. At the end of the battle*
         there\u2019s a 30% chance they come out as Lunatic and a 70% chance both
         them and an exact copy exit the module."
       requirement: 
-      type: 0
+      type: 6
       price: 6
     - name: Ineptitude Distiller
       effect: The lower your total performance is* the more damage the ship does.
@@ -1461,7 +1460,7 @@ MonoBehaviour:
       effect: Whenever a crew member takes damage in one of the modules* so will
         the other one.
       requirement: 
-      type: 0
+      type: 6
       price: 4
     - name: Hunting Settlement
       effect: If this module is Wild* its crew member will throw wooden spears at
@@ -1504,10 +1503,11 @@ MonoBehaviour:
       price: 4
     - name: Multitype Capsule
       effect: Every time you place this module in the layout* it's type changes in
-        order to the next of the 5 basic types.
+        order to the next of the 5 basic types* starting by being Normal type* and
+        it counts as two stacking bonus for its current type.
       requirement: 
       type: 4
-      price: 4
+      price: 6
     - name: Battle Synergiser
       effect: If this module it's a different type than normal* at battle start and
         until the end of battle it also transforms into a random module of that type.
@@ -1528,7 +1528,7 @@ MonoBehaviour:
       requirement: 
       type: 3
       price: 6
-    - name: Untransformed Submarine
+    - name: Prime Submarine
       effect: At the end of its first battle* it permanently transforms into another
         random module in your ship or bench.
       requirement: 
@@ -1538,7 +1538,7 @@ MonoBehaviour:
       effect: This module works unmanned. The contents of this module will be identical
         of those of the module adjacent to the right.
       requirement: 
-      type: 0
+      type: 6
       price: 8
     - name: Submarine Crypt
       effect: If a crew member dies in this module* their corpse remains in it. They
@@ -1570,27 +1570,21 @@ MonoBehaviour:
       type: 0
       price: 4
     - name: Investment Agency
-      effect: If the occupant has 80% or more performance* gain 1 coin at the end
+      effect: If the occupant has 70% or more performance* gain 1 coin at the end
         of the battle.
       requirement: 
       type: 4
-      price: 4
+      price: 3
     - name: Hyperperformer
       effect: x1*3 performance to a random adjacent module at the start of battle.
       requirement: 
       type: 3
       price: 8
-    - name: Brain Swapper
-      effect: The occupant swaps their performance with the crew member adjacent
-        to the left.
-      requirement: 
-      type: 3
-      price: 4
     - name: Echo Channeler
       effect: The module on the left has its first effect doubled* up to once per
         battle.
       requirement: 
-      type: 0
+      type: 6
       price: 8
     - name: Maximum Concentration Laser
       effect: If this or any adjacent modules have been disturbed* at turn 10 fire
@@ -1609,15 +1603,15 @@ MonoBehaviour:
     - name: Sacred Crematorium
       effect: If the occupant dies* receive Mysterious Ashes at the end of the battle.
       requirement: 
-      type: 0
+      type: 6
       price: 8
-    - name: Internship Program
+    - name: Internship Program 1
       effect: Can't place a crew member in this module during prep phase. At battle
         start* a random intern will appear in this module until the end of the battle.
         They will always have a trait of -1 cost.
       requirement: 
       type: 4
-      price: 4
+      price: 6
     - name: Peaceful Garden 2
       effect: This module is Wild when first adquired. +1HP/4turns.
       requirement: Must be Wild.
@@ -1658,14 +1652,14 @@ MonoBehaviour:
       type: 1
       price: 4
     - name: Bad Restaurant 1
-      effect: 'The food might be good or bad: every 4 turns* 50% chance of +1HP*
+      effect: 'The food might be good or bad: every 4 turns* 50% chance of +2HP*
         50% chance of -1HP.'
       requirement: 
       type: 4
       price: 4
     - name: Bad Restaurant 2
       effect: 'At battle start it''s decided if the food will be good or bad: 50%
-        chance of +1HP/4turns* 50% chance of -1HP/4turns.'
+        chance of +2HP/4turns* 50% chance of -1HP/4turns.'
       requirement: 
       type: 4
       price: 4
@@ -1677,7 +1671,7 @@ MonoBehaviour:
       price: 6
     - name: Item Transformer 1
       effect: At battle start* the item in this module permanently changes to another
-        random item.
+        random item. // Too similar to the magic module Magical Storage Room.
       requirement: 
       type: 3
       price: 6
@@ -1686,4 +1680,36 @@ MonoBehaviour:
         item until the end of battle.
       requirement: 
       type: 3
+      price: 4
+    - name: Haunted Mansion
+      effect: This module is unmanned. This and all adjacent modules will be inhabited
+        by creepy spirits* and if the enemy hits any of these modules they suffer
+        100 damage and they won't hit them again. Modules with spirits have -5%P.
+      requirement: 
+      type: 6
+      price: 6
+    - name: Possessed Chamber
+      effect: The occupier is possessed and gains great strength* being immortal
+        and hitting the enemy back for 100 damage if hit* but they become Lunatic
+        at the end of the battle.
+      requirement: 
+      type: 6
+      price: 4
+    - name: Arcane Library
+      effect: If the occupier is a Wizard* +5%P* if not* their profession permanently
+        changes to Wizard but they also become Lunatic.
+      requirement: 
+      type: 6
+      price: 6
+    - name: Cannibal Kitchen
+      effect: If the occupant dies* each adjacent crew member heals +1HP.
+      requirement: 
+      type: 4
+      price: 4
+    - name: Internship Program 2
+      effect: Can't place a crew member in this module during prep phase. At battle
+        start* a random intern will appear in this module until the end of the battle.
+        They will always have a trait of -1 cost and Cadet profession.
+      requirement: 
+      type: 4
       price: 4
