@@ -8,11 +8,23 @@ public class HoverOver : MonoBehaviour //, IPointerEnterHandler, IPointerExitHan
 {
     public GameObject HoverPanel;
     public GameObject HoverPanel2;
+    private GameObject showInfoButton;
+    private GameObject malla;
+
+    private void Start()
+    {
+        malla = GameObject.Find("/Malla");
+        showInfoButton = malla.transform.GetChild(15).GetChild(26).gameObject;
+    }
+
 
     public void OnMouseOver()
     {
-        HoverPanel.SetActive(true);
-        HoverPanel2.SetActive(true);
+        if (showInfoButton.transform.GetComponent<ShowInfoButton>().showInfo)
+        {
+            HoverPanel.SetActive(true);
+            HoverPanel2.SetActive(true);
+        }
     }
 
     public void OnMouseExit()

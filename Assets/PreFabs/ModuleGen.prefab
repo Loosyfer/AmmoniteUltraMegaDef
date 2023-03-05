@@ -7555,6 +7555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd8da56222f9fb4d867b8f0eaafd32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infoPanels: {fileID: 533412607001582787}
+  showInfoButton: {fileID: 0}
+  moduleParent: {fileID: 2034231186501652198}
+  malla: {fileID: 0}
 --- !u!114 &6299584739895173073
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,7 +30,9 @@ public class GenerateBosses : MonoBehaviour
             enemiesExcel.myEnemies.enemies[i].health = int.Parse(enemiesData[(8 * (i + 1)) + 1]);
             enemiesExcel.myEnemies.enemies[i].dPT = int.Parse(enemiesData[(8 * (i + 1)) + 2]);
             enemiesExcel.myEnemies.enemies[i].effect = enemiesData[(8 * (i + 1)) + 3];
+            enemiesExcel.myEnemies.enemies[i].effect = enemiesExcel.myEnemies.enemies[i].effect.Replace("*", ",");
             enemiesExcel.myEnemies.enemies[i].flavour = enemiesData[(8 * (i + 1)) + 4];
+            enemiesExcel.myEnemies.enemies[i].flavour = enemiesExcel.myEnemies.enemies[i].flavour.Replace("*", ",");
             enemiesExcel.myEnemies.enemies[i].level = int.Parse(enemiesData[(8 * (i + 1)) + 5]);
             if (enemiesData[(8 * (i + 1)) + 6] == "Boss")
                 enemiesExcel.myEnemies.enemies[i].type = true;

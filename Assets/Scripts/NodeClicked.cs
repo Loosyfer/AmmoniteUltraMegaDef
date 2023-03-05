@@ -38,7 +38,8 @@ public class NodeClicked : MonoBehaviour,  IDropHandler
     {
         if (eventData.pointerDrag != null)
         {
-            eventData.pointerDrag.transform.position = transform.position;
+            if (eventData.pointerDrag.CompareTag("Icon"))
+                eventData.pointerDrag.transform.position = transform.position;
             //GetComponent<RectTransform>().anchoredPosition
         }
     }

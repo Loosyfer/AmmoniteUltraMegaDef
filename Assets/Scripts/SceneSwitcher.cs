@@ -23,9 +23,29 @@ public class SceneSwitcher : MonoBehaviour
     WaitForEndOfFrame frameEnd = new WaitForEndOfFrame();
     private bool mapOn = false;
     public GameObject showInfoButton;
+    public GameObject modulesFolder;
+    public GameObject membersFolder;
+    public BattleSystem battleSystem;
+    public GameObject desactivar1;
+    public GameObject desactivar2;
+    public GameObject desactivar3;
+    public GameObject desactivar4;
+    public ItemSpawner itemSpawner;
 
     public void NodeMap()
     {
+        foreach (GameObject module in battleSystem.modules)
+        {
+            module.GetComponent<Image>().enabled = false;
+        }
+        foreach (GameObject member in battleSystem.members)
+        {
+            member.GetComponent<Image>().enabled = false;
+        }
+        foreach (GameObject objeto in itemSpawner.objectList)
+        {
+            objeto.GetComponent<Image>().enabled = false;
+        }
         mapOn = true;
         malla.transform.GetComponent<Canvas>().enabled = false;
         BG.SetActive(false);
@@ -33,6 +53,13 @@ public class SceneSwitcher : MonoBehaviour
         mainCamera.SetActive(false);
         camera2.SetActive(true);
         canvas2.SetActive(true);
+        desactivar1.SetActive(false);
+        desactivar2.SetActive(false);
+        desactivar3.SetActive(false);
+        desactivar4.SetActive(false);
+        
+        //modulesFolder.SetActive(false);
+        //membersFolder.SetActive(false);
     }
     private void Update()
     {
@@ -74,11 +101,28 @@ public class SceneSwitcher : MonoBehaviour
 
     public void MainGame()
     {
+        foreach (GameObject module in battleSystem.modules)
+            module.GetComponent<Image>().enabled = true;
+        foreach (GameObject member in battleSystem.members)
+            member.GetComponent<Image>().enabled = true;
         malla.transform.GetComponent<Canvas>().enabled = true;
         BG.SetActive(true);
         imagen.SetActive(true);
         mapOn = false;
         camera2.SetActive(false);
+        desactivar1.SetActive(true);
+        desactivar2.SetActive(true);
+        desactivar3.SetActive(true);
+        desactivar4.SetActive(true);
+        foreach (GameObject objeto in itemSpawner.objectList)
+        {
+            objeto.GetComponent<Image>().enabled = true;
+        }
+
+        //canvas2.SetActive(false);
+        //mainCamera.SetActive(true);
+        //modulesFolder.SetActive(true);
+        //membersFolder.SetActive(true);
         StartCoroutine(Screenshot(camera3));
         StartCoroutine(DeactivateCanvas());
     }
@@ -104,7 +148,7 @@ public class SceneSwitcher : MonoBehaviour
 
     IEnumerator DeactivateCanvas()
     {
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0f);
         canvas2.SetActive(false);
         mainCamera.SetActive(true);
     }

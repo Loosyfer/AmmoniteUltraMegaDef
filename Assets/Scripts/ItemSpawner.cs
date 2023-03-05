@@ -36,6 +36,7 @@ public class ItemSpawner : MonoBehaviour
             itemsExcel.myItems.items[i] = new ItemsExcel.Item();
             itemsExcel.myItems.items[i].name = itemsData[(5 * (i + 1))];
             itemsExcel.myItems.items[i].effect = itemsData[(5 * (i + 1)) + 1];
+            itemsExcel.myItems.items[i].effect = itemsExcel.myItems.items[i].effect.Replace("*", ",");
             itemsExcel.myItems.items[i].type = itemsData[(5 * (i + 1)) + 2];
         }
     }

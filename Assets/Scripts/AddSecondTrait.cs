@@ -17,6 +17,7 @@ public class AddSecondTrait : MonoBehaviour
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.secTrait.text = script.memExcel.myMembers.members[int.Parse(s)].trait;
                 memberHUD.secTraitDescription.text = script.memExcel.myMembers.members[int.Parse(s)].tEffect;
+                memberHUD.secTraitDescription.text = memberHUD.secTraitDescription.text.Replace("*", ",");
                 memberHUD.id2 = int.Parse(s);
                 memberHUD.id2Active = true;
                 // membersInfo.traitList[int.Parse(s)] + " = " + 

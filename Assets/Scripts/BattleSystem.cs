@@ -795,7 +795,7 @@ public class BattleSystem : MonoBehaviour
                             go.transform.GetChild(11).GetChild(9).gameObject.SetActive(true);
                             Yrt.reqId = 0;
                             break;
-                        case int h when (h == 2 || h == 10):
+                        case int h when (h == 1 || h == 10):
                             int l = UnityEngine.Random.Range(0, 4);
                             switch (l)
                             {
