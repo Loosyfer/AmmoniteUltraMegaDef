@@ -470,8 +470,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.867054, y: -7.769413}
-  m_SizeDelta: {x: 324.6485, y: 348.68826}
+  m_AnchoredPosition: {x: -28.867054, y: -8.24144}
+  m_SizeDelta: {x: 324.64853, y: 358.12885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &15282836
 Canvas:
@@ -3526,7 +3526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000027746, y: 18}
+  m_AnchoredPosition: {x: -0.000027746, y: 19.9}
   m_SizeDelta: {x: 302.9438, y: 187.943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84102739
@@ -4698,8 +4698,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.825768, y: 9.968779}
-  m_SizeDelta: {x: 324.73108, y: 371.16107}
+  m_AnchoredPosition: {x: -28.825768, y: 4.339883}
+  m_SizeDelta: {x: 324.7311, y: 258.58322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &107713110
 Canvas:
@@ -6311,8 +6311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.8, y: 22}
-  m_SizeDelta: {x: 298.72, y: 131.8459}
+  m_AnchoredPosition: {x: -5.4, y: -0.0000076294}
+  m_SizeDelta: {x: 298.72, y: 83.5982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147294335
 MonoBehaviour:
@@ -6334,10 +6334,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 6x = for each connected Organic module, each crew member has a 5% chance
-    of turning into a monstrous abomination and gaining the Monstrous trait. // Each
-    occupant of an organic module has a 15% chance of becoming Monstrous at the end
-    of the battle.
+  m_text: '6x = Each occupant of an organic module has a 15% chance of becoming Monstrous
+    at the end of the battle.
+
+    
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -16266,8 +16268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.840408, y: -4.7726417}
-  m_SizeDelta: {x: 324.70178, y: 321.3081}
+  m_AnchoredPosition: {x: -28.840408, y: -4.3478155}
+  m_SizeDelta: {x: 324.7018, y: 312.8116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &390516477
 Canvas:
@@ -16818,8 +16820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000019725, y: 0.9207}
-  m_SizeDelta: {x: 304.3662, y: 352.3284}
+  m_AnchoredPosition: {x: -3.2, y: -1.2268}
+  m_SizeDelta: {x: 304.3662, y: 259.0496}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405414403
 MonoBehaviour:
@@ -16841,12 +16843,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "4x = 60%+ performing crew members fix damaged and unstable modules. //
-    +5%P to all crew members that are 65%P or higher in a scientific module.\r\n\n8x
-    = 75%+ performing crew members add an extra side effect to their module. // +10%P
-    to all crew members that are 65%P or higher in a scientific module.\r\n\n12x
-    = 90%+ performing crew members gain a 2HP shield at battle start // and add a
-    side effect to their module and fix damaged and unstable modules.\r"
+  m_text: '4x =  +5% Performance to each crew member that is 60%P or higher in a
+    scientific module.
+
+
+    8x = 70%+ Performance crew members add an extra side
+    effect to their module.
+
+
+    12x = 80%+ Performance crew members ignore module
+    requirements and gain a 2HP shield at battle start.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -18147,8 +18153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 641.14624, y: 322.90002}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 691.43, y: 336.5}
+  m_SizeDelta: {x: 79.4471, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &437197934
 MonoBehaviour:
@@ -18286,7 +18292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.83921576, g: 0.24705884, b: 0.24705884, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19582,8 +19588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.850193, y: 3.72311}
-  m_SizeDelta: {x: 324.68158, y: 196.34961}
+  m_AnchoredPosition: {x: -28.850193, y: 9.104241}
+  m_SizeDelta: {x: 324.68155, y: 88.72701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &451983930
 Canvas:
@@ -21203,8 +21209,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000017971, y: 0}
-  m_SizeDelta: {x: 304.8487, y: 505.1537}
+  m_AnchoredPosition: {x: -0.000017971, y: 1.8728}
+  m_SizeDelta: {x: 304.8487, y: 480.6082}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494891982
 MonoBehaviour:
@@ -24601,8 +24607,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.840347, y: -7.939141}
-  m_SizeDelta: {x: 324.7019, y: 518.2106}
+  m_AnchoredPosition: {x: -28.840347, y: -7.6559224}
+  m_SizeDelta: {x: 324.70193, y: 512.5462}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &595187338
 Canvas:
@@ -28740,8 +28746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015438, y: 29.1}
-  m_SizeDelta: {x: 303.7441, y: 290.0272}
+  m_AnchoredPosition: {x: -0.000015438, y: 33.754997}
+  m_SizeDelta: {x: 303.7441, y: 214.4392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698769815
 MonoBehaviour:
@@ -28763,13 +28769,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "4x = at battle start 1 random module and occupant are called for assistance
-    and appear in a random slot until the end of the battle. Doesn\u2019t count for
-    stacking bonus.\r\n\n8x = at battle start 2 random module and occupant are called
-    for assistance and appear in a random slot until the end of the battle. Doesn\u2019t
-    count for stacking bonus.\r\n\n12 = at battle start 3 random module and occupant
-    are called for assistance and appear in a random slot until the end of the battle.
-    Doesn\u2019t count for stacking bonus.\r"
+  m_text: '4x = at battle start, 1 temporary random module and occupant are called
+    for assistance and appear in a random slot.
+
+
+    8x = at battle start, 2 temporary
+    random module and occupant are called for assistance and appear in a random slot.
+
+
+    12
+    = at battle start, 3 temporary random module and occupant are called for assistance
+    and appear in a random slot.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -31077,8 +31087,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00002265, y: 102.4}
-  m_SizeDelta: {x: 304.0871, y: 256.2532}
+  m_AnchoredPosition: {x: 0.00002265, y: -0.000015259}
+  m_SizeDelta: {x: 304.0871, y: 482.8272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &734404152
 MonoBehaviour:
@@ -43240,8 +43250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.850193, y: -2.298561}
-  m_SizeDelta: {x: 324.68155, y: 514.2879}
+  m_AnchoredPosition: {x: -28.850193, y: -1.2129}
+  m_SizeDelta: {x: 324.68158, y: 492.5746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1013925776
 Canvas:
@@ -48443,7 +48453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000027746, y: 0}
+  m_AnchoredPosition: {x: -0.000027746, y: 12.3}
   m_SizeDelta: {x: 302.9438, y: 330.2932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148834617
@@ -55571,8 +55581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.825768, y: 14.353769}
-  m_SizeDelta: {x: 324.73108, y: 364.16052}
+  m_AnchoredPosition: {x: -28.825768, y: 10.420824}
+  m_SizeDelta: {x: 324.7311, y: 285.50165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1346538375
 Canvas:
@@ -61630,8 +61640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.825768, y: 0.46044183}
-  m_SizeDelta: {x: 324.7311, y: 216.87912}
+  m_AnchoredPosition: {x: -28.825768, y: 0.69646}
+  m_SizeDelta: {x: 324.73108, y: 212.15883}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1484873578
 Canvas:
@@ -62597,8 +62607,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.75927, y: 2.7429678}
-  m_SizeDelta: {x: 324.57382, y: 188.82211}
+  m_AnchoredPosition: {x: -28.75927, y: -2.04159}
+  m_SizeDelta: {x: 324.5738, y: 93.13092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1525672980
 Canvas:
@@ -63240,8 +63250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000038385, y: 22.9}
-  m_SizeDelta: {x: 310.0359, y: 283.0395}
+  m_AnchoredPosition: {x: 0.000038385, y: -0.0000038146973}
+  m_SizeDelta: {x: 310.0359, y: 358.5641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539292976
 MonoBehaviour:
@@ -63268,8 +63278,7 @@ MonoBehaviour:
     the side effect of one module.\r\n\n8x = After each battle, you can reroll the
     requirement of one module. After each battle, you can remove a module defect.\n\n12x
     = If you have more than 24 modules in your ship, it becomes a mega structure
-    that deflects 20% of attacks.\r // And also for every bench slot, you get an
-    extra bench slot?"
+    that deflects 20% of attacks.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -67313,8 +67322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 530.93, y: -343.06}
-  m_SizeDelta: {x: 60.4265, y: 84.376}
+  m_AnchoredPosition: {x: 529.3, y: -343}
+  m_SizeDelta: {x: 45.2609, y: 64.922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646518869
 MonoBehaviour:
@@ -67363,7 +67372,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.7
+  m_fontSize: 48.25
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -78294,7 +78303,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.00016785, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909856087
 MonoBehaviour:
@@ -78336,7 +78345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: O2 Timer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -78345,8 +78354,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 3643945522
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.8509804}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -82287,8 +82296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000017971, y: 14.210991}
-  m_SizeDelta: {x: 304.8487, y: 172.9168}
+  m_AnchoredPosition: {x: -0.000017971, y: 2.3868}
+  m_SizeDelta: {x: 304.8487, y: 81.3432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010185694
 MonoBehaviour:
@@ -85698,8 +85707,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.87015, y: -14.455837}
-  m_SizeDelta: {x: 324.64172, y: 336.20853}
+  m_AnchoredPosition: {x: -28.87015, y: -15.824721}
+  m_SizeDelta: {x: 324.64172, y: 363.5862}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2111798568
 Canvas:
@@ -86674,8 +86683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.850193, y: -21.366833}
-  m_SizeDelta: {x: 324.68155, y: 472.3831}
+  m_AnchoredPosition: {x: -28.850193, y: -22.074877}
+  m_SizeDelta: {x: 324.68158, y: 486.54388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2129120620
 Canvas:
