@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Fmod/Ammonite/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638137032893084614
+  lastModified: 638137113811548509
   FileSizes:
   - Name: 
-    Value: 1104
+    Value: 1146
   Exists: 1
 --- !u!114 &-3963913332902846271
 MonoBehaviour:
@@ -90,7 +90,7 @@ MonoBehaviour:
   Path: Fmod/Ammonite/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638137032893079593
+  lastModified: 638137113811533504
   FileSizes: []
   Exists: 1
 --- !u!114 &-3628192695612500435
@@ -221,12 +221,13 @@ MonoBehaviour:
   - {fileID: -8099905317313020304}
   - {fileID: -3181912368587626747}
   - {fileID: -3628192695612500435}
+  - {fileID: 2470123052573597208}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3708867045443387618}
   StringsBanks:
   - {fileID: -7739309998612832040}
-  cacheTime: 638137032893084614
+  cacheTime: 638137113811548509
   cacheVersion: 131601
 --- !u!114 &1764428182256140012
 MonoBehaviour:
@@ -254,7 +255,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 128709
+  Length: 122000
+--- !u!114 &2470123052573597208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/LogoFanMade
+  m_EditorClassIdentifier: 
+  Path: event:/Music/LogoFanMade
+  Guid:
+    Data1: -548076703
+    Data2: 1120141122
+    Data3: 2093438881
+    Data4: 310428511
+  Banks:
+  - {fileID: -3708867045443387618}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4125
 --- !u!114 &5589062517303196671
 MonoBehaviour:
   m_ObjectHideFlags: 0

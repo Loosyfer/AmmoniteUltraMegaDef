@@ -3045,6 +3045,7 @@ MonoBehaviour:
   showInfoButton: {fileID: 0}
   slot: {fileID: 0}
   camera: {fileID: 0}
+  beingDrag: 0
 --- !u!114 &4971035606155351638
 MonoBehaviour:
   m_ObjectHideFlags: 0

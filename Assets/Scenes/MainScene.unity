@@ -6337,7 +6337,7 @@ MonoBehaviour:
   m_text: '6x = Each occupant of an organic module has a 15% chance of becoming Monstrous
     at the end of the battle.
 
-    
+
 
 '
   m_isRightToLeft: 0
@@ -56908,7 +56908,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378895831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1.96, y: 1.96, z: 1.96}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -82183,8 +82183,7 @@ MonoBehaviour:
 
 
     LouisF:
-    Assistant Director, Producer, Sound Design Director, Technical Director, Game
-    Designer.'
+    Director, Producer, Sound Design Director, Technical Director, Game Designer.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}

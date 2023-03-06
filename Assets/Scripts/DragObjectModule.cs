@@ -23,6 +23,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObject slot;
     public Camera camera;
     public bool beingDrag;
+    public BattleSystem bS;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         camera = Camera.main;
         script = malla.transform.GetChild(15).GetComponent<GameObjectHolder>();
         showInfoButton = malla.transform.GetChild(15).GetChild(26).gameObject;
+        bS = GameObject.Find("/Battle System").GetComponent<BattleSystem>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -51,6 +53,30 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         beingDrag = true;
         GlobalVariables.objectBeingDragged = true;
         transform.SetSiblingIndex(0);
+        foreach (GameObject module in bS.modules)
+        {
+            if (module != this.gameObject)
+            {
+                module.transform.GetComponent<Canvas>().sortingOrder = 0;
+                module.transform.GetChild(1).GetComponent<Canvas>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(2).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(3).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(4).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(5).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(6).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(7).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(8).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(9).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(10).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(11).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(12).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(10).transform.GetChild(13).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(19).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                module.transform.GetChild(20).GetComponent<Canvas>().sortingOrder = 1;
+            }
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -70,6 +96,30 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         beingDrag = false;
         GlobalVariables.objectBeingDragged = false;
         this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
+        foreach (GameObject module in bS.modules)
+        {
+            if (module != this.gameObject)
+            {
+                module.transform.GetComponent<Canvas>().sortingOrder = 1;
+                module.transform.GetChild(1).GetComponent<Canvas>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(2).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(3).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(4).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(5).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(6).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(7).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(8).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(9).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(10).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(11).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(12).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(10).transform.GetChild(13).GetComponent<SpriteRenderer>().sortingOrder = 3;
+                module.transform.GetChild(19).GetComponent<SpriteRenderer>().sortingOrder = 4;
+                module.transform.GetChild(20).GetComponent<Canvas>().sortingOrder = 5;
+            }
+        }
 
     }
 
