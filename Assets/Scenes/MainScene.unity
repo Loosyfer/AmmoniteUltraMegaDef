@@ -956,7 +956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.17042542, y: -510.8}
+  m_AnchoredPosition: {x: 0.17041016, y: -510.8}
   m_SizeDelta: {x: 174.8109, y: 257.5617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20080866
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -15778,6 +15778,7 @@ GameObject:
   - component: {fileID: 383572965}
   - component: {fileID: 383572966}
   - component: {fileID: 383572967}
+  - component: {fileID: 383572968}
   m_Layer: 0
   m_Name: Battle System
   m_TagString: Untagged
@@ -15898,6 +15899,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShipHP: {fileID: 605540724}
   EnemyHP: {fileID: 461726771}
+--- !u!114 &383572968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383572959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35bbc9c8991da2046b798d72916db817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &384327064
 GameObject:
   m_ObjectHideFlags: 0
@@ -61019,7 +61032,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 185840769}
   m_FillRect: {fileID: 1680716471}
   m_HandleRect: {fileID: 185840768}

@@ -18,8 +18,10 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObject malla;
     private Vector3 mousePositionOffset;
     public GameObject member;
-
+    public bool beingDrag;
     public Camera camera;
+    public GameObject hoverPanel1;
+    public GameObject hoverPanel2;
 
     private void Awake()
     {
@@ -45,6 +47,10 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         }
         this.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(55f, 55f);
         this.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(335, 190);
+        beingDrag = true;
+        hoverPanel1.SetActive(false);
+        hoverPanel2.SetActive(false);
+        GlobalVariables.objectBeingDragged = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -58,6 +64,10 @@ public class DragObjectObject : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         camera.GetComponent<CameraZoomController>().movingOn = false;
+        beingDrag = false;
+        hoverPanel1.SetActive(true);
+        hoverPanel2.SetActive(true);
+        GlobalVariables.objectBeingDragged = false;
     }
 
     public void OnPointerDown(PointerEventData eventData)

@@ -22,8 +22,11 @@ public class HoverOver : MonoBehaviour //, IPointerEnterHandler, IPointerExitHan
     {
         if (showInfoButton.transform.GetComponent<ShowInfoButton>().showInfo)
         {
-            HoverPanel.SetActive(true);
-            HoverPanel2.SetActive(true);
+            if (!this.gameObject.GetComponent<DragObjectObject>().beingDrag && !GlobalVariables.objectBeingDragged)
+            {
+                HoverPanel.SetActive(true);
+                HoverPanel2.SetActive(true);
+            }
         }
     }
 

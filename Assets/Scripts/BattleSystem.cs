@@ -344,12 +344,13 @@ public class BattleSystem : MonoBehaviour
         }
 
         turn++;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn");
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/Turn");
         turnCounter.transform.GetComponent<TextMeshProUGUI>().text = turn.ToString();
         if ((turn % 2) == 1 && enemyHPBar.GetComponent<Slider>().value != 0)
         {
             playerHPBar.GetComponent<DecreaseHPShip>().ReadStringInput(((monster.GetComponent<MonsterHUD>().dPT) * -1).ToString());
             monster.GetComponent<Animator>().Play("Monster_Attack");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/MonsterAttack");
             List<GameObject> activatedModules = new List<GameObject>();
             for (int j = 0; j < 36; j++)
             {
@@ -363,6 +364,7 @@ public class BattleSystem : MonoBehaviour
         }
         if ((turn % 2) == 0)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Effects/ShipAttack");
             enemyHPBar.GetComponent<DecreaseHP>().ReadStringInput(((playerBattleHUD.GetComponent<TotalDamage>().sum) * -1).ToString());
             if (enemyHPBar.GetComponent<Slider>().value == 0)
                 monster.GetComponent<Animator>().Play("Monster_Die");

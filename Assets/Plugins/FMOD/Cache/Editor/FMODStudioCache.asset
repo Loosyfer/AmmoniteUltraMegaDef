@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Fmod/Ammonite/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638102875011734529
+  lastModified: 638136943042830404
   FileSizes:
   - Name: 
-    Value: 1008
+    Value: 1104
   Exists: 1
 --- !u!114 &-3963913332902846271
 MonoBehaviour:
@@ -74,7 +74,7 @@ MonoBehaviour:
   - {fileID: -1475213665126609009}
   MinDistance: 1
   MaxDistance: 20
-  Length: 343107
+  Length: 341739
 --- !u!114 &-3708867045443387618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,9 +90,63 @@ MonoBehaviour:
   Path: Fmod/Ammonite/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638102875011499488
+  lastModified: 638136943042820402
   FileSizes: []
   Exists: 1
+--- !u!114 &-3628192695612500435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Effects/MonsterAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/MonsterAttack
+  Guid:
+    Data1: 572288055
+    Data2: 1162996712
+    Data3: -880428872
+    Data4: -641936741
+  Banks:
+  - {fileID: -3708867045443387618}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-3181912368587626747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Effects/ShipAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/ShipAttack
+  Guid:
+    Data1: 2127257371
+    Data2: 1153102211
+    Data3: -118810495
+    Data4: -797755548
+  Banks:
+  - {fileID: -3708867045443387618}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-2387061253648985111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,12 +219,14 @@ MonoBehaviour:
   - {fileID: 5589062517303196671}
   - {fileID: -2387061253648985111}
   - {fileID: -8099905317313020304}
+  - {fileID: -3181912368587626747}
+  - {fileID: -3628192695612500435}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3708867045443387618}
   StringsBanks:
   - {fileID: -7739309998612832040}
-  cacheTime: 638102875011734529
+  cacheTime: 638136943042830404
   cacheVersion: 131601
 --- !u!114 &1764428182256140012
 MonoBehaviour:

@@ -22,6 +22,7 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObject showInfoButton;
     public GameObject slot;
     public Camera camera;
+    public bool beingDrag;
 
     private void Awake()
     {
@@ -46,12 +47,17 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
             slot.GetComponent<ItemSlot>().module = null;
             slot = null;
         }
+        infoPanels.gameObject.SetActive(false);
+        beingDrag = true;
+        GlobalVariables.objectBeingDragged = true;
+        transform.SetSiblingIndex(0);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.position = GetMouseWorldPosition() + mousePositionOffset;
-        
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -2);
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -60,6 +66,11 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         //GetComponent<Image>().raycastTarget = true;
         camera.GetComponent<CameraZoomController>().movingOn = false;
         StartCoroutine(WaitAfterClickUp());
+        infoPanels.gameObject.SetActive(true);
+        beingDrag = false;
+        GlobalVariables.objectBeingDragged = false;
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -167,11 +178,14 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     {
         if (showInfoButton.transform.GetComponent<ShowInfoButton>().showInfo)
         {
-            infoPanels.gameObject.SetActive(true);
-            if (this.transform.GetComponent<ModuleHUD>().reqType == 2)
+            if (!beingDrag && !GlobalVariables.objectBeingDragged)
             {
-                infoPanels.transform.GetChild(2).gameObject.SetActive(true);
-                infoPanels.transform.GetChild(3).gameObject.SetActive(true);
+                infoPanels.gameObject.SetActive(true);
+                if (this.transform.GetComponent<ModuleHUD>().reqType == 2)
+                {
+                    infoPanels.transform.GetChild(2).gameObject.SetActive(true);
+                    infoPanels.transform.GetChild(3).gameObject.SetActive(true);
+                }
             }
         }
     }

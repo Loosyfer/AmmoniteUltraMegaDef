@@ -15,5 +15,7 @@ public class DecreaseHP : MonoBehaviour
         inputValue = float.Parse(s);
         enemyHP.value += inputValue;
         this.transform.parent.GetChild(0).GetChild(3).GetComponent<Text>().text = this.transform.parent.GetChild(0).GetComponent<Slider>().value.ToString() + " HP / " + monster.transform.GetComponent<MonsterHUD>().health + " HP";
+        if (enemyHP.value <= 0)
+            monster.GetComponent<Animator>().Play("Monster_Die");
     }
 }

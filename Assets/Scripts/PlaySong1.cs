@@ -13,8 +13,8 @@ public class PlaySong1 : MonoBehaviour
     void Start()
     {
         song = 0;
-        //instance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Demo");
-        //instance.start();
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Demo");
+        instance.start();
     }
 
 

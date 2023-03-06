@@ -21,6 +21,7 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     public GameObject item;
     public GameObject showInfoButton;
     public GameObject slot;
+    private bool beingDrag;
 
     private void Awake()
     {
@@ -45,6 +46,11 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
             slot.GetComponent<ItemSlot>().member = null;
             slot = null;
         }
+        beingDrag = true;
+        this.transform.GetChild(4).gameObject.SetActive(false);
+        this.transform.GetChild(23).gameObject.SetActive(false);
+        GlobalVariables.objectBeingDragged = true;
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -60,6 +66,11 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         GetComponent<Image>().raycastTarget = true;
         camera.GetComponent<CameraZoomController>().movingOn = false;
         StartCoroutine(WaitAfterClickUp());
+        beingDrag = false;
+        this.transform.GetChild(4).gameObject.SetActive(true);
+        if (this.transform.GetComponent<MemberHUD>().secTrait.text != "")
+            this.transform.GetChild(23).gameObject.SetActive(true);
+        GlobalVariables.objectBeingDragged = false;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -148,9 +159,12 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
     {
         if (showInfoButton.transform.GetComponent<ShowInfoButton>().showInfo)
         {
-            this.transform.GetChild(4).gameObject.SetActive(true);
-            if (this.transform.GetComponent<MemberHUD>().secTrait.text != "")
-                this.transform.GetChild(23).gameObject.SetActive(true);
+            if (!beingDrag && !GlobalVariables.objectBeingDragged)
+            {
+                this.transform.GetChild(4).gameObject.SetActive(true);
+                if (this.transform.GetComponent<MemberHUD>().secTrait.text != "")
+                    this.transform.GetChild(23).gameObject.SetActive(true);
+            }
         }
     }
 

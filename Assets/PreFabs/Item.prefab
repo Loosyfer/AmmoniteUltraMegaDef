@@ -172,7 +172,10 @@ MonoBehaviour:
   script: {fileID: 0}
   malla: {fileID: 0}
   member: {fileID: 0}
+  beingDrag: 0
   camera: {fileID: 0}
+  hoverPanel1: {fileID: 969179967407917221}
+  hoverPanel2: {fileID: 7179956806374799991}
 --- !u!223 &2252252371515128433
 Canvas:
   m_ObjectHideFlags: 0
