@@ -49442,8 +49442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5402, y: -116.505035}
-  m_SizeDelta: {x: 604.4318, y: 778.5753}
+  m_AnchoredPosition: {x: 1.5402, y: -120.45705}
+  m_SizeDelta: {x: 604.4318, y: 806.1154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172000656
 MonoBehaviour:
@@ -49467,7 +49467,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -49478,21 +49478,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Start with 15 Fuel. \n\nEach node has a 18% chance of slot, and 15% chance
-    of +1 Fuel.\n\nPok\xE9mon box where all the \"impossible to fit\" stuff goes,
-    and if we ever make space for it, it comes back to the slot/bench?\n\nHangar:\n100%:
-    2 upgrades -1 scrap discount.\n20%: one 2 for 1.\n\nCrew Members in the bench
-    can't do their effects.\n\nAlpha enemies: 1-50 double DPT, 51-100 double HP.\n\nAutomatised
-    modules carry an automatic 50%P that doesn\u2019t change. If they have an occupant,
-    +10%P.\n\nShip slots can be expanded in any direction/inside a given ship layout\r.\n\nAll
-    modules have requirements.\n\nStart with 1 slot and 3 bench, and bench heals
-    +2HP per battle.\n\nUnstable is now 25% chance of explosion\r.\n\nShip starts
-    with 1000HP.\n\n6 Fuel is the starting and max amount.\n\n2 Emporiums hidden
-    per level. // Only one. This depends on how rewarded it is to scan the whole
-    level. Right now it's very rewarding so maybe 1 Emporium, in the future if it's
-    not rewarding maybe 2 Emporium.\n\nUpgrade ship processor = 50% chance enemy
-    yields 1 item\r.\nUpgrade speed is unavailable\r.\nUpgrade recycle = if module
-    explodes, + 1 scrap and 2 coins.\n"
+  m_Text: "Pre \"<-req here\", there's only normal enemies and shops, nothing else.\n\nThere's
+    1 slot adjacent to starting point, and another two further down on each side
+    of the map, so you always go through 2 slots.\n\nEach node has a 18% chance of
+    slot, and 15% chance of +1 Fuel.\n\nWater-flooding and Excrement-flooding are
+    the same, and only 4 ailments: Asleep, Frozen, Sick and Lunatic.\n\nPok\xE9mon
+    box where all the \"impossible to fit\" stuff goes, and if we ever make space
+    for it, it comes back to the slot/bench.\n\nThings that happen in the same turn
+    happen from top-left to top-right order, prioritizing item -> crew member ->
+    module -> basic attack.\n\n1 hidden Emporium per level.\n\nWhen entering a new
+    level: +500 Ship HP, top up Fuel tank and +1HP to each crew member.\n\nStart
+    with 15 Fuel.\n\nCrew Members in the bench can't do their effects.\n\nAlpha enemies:
+    1-50 double DPT, 51-100 double HP.\n\nAutomatised modules carry an automatic
+    50%P that doesn\u2019t change. If they have an occupant, +10%P.\n\nShip slots
+    can be expanded in any direction/inside a given ship layout\r.\n\nAll modules
+    have requirements.\n\nStart with 1 slot and 3 bench, and bench heals +2HP per
+    battle.\n\nShip starts with 1000HP.\n\nWhen rerolling profession, do an RNG and
+    if the result is 98 or more, you get CEO/Explorer/WG, if not, you get a common
+    profession."
 --- !u!222 &1172000657
 CanvasRenderer:
   m_ObjectHideFlags: 0
