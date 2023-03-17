@@ -49478,24 +49478,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Pre \"<-req here\", there's only normal enemies and shops, nothing else.\n\nThere's
-    1 slot adjacent to starting point, and another two further down on each side
-    of the map, so you always go through 2 slots.\n\nEach node has a 18% chance of
-    slot, and 15% chance of +1 Fuel.\n\nWater-flooding and Excrement-flooding are
-    the same, and only 4 ailments: Asleep, Frozen, Sick and Lunatic.\n\nPok\xE9mon
+  m_Text: "Upgrade tree has a different selection of branches every run.\n\nPre \"<-req
+    here\", there's only normal enemies and shops, nothing else.\n\nThere's 1 slot
+    adjacent to starting point, and another two further down on each side of the
+    map, so you always go through 2 slots.\n\nEach node has a 15% chance of slot,
+    and 15% chance of +1 Fuel.\n\nYou can save something in a market to appear in
+    the randomise selection of the next market.\n\nHangars don't heal.\n\nThere's
+    only Flooding and Set on Fire, and only 4 ailments: Asleep, Sick and Lunatic.\n\nPok\xE9mon
     box where all the \"impossible to fit\" stuff goes, and if we ever make space
     for it, it comes back to the slot/bench.\n\nThings that happen in the same turn
     happen from top-left to top-right order, prioritizing item -> crew member ->
-    module -> basic attack.\n\n1 hidden Emporium per level.\n\nWhen entering a new
-    level: +500 Ship HP, top up Fuel tank and +1HP to each crew member.\n\nStart
-    with 15 Fuel.\n\nCrew Members in the bench can't do their effects.\n\nAlpha enemies:
-    1-50 double DPT, 51-100 double HP.\n\nAutomatised modules carry an automatic
-    50%P that doesn\u2019t change. If they have an occupant, +10%P.\n\nShip slots
-    can be expanded in any direction/inside a given ship layout\r.\n\nAll modules
-    have requirements.\n\nStart with 1 slot and 3 bench, and bench heals +2HP per
-    battle.\n\nShip starts with 1000HP.\n\nWhen rerolling profession, do an RNG and
-    if the result is 98 or more, you get CEO/Explorer/WG, if not, you get a common
-    profession."
+    module -> basic attack.\n\n1 hidden Emporium per level.\n\nBase Fuel tank capacity
+    is 15. After beating boss, you can choose when to enter next level.\n\nCrew Members
+    in the bench can't do their effects.\n\nAlpha enemies: 1-50 x1.6 DPT, 51-100
+    x1.6 HP.\n\nAutomatised modules carry an automatic 50%P that doesn\u2019t change.
+    If they have an occupant, +10%P.\n\nShip slots are confined to a pre-determined
+    ship layout.\n\nAll modules have requirements.\n\nStart with 1 slot and 3 bench,
+    and bench heals +2HP per battle.\n\nShip starts with 500 HP.\n\nWhen rerolling
+    profession, do an RNG and if the result is 98 or more, you get CEO/Explorer/WG,
+    if not, you get a common profession."
 --- !u!222 &1172000657
 CanvasRenderer:
   m_ObjectHideFlags: 0
