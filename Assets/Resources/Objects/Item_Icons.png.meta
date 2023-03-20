@@ -339,27 +339,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Item_Icons_10
-      rect:
-        serializedVersion: 2
-        x: 3152
-        y: 3785
-        width: 306
-        height: 304
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a26a67568f03dd441b1ac0c26de26e9d
-      internalID: 392519185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Item_Icons_11
       rect:
         serializedVersion: 2

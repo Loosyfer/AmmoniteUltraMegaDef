@@ -783,6 +783,21 @@ public class BattleSystem : MonoBehaviour
                 break;
         }
 
+        int u = UnityEngine.Random.Range(0, 100);
+        switch (u)
+        {
+            case int h when (h >= 0 && h < 86):
+                int r = UnityEngine.Random.Range(0, 6);
+                go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                break;
+            case int h when (h >= 86 && h < 96):
+                go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(6, 10)).gameObject.SetActive(true);
+                break;
+            case int h when (h >= 96 && h <= 100):
+                go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(11, 15)).gameObject.SetActive(true);
+                    break;
+        }
+
         if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)
         {
             Yrt.reqActive = true;
@@ -1345,6 +1360,21 @@ public class BattleSystem : MonoBehaviour
                     break;
                 case (ModuleType)5:
                     Yrt.typeDetails.text = modInfo.typeStacking[5];
+                    break;
+            }
+
+            int w = UnityEngine.Random.Range(0, 100);
+            switch (w)
+            {
+                case int u when (u >= 0 && u < 86):
+                    int r = UnityEngine.Random.Range(0, 6);
+                    go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                    break;
+                case int u when (u >= 86 && u < 96):
+                    go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(6, 10)).gameObject.SetActive(true);
+                    break;
+                case int u when (u >= 96 && u <= 100):
+                    go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(11, 15)).gameObject.SetActive(true);
                     break;
             }
             if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)
