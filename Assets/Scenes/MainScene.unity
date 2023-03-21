@@ -13932,8 +13932,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.850193, y: -18.582893}
-  m_SizeDelta: {x: 324.68155, y: 416.72937}
+  m_AnchoredPosition: {x: -28.850193, y: -14.467531}
+  m_SizeDelta: {x: 324.68158, y: 334.4221}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &332319249
 Canvas:
@@ -16577,7 +16577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Biologist (4/8/12)
+  m_text: Biologist (6/12)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -35303,8 +35303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000055268, y: 60.1}
-  m_SizeDelta: {x: 304.0871, y: 286.8977}
+  m_AnchoredPosition: {x: -0.000055268, y: 1.4698}
+  m_SizeDelta: {x: 304.0871, y: 330.2559}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827772341
 MonoBehaviour:
@@ -35326,12 +35326,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Once per Biologist, can build an organic A module at the end of the battle.-\r\n\n4x
-    = After each battle, receive an Organic B module based on the defeated enemy.\r\n\n8x
-    = If an organic module is destroyed, recycle it into another random organic module.\r\n\n12x
-    = at battle start, summon the previously defeated monster as a zombie by your
-    side with 33% of their DPT and 10% of their HP, and it absorbs hits until its
-    body disintegrates.\r"
+  m_text: 'Once per Biologist, can buy an organic B module in the shop for 4 coins
+    from a defeated non-boss enemy.
+
+
+    6x = Once per Biologist, can buy an organic
+    B module in the shop for 8 coins from a defeated boss.
+
+
+    12x = at battle
+    start, summon the previously defeated monster as a zombie by your side with 33%
+    of their DPT and 10% of their HP, and it absorbs hits until its body disintegrates.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
