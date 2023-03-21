@@ -18,14 +18,14 @@ public class ItemSpawner : MonoBehaviour
     void Start()
     {
         Sprite[] all = Resources.LoadAll<Sprite>("Objects/Item_Icons");
-        for (int i = 0; i < 165; i++)
+        for (int i = 0; i < 154; i++)
         {
             objects.sprites[i] = all[i];
         }
         Sprite[] all2 = Resources.LoadAll<Sprite>("Objects/Item_Icons_2");
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < 51; i++)
         {
-            objects.sprites[i + 165] = all2[i];
+            objects.sprites[i + 154] = all2[i];
         }
 
         itemsData = Resources.Load<TextAsset>("Excel/Items").text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
@@ -43,9 +43,9 @@ public class ItemSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        int i = UnityEngine.Random.Range(0, 225);
+        int i = UnityEngine.Random.Range(0, 205);
         while (itemsExcel.myItems.items[i].type != "")
-            i = UnityEngine.Random.Range(0, 225);
+            i = UnityEngine.Random.Range(0, 205);
         GameObject objeto = Instantiate(objectPrefab, new Vector3(618 , 861 , 0), Quaternion.identity) as GameObject;
         objeto.GetComponent<Image>().sprite = objects.sprites[i];
         objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;
