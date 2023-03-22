@@ -288,6 +288,6 @@ public class MemInfo : ScriptableObject
                                               2, 1, 1, 0, 1, 2, 0, 0, 0, 1,
                                               1, 2, 2, 1, 2, 2, 1, 1, 2, 1,
                                               0, 0, 0, 0, 0, 0};
-    public int[] profPrice = new int[] { 5, 5, 6, 5, 5, 4, 5, 8, 5, 5, 8, 8, 5, 6 };
+    public int[] profPrice = new int[] { 5, 5, 5, 5, 5, 4, 5, 8, 5, 5, 8, 8, 5, 5 };
 
 }

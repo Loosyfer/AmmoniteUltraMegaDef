@@ -31,6 +31,7 @@ public class EventGenerator : MonoBehaviour
         tableSize = (eventsData.Length / 4) - 1;
         eventsExcel.myEvents.events = new EventExcel.Event[tableSize];
         chances = new int[numOfEvents - 1];
+        chancesAccumulative = new int[numOfEvents - 1];
 
         for (int j = 0; j < numOfEvents - 1; j++)
         {
@@ -58,7 +59,7 @@ public class EventGenerator : MonoBehaviour
         }
 
         chancesAccumulative[0] = chances[0];
-        for (int i = 1; i < chances.Length; i++)
+        for (int i = 1; i < numOfEvents; i++)
         {
             chancesAccumulative[i] = chancesAccumulative[i - 1] + chances[i];
         }

@@ -14,7 +14,7 @@ public class RerollFirstTrait : MonoBehaviour
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
             {
-                int random = randomTrait.Next(0, 224);
+                int random = randomTrait.Next(0, 210);
                 memberorModule = this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.trait.text = script.memExcel.myMembers.members[random].trait;
