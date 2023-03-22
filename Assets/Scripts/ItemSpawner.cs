@@ -13,6 +13,7 @@ public class ItemSpawner : MonoBehaviour
     public List<int> objectListId = new List<int>();
     public ItemsExcel itemsExcel;
     private string[] itemsData;
+    private System.Random randomItems = new System.Random();
 
     // Start is called before the first frame update
     void Start()
@@ -43,9 +44,9 @@ public class ItemSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        int i = UnityEngine.Random.Range(0, 205);
+        int i = randomItems.Next(0, 205);
         while (itemsExcel.myItems.items[i].type != "")
-            i = UnityEngine.Random.Range(0, 205);
+            i = randomItems.Next(0, 205);
         GameObject objeto = Instantiate(objectPrefab, new Vector3(618 , 861 , 0), Quaternion.identity) as GameObject;
         objeto.GetComponent<Image>().sprite = objects.sprites[i];
         objeto.GetComponent<ObjectHUD>().name = itemsExcel.myItems.items[i].name;

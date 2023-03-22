@@ -6,6 +6,7 @@ public class RerollFirstTrait : MonoBehaviour
 {
     private GameObject memberorModule;
     public BattleSystem script;
+    private System.Random randomTrait = new System.Random();
 
     public void Reroll()
     {
@@ -13,7 +14,7 @@ public class RerollFirstTrait : MonoBehaviour
         {
             if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.tag == "Member")
             {
-                int random = Random.Range(0, 224);
+                int random = randomTrait.Next(0, 224);
                 memberorModule = this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember;
                 MemberHUD memberHUD = memberorModule.GetComponent<MemberHUD>();
                 memberHUD.trait.text = script.memExcel.myMembers.members[random].trait;

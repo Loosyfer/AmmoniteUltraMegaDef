@@ -59,6 +59,9 @@ public class BattleSystem : MonoBehaviour
     public GameObject ReqOnOff;
     public GameObject surprise;
     public GameObject itemSpawner;
+    private System.Random randomModules = new System.Random();
+    private System.Random randomTraits = new System.Random();
+    private System.Random randomProfessions = new System.Random();
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -1326,10 +1329,10 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 259);
+            int j = randomModules.Next(0, 259);
             int k = UnityEngine.Random.Range(0, 11);
             while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6)
-                j = UnityEngine.Random.Range(0, 259);
+                j = randomModules.Next(0, 259);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
@@ -1693,10 +1696,10 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = UnityEngine.Random.Range(0, 224);
+            int j = randomTraits.Next(0, 224);
             int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = 0;
-            float random = UnityEngine.Random.Range(0f, 1000f);
+            float random = (float)randomProfessions.NextDouble()*1000;
             if (random < 90f)
                 k = 0;
             if (random >= 90f && random < 180f)
