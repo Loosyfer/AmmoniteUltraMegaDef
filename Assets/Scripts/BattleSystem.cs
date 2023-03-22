@@ -787,18 +787,24 @@ public class BattleSystem : MonoBehaviour
         }
 
         int u = UnityEngine.Random.Range(0, 100);
+        int r;
         switch (u)
         {
             case int h when (h >= 0 && h < 86):
-                int r = UnityEngine.Random.Range(0, 6);
+                r = UnityEngine.Random.Range(0, 6);
                 go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                Yrt.energy = r;
                 break;
             case int h when (h >= 86 && h < 96):
-                go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(6, 10)).gameObject.SetActive(true);
+                r = UnityEngine.Random.Range(6, 10);
+                go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                Yrt.energy = r;
                 break;
             case int h when (h >= 96 && h <= 100):
-                go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(11, 15)).gameObject.SetActive(true);
-                    break;
+                r = UnityEngine.Random.Range(11, 15);
+                go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                Yrt.energy = r;
+                break;
         }
 
         if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)
@@ -1367,17 +1373,23 @@ public class BattleSystem : MonoBehaviour
             }
 
             int w = UnityEngine.Random.Range(0, 100);
+            int r;
             switch (w)
             {
                 case int u when (u >= 0 && u < 86):
-                    int r = UnityEngine.Random.Range(0, 6);
+                    r = UnityEngine.Random.Range(0, 6);
                     go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                    Yrt.energy = r;
                     break;
                 case int u when (u >= 86 && u < 96):
+                    r = UnityEngine.Random.Range(6, 10);
                     go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(6, 10)).gameObject.SetActive(true);
+                    Yrt.energy = r;
                     break;
                 case int u when (u >= 96 && u <= 100):
-                    go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(11, 15)).gameObject.SetActive(true);
+                    r = UnityEngine.Random.Range(11, 15);
+                    go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                    Yrt.energy = r;
                     break;
             }
             if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)

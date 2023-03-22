@@ -20,6 +20,7 @@ public class ChangeEnergy : MonoBehaviour
                 energyIndex = 0;
             else
                 energyIndex++;
+            this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.GetComponent<ModuleHUD>().energy = energyIndex;
         }
     }
 }

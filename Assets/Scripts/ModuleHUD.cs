@@ -43,6 +43,7 @@ public class ModuleHUD : MonoBehaviour
     public int reqId;
     public bool reqActive;
     public GameObject priceObject;
+    public int energy;
 
     public void SetHUD(Module module)
     {
