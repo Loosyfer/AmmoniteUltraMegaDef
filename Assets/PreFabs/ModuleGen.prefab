@@ -3433,6 +3433,7 @@ MonoBehaviour:
   reqId: 0
   reqActive: 0
   priceObject: {fileID: 1327145551661578455}
+  energy: 0
 --- !u!225 &5252401854985802036
 CanvasGroup:
   m_ObjectHideFlags: 0

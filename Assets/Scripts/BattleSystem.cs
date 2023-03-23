@@ -740,7 +740,7 @@ public class BattleSystem : MonoBehaviour
             return;
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
-        int k = UnityEngine.Random.Range(0, 11);
+        int k = UnityEngine.Random.Range(0, 12);
         if (!int.TryParse(s, out int index))
         {
             Debug.Log("Try inputting a valid integer");
@@ -790,17 +790,17 @@ public class BattleSystem : MonoBehaviour
         int r;
         switch (u)
         {
-            case int h when (h >= 0 && h < 86):
+            case int h when (h >= 0 && h < 49):
                 r = UnityEngine.Random.Range(0, 6);
                 go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                 Yrt.energy = r;
                 break;
-            case int h when (h >= 86 && h < 96):
+            case int h when (h >= 49 && h < 98):
                 r = UnityEngine.Random.Range(6, 10);
                 go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                 Yrt.energy = r;
                 break;
-            case int h when (h >= 96 && h <= 100):
+            case int h when (h >= 98 && h <= 100):
                 r = UnityEngine.Random.Range(11, 15);
                 go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                 Yrt.energy = r;
@@ -844,7 +844,7 @@ public class BattleSystem : MonoBehaviour
                             }
                             break;
                         case 2:
-                            go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                            //go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
                             Yrt.reqId = 5;
                             break;
                         case 3:
@@ -852,17 +852,8 @@ public class BattleSystem : MonoBehaviour
                             Yrt.reqId = 6;
                             break;
                         case 4:
-                            int q = UnityEngine.Random.Range(0, 2);
-                            if (q == 0)
-                            {
                                 go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
                                 Yrt.reqId = 7;
-                            }
-                            else
-                            {
-                                go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
-                                Yrt.reqId = 8;
-                            }
                             break;
                         case 5:
                             int p = UnityEngine.Random.Range(0, 4);
@@ -901,6 +892,10 @@ public class BattleSystem : MonoBehaviour
                         case 9:
                             go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
                             Yrt.reqId = 12;
+                            break;
+                        case 11:
+                            go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                            Yrt.reqId = 8;
                             break;
                     }
                     break;
@@ -1336,7 +1331,7 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < cyclelength; i++)
         {
             int j = randomModules.Next(0, 235);
-            int k = UnityEngine.Random.Range(0, 11);
+            int k = UnityEngine.Random.Range(0, 12);
             while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6)
                 j = randomModules.Next(0, 235);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
@@ -1376,17 +1371,17 @@ public class BattleSystem : MonoBehaviour
             int r;
             switch (w)
             {
-                case int u when (u >= 0 && u < 86):
+                case int u when (u >= 0 && u < 49):
                     r = UnityEngine.Random.Range(0, 6);
                     go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                     Yrt.energy = r;
                     break;
-                case int u when (u >= 86 && u < 96):
+                case int u when (u >= 49 && u < 98):
                     r = UnityEngine.Random.Range(6, 10);
                     go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(6, 10)).gameObject.SetActive(true);
                     Yrt.energy = r;
                     break;
-                case int u when (u >= 96 && u <= 100):
+                case int u when (u >= 98 && u <= 100):
                     r = UnityEngine.Random.Range(11, 15);
                     go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                     Yrt.energy = r;
@@ -1429,7 +1424,7 @@ public class BattleSystem : MonoBehaviour
                                 }
                                 break;
                             case 2:
-                                go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
+                                //go.transform.GetChild(11).GetChild(8).gameObject.SetActive(true);
                                 Yrt.reqId = 5;
                                 break;
                             case 3:
@@ -1437,17 +1432,8 @@ public class BattleSystem : MonoBehaviour
                                 Yrt.reqId = 6;
                                 break;
                             case 4:
-                                int h = UnityEngine.Random.Range(0, 2);
-                                if (h == 0)
-                                {
                                     go.transform.GetChild(11).GetChild(2).gameObject.SetActive(true);
-                                    Yrt.reqId = 7;
-                                }
-                                else
-                                {
-                                    go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
-                                    Yrt.reqId = 8;
-                                }
+                                    Yrt.reqId = 7; 
                                 break;
                             case 5:
                                 int q = UnityEngine.Random.Range(0, 4);
@@ -1486,6 +1472,10 @@ public class BattleSystem : MonoBehaviour
                             case 9:
                                 go.transform.GetChild(11).GetChild(11).gameObject.SetActive(true);
                                 Yrt.reqId = 12;
+                                break;
+                            case 11:
+                                    go.transform.GetChild(11).GetChild(3).gameObject.SetActive(true);
+                                    Yrt.reqId = 8;
                                 break;
                         }
                         break;
