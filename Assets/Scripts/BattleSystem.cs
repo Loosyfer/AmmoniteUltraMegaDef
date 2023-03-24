@@ -741,6 +741,8 @@ public class BattleSystem : MonoBehaviour
         GameObject canvas = GameObject.Find("/Malla");
         GameObject modulesFolder = canvas.transform.GetChild(27).gameObject;
         int k = UnityEngine.Random.Range(0, 12);
+        while(k==2)
+            k = UnityEngine.Random.Range(0, 12);
         if (!int.TryParse(s, out int index))
         {
             Debug.Log("Try inputting a valid integer");
@@ -1332,6 +1334,8 @@ public class BattleSystem : MonoBehaviour
         {
             int j = randomModules.Next(0, 235);
             int k = UnityEngine.Random.Range(0, 12);
+            while (k == 2)
+                k = UnityEngine.Random.Range(0, 12);
             while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6)
                 j = randomModules.Next(0, 235);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
