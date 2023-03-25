@@ -470,8 +470,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.867054, y: -8.24144}
-  m_SizeDelta: {x: 324.64853, y: 358.12885}
+  m_AnchoredPosition: {x: -28.867054, y: -4.8415556}
+  m_SizeDelta: {x: 324.6485, y: 290.13126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &15282836
 Canvas:
@@ -6311,8 +6311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.4, y: -0.0000076294}
-  m_SizeDelta: {x: 298.72, y: 83.5982}
+  m_AnchoredPosition: {x: -4.7, y: -0.0000076294}
+  m_SizeDelta: {x: 298.72, y: 228.0606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147294335
 MonoBehaviour:
@@ -6334,12 +6334,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '6x = Each occupant of an organic module has a 15% chance of becoming Monstrous
+  m_text: '4x = each occupant of an organic module has a 15% chance of becoming Monstrous
     at the end of the battle.
 
 
+    8x = Monstrous crew members in this cluster deal
+    +25 damage
 
-'
+
+    12x = Monstrous crew members in this cluster deal +50 damage'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -20963,9 +20966,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "4x = 10 ship health for every module at battle start.\r\n\n8x = 15 ship
-    health for every module at battle start.\r\n\n12x = 20 ship health for every
-    module in your ship at battle start.\r"
+  m_text: "4x = 10 ship health for every connected defensive module.\r\n\n8x = 15
+    ship health for every connected defensive module.\r\n\n12x = 20 ship health for
+    every connected defensive module.\r\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -49250,8 +49253,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000027746, y: 12.3}
-  m_SizeDelta: {x: 302.9438, y: 330.2932}
+  m_AnchoredPosition: {x: -0.000027746, y: 0.000011444}
+  m_SizeDelta: {x: 302.9438, y: 284.9614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148834617
 MonoBehaviour:
@@ -49273,12 +49276,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Instead of normal autos, Wizards cast magic beams that deal 5 extra dpt
-    // 20% more dpt.\n\n6x = Once per Wizard, after spending a battle in a normal
-    module, it transforms into a random magic module. // Once per Wizard, at the
-    end of the battle creates one random magic module.\n\n12x = After each battle,
-    choose one Wizard to be elevated to Archwizard, healing to full HP and gaining
-    a random Spell.\r"
+  m_text: "Instead of normal autos, Wizards cast magic beams that deal 3 extra dpt.\n\n6x
+    = Once per Wizard, at the end of the battle it can turn its module into a random
+    magic module.\n\n12x = After each battle, choose one Wizard to be elevated to
+    Archwizard, healing to full HP and gaining a random Spell.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
@@ -50291,7 +50292,7 @@ MonoBehaviour:
     x1.6 HP.\n\nAutomatised modules carry an automatic 50%P that doesn\u2019t change.
     If they have an occupant, +10%P.\n\nShip slots are confined to a pre-determined
     ship layout.\n\nAll modules have requirements.\n\nStart with 1 slot and 3 bench,
-    and bench heals +2HP per battle.\n\nShip starts with 500 HP.\n\nWhen rerolling
+    and bench heals +2HP per battle.\n\nShip starts with 1200 HP.\n\nWhen rerolling
     profession, do an RNG and if the result is 98 or more, you get CEO/Explorer/WG,
     if not, you get a common profession."
 --- !u!222 &1172000657
@@ -63441,8 +63442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.75927, y: -2.04159}
-  m_SizeDelta: {x: 324.5738, y: 93.13092}
+  m_AnchoredPosition: {x: -28.75927, y: 6.290034}
+  m_SizeDelta: {x: 324.5738, y: 235.44785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1525672980
 Canvas:
