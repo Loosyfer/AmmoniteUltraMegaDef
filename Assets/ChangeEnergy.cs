@@ -11,12 +11,12 @@ public class ChangeEnergy : MonoBehaviour
         if (this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.CompareTag("Module"))
         {
             this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.transform.GetChild(22).transform.GetChild(energyIndex).gameObject.SetActive(true);
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 31; i++)
             {
                 if (i != energyIndex)
                     this.transform.parent.GetComponent<GameObjectHolder>().activeModuleorMember.transform.GetChild(22).transform.GetChild(i).gameObject.SetActive(false);
             }
-            if (energyIndex == 19)
+            if (energyIndex == 30)
                 energyIndex = 0;
             else
                 energyIndex++;
