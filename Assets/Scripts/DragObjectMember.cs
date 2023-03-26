@@ -100,7 +100,6 @@ public class DragObjectMember : MonoBehaviour, IPointerDownHandler, IBeginDragHa
 
     void Update()
     {
-        Debug.Log("pointerDown es " + pointerDown + " rayCastNull es " + rayCastNull + " objectDragged es " + objectDragged);
         if (Input.GetMouseButtonUp(0) && pointerDown && !objectDragged)
         {
             /*EventSystem.current.SetSelectedGameObject(gameObject);

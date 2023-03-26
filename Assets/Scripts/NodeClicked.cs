@@ -27,7 +27,6 @@ public class NodeClicked : MonoBehaviour,  IDropHandler
 
     private void Update()
     {
-        Debug.Log("Is over button is " + IsOverButton());
         if (Input.GetMouseButtonDown(1) && IsOverButton())
         {
             Click();

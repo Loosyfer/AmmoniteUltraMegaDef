@@ -162,7 +162,6 @@ public class DragObjectModule : MonoBehaviour, IPointerDownHandler, IBeginDragHa
         else
             GetComponent<Image>().raycastTarget = true;
 
-        Debug.Log("GetRayCast es " + GetRaycast());
 
         if (Input.GetMouseButtonDown(0) && GetRaycast())
         {

@@ -792,18 +792,66 @@ public class BattleSystem : MonoBehaviour
         int r;
         switch (u)
         {
-            case int h when (h >= 0 && h < 49):
+            case int h when (h >= 0 && h < 40):
                 r = UnityEngine.Random.Range(0, 6);
                 go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                 Yrt.energy = r;
                 break;
-            case int h when (h >= 49 && h < 98):
+            case int h when (h >= 40 && h < 60):
                 r = UnityEngine.Random.Range(6, 10);
                 go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                 Yrt.energy = r;
                 break;
-            case int h when (h >= 98 && h <= 100):
+            case 60:
+                go.transform.GetChild(23).GetChild(10).gameObject.SetActive(true);
+                Yrt.energy = 10;
+                break;
+            case int h when (h >= 61 && h < 64):
                 r = UnityEngine.Random.Range(11, 15);
+                go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                Yrt.energy = r;
+                break;
+            case int h when (h >= 64 && h <= 66):
+                r = UnityEngine.Random.Range(15, 19);
+                go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                Yrt.energy = r;
+                break;
+            case 67:
+                go.transform.GetChild(23).GetChild(19).gameObject.SetActive(true);
+                Yrt.energy = 19;
+                break;
+            case int h when (h >= 68 && h <= 84):
+                int z = UnityEngine.Random.Range(0, 3);
+                switch (z)
+                {
+                    case 0:
+                        r = 20;
+                        go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                        Yrt.energy = r;
+                        break;
+                    case 1:
+                        r = 21;
+                        go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                        Yrt.energy = r;
+                        break;
+                    case 2:
+                        r = 24;
+                        go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                        Yrt.energy = r;
+                        break;
+                }
+                break;
+            case int h when (h >= 85 && h <= 89):
+                r = UnityEngine.Random.Range(23, 25);
+                go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                Yrt.energy = r;
+                break;
+            case 90:
+                go.transform.GetChild(23).GetChild(31).gameObject.SetActive(true);
+                Yrt.energy = 31;
+                break;
+            case int h when (h >= 91):
+                r = UnityEngine.Random.Range(32, 44);
                 go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                 Yrt.energy = r;
                 break;
@@ -1371,26 +1419,77 @@ public class BattleSystem : MonoBehaviour
                     break;
             }
 
-            int w = UnityEngine.Random.Range(0, 100);
-            int r;
-            switch (w)
+            int u = UnityEngine.Random.Range(0, 100);
+            int r = 0;
+            switch (u)
             {
-                case int u when (u >= 0 && u < 49):
+                case int h when (h >= 0 && h < 40):
                     r = UnityEngine.Random.Range(0, 6);
                     go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                     Yrt.energy = r;
                     break;
-                case int u when (u >= 49 && u < 98):
+                case int h when (h >= 40 && h < 60):
                     r = UnityEngine.Random.Range(6, 10);
-                    go.transform.GetChild(23).GetChild(UnityEngine.Random.Range(6, 10)).gameObject.SetActive(true);
+                    go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                     Yrt.energy = r;
                     break;
-                case int u when (u >= 98 && u <= 100):
+                case 60:
+                    go.transform.GetChild(23).GetChild(10).gameObject.SetActive(true);
+                    Yrt.energy = 10;
+                    break;
+                case int h when (h >= 61 && h < 64):
                     r = UnityEngine.Random.Range(11, 15);
                     go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
                     Yrt.energy = r;
                     break;
+                case int h when (h >= 64 && h <= 66):
+                    r = UnityEngine.Random.Range(15, 19);
+                    go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                    Yrt.energy = r;
+                    break;
+                case 67:
+                    r = 19;
+                    go.transform.GetChild(23).GetChild(19).gameObject.SetActive(true);
+                    Yrt.energy = 19;
+                    break;
+                case int h when (h >= 68 && h <= 84):
+                    int z = UnityEngine.Random.Range(0, 3);
+                    switch (z)
+                    {
+                        case 0:
+                            r = 20;
+                            go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                            Yrt.energy = r;
+                            break;
+                        case 1:
+                            r = 21;
+                            go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                            Yrt.energy = r;
+                            break;
+                        case 2:
+                            r = 24;
+                            go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                            Yrt.energy = r;
+                            break;
+                    }
+                    break;
+                case int h when (h >= 85 && h <= 89):
+                    r = UnityEngine.Random.Range(23, 25);
+                    go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                    Yrt.energy = r;
+                    break;
+                case 90:
+                    r = 31;
+                    go.transform.GetChild(23).GetChild(31).gameObject.SetActive(true);
+                    Yrt.energy = 31;
+                    break;
+                case int h when (h >= 91):
+                    r = UnityEngine.Random.Range(32, 44);
+                    go.transform.GetChild(23).GetChild(r).gameObject.SetActive(true);
+                    Yrt.energy = r;
+                    break;
             }
+            print("La r ha sido " + r);
             if (ReqOnOff.transform.GetComponent<RequirementsButton>().state)
             {
                 Yrt.reqActive = true;

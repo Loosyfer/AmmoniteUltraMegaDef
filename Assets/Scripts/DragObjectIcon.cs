@@ -67,7 +67,6 @@ public class DragObjectIcon : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 
     void Update()
     {
-        Debug.Log(camera.GetComponent<CameraZoomControllerTwo>().movingOn);
 
         if ((Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1)) && pointerDown && !objectDragged)
         {
