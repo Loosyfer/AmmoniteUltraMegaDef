@@ -11867,7 +11867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Organic (6)
+  m_text: Organic (4/8/12)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
   m_sharedMaterial: {fileID: 6177776914075418221, guid: caf6b31e54eb2db4d804227a987d28c3, type: 2}
