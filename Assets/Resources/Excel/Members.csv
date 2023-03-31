@@ -1,8 +1,8 @@
-Name,Effect,Requirements,Price
+Name,Effect,Type of Trait,Price
 Crazy Genius,60% base performance* but if they don't receive a performance buff* they become Lunatic at the end of the battle.,Positive,2
 Thick,Their performance cannot go past 50%.,,-1
 Hermit,-20%P if adjacent to a crew member* +10%P instead if alone.,,1
-Cannibal,Every 2 turns they will bite an adjacent crew member for -1HP while they heal +1HP. If they drop an adjacent crew member to less than 4HP* they gain the trait Missing an Arm and a Leg.,,-1
+Cannibal,Every 2 turns they will bite an adjacent crew member for -1HP while they heal +1HP. If they drop an adjacent crew member to less than 3HP* they gain the trait Missing an Arm and a Leg.,,-1
 Claustrophobic,If their module isn't isolated* they become Lunatic at the end of the battle.,,-1
 Hypochondriac,If adjacent to someone that's sick* they become Lunatic.,,-1
 Constipated,Upon death* they explode and shit flies everywhere* making their module and all adjacent modules excrement-flooded.,,-1
@@ -30,7 +30,7 @@ War Fanatic,+10%P in offensive modules* -20%P in defensive modules.,Positive,3
 Pacifist,+10%P in defensive modules* -20%P in offensive modules.,Positive,3
 Tilter,If you lose more than 400 ship health in a battle* they will quit the expedtion.,,-2
 Thief,If they or an adjacent crew member holds an item* there's a 50% chance it disappears at the end of the battle.,,-2
-Toxic,If you lose more than 300 ship health in a battle* -10%P to adjacent crew members.,,-2
+Toxic,If you lose more than 300 ship health in a battle* -10%P to adjacent crew members.,,-1
 Has an Imaginary Friend,If they weren't adjacent to an empty module at the end of the battle* they become Lunatic. A random adjacent empty module will count as manned for its effect activation.,Positive,2
 Flat Earther,-20%P to adjacent scientists* and their or adjacent scientific modules will be inactive.,,-1
 Unlucky,Any percentage-based effect on this crew member will have a higher chance of having a negative outcome instead of a positive one.,,-1
@@ -56,16 +56,16 @@ Casanova,When recruited* they and a random crew member will have In Love as thei
 Martyr,If an adjacent crew member loses HP* there’s a 50% chance they sacrifice their own HP instead.,,1
 Unhygienic,Every 2 turns there's a 20% chance they get sick.,,-1
 Full of Shit,Upon death* they explode and shit flies everywhere* making their module and all adjacent modules excretion-flooded.,,-1
-Bully,-20%P to the lowest-performing crew member in the ship.,,-2
+Bully,-20%P to the lowest-performing crew member in the ship other than themselves.,,-2
 Lazy and Rich,30% base performance. If their performance was lowered* receive 1 coin at the end of the battle.,,1
 Selfless,If a crew member is about to die* they sacrifice their own life instead.,,1
 Hero,If your ship health runs out* they sacrifice themselves to avoid the defeat and your ship is rescued back to 200 health.,Positive,3
 Best Buddies,This trait always appears in pairs in the shop. They can only be recruited if both applicants are. +5%P when adjacent to each other.,Positive,2
 Pregnant,"Always comes with a secondary trait. After 2 battles she becomes automatically equipped with Lucky Baby. If they lose hold of this item except by its own effect* they become Lunatic. The crew member this Lucky Baby turns into will have the same trait as the mother's trait that isn't ""Pregnant"".",Positive,2
 Has the Flu,For the battle after they’re recruited* each other crew member has a 50% chance of becoming sick.,,-1
-Uncontrollable Flatulences,Every 4 turns* a Fart Bubble is formed in the vicinity (even if you don’t have an available slot) and there's a 50% chance they excrement-flood their module.,,-1
+Uncontrollable Flatulences,Every 4 turns* 33% chance of a Fart Bubble is formed in the vicinity (even if you don’t have an available slot) and 33% chance they shit themselves instead of farting and the module is excrement-flooded. Maximum 1 Fart Bubble per battle.,,-1
 Spiritual Meditator,Upon death* they will revive with their trait changed to Ghost.,Positive,2
-Seasick,At battle start* 40% chance they puke* excrement-flooding their module. After not puking twice in a row* they never puke again.,,-1
+Seasick,At battle start* 50% chance they puke* excrement-flooding their module. After not puking twice in a row* they never puke again.,,-1
 Liar,Only exists as a hidden secondary trait on applicants in the shop. Once recruited their trait will change to Liar* will gain a random secondary trait* and their profession will change to another random one.,,?
 Can’t Swim,If their module is water-flooded* -1HP/2turns.,,-1
 Has Explosive Diarrhea,Every 2 turns there's a 33% chance that their module and a random adjacent one become excrement-flooded.,,-1
@@ -80,8 +80,7 @@ Robot,Always has 60% base performance. Their performance can't be lowered and th
 Avid Swimmer,If their module is Water-flooded once per battle they swim to another Water-flooded module in order to avoid an enemy hit.,,1
 Unreliable,Every time you enter a market or emporium* there's a 33% chance they swap themselves for another random crew member in the market or empoium.,,-1
 Porn Addict,-20%P if in or adjacent to an automatised or scientific module.,,-1
-Enthusiastic Handyman,At the end of battle* 50% chance they reroll the requirement or energy pattern of their module* up to once per module.,,1
-Parties Hard 1,In the next battle after a victorious battle* those that were adjacent to them will become Sleepy.,,-2
+Parties Hard 1,In the next battle after a victorious battle* those that were adjacent to them will become Alseep at battle start.,,-2
 Passionate About Science,+5%P if in a Scientific module.,Positive,2
 Massage Expert,+5%P to the crew member adjacent to the left.,Positive,2
 Chronic Masturbator,After 5 battles they will go blind and gain Bad Eyesight as their secondary trait.,,-1
@@ -97,7 +96,7 @@ Alucard,If they’re missing Health* once every 4 turns +1HP and -1HP to a rando
 Ghost,Can’t die or take damage. There’s a 50% chance they don’t show up to each battle.,,-1
 Stoned,-20%P* +1HP/4turns and +2 max HP.,,1
 Insured Out of His Ass,At the end of each battle* if they lost HP* you lose 2 coin. If they died* you lose 2 coins.,,-2
-Hates Kids,-20%P if adjacent to a Cadet* someone with Rookie trait* with Lucky Baby or adjacent to someone with Lucky Baby.,,-1
+Hates Kids,-20%P if adjacent to a Cadet* someone with Rookie trait* with Lucky Baby or adjacent to someone with Lucky Baby.,,1
 Thinks They’re a Fish,-20%P* but +1HP/4turns and +10%P instead if their module is water flooded.,,1
 Weak Immune System,If someone is sick* they also become sick.,,-1
 Normal,Just a normal person for once. No effect.,,-1
@@ -110,29 +109,28 @@ One-trick Pony,+10%P in modules of the same type as the first module they were e
 Easily Distracted,If an adjacent module is disturbed* -20%P for 2 turns.,,-1
 Seafood Eater,If in an organic module at the end of battle* they eat it and the module is gone* go to the bench* heal to full HP and gain +1 max HP. // If in or adjacent to an organic module* they eat it at the end of battle* heal to full HP and gain +1 max HP. The person in the module that was eaten goes to the bench.,,2
 Ate an Expired Yoghourt,At battle start* there's a 40% chance they excrement-flood their module. After not excrement-flooding twice in a row* they never do it again.,,-1
-Heavy Smoker,Every 4 turns* a Smoke Bubble is formed in the vicinity (even if you don’t have an available slot)* but at the end of each battle -1HP.,,1
+Heavy Smoker,At turn 4* a Smoke Bubble is formed in the vicinity (even if you don’t have an available slot)* but at the end of each battle -1HP.,,1
 Infested with Bedbugs,Any module that they’re in is marked because it becomes infested with bedbugs. Any other crew member in that module has a 50% chance of becoming Lunatic at the end of the battle.,,-1
 Complacent,-20/0/+10%P at 90/50/30% ship health.,,1
 Bone Architect,Every 4 turns* an adjacent crew member loses 1HP and their secondary trait changes to Missing and Arm and a Leg. After this happens 4 times* receive one Bone Capsule.,Positive,2
-Corpse Looter,For every crew member that dies* +1HP and they give you 1 coins. If the corpse was of a Businessman* they give you 2 coins.,Positive,3
-Unleashed Power,If their module explodes or they reach 0 HP* they survive and unleash newfound power changing their trait to Blastman/Blaswoman.,Positive,3
-Goes to Bed Early,At turn 10 they become Sleepy.,,-1
+Corpse Looter,For every crew member that dies* +1HP and they give you 1 coin. If the corpse was of a Businessman* they give you 2 coins.,Positive,3
+Unleashed Power,If they die* they survive and unleash newfound power changing their trait to Blastman/Blaswoman.,Positive,3
+Goes to Bed Early,At turn 10 they go to sleep.,,-1
 Obsessed Collector,+3% base performance for every different item they’ve ever held.,Positive,3
 Has OCD,+10%P If your ship is top-bottom symmetrical* but if it's not* -20%P instead* and if that happens two battles in a row they become Lunatic.,,1
 Scared of Heights,If they’re not placed in the lowest possible row* -20%P.,,-1
 Alien-looking,60% base performance* but at the start of a battle* 40% chance of abducting themselves together with an adjacent crew member* and after 1 battle passes* only said crew member will return* with their trait changed to Has Amnesia.,,-2
 Caveman,Has 20% base performance* increased to 30% if in an Organic module* where they also heal +1HP/4turns.,,1
 Had Plastic Surgery,At the end of each battle* there's an increase in 20% chance that their trait changes to Caveman* starting at 0%.,,1
-Never Reads Manuals,If their module has requirements* they’re ignored but the module is due to become permanently unstable after 5 battles. // Their module has its requirements ignored but it's also unstable at battle start* meaning there's a 25% chance it explodes every 2 turns.,,1
 Caregiver,If adjacent to the Caregiver* Elderly and Centenarians will only have a 10% chance of dropping dead after a battle. Adjacent crew members have a 50% chance of avoiding an Ailment if they get one.,Positive,2
 Also a Lawyer,If a crew member dies* 50% chance of -3 coins and 50% chance +3 coins.,,0
-A Karen,You can return modules and get back their full price instead of half. Always comes paired with Argumentative.,Positive,3
+A Karen,You can return modules for 3 coins instead of 2. Always comes paired with Argumentative.,Positive,3
 Also a Priest,If a crew member dies* under no circumstance will they return in any shape or form* and will instead rest in peace.,,-2
 Cursed,Every enemy attack has a 33% chance of targeting them* and at battle start they have a 33% chance of becoming Sick. If they die* they will return after 1 battle without them.,,2
 Possessed,Every 4 turns* -1HP or gain a random ailment other than Lunatic. If they die* another random crew member becomes Possessed instead.,,-2
 Constantly Picks their Scabs,If they lose HP* every 2 turns tey gain 1 HP back* then lose 1 HP* and so on.,Positive,2
 Has Amnesia,At battle start* 50% chance they don’t have their profession for this battle.,,-2
-Also a Veterinarian,If an enemy at or below 10% HP* they heal the enemy once per battle for 5% of their HP.,,-2
+Compassionate Veterinarian,If an enemy is at 20% HP or less* they heal the enemy once per battle for 10% of their HP.,,-2
 Apocalypse Paranoid,The first module that they’re placed in becomes an Isolation Bunker.,,1
 Loves Rainbows,If you have 1 of each type of module* +10%P.,Positive,2
 Big Fan,If you don’t recruit this applicant* they will show up very frequently in the shop (every applicant has a 10% chance of being the same Big Fan).,,2
@@ -140,9 +138,9 @@ BDSM Enthusiast,-1HP/4turns to a random adjcent crew member* and +5%P to the BDS
 Kidnapper,At the end of the battle* there's a 30% chance an adjacent crew member disappears and doesn't return unless you pay 1 coin.,,-2
 Builds Ships in Bottles,If disturbed by an adjacent module* -1 HP to the crew member in the module the disturbance came from. If undisturbed for a battle* produces the item Ship in a bottle.,,1
 Well Endowed,Only applies to men. At the end of battle* there's a 25% chance an adjacent crew member of the opposite sex becomes pregnant.,Positive,3
-Tap Dance Enthusiast,-20%P to the crew member below their module* but will also prevent them from becoming Sleepy or Asleep.,,-1
+Tap Dance Enthusiast,-10%P to the crew member below their module* but will also prevent them from becoming Asleep.,,-1
 Big Daddy,If an adjacent crew member is damaged by the enemy* they deal 50 damage to the enemy.,Positive,3
-Missing an Arm and a Leg,Only has 3 base HP* however if attacked there’s a 33% chance the enemy misses.,,-1
+Missing an Arm and a Leg,Only has 3 base HP* however if attacked by the enemy there’s a 33% chance the enemy misses.,,-1
 Amateur Surgeon,If an adjacent crew member has 2 or less HP* they will attempt to do surgery on them* with a 50% chance they fully heal and 50% chance they lose 1 HP.,,1
 Clumsy,If they hold an item* 33% chance that it breaks at the end of the battle.,,-1
 Uni-tasker,-20%P if they hold an item.,,-1
@@ -158,7 +156,6 @@ Gambling Addict,At the end of battle they gamble with your coins: if you have at
 Forgetful,50% chance at battle start that they leave their item behind on the bench.,,-1
 Spits Fire,Every 4 turns spits fire at the enemy for 50 damage and every module in the row has a 50% chance of being set on fire.,Positive,2
 Babysitter,Always comes with Lucky Baby equipped. If they lose hold of this item except by its own effect* they become Lunatic.,Positive,2
-Repairman Wannabe,If their module is damaged they repair it* but there's a 33% chance they add a defect to it. // At the end of battle they heal the ship for 25 HP* but every 2 turns there's a 50% chance their module has no energy for 2 turns.,,1
 Hates Society,Every 4 turns there’s a 33% chance their module detaches from the ship.,,-1
 Baker,If their module is set on fire produce* 1 Tasty Pizza.,Positive,2
 Orchestra Conductor,If they and 4 adjacent crew members all have the exact same performance* +5%P to all five* if not* -10%P to all five.,Positive,2
@@ -170,16 +167,16 @@ Coastguard,If a crew member dies in an adjacent module that's flooded* they will
 Hyperactive,For every performance boost they receive* +5%P* but every 4 turns there’s a 10% chance their module becomes damaged. // their modules wears out faster.,Positive,3
 Deep Thinker,-10%P but if their module is inactive* +10%P instead.,,1
 Marathon Runner,Every 4 turns moves to an adjacent module they haven’t been in this battle yet.,,-2
-Sworn Enemy,When recruited* will declare another random crew member as their Sworn Enemy and they'll gain that as their secondary trait. From there onwards* unless there’s a distance of 5 modules between them* they will hurt each other and both lose 1HP/2turns.*,,-1
+Sworn Enemy,At the start of their first battle* they'll declare another random crew member as their Sworn Enemy and they'll gain that as their secondary trait. From there onwards* unless there’s a distance of 5 modules between them* they will hurt each other and both lose 1HP/4turns.*,,-1
 Cult Leader,Adjacent crew members have +5%P but will also suffer the same ailment* loss of HP and death of the occupier.,Positive,2
 Perfectionist,+10%P if all adjacent crew members have at least 50%P.,Positive,2
 Simple,Cannot gain or lose performance nor base performance* and only activates 4-cost modules.,,1
 Monster Tamer,Every time they’re hit by the enemy* the enemy loses 5dpt.,Positive,3
 Cocky Taunter,The enemy has a 33% chance of targeting them with each hit.,Positive,3
 Avoids Responsibilities,The first time per battle that they or their module are afflicted with an ailment or element* it’s instead passed onto a random adjacent module.,Positive,2
-Consistent,Their performance cannot be changed by any means.,,1
+Consistent,Their performance cannot be increased or decreased by any means.,,1
 Extreme Performer,If at 70%P or above* +10%P* but if at 35%P or less* -20%P.,,0
-Oblivious,Their performance doesn't matter* they'll always have the effects of having 40%P.,,-1
+Oblivious,Ignores module elements and is unaffected by the effects of other traits and professions.,,1
 Unleashed Talent,Has 0% base performance* but every time their performance is increased* +5% base performance up to 15 times.,Positive,3
 Suffers from Burnout,-20%P* unless they rested in the bench for one battle in which case +10%P instead.,,-1
 Monster Enrager,If they're hit by the enemy* they deal 50 damage but the enemy gains +10dpt. Earlygame enemies don't hit crew members* they just bump into the modules.,,-2
@@ -189,11 +186,9 @@ Juggler,Can hold up to 3 items at the same time* but at the end of the battle th
 Wall Painter,At the end of the battle* their module changes to another random type.,Positive,3
 Insecure Professional,-20%P for the next battle if a new applicant of the same profession was recruited.,,-1
 Special Bonding,Will bond to a random adjacent crew member in their first battle changing their trait to also Special Bonding at the end of the battle. +10%P to both crew members but if they are ever separated they both die.,,1
-Loves Instruction Manuals,Their module will have a second random requirement* but +5%P if they're both fulfilled.,Positive,2
 Hates Complex Work,-20%P but +10%P instead if their module is inactive.,,-1
 Flirter,-20%P* but +5%P instead if they're adjacent to someone of the opposite sex.,,1
 Copycat,At battle start* will copy the same performance and HP gains and loses of a random crew member in the ship.,,1
-Careless Tenant,Will pay you a rent of 1 coin at the end of each battle* however they don't treat their module well* so it will gain a defect at the end of the battle* and if it already had one* then it becomes damaged. // will wear out faster.,,-1
 Scammer,Once per level* you can sell a module for 2 more coins than it was worth. Once recruited* there's a 50% chance they have a different random profession.,Positive,3
 Easily Bored,-10%P if they are in the same module as the previous battle.,,-1
 Loves Change,+10%P if they are in a different module than in the previous battle.,Positive,2
@@ -202,28 +197,39 @@ Cannibal 2,If an adjacent crew member dies* +3HP.,Positive,3
 Identity Thief,If a crew member dies* they steal their name* gender* profession* trait and base performance permanently.,Positive,3
 Does the Bare Minimum,They'll copy the performance of the lowest performance crew member in the ship.,,-1
 Needs to be Supervised,+5%P* but -5%P for every module away from the Captain.,,1
-Night Owl,Will be Asleep at battle start* but at turn 6 they wake up and gain +10%P.,,1
+Night Owl,Will be Asleep at battle start* but +10%P if awake.,,1
 Mad Scientist,If Lunatic* you receive 1 random item at the end of the battle.,,1
 Motivational Speaker,Adjacent crew members won't suffer from performance decreases.,Positive,3
 Double Personality,At battle start* there's a 50% chance they have a second set of profession and trait that doesn't change.,,-1
 Organised,If a different crew member occupies the module they were in* they get +10%P for the next battle.,,1
 Helps Others,-10%P* but +10%P to a random adjacent crew member.,,1
 Personal Trainer,A random adjacent crew member will be trained during this battle* and will have +10%P for the next battle.,Positive,2
+Radioactive ,Permanently sick* but their module requires no energy to function.,Positive,2
+Amateur Electrician 1,"At the end of the battle* rerolls the energy pattern of their module but there's a 50% chance it rerolls into a ""mono"" pattern.",,1
+Lazy Electrician 2,At battle start* 30% chance they reroll the enery pattern of their module and 70% chance they fall asleep.,,1
+Reckless Electrician 3,At the end of the battle* rerolls the energy pattern of the module they're in but there's a 40% chance they die in the process.,,-1
+Handy Electrician 4,Their module will copy the energy patter of the module to their left/right/up/down.,Positive,2
+Enthusiastic Electrician 5,At the end of battle* 50% chance they reroll energy pattern of their module* up to once per module.,,1
+Expert Electrician 6,At the end of the battle* for 4 coins can reroll the energy pattern of their module.,Positive,3
+Never Reads Manuals,Will change the energy pattern of their module to connect to the grid* but this will make the module unstable* with a 25% chance of explosion every 2 turns.,,-1
+Careless Tenant,50% chance they pay you 1 coin at the end of each battle* however they don't treat their module well* so at the end of each battle there's a 50% chance it gains a defect.,Positive,3
+Electricity Thief 1,Every 2 turns* there's a 15% chance their module becomes devoid of energy.,,-2
+Electricity Thief 2,Energy can enter* but not exit this module.,,-1
 Monstrous,Every 4 turns* -1HP to an adjacent crew member* but if they’re also Monstrous no damage is done. If hit by the enemy* they hit back for 50 damage. If their module is destroyed* instead of dying they return to an available module or the bench.,Exclusive,
 Doomed,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -2%/2turns* and -1HP/2turns.,Exclusive,
 Reanimated,Their skin will be grey and cracked. Their Performance will slowly decrease at a rate of -2%/2turns.,Exclusive,
 The Chosen One,They will have 16 Health* 100% base performance and are immune to explosions* but if they die you lose the expedition.,Exclusive,
-Blastman,They rescue from death and send to the bench full HP up to 4 crew members* after which they quit the expedition to help in other places.,Exclusive,
+Blastman,They rescue from death and send to the bench full HP up to 2 crew members* after which they quit the expedition to help in other places.,Exclusive,
 Centenarian,They are generated with 3 HP* and have a 70% chance of dropping dead at the end of each battle.,Exclusive,
-Smart Robot,Its module has no requirements. If its module is damaged or unstable* it repairs it in 2 turns. If at 80%P or higher* it can't lose HP and if hit* electrocutes the enemy for 100 damage.,Exclusive,
+Smart Robot,Powers its module so it doesn't need an energy connection. If its module is damaged or unstable* it repairs it in 2 turns. If at 80%P or higher* it can't lose HP and if hit* electrocutes the enemy for 100 damage.,Exclusive,
 Competitive,Their performance will increase to match the best-performing adjacent crew member.,Erudite,
 Posh Millionaire,Wont work unless their module costs 8 coins* in which case there's a 50% chance they tip you 1 coin at the end of each battle.,Erudite,
 Professor,If adjacent to a Cadet for 2 battles in a row* the Cadet will become their profession.,Erudite,
 Nirvana Achiever,If at 70%P or above* +1HP/4turns.,Erudite,
 Reverse Engineer,At battle start* there's a 50% chance their item permanently changes to another item.,Erudite,
-Expert Electrician,Their module will have 4 energy connections.,Erudite,
+Altruist Electrician 7,At the end of the battle can reroll the energy pattern of their module.,Erudite,
 Plumbing Expert,The module that they’re in and adjacent ones cannot be flooded* nor can parasites* spores or gases invade their module.,Erudite,
-Skilled Hacker,Ignore the requirements of the module they’re in.,Erudite,
+Skilled Hacker,Adds one energy pattern node in his module* in top/bottom/right/left direction.,Erudite,
 Avid Learner,At the end of the battle they can change their profession to that of an adjacent crew member.,Erudite,
 Expert Investor,If you go to a shop event without buying anything* increase your savings by 15%.,Erudite,
 Multidisciplinary,At battle start* offers the chance of choosing between two professions.,Erudite,
@@ -235,9 +241,10 @@ Master of Concentration,Works under any condition; performance can't be lowered 
 Tough,Immune to all ailments.,Erudite,
 First Aid Expert,Once per battle* fix the ailment of a random adjacent crew member after 2 turns.,Erudite,
 Expert repairman,If placed in a damaged module* they will fix it at the end of the battle.,Erudite,
+Electrobender,+4dpt for each energy node adjacent to this module on each side.,Super,
 Teleportation,Once per battle* can be teleported to another module* even if it’s swapping with another crew member.,Super,
 Spark Aura,If their module is attacked* they will take half the damage (minimum 1 HP) and deal 100 dmg to the enemy.,Super,
-Telekinesis,Once per battle* you can swap around two modules or two items in your ship as long as it meets their requirements.,Super,
+Telekinesis,Once per battle* you can swap around two modules or two items in your ship.,Super,
 Waterbender,Once per battle* you can water-flood any module* or undo a water-flooded module. If their module is water-flooded* they’re immune to it and them and adjacent crew members will have a 60% chance of being protected from enemy hit by water shields.,Super,
 Telepathic,Every crew member in the ship counts as adjacent.,Super,
 Omega Brain,Every performance increase is doubled* and their performance cap is 150%.,Super,

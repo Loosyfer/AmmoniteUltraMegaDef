@@ -410,7 +410,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (index > 234)
+        if (index > 208)
         {
             Debug.Log("Your number was too high");
             return;
@@ -749,7 +749,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (index > 234)
+        if (index > 250)
         {
             Debug.Log("Your number was too high");
             return;
@@ -1371,12 +1371,12 @@ public class BattleSystem : MonoBehaviour
         GameObject membersFolder = canvas.transform.GetChild(28).gameObject;
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = randomModules.Next(0, 235);
+            int j = randomModules.Next(0, 208);
             int k = UnityEngine.Random.Range(0, 12);
             while (k == 2)
                 k = UnityEngine.Random.Range(0, 12);
             while (modExcel.myModules.modules[j].type == (ModuleType)5 || modExcel.myModules.modules[j].type == (ModuleType)6)
-                j = randomModules.Next(0, 235);
+                j = randomModules.Next(0, 208);
             GameObject go = Instantiate(moduleGenPrefab, new Vector3(272 + i * 163, 1016, 0), Quaternion.identity) as GameObject;
             go.transform.parent = modulesFolder.transform;
             ModuleHUD Yrt = go.GetComponent<ModuleHUD>();
@@ -1780,7 +1780,7 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < cyclelength; i++)
         {
-            int j = randomTraits.Next(0, 210);
+            int j = randomTraits.Next(0, 216);
             int l = UnityEngine.Random.Range(0, membersInfo.names.Length);
             int k = 0;
             float random = (float)randomProfessions.NextDouble()*1000;
