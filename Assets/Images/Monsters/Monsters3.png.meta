@@ -328,15 +328,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monsters3_6: -1420210739
-      Monsters3_4: 1786364605
+      Monsters3_0: -634122634
       Monsters3_1: 1986082473
       Monsters3_2: 81399678
-      Monsters3_7: -11124399
-      Monsters3_0: -634122634
       Monsters3_3: 1695268723
-      Monsters3_8: 1795194301
+      Monsters3_4: 1786364605
       Monsters3_5: 1330598139
+      Monsters3_6: -1420210739
+      Monsters3_7: -11124399
+      Monsters3_8: 1795194301
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
